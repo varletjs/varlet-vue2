@@ -10,7 +10,7 @@
 
 ### 介绍
 
-Varlet-Vue2 是 `Varlet` 的 vue2 版本, 是一个 Material 风格移动端组件库，由社区建立起来的组件库团队进行维护。
+`Varlet-vue2` 是 `Varlet` 的 vue2 版本, 是一个 Material 风格移动端组件库，由社区建立起来的组件库团队进行维护。
 
 ### 特性
 1. 提供50个高质量通用组件
@@ -36,13 +36,14 @@ Varlet-Vue2 是 `Varlet` 的 vue2 版本, 是一个 Material 风格移动端组�
 
 ```html
 <div id="app"></div>
-<script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
-<script src="https://cdn.jsdelivr.net/npm/@varlet/ui/umd/varlet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="https://cdn.jsdelivr.net/npm/@varlet-vue2/ui/umd/varlet.js"></script>
 <script>
-  const app = Vue.createApp({
+  Vue.use(Varlet)
+
+  new Vue({
     template: '<var-button>按钮</var-button>'
-  })
-  app.use(Varlet).mount('#app')
+  }).$mount('#app')
 </script>
 ```
 
@@ -50,23 +51,28 @@ Varlet-Vue2 是 `Varlet` 的 vue2 版本, 是一个 Material 风格移动端组�
 ```shell
 # 通过 npm 或 yarn 或 pnpm 安装
 # npm
-npm i @varlet/ui -S
+npm i @varlet-vue2/ui -S
 # yarn
-yarn add @varlet/ui
+yarn add @varlet-vue2/ui
 # pnpm
-pnpm add @varlet/ui
+pnpm add @varlet-vue2/ui
 ```
 
 ```js
 import App from './App.vue'
-import Varlet from '@varlet/ui'
-import { createApp } from 'vue'
-import '@varlet/ui/es/style.js'
-createApp(App).use(Varlet).mount('#app')
+import Varlet from '@varlet-vue2/ui'
+import Vue from 'vue'
+import '@varlet-vue2/ui/es/style.js'
+
+Vue.use(Varlet)
+
+new Vue({
+  render: (h) => h(App)
+}).$mount('#app')
 ```
 
 ### Contributors
 
-<a href="https://github.com/varletjs/varlet/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=haoziqaq/varlet" />
+<a href="https://github.com/varletjs/varlet-vue2/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=varletjs/varlet-vue2" />
 </a> -->
