@@ -1,0 +1,70 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "bootstrap": "pnpm install && node scripts/bootstrap.mjs",
+    "lint": "varlet-vue2-cli lint",
+    "changelog": "varlet-vue2-cli changelog",
+    "release": "node scripts/publish.mjs && varlet-vue2-cli release"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --allow-empty --concurrent false",
+    "commit-msg": "npx --no-install varlet-vue2-cli commit-lint $1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,vue,less}": "prettier --write",
+    "*.{ts,tsx,js,vue}": "eslint --fix",
+    "*.{vue,css,less}": "stylelint --fix"
+  },
+  "eslintConfig": {
+    "root": true,
+    "ignorePatterns": [
+      "packages/varlet-vue2-cli/lib/**",
+      "packages/varlet-vue2-cli/site/**",
+      "packages/varlet-vue2-ui/lib/**",
+      "packages/varlet-vue2-ui/es/**",
+      "packages/varlet-vue2-ui/umd/**",
+      "packages/varlet-vue2-ui/site/**",
+      "packages/varlet-vue2-ui/public/**",
+      "packages/varlet-vue2-ui/src/*/__tests__/**",
+      "packages/varlet-vue2-ui/.varlet/**",
+      "packages/varlet-vue2-ui/global.d.ts"
+    ],
+    "extends": [
+      "@varlet-vue2"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "@varlet-vue2/stylelint-config"
+    ],
+    "ignoreFiles": [
+      "packages/varlet-vue2-cli/lib/**",
+      "packages/varlet-vue2-cli/site/**",
+      "packages/varlet-vue2-ui/lib/**",
+      "packages/varlet-vue2-ui/es/**",
+      "packages/varlet-vue2-ui/umd/**",
+      "packages/varlet-vue2-ui/site/**",
+      "packages/varlet-vue2-ui/coverage/**",
+      "packages/varlet-vue2-ui/highlight/**",
+      "packages/varlet-vue2-ui/public/**",
+      "packages/varlet-vue2-ui/.varlet/**"
+    ]
+  },
+  "devDependencies": {
+    "@varlet-vue2/cli": "workspace:*",
+    "@varlet-vue2/eslint-config": "workspace:*",
+    "@varlet-vue2/stylelint-config": "workspace:*",
+    "eslint": "^7.30.0",
+    "execa": "^5.0.0",
+    "lint-staged": "^10.5.0",
+    "ora": "^5.4.0",
+    "prettier": "^2.3.2",
+    "simple-git-hooks": "^2.7.0",
+    "stylelint": "^13.13.1",
+    "surge": "^0.23.0",
+    "typescript": "^4.4.4"
+  },
+  "packageManager": "pnpm@6.24.3"
+}

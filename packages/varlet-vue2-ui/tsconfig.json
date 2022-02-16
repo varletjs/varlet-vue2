@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "strict": true,
+    "downlevelIteration": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": ["esnext", "dom"],
+    "jsx": "preserve",
+    "isolatedModules": true,
+    "exclude": ["**/*.spec.ts", "**/*.spec.js", "node_modules"]
+  }
+}

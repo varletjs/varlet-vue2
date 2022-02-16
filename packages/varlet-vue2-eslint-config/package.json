@@ -1,0 +1,24 @@
+{
+  "name": "@varlet-vue2/eslint-config",
+  "version": "0.0.0",
+  "description": "eslint config of varlet-vue2",
+  "keywords": [
+    "eslint",
+    "varlet-vue2"
+  ],
+  "author": "haoziqaq <357229046@qq.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.12.1"
+  }
+}
