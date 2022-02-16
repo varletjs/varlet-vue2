@@ -29,7 +29,8 @@
       "packages/varlet-vue2-ui/public/**",
       "packages/varlet-vue2-ui/src/*/__tests__/**",
       "packages/varlet-vue2-ui/.varlet/**",
-      "packages/varlet-vue2-ui/global.d.ts"
+      "packages/varlet-vue2-ui/global.d.ts",
+      "packages/varlet-vue2-ui/types/global.d.ts"
     ],
     "extends": [
       "@varlet-vue2"

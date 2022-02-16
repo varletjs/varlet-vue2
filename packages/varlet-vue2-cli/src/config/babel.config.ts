@@ -8,7 +8,6 @@ module.exports = (api?: ConfigAPI) => {
   const isCommonJS = process.env.NODE_ENV === 'test' || process.env.BABEL_MODULE === 'commonjs'
 
   return {
-    sourceType: 'unambiguous',
     presets: [
       [
         require.resolve('@babel/preset-env'),
@@ -26,16 +25,6 @@ module.exports = (api?: ConfigAPI) => {
       require.resolve('@babel/preset-typescript'),
       require('./babel.sfc.transform'),
     ],
-    plugins: [
-      [
-        require.resolve('@babel/plugin-transform-runtime'),
-        {
-          corejs: false,
-          useESModules: !isCommonJS,
-        },
-      ],
-      require.resolve('babel-plugin-jsx-v-model'),
-      require.resolve('babel-plugin-jsx-event-modifiers'),
-    ],
+    plugins: [require.resolve('babel-plugin-jsx-v-model'), require.resolve('babel-plugin-jsx-event-modifiers')],
   }
 }
