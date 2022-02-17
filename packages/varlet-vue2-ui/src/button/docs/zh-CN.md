@@ -3,10 +3,10 @@
 ### 引入
 
 ```js
-import { createApp } from 'vue'
-import { Button } from '@varlet/ui'
+import Vue from 'vue'
+import { Button } from '@varlet-vue2/ui'
 
-createApp().use(Button)
+Vue.use(Button)
 ```
 
 

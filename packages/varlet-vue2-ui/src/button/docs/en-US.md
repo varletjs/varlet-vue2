@@ -3,10 +3,10 @@
 ### Install
 
 ```js
-import { createApp } from 'vue'
+import Vue from 'vue'
 import { Button } from '@varlet/ui'
 
-createApp().use(Button)
+Vue.use(Button)
 ```
 
 ### Theme Color Button
