@@ -35,12 +35,30 @@ pnpm dev
 #### 单元测试
 
 ```shell
+npm i -g yarn
+```
+
+```shell
 yarn test -w -c skeleton
 ```
 
 - props -> propsData
 - unmount -> destroy
 - slots -> scopedSlots（注意：参数default属性值直接为字符串）
+
+#### 提交项目
+
+```shell
+git add .
+```
+
+```shell
+git commit -m "feat: add component 这里写组件名称" or git commit -m "feat(ui/这里写组件名称): add component 这里写组件名称"
+```
+
+```shell
+git push -u
+```
 
 #### Todolist
 
