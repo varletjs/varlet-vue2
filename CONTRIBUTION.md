@@ -32,6 +32,16 @@ pnpm dev
 - 组件types类型声明完成
 - 组件文档适配Vue2写法
 
+#### 单元测试
+
+```shell
+yarn test -w -c skeleton
+```
+
+- props -> propsData
+- unmount -> destroy
+- slots -> scopedSlots（注意：参数default属性值直接为字符串）
+
 #### Todolist
 
 - app-bar

@@ -1,0 +1,138 @@
+@skeleton-content-padding: 16px;
+@skeleton-card-height: 160px;
+@skeleton-card-border-radius: 4px;
+@skeleton-card-margin-bottom: 16px;
+@skeleton-card-background-color: rgba(0, 0, 0, 0.12);
+@skeleton-animation-background: linear-gradient(
+  90deg,
+  hsla(0, 0%, 100%, 0),
+  hsla(0, 0%, 100%, 0.3),
+  hsla(0, 0%, 100%, 0)
+);
+@skeleton-avatar-size: 34px;
+@skeleton-avatar-border-radius: 50%;
+@skeleton-avatar-margin-right: 16px;
+@skeleton-avatar-background-color: rgba(0, 0, 0, 0.12);
+@skeleton-title-width: 50%;
+@skeleton-title-border-radius: 10px;
+@skeleton-title-background-color: rgba(0, 0, 0, 0.12);
+@skeleton-row-height: 12px;
+@skeleton-row-border-radius: 10px;
+@skeleton-row-margin-top: 10px;
+
+:root {
+  --skeleton-content-padding: @skeleton-content-padding;
+  --skeleton-card-height: @skeleton-card-height;
+  --skeleton-card-border-radius: @skeleton-card-border-radius;
+  --skeleton-card-margin-bottom: @skeleton-card-margin-bottom;
+  --skeleton-card-background-color: @skeleton-card-background-color;
+  --skeleton-animation-background: @skeleton-animation-background;
+  --skeleton-avatar-size: @skeleton-avatar-size;
+  --skeleton-avatar-border-radius: @skeleton-avatar-border-radius;
+  --skeleton-avatar-margin-right: @skeleton-avatar-margin-right;
+  --skeleton-avatar-background-color: @skeleton-avatar-background-color;
+  --skeleton-title-width: @skeleton-title-width;
+  --skeleton-title-border-radius: @skeleton-title-border-radius;
+  --skeleton-title-background-color: @skeleton-title-background-color;
+  --skeleton-row-height: @skeleton-row-height;
+  --skeleton-row-border-radius: @skeleton-row-border-radius;
+  --skeleton-row-margin-top: @skeleton-row-margin-top;
+}
+
+@keyframes var-skeleton-animation {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.var-skeleton {
+  width: 100%;
+
+  &__content {
+    padding: var(--skeleton-content-padding);
+  }
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: var(--skeleton-card-height);
+    background-color: var(--skeleton-card-background-color);
+    margin-bottom: var(--skeleton-card-margin-bottom);
+    border-radius: var(--skeleton-card-border-radius);
+    transition: background-color 0.25s;
+  }
+
+  &__article {
+    display: flex;
+    width: 100%;
+  }
+
+  &__avatar {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: var(--skeleton-avatar-size);
+    height: var(--skeleton-avatar-size);
+    border-radius: var(--skeleton-avatar-border-radius);
+    background-color: var(--skeleton-avatar-background-color);
+    margin-right: var(--skeleton-avatar-margin-right);
+    transition: 0.25s background-color;
+  }
+
+  &__section {
+    width: 100%;
+    padding-top: 8px;
+  }
+
+  &__title {
+    position: relative;
+    overflow: hidden;
+    width: var(--skeleton-title-width);
+    height: var(--skeleton-row-height);
+    background-color: var(--skeleton-title-background-color);
+    border-radius: var(--skeleton-title-border-radius);
+    transition: 0.25s background-color;
+  }
+
+  &__row {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: var(--skeleton-row-height);
+    background-color: var(--skeleton-title-background-color);
+    margin-top: var(--skeleton-row-margin-top);
+    border-radius: var(--skeleton-row-border-radius);
+    transition: 0.25s background-color;
+  }
+
+  &__fullscreen {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--skeleton-title-background-color);
+    transition: 0.25s background-color;
+  }
+
+  &--animation {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      animation: var-skeleton-animation 1s infinite;
+      background: var(--skeleton-animation-background);
+      transition: 0.25s background-color;
+    }
+  }
+}
