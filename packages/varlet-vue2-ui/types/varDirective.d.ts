@@ -1,8 +1,8 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import { DirectiveBinding } from '@vue/runtime-core'
 
 export class VarDirective {
-  static install(app: App): void
+  static install(app: VueConstructor): void
 
   static mounted(el: HTMLElement, binding: DirectiveBinding): void
 

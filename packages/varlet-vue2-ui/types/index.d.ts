@@ -1,6 +1,6 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 
-export const install: (app: App) => void
+export const install: (app: VueConstructor) => void
 
 export * from './button'
 export * from './varComponent'

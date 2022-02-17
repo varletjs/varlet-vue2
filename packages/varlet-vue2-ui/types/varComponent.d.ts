@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 
 export class VarComponent {
   static name: string
 
-  static install(app: App): void
+  static install(app: VueConstructor): void
 }
