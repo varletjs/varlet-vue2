@@ -7,8 +7,18 @@ import { compileScript } from './compileScript'
 import { clearEmptyLine, compileLess, extractStyleDependencies, STYLE_IMPORT_RE } from './compileStyle'
 
 const EXPORT_START_RE = /export\s+default\s+{/
+const DEFINE_EXPORT_START_RE = /export\s+default\s+defineComponent\s*\(\s*{/
 
 export function injectRender(script: string, render: string): string {
+  if (DEFINE_EXPORT_START_RE.test(script.trim())) {
+    return script.trim().replace(
+      DEFINE_EXPORT_START_RE,
+      `${render}\nexport default defineComponent({
+  render,\
+    `
+    )
+  }
+
   if (EXPORT_START_RE.test(script.trim())) {
     return script.trim().replace(
       EXPORT_START_RE,

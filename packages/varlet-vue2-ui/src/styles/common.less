@@ -1,0 +1,73 @@
+@import './var';
+
+.var {
+  &--box {
+    box-sizing: border-box;
+
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+  &--relative {
+    position: relative;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--hidden {
+    overflow: hidden;
+  }
+
+  &--lock {
+    overflow: hidden;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--ellipsis {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--inline-block {
+    display: inline-block;
+  }
+
+  &--flex {
+    display: flex;
+  }
+
+  &--inline-flex {
+    display: inline-flex;
+  }
+}
+
+:root {
+  --font-size-xs: @font-size-xs;
+  --font-size-sm: @font-size-sm;
+  --font-size-md: @font-size-md;
+  --font-size-lg: @font-size-lg;
+  --icon-size-xs: @icon-size-xs;
+  --icon-size-sm: @icon-size-sm;
+  --icon-size-md: @icon-size-md;
+  --icon-size-lg: @icon-size-lg;
+  --color-body: @color-body;
+  --color-text: @color-text;
+  --color-primary: @color-primary;
+  --color-info: @color-info;
+  --color-success: @color-success;
+  --color-warning: @color-warning;
+  --color-danger: @color-danger;
+  --color-disabled: @color-disabled;
+  --color-text-disabled: @color-text-disabled;
+  --cubic-bezier: @cubic-bezier;
+  --shadow-key-umbra-opacity: @shadow-key-umbra-opacity;
+  --shadow-key-penumbra-opacity: @shadow-key-penumbra-opacity;
+  --shadow-key-ambient-opacity: @shadow-key-ambient-opacity;
+}

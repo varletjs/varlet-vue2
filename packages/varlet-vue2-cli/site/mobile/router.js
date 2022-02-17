@@ -3,11 +3,12 @@ import config from '@config'
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 import { get } from 'lodash-es'
+import { inIframe, isPhone } from '../utils'
 
 Vue.use(VueRouter)
 
 const redirect = get(config, 'mobile.redirect')
-// const defaultLanguage = get(config, 'defaultLanguage')
+const defaultLanguage = get(config, 'defaultLanguage')
 
 if (redirect) {
   routes.push({
@@ -24,6 +25,30 @@ routes.push({
 const router = new VueRouter({
   scrollBehavior: () => ({ x: 0, y: 0 }),
   routes,
+})
+
+router.beforeEach((from, to, next) => {
+  const language = to.query.language ?? defaultLanguage
+  const path = to.path
+  const replace = to.query.replace
+
+  if (!isPhone() && !inIframe()) {
+    window.location.href = `./#/${language}${path}`
+    return
+  }
+
+  if (!isPhone() && inIframe()) {
+    window.top.onMobileRouteChange(path, language, replace)
+  }
+
+  if (window._hmt) {
+    if (to.path) {
+      // @ts-ignore
+      window._hmt.push(['_trackPageview', `/#${to.fullPath}`])
+    }
+  }
+
+  next()
 })
 
 export default router

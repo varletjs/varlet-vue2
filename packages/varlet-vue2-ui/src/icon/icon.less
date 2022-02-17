@@ -1,0 +1,26 @@
+@import '@varlet/icons/dist/css/varlet-icons.less';
+
+@icon-size: 20px;
+
+:root {
+  --icon-size: @icon-size;
+}
+
+.var-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--icon-size);
+  color: inherit;
+  vertical-align: bottom;
+
+  &--shrinking {
+    transform: scale(0);
+  }
+
+  &__image {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    object-fit: cover;
+  }
+}

@@ -34,13 +34,13 @@ importers:
     specifiers:
       '@babel/core': ^7.16.0
       '@babel/helper-plugin-utils': ^7.14.5
-      '@babel/plugin-transform-runtime': ^7.16.4
       '@babel/plugin-transform-typescript': ^7.16.1
       '@babel/preset-env': ^7.16.4
       '@babel/preset-typescript': ^7.16.0
       '@types/babel__core': ^7.1.12
       '@types/fs-extra': ^9.0.13
       '@types/lodash': ^4.14.177
+      '@types/lodash-es': ^4.17.5
       '@types/semver': ^7.3.9
       '@types/slash': ^3.0.0
       '@varlet-vue2/markdown-vite-plugin': workspace:*
@@ -66,6 +66,7 @@ importers:
       jest: ^26.6.3
       less: ^4.1.2
       lodash: ^4.17.21
+      lodash-es: ^4.17.21
       ora: ^5.4.0
       semver: ^7.3.5
       slash: ^3.0.0
@@ -74,12 +75,13 @@ importers:
       vite: 2.8.1
       vite-plugin-html: ^2.1.1
       vite-plugin-vue2: ^1.9.3
+      vue: ^2.6.14
       vue-jest: 4.0.0-rc.0
+      vue-router: ^3.5.3
       vue-template-compiler: ^2.6.14
     dependencies:
       '@babel/core': 7.17.4
       '@babel/helper-plugin-utils': 7.16.7
-      '@babel/plugin-transform-runtime': 7.17.0_@babel+core@7.17.4
       '@babel/plugin-transform-typescript': 7.16.8_@babel+core@7.17.4
       '@babel/preset-env': 7.16.11_@babel+core@7.17.4
       '@babel/preset-typescript': 7.16.7_@babel+core@7.17.4
@@ -89,7 +91,7 @@ importers:
       '@vue/babel-helper-vue-jsx-merge-props': 1.2.1
       '@vue/babel-preset-jsx': 1.2.4_@babel+core@7.17.4
       '@vue/component-compiler-utils': 3.3.0
-      '@vue/test-utils': 1.3.0_vue-template-compiler@2.6.14
+      '@vue/test-utils': 1.3.0_9065e7474e033a8e4b95615fc8e6c36c
       babel-jest: 26.6.3_@babel+core@7.17.4
       babel-plugin-jsx-event-modifiers: 2.0.5
       babel-plugin-jsx-v-model: 2.0.3
@@ -106,6 +108,7 @@ importers:
       jest: 26.6.3
       less: 4.1.2
       lodash: 4.17.21
+      lodash-es: 4.17.21
       ora: 5.4.1
       semver: 7.3.5
       slash: 3.0.0
@@ -114,12 +117,15 @@ importers:
       vite: 2.8.1_less@4.1.2
       vite-plugin-html: 2.1.2_vite@2.8.1
       vite-plugin-vue2: 1.9.3_4963ddf36b776ba22e85f55e37054e5b
-      vue-jest: 4.0.0-rc.0_89f3ae579e41bf2e3401515ad269f89c
+      vue: 2.6.14
+      vue-jest: 4.0.0-rc.0_6c023867d976734546d197a0e506a67d
+      vue-router: 3.5.3
       vue-template-compiler: 2.6.14
     devDependencies:
       '@types/babel__core': 7.1.18
       '@types/fs-extra': 9.0.13
       '@types/lodash': 4.14.178
+      '@types/lodash-es': 4.17.6
       '@types/semver': 7.3.9
       '@types/slash': 3.0.0
 
@@ -1162,23 +1168,6 @@ packages:
       '@babel/helper-plugin-utils': 7.16.7
     dev: false
 
-  /@babel/plugin-transform-runtime/7.17.0_@babel+core@7.17.4:
-    resolution: {integrity: sha512-fr7zPWnKXNc1xoHfrIU9mN/4XKX4VLZ45Q+oMhfsYIaHvg7mHgmhfOy/ckRWqDK7XF3QDigRpkh5DKq6+clE8A==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.17.4
-      '@babel/helper-module-imports': 7.16.7
-      '@babel/helper-plugin-utils': 7.16.7
-      babel-plugin-polyfill-corejs2: 0.3.1_@babel+core@7.17.4
-      babel-plugin-polyfill-corejs3: 0.5.2_@babel+core@7.17.4
-      babel-plugin-polyfill-regenerator: 0.3.1_@babel+core@7.17.4
-      semver: 6.3.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /@babel/plugin-transform-shorthand-properties/7.16.7_@babel+core@7.17.4:
     resolution: {integrity: sha512-hah2+FEnoRoATdIb05IOXf+4GzXYTq75TVhIn1PewihbpyrNWUt2JbudKQOETWw6QpLe+AIUpJ5MVLYTQbeeUg==}
     engines: {node: '>=6.9.0'}
@@ -1833,6 +1822,12 @@ packages:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: false
 
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
+    dependencies:
+      '@types/lodash': 4.14.178
+    dev: true
+
   /@types/lodash/4.14.178:
     resolution: {integrity: sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==}
     dev: true
@@ -2115,19 +2110,6 @@ packages:
       pretty: 2.0.0
       vue: 2.6.14
       vue-template-compiler: 2.6.14
-    dev: true
-
-  /@vue/test-utils/1.3.0_vue-template-compiler@2.6.14:
-    resolution: {integrity: sha512-Xk2Xiyj2k5dFb8eYUKkcN9PzqZSppTlx7LaQWBbdA8tqh3jHr/KHX2/YLhNFc/xwDrgeLybqd+4ZCPJSGPIqeA==}
-    peerDependencies:
-      vue: 2.x
-      vue-template-compiler: ^2.x
-    dependencies:
-      dom-event-types: 1.1.0
-      lodash: 4.17.21
-      pretty: 2.0.0
-      vue-template-compiler: 2.6.14
-    dev: false
 
   /JSONStream/1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==}
@@ -6270,7 +6252,6 @@ packages:
 
   /lodash-es/4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: true
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
@@ -8990,7 +8971,7 @@ packages:
       - supports-color
     dev: false
 
-  /vue-jest/4.0.0-rc.0_89f3ae579e41bf2e3401515ad269f89c:
+  /vue-jest/4.0.0-rc.0_6c023867d976734546d197a0e506a67d:
     resolution: {integrity: sha512-0U1osuxR8cubzwUJDWU9VNOMYMwrMayaDUH+IYhoMHyi3zaa34nvr8BrdGLqo2ufnaiOCni2JgSy8nkcOi+Awg==}
     peerDependencies:
       '@babel/core': 7.x
@@ -9006,6 +8987,7 @@ packages:
       jest: 26.6.3
       source-map: 0.5.6
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
+      vue: 2.6.14
       vue-template-compiler: 2.6.14
     transitivePeerDependencies:
       - supports-color
@@ -9014,7 +8996,6 @@ packages:
 
   /vue-router/3.5.3:
     resolution: {integrity: sha512-FUlILrW3DGitS2h+Xaw8aRNvGTwtuaxrRkNSHWTizOfLUie7wuYwezeZ50iflRn8YPV5kxmU2LQuu3nM/b3Zsg==}
-    dev: true
 
   /vue-template-compiler/2.6.14:
     resolution: {integrity: sha512-ODQS1SyMbjKoO1JBJZojSw6FE4qnh9rIpUZn2EUT86FKizx9uH5z6uXiIrm4/Nb/gwxTi/o17ZDEGWAXHvtC7g==}
@@ -9028,7 +9009,6 @@ packages:
 
   /vue/2.6.14:
     resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
-    dev: true
 
   /w3c-hr-time/1.0.2:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}

@@ -61,7 +61,10 @@
     "vite-plugin-html": "^2.1.1",
     "vite-plugin-vue2": "^1.9.3",
     "vue-jest": "4.0.0-rc.0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vue": "^2.6.14",
+    "lodash-es": "^4.17.21",
+    "vue-router": "^3.5.3"
   },
   "peerDependencies": {
     "@varlet/touch-emulator": "latest",
@@ -79,6 +82,7 @@
     "@types/babel__core": "^7.1.12",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.177",
+    "@types/lodash-es": "^4.17.5",
     "@types/slash": "^3.0.0",
     "@types/semver": "^7.3.9"
   }
