@@ -112,28 +112,20 @@ Vue.use(Button)
 ```
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
-  setup() {
-    const handleClick = () => {
+  methods: {
+    handleClick() {
       Snackbar.success('点击成功')
-    }
-
-    const handleTouchstart = () => {
+    },
+    handleTouchstart() {
       Snackbar.success('触摸成功')
-    }
-
-    const handleAutoLoadingClick = () => {
+    },
+    handleAutoLoadingClick() {
       return new Promise((resolve) => {
         setTimeout(resolve, 2000)
       })
-    }
-
-    return {
-      handleClick,
-      handleTouchstart,
-      handleAutoLoadingClick
     }
   }
 }
