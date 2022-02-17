@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test teleport disabled 1`] = `
+"<div class=\\"var-teleport\\">
+  <div class=\\"var-teleport__container\\">hello</div>
+</div>"
+`;
+
+exports[`test teleport to 1`] = `"<div id=\\"app\\"></div><div class=\\"var-teleport__container\\">hello</div>"`;
+
+exports[`test teleport to 2`] = `"<div id=\\"app\\"><div class=\\"var-teleport__container\\">hello</div></div>"`;
+
+exports[`test teleport transfer 1`] = `"<div class=\\"var-teleport\\"></div>"`;

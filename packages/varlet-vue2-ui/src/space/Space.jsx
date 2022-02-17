@@ -18,6 +18,8 @@ const getSize = (size, isInternalSize) => {
 }
 
 export default defineComponent({
+  name: 'VarSpace',
+
   props,
 
   render() {
