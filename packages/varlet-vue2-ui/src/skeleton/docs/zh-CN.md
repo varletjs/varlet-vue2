@@ -21,11 +21,9 @@ Vue.use(Skeleton)
 
 ```js
 export default {
-  data() {
-    return {
-      loading: true,
-    }
-  },
+  data: () => ({
+    loading: true
+  }),
 }
 ```
 
@@ -61,11 +59,9 @@ export default {
 
 ```js
 export default {
-  data() {
-    return {
-      loading: false,
-    }
-  },
+  data: () => ({
+    loading: false,
+  }),
 
   methods: {
     fullscreen() {
