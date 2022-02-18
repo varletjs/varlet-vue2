@@ -6,7 +6,7 @@ export const ValidationMixin = {
   }),
 
   methods: {
-    async validateRules(rules, value, apis) {
+    async validate(rules, value, apis) {
       if (!isArray(rules) || !rules.length) {
         return true
       }
