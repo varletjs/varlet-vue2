@@ -1,0 +1,85 @@
+@card-padding: 0 0 15px 0;
+@card-background: #fff;
+@card-border-radius: 4px;
+@card-image-width: 100%;
+@card-image-height: 200px;
+@card-title-color: #333;
+@card-title-font-size: 20px;
+@card-title-padding: 0 12px;
+@card-title-margin: 15px 0 0 0;
+@card-subtitle-color: rgba(0, 0, 0, 0.6);
+@card-subtitle-font-size: 14px;
+@card-subtitle-padding: 0 13px;
+@card-subtitle-margin: 10px 0 0 0;
+@card-description-color: rgba(0, 0, 0, 0.6);
+@card-description-font-size: 14px;
+@card-description-margin: 20px 0 0 0;
+@card-description-padding: 0 13px;
+@card-footer-padding: 0 12px;
+@card-footer-margin: 30px 0 0px 0;
+@card-line-height: 22px;
+
+:root {
+  --card-padding: @card-padding;
+  --card-background: @card-background;
+  --card-border-radius: @card-border-radius;
+  --card-image-width: @card-image-width;
+  --card-image-height: @card-image-height;
+  --card-title-color: @card-title-color;
+  --card-title-font-size: @card-title-font-size;
+  --card-title-padding: @card-title-padding;
+  --card-title-margin: @card-title-margin;
+  --card-subtitle-color: @card-subtitle-color;
+  --card-subtitle-font-size: @card-subtitle-font-size;
+  --card-subtitle-padding: @card-subtitle-padding;
+  --card-subtitle-margin: @card-subtitle-margin;
+  --card-description-color: @card-description-color;
+  --card-description-font-size: @card-description-font-size;
+  --card-description-margin: @card-description-margin;
+  --card-description-padding: @card-description-padding;
+  --card-footer-padding: @card-footer-padding;
+  --card-footer-margin: @card-footer-margin;
+  --card-line-height: @card-line-height;
+}
+
+.var-card {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  padding: var(--card-padding);
+  line-height: var(--card-line-height);
+  background: var(--card-background);
+  transition: background-color 0.25s;
+
+  &__image {
+    width: var(--card-image-width);
+    height: var(--card-image-height);
+    display: block;
+  }
+
+  &__title {
+    font-size: var(--card-title-font-size);
+    padding: var(--card-title-padding);
+    margin: var(--card-title-margin);
+    color: var(--card-title-color);
+  }
+
+  &__subtitle {
+    font-size: var(--card-subtitle-font-size);
+    color: var(--card-subtitle-color);
+    padding: var(--card-subtitle-padding);
+    margin: var(--card-subtitle-margin);
+  }
+
+  &__description {
+    font-size: var(--card-description-font-size);
+    color: var(--card-description-color);
+    margin: var(--card-description-margin);
+    padding: var(--card-description-padding);
+    word-break: break-all;
+  }
+
+  &__footer {
+    padding: var(--card-footer-padding);
+    margin: var(--card-footer-margin);
+  }
+}
