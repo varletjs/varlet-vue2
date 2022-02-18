@@ -13,11 +13,11 @@ export function pickProps(props: any, propsKey: any): any {
 }
 
 export interface MountComponentApi {
-  instance: CombinedVueInstance<any, any, any, any, any>;
-  unmount(): void;
+  instance: CombinedVueInstance<any, any, any, any, any>
+  unmount(): void
 }
 
-export function mountComponent(component: ComponentOptions<Vue>, container: string, options = {}): MountComponentApi {
+export function mountComponent(component: ComponentOptions<Vue>, container = 'body', options = {}): MountComponentApi {
   const instance = new (Vue.extend(component))(options)
   const el = instance.$mount().$el
   const wrapper = document.querySelector(container)!
