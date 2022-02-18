@@ -35,10 +35,7 @@ pnpm dev
 #### Todolist
 
 - app-bar
-- cell
-- progress
 - snackbar
 - chip
 - image
 - badge
-- skeleton

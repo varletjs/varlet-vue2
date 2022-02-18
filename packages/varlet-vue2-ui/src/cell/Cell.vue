@@ -9,13 +9,13 @@
       <div class="var-cell__title" :class="[titleClass ? titleClass : null]">
         <slot>{{ title }}</slot>
       </div>
-      <div class="var-cell__desc" :class="[descClass ? descClass : null]" v-if="$slots.desc || desc">
+      <div class="var-cell__desc" :class="[descClass ? descClass : null]" v-if="hasSlots(desc) || desc">
         <slot name="desc">
           {{ desc }}
         </slot>
       </div>
     </div>
-    <div class="var-cell__extra" :class="[extraClass ? extraClass : null]" v-if="$slots.extra">
+    <div class="var-cell__extra" :class="[extraClass ? extraClass : null]" v-if="hasSlots(extra)">
       <slot name="extra" />
     </div>
   </div>
@@ -28,6 +28,7 @@ import VarIcon from '../icon'
 
 export default defineComponent({
   name: 'VarCell',
+
   components: {
     VarIcon,
   },
