@@ -14,8 +14,6 @@
 </template>
 
 <script>
-// useLock(props, 'show', 'lockScroll')
-
 import VarLoading from '../loading'
 import VarIcon from '../icon'
 import { createZIndexMixin } from '../utils/mixins/zIndex'
