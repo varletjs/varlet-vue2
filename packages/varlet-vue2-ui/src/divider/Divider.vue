@@ -60,7 +60,7 @@ export default defineComponent({
 
   methods: {
     checkHasText() {
-      this.withText = Boolean(this.slots.default?.().length) || Boolean(props.description)
+      this.withText = this.hasSlots() || Boolean(props.description)
     },
   },
 
