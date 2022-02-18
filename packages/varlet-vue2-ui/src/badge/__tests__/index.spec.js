@@ -1,8 +1,8 @@
 import example from '../example'
+import Vue from 'vue'
 import Badge from '..'
 import VarBadge from '../Badge'
 import { mount } from '@vue/test-utils'
-import { createApp } from 'vue'
 
 test('test badge example', () => {
   const wrapper = mount(example)
@@ -11,13 +11,13 @@ test('test badge example', () => {
 })
 
 test('test badge plugin', () => {
-  const app = createApp({}).use(Badge)
-  expect(app.component(Badge.name)).toBeTruthy()
+  Vue.use(Badge)
+  expect(Vue.component(Badge.name)).toBeTruthy()
 })
 
 test('test badge value and maxValue', async () => {
   const wrapper = mount(VarBadge, {
-    props: {
+    propsData: {
       value: 72,
     },
   })
@@ -31,7 +31,7 @@ test('test badge value and maxValue', async () => {
 
 test('test badge hidden', () => {
   const wrapper = mount(VarBadge, {
-    props: {
+    propsData: {
       hidden: true,
     },
   })
@@ -41,7 +41,7 @@ test('test badge hidden', () => {
 
 test('test badge dot', async () => {
   const wrapper = mount(VarBadge, {
-    props: {
+    propsData: {
       dot: true,
       value: 72,
     },
@@ -86,7 +86,7 @@ test('test badge position', async () => {
 
 test('test badge style', () => {
   const wrapper = mount(VarBadge, {
-    props: {
+    propsData: {
       color: '#6200ea',
       icon: 'fire',
     },

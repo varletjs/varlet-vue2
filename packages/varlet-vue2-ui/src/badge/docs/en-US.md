@@ -2,10 +2,10 @@
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { Badge } from '@varlet/ui'
+import Vue from 'vue'
+import { Badge } from '@varlet-vue2/ui'
 
-createApp().use(Badge)
+Vue.use(Badge)
 ```
 
 ### Badge Type
@@ -50,17 +50,11 @@ Control the range of badge display values through `value` and `max-value` (effec
 import { ref } from 'vue'
 
 export default {
-  setup() {
-    const value = ref(88);
-    const value1 = ref(188);
-    const maxValue = ref(99);
-
-    return { 
-      value, 
-      value1,
-      maxValue 
-    }
-  }
+  data: ()=> ({
+    value: 88,
+    value1: 188,
+    maxValue: 99
+  }),
 }
 ```
 ### Different Positioning Badges
@@ -94,21 +88,15 @@ Set whether the badge is displayed through the `hidden` attribute.
 ```
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const hidden = ref(false);
-
-    const handleChange = () => {
-      hidden.value = !hidden.value
+  data: ()=> ({
+    hidden: false
+  }),
+  methods:{
+    handleChange(){
+      this.hidden = !this.hidden
     }
-
-    return { 
-      hidden, 
-      handleChange 
-    }
-  }
+  },
 }
 ```
 

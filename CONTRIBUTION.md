@@ -36,6 +36,5 @@ pnpm dev
 
 - app-bar
 - snackbar
-- chip
 - image
-- badge
+

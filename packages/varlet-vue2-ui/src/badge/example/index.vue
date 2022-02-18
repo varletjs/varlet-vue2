@@ -58,7 +58,7 @@
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import VarBadge from '..'
 import VarButton from '../../button'
-// import VarChip from '../../chip'
+import VarChip from '../../chip'
 import dark from '../../themes/dark'
 import { pack, use } from './locale'
 import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
@@ -69,7 +69,7 @@ export default {
   components: {
     VarBadge,
     VarButton,
-    // VarChip,
+    VarChip,
     AppType,
   },
 

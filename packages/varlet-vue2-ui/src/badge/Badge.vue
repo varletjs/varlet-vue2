@@ -34,7 +34,7 @@ export default defineComponent({
   computed: {
     contentClass() {
       const { type, position, dot, icon } = this
-      const positionBasic = this.hasSlot() && `var-badge__position var-badge--${position}`
+      const positionBasic = this.hasSlots() && `var-badge__position var-badge--${position}`
       const dotClass = dot && 'var-badge__dot'
       const positionClass = this.getPositionClass()
       const iconClass = icon && 'var-badge__icon'
@@ -43,7 +43,7 @@ export default defineComponent({
     },
 
     values() {
-      const { dot, value, maxValue } = props
+      const { dot, value, maxValue } = this
 
       if (dot) return ''
 
