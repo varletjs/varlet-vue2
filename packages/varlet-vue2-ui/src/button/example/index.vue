@@ -68,6 +68,7 @@ import VarButton from '../index'
 import VarIcon from '../../icon'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import context from '../../context'
+import Snackbar from '../../snackbar'
 import dark from '../../themes/dark'
 import { pack, use } from './locale'
 import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/utils'
@@ -106,13 +107,11 @@ export default {
 
   methods: {
     handleClick() {
-      // TODO: Should use snackbar replace
-      console.log(this.pack.clickSuccess)
+      Snackbar.success(this.pack.clickSuccess)
     },
 
     handleTouchstart() {
-      // TODO: Should use snackbar replace
-      console.log(this.pack.touchstartSuccess)
+      Snackbar.success(this.pack.touchstartSuccess)
     },
 
     handleAutoLoadingClick() {

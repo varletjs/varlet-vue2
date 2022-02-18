@@ -1,5 +1,5 @@
 import { VarComponent } from './varComponent'
-import type { App, TeleportProps } from 'vue'
+import type { VueConstructor } from 'vue'
 
 export type LoadingType = 'circle' | 'wave' | 'cube' | 'rect' | 'disappear'
 
@@ -11,7 +11,7 @@ export interface SnackbarProps {
   position?: 'top' | 'center' | 'bottom'
   loadingType?: LoadingType
   loadingSize?: LoadingSize
-  teleport?: TeleportProps['to']
+  teleport?: string
   lockScroll?: boolean
   contentClass?: string
   duration?: number
@@ -59,7 +59,7 @@ export interface ISnackbar {
 
   Component: typeof SnackbarComponent
 
-  install(app: App): void
+  install(app: VueConstructor): void
 
   allowMultiple(bool: boolean): void
 
