@@ -2,6 +2,28 @@ import Vue from 'vue'
 import zhCN from './zh-CN'
 
 export type Pack = {
+  // Dialog
+  dialogTitle: string;
+  dialogConfirmButtonText: string;
+  dialogCancelButtonText: string;
+  // ActionSheet
+  actionSheetTitle: string;
+  // List
+  listLoadingText: string;
+  listFinishedText: string;
+  listErrorText: string;
+  // Picker
+  pickerTitle: string;
+  pickerConfirmButtonText: string;
+  pickerCancelButtonText: string;
+  // date-picker
+  // datePickerMonthDict: Record<Month, { name: string; abbr: string }>
+  // datePickerWeekDict: Record<Week, { name: string; abbr: string }>
+  datePickerSelected: string;
+  // pagination
+  paginationItem: string;
+  paginationPage: string;
+  paginationJump: string;
   // internal
   lang?: string;
 }
