@@ -4,7 +4,7 @@
 
 ```js
 import Vue from 'vue'
-import { Radio, RadioGroup } from '@varlet/ui'
+import { Radio, RadioGroup } from '@varlet-vue2/ui'
 
 Vue.use(RadioGroup).use(Radio)
 ```
