@@ -7,10 +7,10 @@ Load when the image is visible
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { Lazy } from '@varlet/ui'
+import Vue from 'vue'
+import { Lazy } from '@varlet-vue2/ui'
 
-createApp().use(Lazy)
+Vue.use(Lazy)
 ```
 
 ### Basic Use
@@ -41,10 +41,10 @@ You can modify the `loading`, `error` image, and `reload attempts` by using inli
 The option to set the default `Lazy` load option is provided, which is passed in at plugin registration.
 
 ```js
-import { createApp } from 'vue'
-import { Lazy } from '@varlet/ui'
+import Vue from 'vue'
+import { Lazy } from '@varlet-vue2/ui'
 
-createApp().use(Lazy, {
+Vue.use(Lazy, {
   loading: 'https://xxx.cn/loading.png',
   error: 'https://xxx.cn/error.png',
   attempt: 3,

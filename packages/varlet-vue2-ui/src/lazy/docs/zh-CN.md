@@ -7,10 +7,10 @@
 ### 引入
 
 ```js
-import { createApp } from 'vue'
-import { Lazy } from '@varlet/ui'
+import Vue from 'vue'
+import { Lazy } from '@varlet-vue2/ui'
 
-createApp().use(Lazy)
+Vue.use(Lazy)
 ```
 
 ### 基本用法
@@ -41,10 +41,10 @@ createApp().use(Lazy)
 `Lazy` 提供了在插件注册时传入的选项，可以设置默认的懒加载选项。
 
 ```js
-import { createApp } from 'vue'
-import { Lazy } from '@varlet/ui'
+import Vue from 'vue'
+import { Lazy } from '@varlet-vue2/ui'
 
-createApp().use(Lazy, {
+Vue.use(Lazy, {
   loading: 'https://xxx.cn/loading.png',
   error: 'https://xxx.cn/error.png',
   attempt: 3,
