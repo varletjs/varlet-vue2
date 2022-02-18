@@ -7,10 +7,10 @@ Chip component, used to display some items, and supports closing items
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { Chip } from '@varlet/ui'
+import Vue from 'vue'
+import { Chip } from '@varlet-vue2/ui'
 
-createApp().use(Chip)
+Vue.use(Chip)
 ```
 
 ### Chip Type
@@ -77,18 +77,11 @@ Set the paper to be closable through the `closable` attribute, and use the `clos
 ```
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const show = ref(true)
-    const show1= ref(true)
-
-    return {
-      show,
-      show1
-    }
-  }
+  data: () => ({
+    show: true,
+    show1: true
+  })
 }
 ```
 

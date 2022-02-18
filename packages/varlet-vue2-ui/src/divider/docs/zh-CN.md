@@ -6,10 +6,10 @@
 ### 引入
 
 ```js
-import { createApp } from 'vue'
-import { Divider } from '@varlet/ui'
+import Vue from 'vue'
+import { Divider } from '@varlet-vue2/ui'
 
-createApp().use(Divider)
+Vue.use(Divider)
 ```
 
 ### 基本使用

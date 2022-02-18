@@ -47,16 +47,19 @@ import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
   name: 'DividerExample',
+
   components: {
     VarIcon,
     VarDivider,
     AppType,
   },
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)

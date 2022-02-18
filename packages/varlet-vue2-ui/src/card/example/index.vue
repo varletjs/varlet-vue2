@@ -39,16 +39,19 @@ import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/u
 
 export default {
   name: 'CardExample',
+
   components: {
     VarButton,
     VarCard,
     AppType,
   },
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)

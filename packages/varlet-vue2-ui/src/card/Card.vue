@@ -40,13 +40,17 @@ import { toSizeUnit } from '../utils/elements'
 
 export default defineComponent({
   name: 'VarCard',
+
   directives: { Ripple },
+
   props,
+
   data() {
     return {
       toSizeUnit,
     }
   },
+
   methods: {
     handleClick(e) {
       const { disabled } = this
