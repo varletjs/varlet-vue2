@@ -18,33 +18,37 @@
 
 <script>
 import VarIcon from '../icon'
-// import { defineComponent, computed } from 'vue'
 import { defineComponent } from '../utils/create'
 import { props } from './props'
 
-// import type { ComputedRef } from 'vue'
-
 export default defineComponent({
   name: 'VarChip',
+
   components: {
     VarIcon,
   },
+
   inheritAttrs: false,
+
   props,
+
   computed: {
     chipStyles() {
       const { plain, textColor, color } = this
+
       if (plain) {
         return {
           color: textColor || color,
           borderColor: color,
         }
       }
+
       return {
         color: textColor,
         background: color,
       }
     },
+
     contentClass() {
       const { size, block, type, plain, round } = this
       const blockClass = block ? 'var--flex' : 'var--inline-flex'
@@ -53,13 +57,10 @@ export default defineComponent({
       return [`var-chip--${size}`, blockClass, plainTypeClass, roundClass]
     },
   },
+
   methods: {
     onClose(e) {
-      const { onClose } = this.getListeners()
-      if (!onClose) {
-        return
-      }
-      onClose(e)
+      this.getListeners().onClose?.(e)
     },
   },
 })

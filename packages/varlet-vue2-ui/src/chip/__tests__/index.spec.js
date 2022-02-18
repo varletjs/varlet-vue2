@@ -3,12 +3,11 @@ import Vue from 'vue'
 import Chip from '..'
 import VarChip from '../Chip'
 import { mount } from '@vue/test-utils'
-import { createApp } from 'vue'
 
 test('test chip example', () => {
   const wrapper = mount(example)
   expect(wrapper.html()).toMatchSnapshot()
-  // wrapper.destroy()
+  wrapper.destroy()
 })
 
 test('test chip plugin', () => {
@@ -32,7 +31,6 @@ test('test chip close', () => {
 
   const wrapper = mount(VarChip, {
     propsData: {
-      onClose,
       closable: true,
     },
     listeners: {
@@ -41,7 +39,6 @@ test('test chip close', () => {
   })
 
   const closeEl = wrapper.find('.var-chip--close')
-
   expect(closeEl.exists()).toBe(true)
   closeEl.trigger('click')
   expect(onClose).toHaveBeenCalledTimes(1)
