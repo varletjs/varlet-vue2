@@ -1,0 +1,56 @@
+@app-bar-color: var(--color-primary);
+@app-bar-height: 54px;
+@app-bar-text-color: #fff;
+@app-bar-title-padding: 0 12px;
+@app-bar-left-gap: 6px;
+@app-bar-right-gap: 6px;
+
+:root {
+  --app-bar-color: @app-bar-color;
+  --app-bar-title-padding: @app-bar-title-padding;
+  --app-bar-text-color: #fff;
+  --app-bar-height: @app-bar-height;
+  --app-bar-left-gap: @app-bar-left-gap;
+  --app-bar-right-gap: @app-bar-right-gap;
+}
+
+.var-app-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--app-bar-height);
+  background: var(--app-bar-color);
+  color: var(--app-bar-text-color);
+  transition: background-color 0.25s;
+
+  &__title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: var(--app-bar-title-padding);
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__left {
+    position: absolute;
+    top: 0;
+    left: var(--app-bar-left-gap);
+  }
+
+  &__right {
+    position: absolute;
+    top: 0;
+    right: var(--app-bar-right-gap);
+  }
+}
