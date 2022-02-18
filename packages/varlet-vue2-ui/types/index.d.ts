@@ -2,6 +2,7 @@ import type { VueConstructor } from 'vue'
 
 export const install: (app: VueConstructor) => void
 
+export * from './appBar'
 export * from './button'
 export * from './card'
 export * from './cell'
