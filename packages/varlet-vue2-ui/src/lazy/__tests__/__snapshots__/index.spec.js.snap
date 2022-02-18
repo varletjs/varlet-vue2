@@ -28,4 +28,4 @@ exports[`test lazy updated 1`] = `"<img lazy-error=\\"https://varlet.gitee.io/va
 
 exports[`test lazy updated 2`] = `"<img lazy-error=\\"https://varlet.gitee.io/varlet-ui/error.jpg\\" src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\">"`;
 
-exports[`test lazy updated 3`] = `"<img lazy-error=\\"https://varlet.gitee.io/varlet-ui/error.jpg\\" src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\">"`;
+exports[`test lazy updated 3`] = `"<img lazy-error=\\"https://varlet.gitee.io/varlet-ui/error.jpg\\" src=\\"https://varlet.gitee.io/varlet-ui/dog.jpg\\">"`;

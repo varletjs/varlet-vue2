@@ -188,7 +188,7 @@ async function mounted(el: LazyHTMLElement, binding: DirectiveBinding) {
   await add(el)
 }
 
-async function updated(el: LazyHTMLElement, binding: DirectiveBinding) {
+async function update(el: LazyHTMLElement, binding: DirectiveBinding) {
   if (!diff(el, binding)) {
     lazyElements.includes(el) && (await check(el))
     return
@@ -211,7 +211,7 @@ function mergeLazyOptions(lazyOptions: LazyOptions = {}) {
 const Lazy: DirectiveOptions & PluginObject<LazyOptions> = {
   inserted: mounted,
   unbind: clear,
-  updated,
+  update,
   install(app: VueConstructor, lazyOptions?: LazyOptions) {
     mergeLazyOptions(lazyOptions)
 
