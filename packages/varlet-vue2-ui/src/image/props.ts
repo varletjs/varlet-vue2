@@ -44,13 +44,4 @@ export const props = {
     type: Boolean,
     default: true,
   },
-  onClick: {
-    type: Function as PropType<(e: Event) => void>,
-  },
-  onLoad: {
-    type: Function as PropType<(e: Event) => void>,
-  },
-  onError: {
-    type: Function as PropType<(e: Event) => void>,
-  },
 }

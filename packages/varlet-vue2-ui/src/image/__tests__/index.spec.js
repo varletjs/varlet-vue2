@@ -35,9 +35,9 @@ test('test image onLoad & onError', () => {
   const onError = jest.fn()
 
   const wrapper = mount(VarImage, {
-    propsData: {
-      onLoad,
-      onError,
+    listeners: {
+      load: onLoad,
+      error: onError,
     },
   })
 
@@ -57,8 +57,10 @@ test('test image onLoad & onError in lazy mode', () => {
   const wrapper = mount(VarImage, {
     propsData: {
       lazy: true,
-      onLoad,
-      onError,
+    },
+    listeners: {
+      load: onLoad,
+      error: onError,
     },
   })
 

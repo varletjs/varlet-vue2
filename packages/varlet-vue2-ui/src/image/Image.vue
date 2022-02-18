@@ -53,7 +53,8 @@ export default defineComponent({
     toSizeUnit,
     handleLoad(e) {
       const el = e.currentTarget
-      const { lazy, onLoad, onError } = this
+      const { lazy } = this
+      const { onLoad, onError } = this.getListeners()
 
       if (lazy) {
         el._lazy.state === 'success' && onLoad?.(e)
@@ -64,17 +65,12 @@ export default defineComponent({
     },
 
     handleClick(e) {
-      const { onClick } = this.getListeners()
-
-      if (!onClick) {
-        return
-      }
-
-      onClick(e)
+      this.getListeners().onClick?.(e)
     },
 
     handleError(e) {
-      const { lazy, onError } = this
+      const { lazy } = this
+      const { onError } = this.getListeners()
 
       !lazy && onError?.(e)
     },
