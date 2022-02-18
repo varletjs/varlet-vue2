@@ -5,5 +5,7 @@ export const install: (app: VueConstructor) => void
 export * from './button'
 export * from './locale'
 export * from './skeleton'
+export * from './cell'
+export * from './progress'
 export * from './varComponent'
 export * from './varDirective'

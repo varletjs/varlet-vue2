@@ -65,12 +65,43 @@ import { toNumber } from '../utils/shared'
 export default defineComponent({
   name: 'VarProgress',
 
+  inheritAttrs: false,
+
   props,
 
   computed: {
-    value() {
-      return toNumber(this.props.value)
+    linearProps() {
+      const value = toNumber(this.value)
+      const width = `${value > 100 ? 100 : value}%`
+      const roundValue = `${value > 100 ? 100 : Math.round(value)}%`
+
+      return {
+        width,
+        roundValue,
+      }
+    },
+
+    circleProps() {
+      const { size, lineWidth, value } = this
+      const viewBox = `0 0 ${size} ${size}`
+      const roundValue = toNumber(value) > 100 ? 100 : Math.round(toNumber(value))
+      const radius = (size - toNumber(lineWidth)) / 2
+      const perimeter = 2 * Math.PI * radius
+      const strokeDasharray = `${(roundValue / 100) * perimeter}, ${perimeter}`
+
+      return {
+        viewBox,
+        roundValue: `${roundValue}%`,
+        radius,
+        perimeter,
+        strokeDasharray,
+      }
     },
   },
 })
 </script>
+
+<style lang="less">
+@import '../styles/common';
+@import './progress';
+</style>
