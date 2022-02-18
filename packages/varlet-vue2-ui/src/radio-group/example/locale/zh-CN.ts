@@ -1,0 +1,17 @@
+export default {
+  basicUsage: '基本使用',
+  currentValue: '当前的值:',
+  setState: '设置状态值',
+  setStyle: '修改图标和颜色',
+  disabled: '禁用',
+  readonly: '只读',
+  eat: '吃饭',
+  sleep: '睡觉',
+  checkAll: '全选',
+  inverseAll: '反选',
+  radioGroup: '单选框组',
+  radioValidate: '单选框字段校验',
+  radioGroupValidate: '单选框组字段校验',
+  radioValidateMessage: '请勾选',
+  radioGroupValidateMessage: '必须选择吃饭',
+}
