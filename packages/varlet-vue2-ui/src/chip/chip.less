@@ -1,0 +1,182 @@
+@chip-default-color: #e0e0e0;
+@chip-primary-color: var(--color-primary);
+@chip-danger-color: var(--color-danger);
+@chip-success-color: var(--color-success);
+@chip-warning-color: var(--color-warning);
+@chip-info-color: var(--color-info);
+@chip-border-radius: 2px;
+@chip-normal-height: 32px;
+@chip-large-height: 40px;
+@chip-small-height: 24px;
+@chip-mini-height: 16px;
+@chip-round-radius: 100px;
+@chip-normal-padding: 0px 10px;
+@chip-large-padding: 0px 17px;
+@chip-small-padding: 0px 6px;
+@chip-mini-padding: 0px 4px;
+@chip-text-normal-margin: 0 5px;
+@chip-text-large-margin: 0 5px;
+@chip-text-small-margin: 0 3px;
+@chip-text-mini-margin: 0 2px;
+
+:root {
+  --chip-default-color: @chip-default-color;
+  --chip-primary-color: @chip-primary-color;
+  --chip-danger-color: @chip-danger-color;
+  --chip-success-color: @chip-success-color;
+  --chip-warning-color: @chip-warning-color;
+  --chip-info-color: @chip-info-color;
+  --chip-border-radius: @chip-border-radius;
+  --chip-normal-height: @chip-normal-height;
+  --chip-large-height: @chip-large-height;
+  --chip-small-height: @chip-small-height;
+  --chip-mini-height: @chip-mini-height;
+  --chip-round-radius: @chip-round-radius;
+  --chip-normal-padding: @chip-normal-padding;
+  --chip-large-padding: @chip-large-padding;
+  --chip-small-padding: @chip-small-padding;
+  --chip-mini-padding: @chip-mini-padding;
+  --chip-text-normal-margin: @chip-text-normal-margin;
+  --chip-text-large-margin: @chip-text-large-margin;
+  --chip-text-small-margin: @chip-text-small-margin;
+  --chip-text-mini-margin: @chip-text-mini-margin;
+}
+
+.var {
+  &-fade-leave-to {
+    opacity: 0;
+  }
+
+  &-fade-leave-active {
+    transition: opacity 0.3s;
+  }
+}
+
+.var-chip {
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  border-radius: var(--chip-border-radius);
+  cursor: default;
+  border: thin solid transparent;
+  vertical-align: middle;
+  line-height: 1;
+  transition: background-color 0.25s;
+
+  &--default {
+    color: inherit;
+    background: var(--chip-default-color);
+  }
+
+  &--primary {
+    color: #fff;
+    background-color: var(--chip-primary-color);
+  }
+
+  &--info {
+    color: #fff;
+    background-color: var(--chip-info-color);
+  }
+
+  &--success {
+    color: #fff;
+    background-color: var(--chip-success-color);
+  }
+
+  &--warning {
+    color: #fff;
+    background-color: var(--chip-warning-color);
+  }
+
+  &--danger {
+    color: #fff;
+    background-color: var(--chip-danger-color);
+  }
+
+  &--plain {
+    background-color: transparent;
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &--plain-default {
+    color: inherit;
+    border-color: currentColor;
+  }
+
+  &--plain-primary {
+    color: var(--chip-primary-color);
+    border-color: currentColor;
+  }
+
+  &--plain-info {
+    color: var(--chip-info-color);
+    border-color: currentColor;
+  }
+
+  &--plain-success {
+    color: var(--chip-success-color);
+    border-color: currentColor;
+  }
+
+  &--plain-warning {
+    color: var(--chip-warning-color);
+    border-color: currentColor;
+  }
+
+  &--plain-danger {
+    color: var(--chip-danger-color);
+    border-color: currentColor;
+  }
+
+  &--round {
+    border-radius: var(--chip-round-radius);
+  }
+
+  &--normal {
+    font-size: var(--font-size-md);
+    padding: var(--chip-normal-padding);
+    height: var(--chip-normal-height);
+  }
+
+  &--large {
+    padding: var(--chip-large-padding);
+    font-size: var(--font-size-lg);
+    height: var(--chip-large-height);
+  }
+
+  &--small {
+    padding: var(--chip-small-padding);
+    font-size: var(--font-size-sm);
+    height: var(--chip-small-height);
+  }
+
+  &--mini {
+    padding: var(--chip-mini-padding);
+    font-size: var(--font-size-xs);
+    height: var(--chip-mini-height);
+  }
+
+  &--close {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  &--text-large {
+    margin: var(--chip-text-large-margin);
+  }
+
+  &--text-normal {
+    margin: var(--chip-text-normal-margin);
+  }
+
+  &--text-small {
+    margin: var(--chip-text-small-margin);
+  }
+
+  &--text-mini {
+    margin: var(--chip-text-mini-margin);
+  }
+}
