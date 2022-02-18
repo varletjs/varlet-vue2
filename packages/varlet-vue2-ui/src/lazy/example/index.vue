@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-lazy-outer">
     <app-type>{{ pack.basicUsage }}</app-type>
     <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui/cat.jpg'" />
     <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui/cat.jpg'" />
@@ -20,19 +20,20 @@ import { watchLang } from '@varlet-vue2/cli/site/utils'
 
 export default {
   name: 'LazyExample',
+
   directives: { Lazy },
+
   components: { AppType },
-  data: () => ({
-    pack,
-  }),
+
+  computed: {
+    pack() {
+      return pack.value
+    },
+  },
+
   created() {
     watchLang(this, use)
   },
-  // setup() {
-  //   watchLang(use)
-
-  //   return { pack }
-  // },
 }
 </script>
 
