@@ -73,6 +73,8 @@ import { pack, use } from './locale'
 import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
+  name: 'ButtonExample',
+
   components: {
     VarButton,
     VarIcon,

@@ -1,4 +1,4 @@
-### 安装pnpm
+### 安装 pnpm
 
 ```shell
 npm i pnpm -g
@@ -6,7 +6,7 @@ npm i pnpm -g
 
 ### 构建依赖
 
-node版本v16+
+node 版本 v16+
 
 ```shell
 pnpm bootstrap
@@ -25,40 +25,12 @@ pnpm dev
 
 #### checklist
 
-- 组件example效果和vue3版本一致
-- 组件example暗黑模式正常
-- 组件example国际化正常
-- 组件单元测试所有case通过
-- 组件types类型声明完成
-- 组件文档适配Vue2写法
-
-#### 单元测试
-
-```shell
-npm i -g yarn
-```
-
-```shell
-yarn test -w -c skeleton
-```
-
-- props -> propsData
-- unmount -> destroy
-- slots -> scopedSlots（注意：参数default属性值直接为字符串）
-
-#### 提交项目
-
-```shell
-git add .
-```
-
-```shell
-git commit -m "feat: add component 这里写组件名称" or git commit -m "feat(ui/这里写组件名称): add component 这里写组件名称"
-```
-
-```shell
-git push -u
-```
+- 组件 example 效果和 vue3 版本一致
+- 组件 example 暗黑模式正常
+- 组件 example 国际化正常
+- 组件单元测试所有 case 通过
+- 组件 types 类型声明完成
+- 组件文档适配 Vue2 写法
 
 #### Todolist
 

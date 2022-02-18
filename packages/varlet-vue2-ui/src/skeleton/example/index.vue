@@ -39,11 +39,13 @@ import { use, pack } from './locale'
 
 export default {
   name: 'SkeletonExample',
+
   components: {
     VarSkeleton,
     VarButton,
     AppType,
   },
+
   data() {
     return {
       loading: true,

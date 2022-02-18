@@ -63,7 +63,6 @@ export default {
   data: () => ({
     loading: false
   }),
-
   methods: {
     fullscreen() {
       this.loading = true
