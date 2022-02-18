@@ -36,5 +36,4 @@ pnpm dev
 
 - app-bar
 - snackbar
-- image
 
