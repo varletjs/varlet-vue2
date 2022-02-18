@@ -3,10 +3,10 @@
 ### 引入
 
 ```js
-import { createApp } from 'vue'
+import Vue from 'vue'
 import { AppBar } from '@varlet/ui'
 
-createApp().use(AppBar)
+Vue.use(AppBar)
 ```
 
 ### 基础导航栏
@@ -57,16 +57,12 @@ createApp().use(AppBar)
 import { Snackbar } from '@varlet/ui'
 
 export default {
-  setup() {
-    const goBack = () => {
+  methods: {
+    goBack() {
       Snackbar({
         content: '返回',
         position: 'top'
       })
-    }
-
-    return {
-      goBack
     }
   }
 }
@@ -94,16 +90,12 @@ export default {
 import { Snackbar } from '@varlet/ui'
 
 export default {
-  setup() {
-    const searchData = () => {
+  methods: {
+    searchData() {
       Snackbar({
         content: '搜索',
         position: 'top'
       })
-    }
-
-    return {
-      searchData
     }
   }
 }
@@ -155,28 +147,24 @@ export default {
 ```
 
 ```js
-import { ref } from 'vue'
 import { Snackbar } from '@varlet/ui'
 
 export default {
-  setup() {
-    const offsetY = ref(false)
-    const menuList = ref([
+  data: () => ({
+    offsetY: false,
+    menuList: [
       { label: '选项一', value: 'menu1' },
       { label: '选项二', value: 'menu2' }
-    ])
+    ],
+  }),
 
-    const goBack = () => {
+  methods: {
+
+    goBack() {
       Snackbar({
         content: '返回',
         position: 'top'
       })
-    }
-
-    return {
-      offsetY,
-      menuList,
-      goBack
     }
   }
 }
