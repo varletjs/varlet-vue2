@@ -147,6 +147,10 @@ export function requestAnimationFrame(fn: FrameRequestCallback): number {
   return globalThis.requestAnimationFrame ? globalThis.requestAnimationFrame(fn) : globalThis.setTimeout(fn, 16)
 }
 
+export function cancelAnimationFrame(handle: number): void {
+  globalThis.cancelAnimationFrame ? globalThis.cancelAnimationFrame(handle) : globalThis.clearTimeout(handle)
+}
+
 interface ScrollToOptions {
   top?: number;
   left?: number;
