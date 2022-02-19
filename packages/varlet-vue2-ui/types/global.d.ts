@@ -1,6 +1,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     VarAppBar: typeof import('@varlet-vue2/ui')['_AppBarComponent']
+    VarBackTop: typeof import('@varlet-vue2/ui')['_BackTopComponent']
     VarBadge: typeof import('@varlet-vue2/ui')['_BadgeComponent']
     VarButton: typeof import('@varlet-vue2/ui')['_ButtonComponent']
     VarCard: typeof import('@varlet-vue2/ui')['_CardComponent']
