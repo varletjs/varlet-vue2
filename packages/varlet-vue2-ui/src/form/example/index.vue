@@ -45,7 +45,7 @@
       <!--        <var-checkbox :checked-value="2">{{ pack.sleep }}</var-checkbox>-->
       <!--        <var-checkbox :checked-value="3">{{ pack.play }}</var-checkbox>-->
       <!--      </var-checkbox-group>-->
-      <!--      <var-rate class="mb" :rules="[(v) => v >= 3 || pack.rateMessage]" v-model="formData.score" />-->
+      <var-rate class="mb" :rules="[(v) => v >= 3 || pack.rateMessage]" v-model="formData.score" />
       <!--      <div class="row mb">-->
       <!--        <var-switch :rules="[(v) => !!v || pack.licenseMessage]" v-model="formData.license" />-->
       <!--      </div>-->
@@ -83,7 +83,7 @@ import VarButton from '../../button'
 // import VarSlider from '../../slider'
 // import VarUploader from '../../uploader'
 // import VarCounter from '../../counter'
-// import VarRate from '../../rate'
+import VarRate from '../../rate'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType.vue'
 import context from '../../context'
 import dark from '../../themes/dark'
@@ -107,7 +107,7 @@ export default {
     // VarSwitch,
     // VarUploader,
     // VarCounter,
-    // VarRate,
+    VarRate,
     AppType,
   },
 
