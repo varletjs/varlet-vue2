@@ -1,5 +1,5 @@
 <template>
-  <div class="var-snackbar" :style="{ pointerEvents: isForbidClick ? 'auto' : 'none', zIndex }" v-show="show">
+  <div class="var-snackbar" :style="{ pointerEvents: isForbidClick ? 'auto' : 'none', zIndex }">
     <div :class="snackbarClass" :style="{ zIndex }">
       <div class="var-snackbar__content" :class="[contentClass]">
         <slot>{{ content }}</slot>
@@ -64,12 +64,10 @@ export default {
   watch: {
     show(show) {
       if (show) {
-        this.onOpen?.()
         this.$emit('open')
         this.updateAfterDuration()
       } else if (show === false) {
         clearTimeout(this.timer)
-        this.onClose?.()
         this.$emit('close')
       }
     },
@@ -80,7 +78,6 @@ export default {
   },
   mounted() {
     if (this.show) {
-      this.onOpen?.()
       this.$emit('open')
       this.updateAfterDuration()
     }

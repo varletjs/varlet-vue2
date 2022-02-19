@@ -7,16 +7,16 @@ Used to display a quick message to a user.
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { Snackbar } from '@varlet/ui'
+import Vue from 'vue'
+import { Snackbar } from '@varlet-vue2/ui'
 
-createApp().use(Snackbar)
+Vue.use(Button)
 ```
 
 ### Scoped Install
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   components: {
@@ -31,18 +31,14 @@ export default {
 
 ```html
 <var-button type="primary" block @click="show = !show">Basic Usage</var-button>
-<var-snackbar v-model:show="show"> "Hello, I'm a snackbar" </var-snackbar>
+<var-snackbar :show.sync="show"> "Hello, I'm a snackbar" </var-snackbar>
 ```
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const show = ref(false)
-
+  data() {
     return {
-      show
+      show: false
     }
   }
 }
@@ -53,7 +49,7 @@ export default {
 Use `vertical` prop to change arrangement of `snackbar`. Use `Custom slot` create action of right.
 
 ```html
-<var-snackbar v-model:show="show" :vertical="true">
+<var-snackbar :show.sync="show" :vertical="true">
   "Hello, I'm a snackbar"
   <template #action>
     <var-button type="primary" @click="show = !show">Close</var-button>
@@ -66,7 +62,7 @@ Use `vertical` prop to change arrangement of `snackbar`. Use `Custom slot` creat
 Use `position` prop to change position of `snackbar`.
 
 ```html
-<var-snackbar v-model:show="show" position="bottom">
+<var-snackbar :show.sync="show" position="bottom">
   "Hello, I'm a snackbar"
   <template #action>
     <var-button type="primary" @click="show = false">Close</var-button>
@@ -79,7 +75,7 @@ Use `position` prop to change position of `snackbar`.
 Use `duration` prop to change display duration of `snackbar`.
 
 ```html
-<var-snackbar v-model:show="show" :duration="1000"> "Hello, I'm a snackbar" </var-snackbar>
+<var-snackbar :show.sync="show" :duration="1000"> "Hello, I'm a snackbar" </var-snackbar>
 ```
 
 ### Forbid Click
@@ -87,7 +83,7 @@ Use `duration` prop to change display duration of `snackbar`.
 Use `forbid-click` prop to control whether penetrating clicks are forbidden.
 
 ```html
-<var-snackbar v-model:show="show" :forbid-click="true"> "Hello, I'm a snackbar" </var-snackbar>
+<var-snackbar :show.sync="show" :forbid-click="true"> "Hello, I'm a snackbar" </var-snackbar>
 ```
 
 ## Function Call
@@ -146,7 +142,7 @@ snackbar1.clear();
 
 | Prop | Description | Type | Default |
 | ----- | -------------- | -------- | ---------- |
-| `v-model:show` | Whether to show `Snackbar` | _boolean_ | `false` |
+| `:show.sync` | Whether to show `Snackbar` | _boolean_ | `false` |
 | `type`| `Snackbar` type, Optional value is one of `success, warning, info, error, loading` | _string_ | `-` |
 | `position`| `Snackbar` position, Optional value is one of `top, center, bottom` | _string_ | `top` |
 | `duration`| Display duration | _number_ | `3000` |

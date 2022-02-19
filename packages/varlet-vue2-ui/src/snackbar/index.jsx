@@ -65,7 +65,13 @@ function getCoreVNode(h, option) {
   const on = {
     'update:show': value => {
       reactiveSnackOptions.show = value
-    }
+    },
+    open: () => {
+      reactiveSnackOptions?.onOpen()
+    },
+    close: () => {
+      reactiveSnackOptions?.onClose()
+    },
   }
   return h(VarSnackbarCore, {
     key: id,

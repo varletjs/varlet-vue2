@@ -67,29 +67,6 @@ export const props = {
     type: Boolean,
     default: false,
   },
-  // 打开时的回调函数
-  onOpen: {
-    type: Function as PropType<() => void>,
-    default: () => {},
-  },
-  // 打开动画结束时的回调
-  onOpened: {
-    type: Function as PropType<() => void>,
-    default: () => {},
-  },
-  // 关闭时的回调函数
-  onClose: {
-    type: Function as PropType<() => void>,
-    default: () => {},
-  },
-  // 关闭动画结束时的回调
-  onClosed: {
-    type: Function as PropType<() => void>,
-    default: () => {},
-  },
-  'onUpdate:show': {
-    type: Function as PropType<(show: boolean) => void>,
-  },
   customUpdate: {
     type: String,
   },

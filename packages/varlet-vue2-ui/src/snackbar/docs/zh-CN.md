@@ -7,16 +7,16 @@
 ### 引入
 
 ```js
-import { createApp } from 'vue'
-import { Snackbar } from '@varlet/ui'
+import Vue from 'vue'
+import { Snackbar } from '@varlet-vue2/ui'
 
-createApp().use(Snackbar)
+Vue.use(Button)
 ```
 
 ### 局部引入
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   components: {
@@ -31,18 +31,14 @@ export default {
 
 ```html
 <var-button type="primary" block @click="show = !show">基本使用</var-button>
-<var-snackbar v-model:show="show"> 这是一个消息条！！</var-snackbar>
+<var-snackbar :show.sync="show"> 这是一个消息条！！</var-snackbar>
 ```
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const show = ref(false)
-
+  data() {
     return {
-      show
+      show: false
     }
   }
 }
@@ -52,7 +48,7 @@ export default {
 通过 `vertical` 属性改变 `snackbar` 排列方式，通过 `自定义插槽` 创建右边 action。
 
 ```html
-<var-snackbar v-model:show="show" :vertical="true">
+<var-snackbar :show.sync="show" :vertical="true">
   这是一个消息条！！
   <template #action>
     <var-button type="primary" @click="show = !show">关闭</var-button>
@@ -65,7 +61,7 @@ export default {
 通过 `position` 属性改变 `snackbar` 显示位置。
 
 ```html
-<var-snackbar v-model:show="show" position="bottom">
+<var-snackbar :show.sync="show" position="bottom">
   这是一个消息条！！
   <template #action>
     <var-button type="primary" @click="show = false">关闭</var-button>
@@ -78,7 +74,7 @@ export default {
 通过 `duration` 属性改变 `snackbar` 显示时长。
 
 ```html
-<var-snackbar v-model:show="show" :duration="1000"> 这是一个消息条！！</var-snackbar>
+<var-snackbar :show.sync="show" :duration="1000"> 这是一个消息条！！</var-snackbar>
 ```
 
 ### 禁止穿透点击
@@ -86,7 +82,7 @@ export default {
 使用 `forbid-click` 控制是否禁止穿透点击。
 
 ```html
-<var-snackbar v-model:show="show" :forbid-click="true"> 这是一个消息条！！</var-snackbar>
+<var-snackbar :show.sync="show" :forbid-click="true"> 这是一个消息条！！</var-snackbar>
 ```
 
 ## 函数调用
@@ -145,7 +141,7 @@ snackbar1.clear();
 
 | 参数 | 说明 | 类型 | 默认值 |
 | ----- | -------------- | -------- | ---------- |
-| `v-model:show` | 是否显示 `Snackbar` | _boolean_ | `false` |
+| `:show.sync` | 是否显示 `Snackbar` | _boolean_ | `false` |
 | `type`| `Snackbar` 类型，可选值为 `success warning info error loading` | _string_ | `-` |
 | `position`| `Snackbar`  位置，可选值为 `top center bottom` | _string_ | `top` |
 | `duration`| 显示时长 | _number_ | `3000` |
