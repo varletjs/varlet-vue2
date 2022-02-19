@@ -1,0 +1,397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test circle props 1`] = `
+"<div class=\\"var-loading\\">
+  <!---->
+  <div class=\\"var--box var-loading__body\\">
+    <div class=\\"var-loading__circle\\"><span class=\\"var-loading__circle-block\\" style=\\"width: 24px; height: 24px; color: rgb(41, 121, 255);\\"><svg viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </div>
+</div>"
+`;
+
+exports[`test cube props 1`] = `
+"<div class=\\"var-loading\\">
+  <!---->
+  <div class=\\"var--box var-loading__body\\">
+    <!---->
+    <!---->
+    <div class=\\"var-loading__cube var-loading__cube-small\\">
+      <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+  </div>
+</div>"
+`;
+
+exports[`test disappear props 1`] = `
+"<div class=\\"var-loading\\">
+  <!---->
+  <div class=\\"var--box var-loading__body\\">
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <div class=\\"var-loading__disappear var-loading__disappear-small\\">
+      <div class=\\"var-loading__disappear-item var-loading__disappear-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__disappear-item var-loading__disappear-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__disappear-item var-loading__disappear-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+    </div>
+    <!---->
+  </div>
+</div>"
+`;
+
+exports[`test loading example 1`] = `
+"<div class=\\"var-loading-outer\\">
+  <div class=\\"loading-demo__type\\">
+    <div class=\\"app-type\\">类型</div>
+    <div class=\\"loading-demo__type-block\\">
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <div class=\\"var-loading__circle\\"><span class=\\"var-loading__circle-block\\" style=\\"width: 30px; height: 30px; color: currentColor;\\"><svg viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <div class=\\"var-loading__cube var-loading__cube-normal\\">
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <div class=\\"var-loading__wave var-loading__wave-normal\\">
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <!---->
+          <div class=\\"var-loading__rect var-loading__rect-normal\\">
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <div class=\\"var-loading__disappear var-loading__disappear-normal\\">
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-normal\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"loading-demo__type\\">
+    <div class=\\"app-type\\">颜色</div>
+    <div class=\\"loading-demo__type-block\\">
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <div class=\\"var-loading__circle\\"><span class=\\"var-loading__circle-block\\" style=\\"width: 30px; height: 30px; color: rgb(41, 121, 255);\\"><svg viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <div class=\\"var-loading__cube var-loading__cube-normal\\">
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <div class=\\"var-loading__wave var-loading__wave-normal\\">
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <!---->
+          <div class=\\"var-loading__rect var-loading__rect-normal\\">
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+          </div>
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <div class=\\"var-loading__disappear var-loading__disappear-normal\\">
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-normal\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"loading-demo__size\\">
+    <div class=\\"app-type\\">大小</div>
+    <div class=\\"loading-demo__size-block\\">
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <div class=\\"var-loading__circle\\"><span class=\\"var-loading__circle-block\\" style=\\"width: 24px; height: 24px; color: currentColor;\\"><svg viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <div class=\\"var-loading__cube var-loading__cube-small\\">
+            <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__cube-item var-loading__cube-item-small\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <div class=\\"var-loading__wave var-loading__wave-small\\">
+            <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <!---->
+          <div class=\\"var-loading__rect var-loading__rect-small\\">
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-loading\\">
+        <!---->
+        <div class=\\"var--box var-loading__body\\">
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <div class=\\"var-loading__disappear var-loading__disappear-small\\">
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-small\\" style=\\"background-color: currentColor;\\"></div>
+            <div class=\\"var-loading__disappear-item var-loading__disappear-item-small\\" style=\\"background-color: currentColor;\\"></div>
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class=\\"app-type\\">包裹内容</div> <button class=\\"var-button var--box var-button--normal var--inline-flex var-button--default var-elevation--2\\" style=\\"margin-bottom: 8px;\\">
+      <!---->
+      <div class=\\"var-button__content\\">
+        打开
+      </div>
+    </button>
+    <div class=\\"var-loading\\">
+      <div class=\\"var-loading__content\\">
+        <div class=\\"var-card var-elevation--2\\">
+          <!---->
+          <div class=\\"var-card__title\\">介绍</div>
+          <!---->
+          <div class=\\"var-card__description\\">Varlet-vue2 是一个基于Vue2开发的 Material 风格移动端组件库，全面拥抱Vue2生态，由社区的小伙伴开发和维护。</div>
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`test rect props 1`] = `
+"<div class=\\"var-loading\\">
+  <!---->
+  <div class=\\"var--box var-loading__body\\">
+    <!---->
+    <!---->
+    <!---->
+    <div class=\\"var-loading__rect var-loading__rect-small\\">
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__rect-item var-loading__rect-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+    </div>
+    <!---->
+    <!---->
+  </div>
+</div>"
+`;
+
+exports[`test slots 1`] = `
+"<div class=\\"var-loading\\">
+  <div class=\\"var-loading__content\\">
+    <div>test</div>
+  </div>
+  <!---->
+</div>"
+`;
+
+exports[`test slots 2`] = `
+"<div class=\\"var-loading\\">
+  <div class=\\"var-loading__content var-loading__content--active\\">
+    <div>test</div>
+  </div>
+  <div class=\\"var--box var-loading__body var-loading__inside\\">
+    <div class=\\"var-loading__circle\\"><span class=\\"var-loading__circle-block\\" style=\\"width: 30px; height: 30px; color: currentColor;\\"><svg viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <div class=\\"var-loading__description var-loading__description--normal\\" style=\\"color: currentColor;\\">loading....</div>
+  </div>
+</div>"
+`;
+
+exports[`test wave props 1`] = `
+"<div class=\\"var-loading\\">
+  <!---->
+  <div class=\\"var--box var-loading__body\\">
+    <!---->
+    <div class=\\"var-loading__wave var-loading__wave-small\\">
+      <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+      <div class=\\"var-loading__wave-item var-loading__wave-item-small\\" style=\\"background-color: rgb(41, 121, 255);\\"></div>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </div>
+</div>"
+`;

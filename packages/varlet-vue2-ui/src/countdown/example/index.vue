@@ -39,7 +39,7 @@
 <script>
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import VarCountdown from '..'
-// import Snackbar from '../../snackbar'
+import Snackbar from '../../snackbar'
 import VarButton from '../../button'
 import dark from '../../themes/dark'
 import { pack, use } from './locale'
@@ -75,7 +75,7 @@ export default {
 
   methods: {
     end() {
-      // Snackbar.info('end!')
+      Snackbar.info('end!')
     },
 
     change() {
