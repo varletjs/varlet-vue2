@@ -1,15 +1,13 @@
-export function createTeleportMixin() {
-  return {
-    data: () => ({
-      teleportDisabled: false,
-    }),
+export const createTeleportMixin = {
+  data: () => ({
+    teleportDisabled: false,
+  }),
 
-    activated() {
-      this.teleportDisabled = false
-    },
+  activated() {
+    this.teleportDisabled = false
+  },
 
-    deactivated() {
-      this.teleportDisabled = true
-    },
-  }
+  deactivated() {
+    this.teleportDisabled = true
+  },
 }

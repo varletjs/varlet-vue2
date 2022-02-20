@@ -1,4 +1,4 @@
-import { defineComponent } from '../utils/create'
+import { defineComponent, nextTick } from '../utils/create'
 import { props } from './props'
 import VarTeleport from '../teleport'
 import { getLeft, getTop, toSizeUnit } from '../utils/elements'
@@ -13,7 +13,7 @@ import './menu.less'
 export default defineComponent({
   name: 'VarMenu',
 
-  mixins: [createZIndexMixin('show', 1), createTeleportMixin()],
+  mixins: [createZIndexMixin('show', 1), createTeleportMixin],
 
   props,
 
@@ -56,7 +56,7 @@ export default defineComponent({
       const { onOpen, onClose } = this.getListeners()
 
       if (newValue) {
-        await this.$nextTick()
+        await nextTick()
         this.resize()
       }
 
@@ -98,20 +98,22 @@ export default defineComponent({
     },
 
     renderTransition() {
-      const { show, transitionStyle, getListeners } = this
-      const { onOpened, onClosed } = getListeners()
       return (
-        <transition name="var-menu" onAfterEnter={onOpened ?? NOOP} onAfterLeave={onClosed ?? NOOP}>
+        <transition
+          name="var-menu"
+          onAfterEnter={this.getListeners().onOpened ?? NOOP}
+          onAfterLeave={this.getListeners().onClosed ?? NOOP}
+        >
           <div
             class="var-menu__menu var-elevation--3"
             ref="menu"
-            style={transitionStyle}
-            v-show:show={show}
+            style={this.transitionStyle}
+            v-show:show={this.show}
             onClick={(event) => {
               event.stopPropagation()
             }}
           >
-            {this.$scopedSlots.menu?.()}
+            {this.slots('menu')}
           </div>
         </transition>
       )
@@ -119,16 +121,15 @@ export default defineComponent({
   },
 
   render() {
-    const { to, teleportDisabled, handleClick, renderTransition } = this
     return (
-      <div class="var-menu" ref="host" onClick={handleClick}>
-        {this.$scopedSlots.default?.()}
-        {to ? (
-          <VarTeleport to={to} disabled={teleportDisabled}>
-            {renderTransition()}
+      <div class="var-menu" ref="host" onClick={this.handleClick}>
+        {this.slots('default')}
+        {this.to ? (
+          <VarTeleport to={this.to} disabled={this.teleportDisabled}>
+            {this.renderTransition()}
           </VarTeleport>
         ) : (
-          renderTransition()
+          this.renderTransition()
         )}
       </div>
     )
