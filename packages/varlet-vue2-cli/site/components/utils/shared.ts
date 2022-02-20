@@ -27,3 +27,7 @@ export const isBool = (val: unknown): val is boolean => typeof val === 'boolean'
 export const isNumber = (val: unknown): val is number => typeof val === 'number'
 
 export const isURL = (val: string) => /^(http)|(\.*\/)/.test(val)
+
+export const camelize = (s: string): string => s.replace(/-(\w)/g, (_: any, p: string) => p.toUpperCase())
+
+export const bigCamelize = (s: string): string => camelize(s).replace(s.charAt(0), s.charAt(0).toUpperCase())
