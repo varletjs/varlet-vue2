@@ -40,9 +40,14 @@ test('test menu trigger', async () => {
   expect(wrapper.find('.menu-content').isVisible()).toBeTruthy()
   expect(wrapper.html()).toMatchSnapshot()
 
+  await wrapper.find('.var-menu').trigger('click')
+  await delay(300)
+  expect(wrapper.find('.menu-content').isVisible()).toBeTruthy()
+
   await wrapper.find('.container').trigger('click')
   await delay(300)
   expect(wrapper.find('.menu-content').isVisible()).toBeFalsy()
+  await wrapper.find('.container').trigger('click')
   expect(wrapper.html()).toMatchSnapshot()
 
   mockRestore()
