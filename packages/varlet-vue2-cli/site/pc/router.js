@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import config from '@config'
 import routes from '@pc-routes'
 import { get } from 'lodash-es'
+import { mountComponent } from '../utils'
+import NProgress from './components/NProgress'
 
 const originalReplace = VueRouter.prototype.replace
 VueRouter.prototype.replace = function replace(location, onResolve, onReject) {
@@ -13,6 +15,9 @@ VueRouter.prototype.replace = function replace(location, onResolve, onReject) {
 }
 
 Vue.use(VueRouter)
+
+let isEnd = true
+const { instance } = mountComponent(NProgress)
 
 const defaultLanguage = get(config, 'defaultLanguage')
 const redirect = get(config, 'pc.redirect')
@@ -35,7 +40,8 @@ router.beforeEach((to, from, next) => {
     return
   }
 
-  // TODO: progress
+  isEnd = false
+  setTimeout(() => !isEnd && instance.start(), 200)
 
   if (window._hmt) {
     if (to.path) {
@@ -44,6 +50,11 @@ router.beforeEach((to, from, next) => {
   }
 
   next()
+})
+
+router.afterEach(() => {
+  isEnd = true
+  instance.end()
 })
 
 Object.defineProperty(window, 'onMobileRouteChange', {
