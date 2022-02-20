@@ -186,3 +186,5 @@ export const createCache = <T>(max: number): CacheInstance<T> => {
     },
   }
 }
+
+export const NOOP = () => {}

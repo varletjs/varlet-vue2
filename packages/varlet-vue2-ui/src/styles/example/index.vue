@@ -1,5 +1,5 @@
 <template>
-  <div class="var-styles-outer">
+  <div class="var-elevation-outer">
     <div class="list__item" v-for="e in elevations" :class="`var-elevation--${e}`" :style="{ background }" :key="e">
       {{ e }}
     </div>
@@ -11,7 +11,7 @@ import dark from '../../themes/dark'
 import { watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
-  name: 'RippleExample',
+  name: 'ElevationExample',
 
   data() {
     return {
@@ -33,11 +33,10 @@ export default {
 </style>
 
 <style scoped lang="less">
-.var-styles-outer {
+.var-elevation-outer {
   display: flex;
   flex-wrap: wrap;
   padding: 2vw;
-
   .list__item {
     display: flex;
     justify-content: center;
