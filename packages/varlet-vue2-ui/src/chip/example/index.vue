@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-chip-example">
     <app-type>{{ pack.chipType }}</app-type>
     <var-chip>{{ pack.defaultChip }}</var-chip>
     <var-chip type="primary">{{ pack.primaryChip }}</var-chip>
@@ -72,22 +72,24 @@ import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
   name: 'ChipExample',
+
   components: {
     VarChip,
     VarIcon,
     AppType,
   },
-  data() {
-    return {
-      show: true,
-      show1: true,
-    }
-  },
+
+  data: () => ({
+    show: true,
+    show1: true,
+  }),
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)
@@ -95,9 +97,11 @@ export default {
 }
 </script>
 
-<style scoped>
-.var-chip {
-  margin-right: 8px;
-  margin-bottom: 8px;
+<style lang="less" scoped>
+.var-chip-example {
+  .var-chip {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
 }
 </style>

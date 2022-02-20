@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test snackbar example 1`] = `
-"<div class=\\"var-progress-outer\\">
+"<div class=\\"var-snackbar-example\\">
   <div class=\\"snackbar-demo\\">
     <div class=\\"app-type\\">组件调用</div> <button class=\\"var-button var--box var-button--normal var--flex var-button--block var-button--primary var-elevation--2\\">
       <!---->

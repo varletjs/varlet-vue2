@@ -18,10 +18,12 @@ import { props } from './props'
 
 export default {
   name: 'VarSnackbar',
+
   components: {
     VarSnackbarCore,
     Teleport,
   },
+
   props,
 }
 </script>

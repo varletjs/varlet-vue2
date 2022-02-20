@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-sticky-example">
     <app-type>{{ pack.basicUsage }}</app-type>
     <var-sticky :offset-top="54">
       <var-button type="primary">{{ pack.basicUsage }}</var-button>
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-.example {
+.var-sticky-example {
   min-height: 200vh;
 
   .scroller {

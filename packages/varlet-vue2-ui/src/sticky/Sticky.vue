@@ -35,6 +35,7 @@ import { defineComponent } from '../utils/create'
 
 export default defineComponent({
   name: 'VarSticky',
+
   props,
 
   data: () => ({
@@ -60,27 +61,31 @@ export default defineComponent({
     },
   },
 
+  activated() {
+    this.addScrollListener()
+  },
+
+  deactivated() {
+    this.removeScrollListener()
+  },
+
+  mounted() {
+    this.addScrollListener()
+  },
+
+  beforeDestroy() {
+    this.removeScrollListener()
+  },
+
   watch: {
     disabled() {
       this.handleScroll()
     },
   },
 
-  activated() {
-    this.addScrollListener()
-  },
-  deactivated() {
-    this.removeScrollListener()
-  },
-  mounted() {
-    this.addScrollListener()
-  },
-  beforeDestroy() {
-    this.removeScrollListener()
-  },
-
   methods: {
     toNumber,
+
     handleScroll() {
       const { onScroll, cssMode, disabled } = this
 

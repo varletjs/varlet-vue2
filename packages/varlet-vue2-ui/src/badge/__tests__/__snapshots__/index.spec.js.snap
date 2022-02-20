@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test badge example 1`] = `
-"<div class=\\"var-badge-outer\\">
+"<div class=\\"var-badge-example\\">
   <div class=\\"app-type\\">主题色徽标</div>
   <div class=\\"var-badge var--box\\">
     <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--default\\"><span>0</span></span></transition-stub>

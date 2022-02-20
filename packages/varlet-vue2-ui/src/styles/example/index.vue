@@ -1,5 +1,5 @@
 <template>
-  <div class="var-elevation-outer">
+  <div class="var-elevation-example">
     <div class="list__item" v-for="e in elevations" :class="`var-elevation--${e}`" :style="{ background }" :key="e">
       {{ e }}
     </div>
@@ -13,12 +13,10 @@ import { watchDarkMode } from '@varlet-vue2/cli/site/utils'
 export default {
   name: 'ElevationExample',
 
-  data() {
-    return {
-      elevations: Array.from({ length: 25 }, (_, i) => i),
-      background: dark,
-    }
-  },
+  data: () => ({
+    elevations: Array.from({ length: 25 }, (_, i) => i),
+    background: dark,
+  }),
 
   created() {
     watchDarkMode(this, dark, (themes) => {
@@ -33,7 +31,7 @@ export default {
 </style>
 
 <style scoped lang="less">
-.var-elevation-outer {
+.var-elevation-example {
   display: flex;
   flex-wrap: wrap;
   padding: 2vw;

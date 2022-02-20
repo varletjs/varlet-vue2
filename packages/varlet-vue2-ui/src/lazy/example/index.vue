@@ -1,5 +1,5 @@
 <template>
-  <div class="var-lazy-outer">
+  <div class="var-lazy-example">
     <app-type>{{ pack.basicUsage }}</app-type>
     <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui/cat.jpg'" />
     <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui/cat.jpg'" />
@@ -38,11 +38,13 @@ export default {
 </script>
 
 <style scoped lang="less">
-.cat {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  background-size: cover;
-  pointer-events: none;
+.var-lazy-example {
+  .cat {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-size: cover;
+    pointer-events: none;
+  }
 }
 </style>

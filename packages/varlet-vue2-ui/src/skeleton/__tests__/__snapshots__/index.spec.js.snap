@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test skeleton example 1`] = `
-"<div class=\\"var-skeleton-outer\\">
+"<div class=\\"var-skeleton-example\\">
   <div class=\\"app-type\\">基本使用</div>
   <div class=\\"var--box var-skeleton\\">
     <!---->

@@ -1,5 +1,5 @@
 <template>
-  <div class="var-progress-outer">
+  <div class="var-progress-example">
     <div class="space"></div>
 
     <div class="progress-demo__basic">
@@ -51,12 +51,10 @@ export default {
 
   components: { VarProgress, AppType },
 
-  data() {
-    return {
-      value: 0,
-      interval: 0,
-    }
-  },
+  data: () => ({
+    value: 0,
+    interval: 0,
+  }),
 
   computed: {
     pack() {
@@ -83,7 +81,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.var-progress-outer {
+.var-progress-example {
   h4 {
     margin: 0;
   }

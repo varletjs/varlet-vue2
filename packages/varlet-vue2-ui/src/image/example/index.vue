@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-image-example">
     <app-type>{{ pack.basicUsage }}</app-type>
     <var-image src="https://varlet.gitee.io/varlet-ui/cat.jpg" />
 
@@ -64,6 +64,7 @@ import { use, pack } from './locale'
 
 export default {
   name: 'ImageExample',
+
   components: {
     VarImage,
     VarRow: {
@@ -73,6 +74,7 @@ export default {
     },
     AppType,
   },
+
   computed: {
     pack() {
       return pack.value
@@ -87,14 +89,16 @@ export default {
 </script>
 
 <style scoped lang="less">
-.fit-item {
-  color: #888;
-  text-align: center;
-  margin-right: 11px;
-  margin-bottom: 11px;
+.var-image-example {
+  .fit-item {
+    color: #888;
+    text-align: center;
+    margin-right: 11px;
+    margin-bottom: 11px;
 
-  div {
-    margin-bottom: 5px;
+    div {
+      margin-bottom: 5px;
+    }
   }
 }
 </style>

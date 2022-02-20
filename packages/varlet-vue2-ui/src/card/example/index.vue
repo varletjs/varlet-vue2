@@ -1,5 +1,5 @@
 <template>
-  <div class="var-card-outer">
+  <div class="var-card-example">
     <app-type>{{ pack.basicUsage }}</app-type>
     <var-card :title="pack.title" :description="pack.description" />
     <app-type>{{ pack.showSubtitle }}</app-type>
@@ -69,9 +69,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.example {
-  background: antiquewhite;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="var-cell-outer">
+  <div class="var-cell-example">
     <div>
       <app-type>{{ pack.basicUsage }}</app-type>
       <var-cell> {{ pack.content }} </var-cell>

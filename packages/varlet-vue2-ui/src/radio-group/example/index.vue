@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-radioGroup-example">
     <app-type>{{ pack.basicUsage }}</app-type>
     <var-radio v-model="value">{{ pack.currentValue }} {{ value }}</var-radio>
 
@@ -92,15 +92,17 @@ export default {
 </script>
 
 <style scoped lang="less">
-.relation {
-  margin-top: 10px;
-}
+.var-radioGroup-example {
+  .relation {
+    margin-top: 10px;
+  }
 
-.button {
-  margin-right: 10px;
-}
+  .button {
+    margin-right: 10px;
+  }
 
-.space {
-  height: 40px;
+  .space {
+    height: 40px;
+  }
 }
 </style>

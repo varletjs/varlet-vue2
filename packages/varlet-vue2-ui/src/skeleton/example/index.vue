@@ -1,5 +1,5 @@
 <template>
-  <div class="var-skeleton-outer">
+  <div class="var-skeleton-example">
     <app-type>{{ pack.basicUsage }}</app-type>
     <var-skeleton :loading="loading">{{ pack.loadingData }}</var-skeleton>
 
@@ -46,12 +46,10 @@ export default {
     AppType,
   },
 
-  data() {
-    return {
-      loading: true,
-      fullscreenLoading: false,
-    }
-  },
+  data: () => ({
+    loading: true,
+    fullscreenLoading: false,
+  }),
 
   computed: {
     pack() {
@@ -77,9 +75,11 @@ export default {
 </script>
 
 <style scoped lang="less">
-.var-button {
-  position: relative;
-  z-index: 10;
-  margin-bottom: 10px;
+.var-skeleton-example {
+  .var-button {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 10px;
+  }
 }
 </style>

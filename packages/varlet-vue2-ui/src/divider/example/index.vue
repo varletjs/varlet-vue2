@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="var-divider-example">
     <div>
       <app-type>{{ pack.basicUsage }}</app-type>
       <var-divider />
@@ -68,15 +68,17 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.vertical-divider-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333;
+.var-divider-example {
+  .vertical-divider-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
 
-  span {
-    font-size: 14px;
-    color: #888;
+    span {
+      font-size: 14px;
+      color: #888;
+    }
   }
 }
 </style>

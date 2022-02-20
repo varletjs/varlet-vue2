@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test card example 1`] = `
-"<div class=\\"var-card-outer\\">
+"<div class=\\"var-card-example\\">
   <div class=\\"app-type\\">基本使用</div>
   <div class=\\"var-card var-elevation--2\\">
     <!---->

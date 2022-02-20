@@ -34,10 +34,7 @@ export default defineComponent({
 
   mixins: [ValidationMixin, createChildrenMixin('form', { parentKey: 'form', childrenKey: 'formItems' })],
 
-  components: {
-    VarIcon,
-    VarFormDetails,
-  },
+  components: { VarIcon, VarFormDetails },
 
   directives: { Ripple },
 
@@ -47,6 +44,7 @@ export default defineComponent({
     formDisabled() {
       return this.form?.disabled
     },
+
     formReadonly() {
       return this.form?.readonly
     },
@@ -54,7 +52,9 @@ export default defineComponent({
 
   methods: {
     toNumber,
+
     toSizeUnit,
+
     getStyle(val) {
       const { count, size, gap } = this
 
@@ -66,6 +66,7 @@ export default defineComponent({
         borderRadius: '50%',
       }
     },
+
     getClass(val) {
       const { type, color } = this.transformValue(val)
 
@@ -76,12 +77,14 @@ export default defineComponent({
         'var-rate--primary': type !== 'empty' && !color,
       }
     },
+
     getIconName(val) {
       const { type } = this.transformValue(val)
       const { icon, halfIcon, emptyIcon } = this
 
       return type === 'full' ? icon : type === 'half' ? halfIcon : emptyIcon
     },
+
     changeValue(score, event) {
       if (this.half) {
         const { offsetWidth } = event.target
@@ -91,15 +94,18 @@ export default defineComponent({
       const { onInput } = this.getListeners()
       onInput?.(score)
     },
+
     validate() {
       this._validate(this.rules, toNumber(this.value))
     },
+
     validateWithTrigger(trigger) {
       this.$nextTick(() => {
         const { validateTrigger, rules, value } = this
         this._validateWithTrigger(validateTrigger, trigger, rules, value)
       })
     },
+
     handleClick(score, event) {
       const { readonly, disabled } = this
       const { onChange } = this.getListeners()
@@ -112,10 +118,12 @@ export default defineComponent({
       onChange?.(score)
       this.validateWithTrigger('onChange')
     },
+
     reset() {
       this.getListeners().onInput?.(0)
       this.resetValidation()
     },
+
     transformValue(index) {
       const { value, disabled, disabledColor, color, half, emptyColor } = this
       let iconColor

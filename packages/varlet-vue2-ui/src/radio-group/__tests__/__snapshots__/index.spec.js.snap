@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test radio example 1`] = `
-"<div class=\\"example\\">
+"<div class=\\"var-radioGroup-example\\">
   <div class=\\"app-type\\">基本使用</div>
   <div class=\\"var-radio__wrap\\">
     <div class=\\"var-radio\\">
@@ -16,7 +16,9 @@ exports[`test radio example 1`] = `
   <div class=\\"var-radio__wrap\\">
     <div class=\\"var-radio\\">
       <div class=\\"var-radio__action var-radio--unchecked\\"><i class=\\"var-icon var-radio__icon var-icon--set var-icon-radio-blank\\" style=\\"transition: transform 0ms;\\" var-radio-cover=\\"\\"></i></div>
-      <div class=\\"var-radio__text\\"> 当前的值: 0 </div>
+      <div class=\\"var-radio__text\\">
+        当前的值: 0
+      </div>
     </div>
     <transition-stub name=\\"var-form-details\\">
       <!---->

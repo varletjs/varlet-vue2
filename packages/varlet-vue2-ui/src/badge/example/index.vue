@@ -1,5 +1,5 @@
 <template>
-  <div class="var-badge-outer">
+  <div class="var-badge-example">
     <app-type>{{ pack.themeColorBadge }}</app-type>
     <var-badge />
     <var-badge type="primary" />
@@ -73,14 +73,12 @@ export default {
     AppType,
   },
 
-  data() {
-    return {
-      value: 88,
-      value1: 188,
-      maxValue: 99,
-      hidden: false,
-    }
-  },
+  data: () => ({
+    value: 88,
+    value1: 188,
+    maxValue: 99,
+    hidden: false,
+  }),
 
   computed: {
     pack() {
@@ -101,9 +99,11 @@ export default {
 }
 </script>
 
-<style scoped>
-.var-badge {
-  margin-right: 20px;
-  margin-bottom: 8px;
+<style lang="less" scoped>
+.var-badge-example {
+  .var-badge {
+    margin-right: 20px;
+    margin-bottom: 8px;
+  }
 }
 </style>

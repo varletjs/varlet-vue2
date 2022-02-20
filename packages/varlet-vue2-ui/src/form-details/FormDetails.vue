@@ -13,6 +13,7 @@ import { defineComponent } from '../utils/create'
 
 export default defineComponent({
   name: 'VarFormDetails',
+
   props,
 })
 </script>

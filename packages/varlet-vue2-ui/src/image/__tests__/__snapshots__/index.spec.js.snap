@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test image example 1`] = `
-"<div class=\\"example\\">
+"<div class=\\"var-image-example\\">
   <div class=\\"app-type\\">基本使用</div>
   <div class=\\"var-image var--box\\" style=\\"border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: fill;\\"></div>
   <div class=\\"app-type\\">填充模式</div>

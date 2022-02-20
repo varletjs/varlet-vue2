@@ -1,5 +1,5 @@
 <template>
-  <div class="var-progress-outer">
+  <div class="var-snackbar-example">
     <div class="snackbar-demo">
       <app-type>{{ pack.componentCall }}</app-type>
       <var-button type="primary" block @click="changeValue('show1')">{{ pack.basicUsage }}</var-button>
@@ -68,27 +68,29 @@ import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/u
 
 export default {
   name: 'SnackbarExample',
+
   components: {
     VarSnackbar: Snackbar.Component,
     VarButton,
     AppType,
   },
-  data() {
-    return {
-      shows: {
-        show1: false,
-        show2: false,
-        show3: false,
-        show4: false,
-        show9: false,
-      },
-    }
-  },
+
+  data: () => ({
+    shows: {
+      show1: false,
+      show2: false,
+      show3: false,
+      show4: false,
+      show9: false,
+    },
+  }),
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)
@@ -105,10 +107,12 @@ export default {
       context.touchmoveForbid = prevTouchmoveForbid
     })
   },
+
   methods: {
     changeValue(type) {
       this.shows[type] = !this.shows[type]
     },
+
     create(type) {
       const text = type === 'loading' ? this.pack.wait : this.pack.text
       Snackbar[type](text)
@@ -119,6 +123,7 @@ export default {
         }, 2000)
       }
     },
+
     createSnackbar(type) {
       if (type === 'time') {
         Snackbar({
@@ -143,9 +148,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.snackbar-demo {
-  .var-button {
-    margin-top: 10px;
+.var-snackbar-example {
+  .snackbar-demo {
+    .var-button {
+      margin-top: 10px;
+    }
   }
 }
 </style>

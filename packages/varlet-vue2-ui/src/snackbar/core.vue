@@ -23,24 +23,27 @@ import { SNACKBAR_TYPE } from './index'
 
 export default {
   name: 'VarSnackbarCore',
+
   components: {
     VarLoading,
     VarIcon,
   },
+
   mixins: [createZIndexMixin('show', 1), createLockMixin('show', 'lockScroll')],
+
   props,
-  data() {
-    return {
-      timer: null,
-      ICON_TYPE_DICT: {
-        success: 'checkbox-marked-circle',
-        warning: 'warning',
-        info: 'information',
-        error: 'error',
-        loading: '',
-      },
-    }
-  },
+
+  data: () => ({
+    timer: null,
+    ICON_TYPE_DICT: {
+      success: 'checkbox-marked-circle',
+      warning: 'warning',
+      info: 'information',
+      error: 'error',
+      loading: '',
+    },
+  }),
+
   computed: {
     snackbarClass() {
       const { position, vertical, type } = this
@@ -61,6 +64,7 @@ export default {
       return this.ICON_TYPE_DICT[this.type]
     },
   },
+
   watch: {
     show(show) {
       if (show) {
@@ -71,17 +75,20 @@ export default {
         this.$emit('close')
       }
     },
+
     customUpdate() {
       clearTimeout(this.timer)
       this.updateAfterDuration()
     },
   },
+
   mounted() {
     if (this.show) {
       this.$emit('open')
       this.updateAfterDuration()
     }
   },
+
   methods: {
     updateAfterDuration() {
       this.timer = setTimeout(() => {

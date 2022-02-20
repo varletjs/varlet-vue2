@@ -23,21 +23,28 @@ export default defineComponent({
 
   props,
 
-  data() {
-    return {
-      endTime: 0,
-      isStart: false,
-      showTime: '',
-      handle: 0,
-      pauseTime: 0,
-      timeData: {
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-        milliseconds: 0,
+  data: () => ({
+    endTime: 0,
+    isStart: false,
+    showTime: '',
+    handle: 0,
+    pauseTime: 0,
+    timeData: {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      milliseconds: 0,
+    },
+  }),
+
+  watch: {
+    time: {
+      handler() {
+        this.reset()
       },
-    }
+      immediate: true,
+    },
   },
 
   methods: {
@@ -100,15 +107,6 @@ export default defineComponent({
       this.isStart = false
       cancelAnimationFrame(this.handle)
       this.countdown()
-    },
-  },
-
-  watch: {
-    time: {
-      handler() {
-        this.reset()
-      },
-      immediate: true,
     },
   },
 })

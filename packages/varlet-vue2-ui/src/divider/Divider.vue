@@ -16,7 +16,6 @@
 </template>
 
 <script>
-// import { defineComponent, computed, reactive, onMounted, onUpdated, toRefs } from 'vue'
 import { defineComponent } from '../utils/create'
 import { toSizeUnit } from '../utils/elements'
 import { isBool, toNumber } from '../utils/shared'
@@ -27,11 +26,9 @@ export default defineComponent({
 
   props,
 
-  data() {
-    return {
-      withText: false,
-    }
-  },
+  data: () => ({
+    withText: false,
+  }),
 
   computed: {
     isInset() {
@@ -58,18 +55,18 @@ export default defineComponent({
     },
   },
 
-  methods: {
-    checkHasText() {
-      this.withText = this.hasSlots() || Boolean(props.description)
-    },
-  },
-
   mounted() {
     this.checkHasText()
   },
 
   updated() {
     this.checkHasText()
+  },
+
+  methods: {
+    checkHasText() {
+      this.withText = this.hasSlots() || Boolean(props.description)
+    },
   },
 })
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-button-example">
     <app-type>{{ pack.themeColorButton }}</app-type>
     <var-button>{{ pack.defaultButton }}</var-button>
     <var-button type="primary">{{ pack.primaryButton }}</var-button>
@@ -124,8 +124,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.var-button {
-  margin-bottom: 10px;
-  margin-right: 10px;
+.var-button-example {
+  .var-button {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
 }
 </style>

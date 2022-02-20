@@ -21,7 +21,7 @@ exports[`test divider dashed and margin prop 3`] = `
 `;
 
 exports[`test divider example 1`] = `
-"<div>
+"<div class=\\"var-divider-example\\">
   <div>
     <div class=\\"app-type\\">基本使用</div>
     <div class=\\"var-divider var--box\\">

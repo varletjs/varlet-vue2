@@ -44,13 +44,17 @@ import { toSizeUnit } from '../utils/elements'
 
 export default defineComponent({
   name: 'VarImage',
+
   directives: {
     Lazy,
     Ripple,
   },
+
   props,
+
   methods: {
     toSizeUnit,
+
     handleLoad(e) {
       const el = e.currentTarget
       const { lazy } = this

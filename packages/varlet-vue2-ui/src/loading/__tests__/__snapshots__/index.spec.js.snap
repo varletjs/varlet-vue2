@@ -52,7 +52,7 @@ exports[`test disappear props 1`] = `
 `;
 
 exports[`test loading example 1`] = `
-"<div class=\\"var-loading-outer\\">
+"<div class=\\"var-loading-example\\">
   <div class=\\"loading-demo__type\\">
     <div class=\\"app-type\\">类型</div>
     <div class=\\"loading-demo__type-block\\">

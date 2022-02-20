@@ -1,5 +1,5 @@
 <template>
-  <div class="var-countdown-outer">
+  <div class="var-countdown-example">
     <div>
       <app-type>{{ pack.basicUsage }}</app-type>
       <var-countdown time="108000000" />
@@ -54,12 +54,10 @@ export default {
     AppType,
   },
 
-  data() {
-    return {
-      countdown: null,
-      time: 3000,
-    }
-  },
+  data: () => ({
+    countdown: null,
+    time: 3000,
+  }),
 
   computed: {
     pack() {
@@ -68,7 +66,6 @@ export default {
   },
 
   created() {
-    console.log(this.$refs)
     watchLang(this, use)
     watchDarkMode(this, dark)
   },
@@ -86,7 +83,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-.var-countdown-outer {
+.var-countdown-example {
   .btn-container {
     display: flex;
     align-items: center;

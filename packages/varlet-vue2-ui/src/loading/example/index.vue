@@ -1,5 +1,5 @@
 <template>
-  <div class="var-loading-outer">
+  <div class="var-loading-example">
     <div class="loading-demo__type">
       <app-type>{{ pack.type }}</app-type>
       <div class="loading-demo__type-block">
@@ -62,11 +62,9 @@ export default {
     AppType,
   },
 
-  data() {
-    return {
-      loading: false,
-    }
-  },
+  data: () => ({
+    loading: false,
+  }),
 
   computed: {
     pack() {
@@ -82,7 +80,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.var-loading-outer {
+.var-loading-example {
   .loading-demo {
     &__type,
     &__size,

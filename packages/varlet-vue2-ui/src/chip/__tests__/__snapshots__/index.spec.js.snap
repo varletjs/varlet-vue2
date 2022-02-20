@@ -6,7 +6,7 @@ exports[`test chip color & textColor 1`] = `
 `;
 
 exports[`test chip example 1`] = `
-"<div class=\\"example\\">
+"<div class=\\"var-chip-example\\">
   <div class=\\"app-type\\">纸片类型</div>
   <transition-stub name=\\"var-fade\\"><span class=\\"var-chip var--box var-chip--normal var--inline-flex var-chip--default var-chip--round\\"> <span class=\\"var-chip--text-normal\\">默认纸片</span>
     <!----></span></transition-stub>

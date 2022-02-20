@@ -51,7 +51,7 @@ exports[`test rate disabled & readonly 2`] = `
 `;
 
 exports[`test rate example 1`] = `
-"<div class=\\"example\\">
+"<div class=\\"var-rate-example\\">
   <div class=\\"app-type\\">基础评分</div>
   <div class=\\"var-rate__warp\\">
     <div class=\\"var-rate\\">

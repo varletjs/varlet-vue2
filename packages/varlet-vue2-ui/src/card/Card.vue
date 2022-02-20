@@ -45,16 +45,14 @@ export default defineComponent({
 
   props,
 
-  data() {
-    return {
-      toSizeUnit,
-    }
-  },
+  data: () => ({
+    toSizeUnit,
+  }),
 
   methods: {
     handleClick(e) {
-      const { disabled } = this
-      const { onClick } = this.getListeners()
+      const { disabled, getListeners } = this
+      const { onClick } = getListeners()
 
       if (!onClick || disabled) {
         return

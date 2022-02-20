@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-rate-example">
     <app-type>{{ pack.baseRating }}</app-type>
     <var-rate v-model="score" />
 
@@ -67,10 +67,12 @@ import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/u
 
 export default {
   name: 'RateExample',
+
   components: {
     VarRate,
     AppType,
   },
+
   data: () => ({
     score: 3,
     score1: 3,
@@ -85,11 +87,13 @@ export default {
     score10: 3,
     score11: 3,
   }),
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)
@@ -106,6 +110,7 @@ export default {
       context.touchmoveForbid = prevTouchmoveForbid
     })
   },
+
   methods: {
     handleChange(score) {
       VarSnackbar({
@@ -117,8 +122,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.var-rate {
-  margin-bottom: 10px;
+<style lang="less" scoped>
+.var-rate-example {
+  .var-rate {
+    margin-bottom: 10px;
+  }
 }
 </style>

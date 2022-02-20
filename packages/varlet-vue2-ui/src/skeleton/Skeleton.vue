@@ -52,11 +52,10 @@ export default defineComponent({
 
   props,
 
-  data() {
-    return {
-      toSizeUnit,
-      toNumber,
-    }
+  methods: {
+    toSizeUnit,
+
+    toNumber,
   },
 })
 </script>

@@ -118,7 +118,7 @@ export default {
   </template>
 
   <template #right>
-    <var-menu :offset-y="42" :offset-x="-20" v-model:show="offsetY">
+    <var-menu :offset-y="42" :offset-x="-20" show.sync="offsetY">
       <var-button
         round
         text
@@ -157,9 +157,7 @@ export default {
       { label: '选项二', value: 'menu2' }
     ],
   }),
-
   methods: {
-
     goBack() {
       Snackbar({
         content: '返回',
@@ -174,11 +172,9 @@ export default {
 .var-menu {
   background: transparent;
 }
-
 .menu-list {
   background: #fff;
 }
-
 .menu-list .menu-cell {
   display: block;
   padding: 10px;
