@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div class="var-appBar-example">
     <app-type>{{ pack.basicAppBar }}</app-type>
     <var-app-bar :title="pack.title" />
 
@@ -35,8 +35,8 @@
         </var-button>
       </template>
 
-      <!-- <template #right>
-        <var-menu :offset-y="42" :offset-x="-20" v-model:show="offsetY">
+      <template #right>
+        <var-menu :offset-y="42" :offset-x="-20" :show.sync="offsetY">
           <var-button round text color="transparent" text-color="#ffffff" @click="changeOffset">
             <var-icon name="menu" :size="24" />
           </var-button>
@@ -49,7 +49,7 @@
             </div>
           </template>
         </var-menu>
-      </template> -->
+      </template>
     </var-app-bar>
 
     <div class="space"></div>
@@ -61,8 +61,8 @@ import VarAppBar from '..'
 import VarIcon from '../../icon'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import Ripple from '../../ripple'
-// import Snackbar from '../../snackbar'
-// import VarMenu from '../../menu'
+import Snackbar from '../../snackbar'
+import VarMenu from '../../menu'
 import VarButton from '../../button'
 import VarCell from '../../cell'
 import dark from '../../themes/dark'
@@ -77,7 +77,7 @@ export default {
   components: {
     VarAppBar,
     VarIcon,
-    // VarMenu,
+    VarMenu,
     VarButton,
     VarCell,
     AppType,
@@ -102,34 +102,39 @@ export default {
 
   methods: {
     searchData() {
-      // TODO: Should use snackbar replace
-      console.log(this.pack.search)
+      Snackbar({
+        content: this.pack.search,
+        position: 'top',
+      })
     },
 
     goBack() {
-      // TODO: Should use snackbar replace
-      console.log(this.pack.goBack)
+      Snackbar({
+        content: this.pack.goBack,
+        position: 'top',
+      })
     },
 
     changeOffset() {
-      this.menuList.value = [
+      this.menuList = [
         { label: this.pack.options1, value: 'menu1' },
         { label: this.pack.options2, value: 'menu2' },
       ]
 
-      this.offsetY.value = true
+      this.offsetY = true
     },
   },
 }
 </script>
 
-<style scoped>
-.menu-list .menu-cell {
-  display: block;
-  padding: 10px;
-}
-
-.space {
-  height: 80px;
+<style lang="less" scoped>
+.var-appBar-example {
+  .menu-list .menu-cell {
+    display: block;
+    padding: 10px;
+  }
+  .space {
+    height: 80px;
+  }
 }
 </style>

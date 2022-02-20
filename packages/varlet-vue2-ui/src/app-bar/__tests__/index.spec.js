@@ -2,7 +2,7 @@ import example from '../example'
 import AppBar from '..'
 import VarAppBar from '../AppBar'
 import { mount } from '@vue/test-utils'
-import { createApp } from 'vue'
+import Vue from 'vue'
 import { delay } from '../../utils/jest'
 
 test('test app bar example', async () => {
@@ -13,20 +13,20 @@ test('test app bar example', async () => {
 })
 
 test('test app bar plugin', () => {
-  const app = createApp({}).use(AppBar)
-  expect(app.component(AppBar.name)).toBeTruthy()
+  Vue.use(AppBar)
+  expect(Vue.component(AppBar.name)).toBeTruthy()
 })
 
 test('test app bar props', () => {
   const wrapper = mount(VarAppBar, {
-    props: {
+    propsData: {
       color: '#a3b9db',
       textColor: '#000',
       title: 'test title',
       titlePosition: 'center',
       elevation: false,
     },
-    slots: {
+    scopedSlots: {
       left: () => 'leftSlot',
       right: () => 'rightSlot',
     },

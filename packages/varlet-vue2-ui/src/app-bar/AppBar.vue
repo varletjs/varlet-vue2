@@ -41,19 +41,19 @@ export default defineComponent({
     paddingRight: 0,
   }),
 
-  methods: {
-    computePadding() {
-      this.paddingLeft = this.hasSlots('left') ? 0 : undefined
-      this.paddingRight = this.hasSlots('right') ? 0 : undefined
-    },
-  },
-
   mounted() {
     this.computePadding()
   },
 
   updated() {
     this.computePadding()
+  },
+
+  methods: {
+    computePadding() {
+      this.paddingLeft = this.hasSlots('left') ? 0 : undefined
+      this.paddingRight = this.hasSlots('right') ? 0 : undefined
+    },
   },
 })
 </script>
