@@ -29,7 +29,7 @@ module.exports = {
         'zh-CN': '中文',
         'en-US': 'English',
       },
-      github: 'https://github.com/varletjs/varlet',
+      github: 'https://github.com/varletjs/varlet-vue2',
       darkMode: true,
     },
     clipboard: {
@@ -45,14 +45,14 @@ module.exports = {
     redirect: '/home',
     title: {
       'zh-CN': '面向 Vue2 的 Material 风格移动端组件库',
-      'en-US': 'Material design mobile components built for Vue3',
+      'en-US': 'Material design mobile components built for Vue2',
     },
     header: {
       i18n: {
         'zh-CN': '中文',
         'en-US': 'English',
       },
-      github: 'https://github.com/varletjs/varlet',
+      github: 'https://github.com/varletjs/varlet-vue2',
       darkMode: true,
     },
   },
