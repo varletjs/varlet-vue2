@@ -6,12 +6,11 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from '../utils/create'
 import { props } from './props'
 import { requestAnimationFrame, cancelAnimationFrame } from '../utils/elements'
 import { toNumber, parseFormat } from '../utils/shared'
-import type { TimeData } from './props'
 
 const SECOND = 1000
 const MINUTE = 60 * SECOND
@@ -48,7 +47,7 @@ export default defineComponent({
   },
 
   methods: {
-    formatTime(durationTime: number) {
+    formatTime(durationTime) {
       const { onChange } = this.getListeners()
       const days = Math.floor(durationTime / DAY)
       const hours = Math.floor((durationTime % DAY) / HOUR)
@@ -56,7 +55,7 @@ export default defineComponent({
       const seconds = Math.floor((durationTime % MINUTE) / SECOND)
       const milliseconds = Math.floor(durationTime % SECOND)
 
-      const time: TimeData = {
+      const time = {
         days,
         hours,
         minutes,

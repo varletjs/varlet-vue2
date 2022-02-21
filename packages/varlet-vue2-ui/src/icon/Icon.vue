@@ -15,7 +15,7 @@
       fontSize: toSizeUnit(size),
     }"
     :src="isURL(name) ? nextName : null"
-    @click="getListeners().onClick"
+    @click="onClickIcon"
   />
 </template>
 
@@ -58,6 +58,9 @@ export default defineComponent({
     toSizeUnit,
     isURL,
     toNumber,
+    onClickIcon() {
+      this.getListeners()?.onClick()
+    },
   },
 })
 </script>
