@@ -28,7 +28,7 @@ test('test cell props', async () => {
       icon: 'fire',
     },
     scopedSlots: {
-      extra: 'text',
+      extra: '<div>text</div>',
     },
   })
   expect(wrapper.find('.var-icon').exists()).toBe(true)

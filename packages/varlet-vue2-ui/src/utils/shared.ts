@@ -1,14 +1,21 @@
+import { TimeData } from '../countdown/props'
+
 export interface CacheInstance<T> {
-  cache: T[];
+  cache: T[]
 
-  has(key: T): boolean;
+  has(key: T): boolean
 
-  add(key: T): void;
+  add(key: T): void
 
-  remove(key: T): void;
+  remove(key: T): void
 
-  clear(): void;
+  clear(): void
 }
+
+export const cubic = (value: number): number => value ** 3
+
+export const easeInOutCubic = (value: number): number =>
+  value < 0.5 ? cubic(value * 2) / 2 : 1 - cubic((1 - value) * 2) / 2
 
 export const isString = (val: unknown): val is string => typeof val === 'string'
 
@@ -119,6 +126,34 @@ export const range = (num: number, left: number, right: number) => {
   return num
 }
 
+export function parseFormat(format: string, time: TimeData): string {
+  const scannedTimes = Object.values(time)
+  const scannedFormats = ['DD', 'HH', 'mm', 'ss']
+  const padValues = [24, 60, 60, 1000]
+
+  scannedFormats.forEach((scannedFormat, index) => {
+    if (!format.includes(scannedFormat)) {
+      scannedTimes[index + 1] += scannedTimes[index] * padValues[index]
+    } else {
+      format = format.replace(scannedFormat, String(scannedTimes[index]).padStart(2, '0'))
+    }
+  })
+
+  if (format.includes('S')) {
+    const ms = String(scannedTimes[scannedTimes.length - 1]).padStart(3, '0')
+
+    if (format.includes('SSS')) {
+      format = format.replace('SSS', ms)
+    } else if (format.includes('SS')) {
+      format = format.replace('SS', ms.slice(0, 2))
+    } else {
+      format = format.replace('S', ms.slice(0, 1))
+    }
+  }
+
+  return format
+}
+
 export const delay = (time: number) => new Promise((resolve) => setTimeout(resolve, time))
 
 export const inBrowser = () => typeof window !== 'undefined'
@@ -151,3 +186,5 @@ export const createCache = <T>(max: number): CacheInstance<T> => {
     },
   }
 }
+
+export const NOOP = () => {}

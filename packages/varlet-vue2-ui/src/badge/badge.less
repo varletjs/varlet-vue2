@@ -1,0 +1,119 @@
+@badge-content-padding: 2px 6px;
+@badge-default-color: #e0e0e0;
+@badge-primary-color: var(--color-primary);
+@badge-danger-color: var(--color-danger);
+@badge-success-color: var(--color-success);
+@badge-warning-color: var(--color-warning);
+@badge-info-color: var(--color-info);
+
+:root {
+  --badge-content-padding: @badge-content-padding;
+  --badge-default-color: @badge-default-color;
+  --badge-primary-color: @badge-primary-color;
+  --badge-danger-color: @badge-danger-color;
+  --badge-success-color: @badge-success-color;
+  --badge-warning-color: @badge-warning-color;
+  --badge-info-color: @badge-info-color;
+}
+
+.var-badge {
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.25s;
+
+  &__content {
+    color: #fff;
+    border-radius: 100px;
+    font-size: 12px;
+    padding: 2px 6px;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+  }
+
+  &__icon {
+    padding: 2px 4px;
+  }
+
+  &__position {
+    border: 2px #fff solid;
+  }
+
+  &--default {
+    background: var(--badge-default-color);
+  }
+
+  &--primary {
+    background: var(--badge-primary-color);
+  }
+
+  &--info {
+    background: var(--badge-info-color);
+  }
+
+  &--warning {
+    background: var(--badge-warning-color);
+  }
+
+  &--success {
+    background: var(--badge-success-color);
+  }
+
+  &--danger {
+    background: var(--badge-danger-color);
+  }
+
+  &--right-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+  }
+
+  &--left-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  &--right-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(50%) translateX(50%);
+  }
+
+  &--left-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+
+  &__dot {
+    box-sizing: content-box;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    padding: 0;
+  }
+
+  &__dot--right {
+    right: 6px;
+  }
+
+  &__dot--left {
+    left: 6px;
+  }
+
+  &-fade-enter-active,
+  &-fade-leave-active {
+    transition: opacity 0.15s var(--cubic-bezier);
+  }
+
+  &-fade-enter-from,
+  &-fade-leave-to {
+    opacity: 0;
+  }
+}

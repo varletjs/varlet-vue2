@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test table example 1`] = `
+"<div class=\\"var-table-example\\">
+  <div class=\\"app-type\\">基本使用</div>
+  <div class=\\"var-table var-elevation--1 var--box\\">
+    <div class=\\"var-table__main\\">
+      <table class=\\"var-table__table\\" style=\\"width: 100%;\\">
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>数学</th>
+            <th>英语</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>耗子君</td>
+            <td>124</td>
+            <td>38</td>
+          </tr>
+          <tr>
+            <td>火猫桑</td>
+            <td>100</td>
+            <td>135</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!---->
+  </div>
+  <div class=\\"app-type\\">尾部插槽</div>
+  <div class=\\"var-table var-elevation--1 var--box\\">
+    <div class=\\"var-table__main\\">
+      <table class=\\"var-table__table\\" style=\\"width: 100%;\\">
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>数学</th>
+            <th>英语</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name 1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Name 2</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Name 3</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Name 4</td>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Name 5</td>
+            <td>5</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Name 6</td>
+            <td>6</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Name 7</td>
+            <td>7</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Name 8</td>
+            <td>8</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Name 9</td>
+            <td>9</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>Name 10</td>
+            <td>10</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class=\\"var-table__footer\\">
+      <div class=\\"footer\\"></div>
+    </div>
+  </div>
+</div>"
+`;

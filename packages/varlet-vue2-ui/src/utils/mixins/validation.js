@@ -6,7 +6,7 @@ export const ValidationMixin = {
   }),
 
   methods: {
-    async validateRules(rules, value, apis) {
+    async _validate(rules, value, apis) {
       if (!isArray(rules) || !rules.length) {
         return true
       }
@@ -26,9 +26,9 @@ export const ValidationMixin = {
       return valid
     },
 
-    async validateWithTrigger(validateTrigger, trigger, rules, value, apis) {
+    async _validateWithTrigger(validateTrigger, trigger, rules, value, apis) {
       if (validateTrigger.includes(trigger)) {
-        await this.validateRules(rules, value, apis)
+        await this._validate(rules, value, apis)
       }
     },
 

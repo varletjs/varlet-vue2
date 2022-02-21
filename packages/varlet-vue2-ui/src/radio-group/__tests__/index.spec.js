@@ -1,0 +1,280 @@
+import example from '../example'
+import RadioGroup from '..'
+import Radio from '../../radio'
+import VarRadioGroup from '../RadioGroup'
+import VarRadio from '../../radio/Radio'
+import { mount } from '@vue/test-utils'
+import Vue from 'vue'
+import { delay } from '../../utils/jest'
+
+test('test radio example', () => {
+  const wrapper = mount(example)
+  expect(wrapper.html()).toMatchSnapshot()
+  wrapper.destroy()
+})
+
+test('test radio group plugin', () => {
+  const app = Vue.use(RadioGroup)
+  expect(app.component(RadioGroup.name)).toBeTruthy()
+})
+
+test('test radio plugin', () => {
+  const app = Vue.use(Radio)
+  expect(app.component(Radio.name)).toBeTruthy()
+})
+
+test('test radio check value', async () => {
+  const onInput = jest.fn((value) => wrapper.setProps({ value: value }))
+
+  const wrapper = mount(VarRadio, {
+    propsData: {
+      value: false,
+    },
+    listeners: {
+      input: onInput,
+    },
+  })
+
+  await wrapper.find('.var-radio').trigger('click')
+  expect(onInput).lastCalledWith(true)
+  expect(wrapper.props('value')).toBe(true)
+
+  await wrapper.find('.var-radio').trigger('click')
+  expect(onInput).lastCalledWith(false)
+  expect(wrapper.props('value')).toBe(false)
+
+  wrapper.destroy()
+})
+
+test('test radio check value with custom value', async () => {
+  const onInput = jest.fn((value) => wrapper.setProps({ value }))
+
+  const wrapper = mount(VarRadio, {
+    propsData: {
+      value: 0,
+      uncheckedValue: 0,
+      checkedValue: 1,
+    },
+    listeners: {
+      input: onInput,
+    },
+  })
+
+  await wrapper.find('.var-radio').trigger('click')
+  expect(onInput).lastCalledWith(1)
+  expect(wrapper.props('value')).toBe(1)
+
+  wrapper.destroy()
+})
+
+test('test radio onClick & onChange', async () => {
+  const onClick = jest.fn()
+  const onChange = jest.fn()
+
+  const wrapper = mount(VarRadio, {
+    propsData: {
+      value: false,
+    },
+    listeners: {
+      click: onClick,
+      change: onChange,
+    },
+  })
+
+  await wrapper.find('.var-radio').trigger('click')
+  expect(onClick).toHaveBeenCalledTimes(1)
+  expect(onChange).lastCalledWith(true)
+
+  wrapper.destroy()
+})
+
+test('test radio toggle method', async () => {
+  const onInput = jest.fn((value) => wrapper.setProps({ value }))
+
+  const wrapper = mount(VarRadio, {
+    propsData: {
+      value: false,
+    },
+    listeners: {
+      input: onInput,
+    },
+  })
+
+  wrapper.vm.toggle()
+  await delay(16)
+
+  expect(onInput).lastCalledWith(true)
+  expect(wrapper.props('value')).toBe(true)
+
+  wrapper.destroy()
+})
+
+test('test radio disabled', async () => {
+  const onInput = jest.fn((value) => wrapper.setProps({ value }))
+  const onClick = jest.fn()
+  const onChange = jest.fn()
+
+  const wrapper = mount(VarRadio, {
+    propsData: {
+      value: false,
+      disabled: true,
+    },
+    listeners: {
+      input: onInput,
+      click: onClick,
+      change: onChange,
+    },
+  })
+
+  await wrapper.find('.var-radio').trigger('click')
+
+  expect(onInput).toHaveBeenCalledTimes(0)
+  expect(onClick).toHaveBeenCalledTimes(0)
+  expect(onChange).toHaveBeenCalledTimes(0)
+  expect(wrapper.props('value')).toBe(false)
+
+  wrapper.destroy()
+})
+
+test('test radio readonly', async () => {
+  const onInput = jest.fn((value) => wrapper.setProps({ value }))
+  const onClick = jest.fn()
+  const onChange = jest.fn()
+
+  const wrapper = mount(VarRadio, {
+    propsData: {
+      value: false,
+      readonly: true,
+    },
+    listeners: {
+      input: onInput,
+      click: onClick,
+      change: onChange,
+    },
+  })
+
+  await wrapper.find('.var-radio').trigger('click')
+
+  expect(onInput).toHaveBeenCalledTimes(0)
+  expect(onClick).toHaveBeenCalledTimes(1)
+  expect(onChange).toHaveBeenCalledTimes(0)
+  expect(wrapper.props('value')).toBe(false)
+
+  wrapper.destroy()
+})
+
+test('test radio with radio group', async () => {
+  const wrapper = mount({
+    components: {
+      [VarRadioGroup.name]: VarRadioGroup,
+      [VarRadio.name]: VarRadio,
+    },
+    data: () => ({
+      value: 2,
+    }),
+    template: `
+      <var-radio-group v-model="value">
+        <var-radio :checked-value="1" />
+        <var-radio :checked-value="2" />
+      </var-radio-group>
+    `,
+  })
+
+  await wrapper.find('.var-radio').trigger('click')
+  expect(wrapper.vm.value).toBe(1)
+
+  await wrapper.find('.var-radio').trigger('click')
+  expect(wrapper.vm.value).toBe(1)
+
+  wrapper.destroy()
+})
+
+test('test radio validation', async () => {
+  const onInput = jest.fn((value) => wrapper.setProps({ value }))
+
+  const wrapper = mount(VarRadio, {
+    propsData: {
+      value: false,
+      rules: [(v) => v || '您必须勾选'],
+    },
+    listeners: {
+      input: onInput,
+    },
+  })
+
+  wrapper.vm.validate()
+  await delay(16)
+
+  expect(wrapper.find('.var-form-details__message').text()).toBe('您必须勾选')
+  expect(wrapper.html()).toMatchSnapshot()
+
+  await wrapper.find('.var-radio').trigger('click')
+  await delay(16)
+
+  expect(wrapper.find('.var-form-details__message').exists()).toBeFalsy()
+  expect(wrapper.html()).toMatchSnapshot()
+
+  wrapper.vm.reset()
+  await delay(16)
+  expect(wrapper.props('value')).toBe(false)
+
+  wrapper.destroy()
+})
+
+test('test radio group validation', async () => {
+  const wrapper = mount({
+    components: {
+      [VarRadioGroup.name]: VarRadioGroup,
+      [VarRadio.name]: VarRadio,
+    },
+    data: () => ({
+      value: 2,
+    }),
+    template: `
+      <var-radio-group ref="radioGroup" :rules="[v => v === 1 || '必须选第一个']" v-model="value">
+        <var-radio :checked-value="1" />
+        <var-radio :checked-value="2" />
+      </var-radio-group>
+    `,
+  })
+
+  const { radioGroup } = wrapper.vm.$refs
+
+  radioGroup.validate()
+  await delay(16)
+  expect(wrapper.find('.var-form-details__message').text()).toBe('必须选第一个')
+  expect(wrapper.html()).toMatchSnapshot()
+
+  radioGroup.reset()
+  await delay(16)
+  expect(wrapper.vm.value).toBe(undefined)
+
+  await wrapper.find('.var-radio').trigger('click')
+  await delay(16)
+
+  expect(wrapper.find('.var-form-details__message').exists()).toBeFalsy()
+  expect(wrapper.html()).toMatchSnapshot()
+
+  wrapper.destroy()
+})
+
+test('test radio group layout direction', async () => {
+  const wrapper = mount({
+    components: {
+      [VarRadioGroup.name]: VarRadioGroup,
+      [VarRadio.name]: VarRadio,
+    },
+    data: () => ({
+      value: 2,
+    }),
+    template: `
+      <var-radio-group direction="vertical" v-model="value">
+        <var-radio :checked-value="1" />
+        <var-radio :checked-value="2" />
+      </var-radio-group>
+    `,
+  })
+
+  expect(wrapper.html()).toMatchSnapshot()
+  wrapper.destroy()
+})

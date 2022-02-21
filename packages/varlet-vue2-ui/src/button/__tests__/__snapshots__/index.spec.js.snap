@@ -22,7 +22,7 @@ exports[`test button disabled 1`] = `
 `;
 
 exports[`test button example 1`] = `
-"<div class=\\"example\\">
+"<div class=\\"var-button-example\\">
   <div class=\\"app-type\\">主题色按钮</div> <button class=\\"var-button var--box var-button--normal var--inline-flex var-button--default var-elevation--2\\">
     <!---->
     <div class=\\"var-button__content\\">默认按钮</div>

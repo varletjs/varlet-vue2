@@ -30,7 +30,7 @@ exports[`test linear progress prop 1`] = `
 `;
 
 exports[`test progress example 1`] = `
-"<div class=\\"var-progress-outer\\">
+"<div class=\\"var-progress-example\\">
   <div class=\\"space\\"></div>
   <div class=\\"progress-demo__basic\\">
     <div class=\\"app-type\\">基本使用</div>
