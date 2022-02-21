@@ -7,10 +7,10 @@
 ### 引入
 
 ```js
-import { createApp } from 'vue'
-import { Table } from '@varlet/ui'
+import Vue from 'vue'
+import { Table } from '@varlet-vue2/ui'
 
-createApp().use(Table)
+Vue.use(Table)
 ```
 
 ### 基本使用
@@ -97,18 +97,15 @@ const gen = (current, size) => {
 }
 
 export default {
-  setup() {
-    const list = ref(gen(1, 10))
+  data: () => ({
+    list: gen(1, 10),
+  }),
 
-    const get = (current, size) => {
-      list.value = gen(current, size)
-    }
-
-    return {
-      list,
-      get
-    }
-  }
+  methods: {
+    get(current, size) {
+      this.list = gen(current, size)
+    },
+  },
 }
 ```
 
