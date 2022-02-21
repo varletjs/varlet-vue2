@@ -4,7 +4,7 @@
 
 ```js
 import Vue from 'vue'
-import { AppBar } from '@varlet/ui'
+import { AppBar } from '@varlet-vue2/ui'
 
 Vue.use(AppBar)
 ```
