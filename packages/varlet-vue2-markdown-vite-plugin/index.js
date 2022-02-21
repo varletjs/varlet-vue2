@@ -72,7 +72,9 @@ function markdownToVue(source, options) {
     highlight: (str, lang) => highlight(str, lang, style),
   })
   let templateString = htmlWrapper(md.render(vueSource))
-  templateString = templateString.replace(/process.env/g, '<span>process.env</span>')
+  templateString = templateString
+    .replace(/process.env/g, '<span>process.env</span>')
+    .replace(/require/g, '<span>require</span>')
   templateString = injectCodeExample(templateString)
 
   return `
