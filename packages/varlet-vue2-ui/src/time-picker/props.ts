@@ -3,15 +3,15 @@ import type { PropType } from 'vue'
 export type Format = 'ampm' | '24hr'
 export type AmPm = 'am' | 'pm'
 export type Time = {
-  hour: string;
-  minute: string;
-  second?: string;
+  hour: string
+  minute: string
+  second?: string
 }
 
 export type AllowedTime = {
-  hours?: (hour: number) => boolean;
-  minutes?: (minute: number) => boolean;
-  seconds?: (second: number) => boolean;
+  hours?: (hour: number) => boolean
+  minutes?: (minute: number) => boolean
+  seconds?: (second: number) => boolean
 }
 
 export const hoursAmpm = ['12', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
@@ -57,8 +57,5 @@ export const props = {
   readonly: {
     type: Boolean,
     default: false,
-  },
-  onChange: {
-    type: Function as PropType<(value: string) => void>,
   },
 }

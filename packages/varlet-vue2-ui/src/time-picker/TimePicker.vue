@@ -130,10 +130,10 @@ export default defineComponent({
   },
   methods: {
     update(newTime) {
-      const { onInput } = this.getListeners()
+      const { onInput, onChange } = this.getListeners()
 
       onInput?.(newTime)
-      this.onChange?.(newTime)
+      onChange?.(newTime)
     },
     rad2deg(rad) {
       return rad * 57.29577951308232
