@@ -108,7 +108,7 @@ export default defineComponent({
             class="var-menu__menu var-elevation--3"
             ref="menu"
             style={this.transitionStyle}
-            v-show:show={this.show}
+            v-show={this.show}
             onClick={(event) => {
               event.stopPropagation()
             }}
