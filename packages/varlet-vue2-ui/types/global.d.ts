@@ -11,6 +11,7 @@ declare module 'vue' {
     VarDivider: typeof import('@varlet-vue2/ui')['_DividerComponent']
     VarForm: typeof import('@varlet-vue2/ui')['_FormComponent']
     VarImage: typeof import('@varlet-vue2/ui')['_ImageComponent']
+    VarInput: typeof import('@varlet-vue2/ui')['_InputComponent']
     VarLazy: typeof import('@varlet-vue2/ui')['_LazyComponent']
     VarLoading: typeof import('@varlet-vue2/ui')['_LoadingComponent']
     VarLocale: typeof import('@varlet-vue2/ui')['_LocaleComponent']
@@ -23,6 +24,9 @@ declare module 'vue' {
     VarSnackbar: typeof import('@varlet-vue2/ui')['_SnackbarComponent']
     VarSwitch: typeof import('@varlet-vue2/ui')['_SwitchComponent']
     VarSticky: typeof import('@varlet-vue2/ui')['_StickyComponent']
+    VarRow: typeof import('@varlet-vue2/ui')['_RowComponent']
+    VarCol: typeof import('@varlet-vue2/ui')['_ColComponent']
+    VarTable: typeof import('@varlet-vue2/ui')['_TableComponent']
   }
 }
 
