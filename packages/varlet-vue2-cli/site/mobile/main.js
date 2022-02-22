@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import '@varlet/touch-emulator'
 
 import Icon from '../components/icon'
 import AppBar from '../components/app-bar'
