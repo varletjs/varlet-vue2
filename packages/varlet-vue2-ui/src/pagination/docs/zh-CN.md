@@ -8,7 +8,7 @@
 
 ```js
 import Vue from 'vue'
-import { Pagination } from '@varlet/ui'
+import { Pagination } from '@varlet-vue2/ui'
 
 Vue.use(Pagination)
 ```

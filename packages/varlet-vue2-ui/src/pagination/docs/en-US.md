@@ -8,7 +8,7 @@ You may need it when you need to process large amounts of data.
 
 ```js
 import Vue from 'vue'
-import { Pagination } from '@varlet/ui'
+import { Pagination } from '@varlet-vue2/ui'
 
 Vue.use(Pagination)
 ```
