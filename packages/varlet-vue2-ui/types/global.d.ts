@@ -26,6 +26,7 @@ declare module 'vue' {
     VarRow: typeof import('@varlet-vue2/ui')['_RowComponent']
     VarCol: typeof import('@varlet-vue2/ui')['_ColComponent']
     VarTable: typeof import('@varlet-vue2/ui')['_TableComponent']
+    VarSpace: typeof import('@varlet-vue2/ui')['_SpaceComponent']
   }
 }
 
