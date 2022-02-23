@@ -146,6 +146,7 @@ feat(ui/组件名): add component 组件名
 - test：增加测试
 - chore：构建过程或辅助工具的变动
 - perf：性能优化
+- test：单元测试
 
 ```shell
 git push -u
