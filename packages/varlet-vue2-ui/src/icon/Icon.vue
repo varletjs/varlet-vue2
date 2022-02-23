@@ -59,7 +59,7 @@ export default defineComponent({
     isURL,
     toNumber,
     onClickIcon() {
-      this.getListeners()?.onClick()
+      this.getListeners()?.onClick?.()
     },
   },
 })

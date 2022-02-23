@@ -1,0 +1,80 @@
+@switch-track-background: #fff;
+@switch-track-active-background: var(--color-primary);
+@switch-track-error-background: var(--color-danger);
+@switch-ripple-color: var(--color-primary);
+@switch-handle-background: #fff;
+@switch-handle-color: #fff;
+@switch-handle-active-background: var(--color-primary);
+@switch-handle-error-background: var(--color-danger);
+
+:root {
+  --switch-track-background: @switch-track-background;
+  --switch-track-active-background: @switch-track-active-background;
+  --switch-track-error-background: @switch-track-error-background;
+  --switch-ripple-color: @switch-ripple-color;
+  --switch-handle-background: @switch-handle-background;
+  --switch-handle-color: @switch-handle-color;
+  --switch-handle-active-background: @switch-handle-active-background;
+  --switch-handle-error-background: @switch-handle-error-background;
+}
+
+.var-switch {
+  display: inline-block;
+
+  &-block {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__disable {
+    filter: opacity(0.6);
+    cursor: not-allowed;
+  }
+
+  &__track {
+    background: var(--switch-track-background);
+    transition: background-color 0.25s;
+    filter: opacity(0.6);
+
+    &-active {
+      background-color: var(--switch-track-active-background);
+    }
+
+    &-error {
+      background-color: var(--switch-track-error-background) !important;
+    }
+  }
+
+  &__ripple {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--switch-ripple-color);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.3s var(--cubic-bezier);
+  }
+
+  &__handle {
+    border-radius: 50%;
+    background-color: var(--switch-handle-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--switch-handle-color);
+    transition: background-color 0.25s;
+
+    &-active {
+      background-color: var(--switch-handle-active-background);
+    }
+
+    &-error {
+      background-color: var(--switch-handle-error-background) !important;
+    }
+  }
+}

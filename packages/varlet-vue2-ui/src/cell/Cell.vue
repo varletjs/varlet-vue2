@@ -1,5 +1,5 @@
 <template>
-  <div class="var-cell" :class="[border ? 'var-cell--border' : null]">
+  <div class="var-cell" :class="[border ? 'var-cell--border' : null]" @click="onClickCell">
     <div class="var-cell__icon" :class="[iconClass ? iconClass : null]" v-if="hasSlots('icon') || icon">
       <slot name="icon">
         <var-icon class="var--flex" :name="icon" />
@@ -34,6 +34,12 @@ export default defineComponent({
   },
 
   props,
+
+  methods: {
+    onClickCell() {
+      this.getListeners()?.onClick?.()
+    },
+  },
 })
 </script>
 

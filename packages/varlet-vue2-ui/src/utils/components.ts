@@ -31,3 +31,15 @@ export function mountComponent(component: ComponentOptions<Vue>, container = 'bo
     },
   }
 }
+
+export function addRouteListener(vm: any, cb: () => void) {
+  vm.$on('hook:mounted', () => {
+    window.addEventListener('hashchange', cb)
+    window.addEventListener('popstate', cb)
+  })
+
+  vm.$on('hook:beforeDestroy', () => {
+    window.removeEventListener('hashchange', cb)
+    window.removeEventListener('popstate', cb)
+  })
+}

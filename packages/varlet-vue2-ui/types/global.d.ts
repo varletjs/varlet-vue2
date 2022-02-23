@@ -22,6 +22,7 @@ declare module 'vue' {
     VarRate: typeof import('@varlet-vue2/ui')['_RateComponent']
     VarSkeleton: typeof import('@varlet-vue2/ui')['_SkeletonComponent']
     VarSnackbar: typeof import('@varlet-vue2/ui')['_SnackbarComponent']
+    VarSwitch: typeof import('@varlet-vue2/ui')['_SwitchComponent']
     VarSticky: typeof import('@varlet-vue2/ui')['_StickyComponent']
     VarRow: typeof import('@varlet-vue2/ui')['_RowComponent']
     VarCol: typeof import('@varlet-vue2/ui')['_ColComponent']

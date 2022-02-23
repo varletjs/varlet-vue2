@@ -244,7 +244,7 @@ export default defineComponent({
       const { disabled, readonly, clearable, getListeners } = this
       const { onInput, onClear } = getListeners()
 
-      if (this.form?.disabled.value || this.form?.readonly.value || disabled || readonly || !clearable) {
+      if (this.formDisabled || this.formReadonly || disabled || readonly || !clearable) {
         return
       }
 
@@ -257,7 +257,7 @@ export default defineComponent({
     handleClick(e) {
       const { disabled, getListeners } = this
 
-      if (this.form?.disabled.value || disabled) {
+      if (this.formDisabled || disabled) {
         return
       }
 

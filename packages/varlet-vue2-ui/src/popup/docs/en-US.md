@@ -1,0 +1,298 @@
+# Popup
+
+### Intro
+Create a container that can pop up from top, bottom, left, right and center. `teleport` inserts into the end of the `body` by default.
+
+### Install
+
+```js
+import Vue from 'vue'
+import { Popup } from '@varlet-vue2/ui'
+
+Vue.use(Popup)
+```
+
+### Popup Position
+
+```html
+<var-button 
+  class="mt-10"
+  type="primary"
+  block
+  @click="center = true"
+>
+  Center Popup
+</var-button>
+<var-button
+  class="mt-10"
+  type="primary"
+  block
+  @click="bottom = true"
+>
+  Below Popup
+</var-button>
+<var-button
+  class="mt-10"
+  type="primary"
+  block 
+  @click="top = true"
+>
+  Above Popup
+</var-button>
+<var-button 
+  class="mt-10" 
+  type="primary"
+  block
+  @click="left = true"
+>
+  Left Popup
+</var-button>
+<var-button 
+  class="mt-10" 
+  type="primary"
+  block 
+  @click="right = true"
+>
+  Right Popup
+</var-button>
+
+// Center Popup
+<var-popup :show.sync="center">
+  <div class="block">
+    As he came into the window.
+    It was the sound of a crescendo.
+    He came into her apartment.
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+
+// Below Popup
+<var-popup position="bottom" :show.sync="bottom">
+  <div class="block">
+    As he came into the window. 
+    It was the sound of a crescendo. 
+    He came into her apartment. 
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+
+// Above Popup
+<var-popup position="top" :show.sync="top">
+  <div class="block">
+    As he came into the window.
+    It was the sound of a crescendo.
+    He came into her apartment.
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+
+// Left Popup
+<var-popup position="left" :show.sync="left">
+  <div class="block">
+    As he came into the window.
+    It was the sound of a crescendo.
+    He came into her apartment.
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+
+// Right Popup
+<var-popup position="right" :show.sync="right">
+  <div class="block">
+    As he came into the window.
+    It was the sound of a crescendo.
+    He came into her apartment.
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+```
+
+```js
+export default {
+  data: () => ({
+    center: false,
+    top: false,
+    bottom: false,
+    left: false,
+    right: false
+  })
+}
+```
+
+```css
+.mt-10 {
+  margin-top: 10px;
+}
+
+.block {
+  padding: 20px 24px;
+  width: 250px;
+}
+```
+
+### Overlay Style
+
+```html
+<var-button
+  class="mt-10"
+  type="primary"
+  block 
+  @click="overlayClass = true"
+>
+  Overlay Style
+</var-button>
+<var-button 
+  class="mt-10"
+  type="primary"
+  block 
+  @click="overlayStyle = true"
+>
+  Overlay Style
+</var-button>
+
+// Overlay Class
+<var-popup 
+  overlay-class="custom-overlay" 
+  :show.sync="overlayClass"
+>
+  <div class="block">
+    As he came into the window.
+    It was the sound of a crescendo.
+    He came into her apartment.
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+
+// Overlay style
+<var-popup 
+  :overlay-style="{
+    backgroundColor: 'rgba(0, 0, 0, 0.3)' 
+  }"
+  :show.sync="overlayStyle"
+>
+  <div class="block">
+    As he came into the window.
+    It was the sound of a crescendo.
+    He came into her apartment.
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+```
+
+```js
+export default {
+  data: () => ({
+    overlayClass: false,
+    overlayStyle: false
+  })
+}
+```
+
+```css
+/* normal css */
+.custom-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* scoped css */
+.mt-10 {
+  margin-top: 10px;
+}
+
+.block {
+  padding: 20px 24px;
+  width: 250px;
+}
+```
+
+### Events
+
+```html
+<var-button
+  class="mt-10"
+  type="primary"
+  block
+  @click="event = true"
+>
+  Event
+</var-button>
+
+<var-popup
+  :show.sync="event"
+  @open="popupOpen"
+  @opened="popupOpened"
+  @close="popupClose"
+  @closed="popupClosed"
+>
+  <div class="block">
+    As he came into the window.
+    It was the sound of a crescendo.
+    He came into her apartment.
+    He left the bloodstains on the carpet.
+  </div>
+</var-popup>
+```
+
+```js
+import { Snackbar } from '@varlet-vue2/ui'
+
+export default {
+  data: () => ({
+    event: false
+  }),
+  methods:{
+    popupOpen() {
+      Snackbar.info('open')
+    },
+    popupOpened() {
+      Snackbar.success('opened')
+    },
+    popupClose() {
+      Snackbar.warning('close')
+    },
+    popupClosed() {
+      Snackbar.error('closed')
+    }
+  }
+}
+```
+
+## API
+
+### Props
+
+| Prop | Description | Type | Default | 
+| --- | --- | --- | --- | 
+| `show.sync` | Whether to display the Popup | _boolean_ | `false` |
+| `position` | Popup position with optional value of `top` `bottom` `right` `left` `center` | _string_ | `center` |
+| `overlay` | Whether to display the overlay | _boolean_ | `true` |  
+| `overlay-class` | Custom overlay class | _string_ | `-` |
+| `overlay-style` | Custom overlay style | _object_ | `-` |
+| `transition` | Transition animation name | _string_ | `-` |
+| `lock-scroll` | Whether to disable scrolling penetration, scrolling the Popup when disabled will not cause the body to scroll | _boolean_ | `true` |
+| `close-on-click-overlay` | Whether to click the overlay to close the Popup | _boolean_ | `true` | 
+| `teleport` | The location of the Popup to mount | _TeleportProps['to']_ | `-` |
+
+### Events
+
+| Event | Description | Arguments |
+| --- | --- | --- |
+| `open` | Triggered when the Popup is open | `-` |
+| `opened` | Triggered when the Popup open-animation ends | `-` |
+| `close` | Triggered when the Popup is close | `-` |
+| `closed` | Triggered when the Popup close-animation ends | `-` |
+| `click-overlay` | Triggered when you click on overlay | `-` |
+
+### Slots
+
+| Slot | Description | Arguments |
+| --- | --- | --- |
+| `default` | Popup content | `-` |
+
+### Style Variables
+Here are the CSS variables used by the component, Styles can be customized using [StyleProvider](#/en-US/style-provider)
+
+| Variable | Default |
+| --- | --- |
+| `--popup-overlay-background-color` | `rgba(0, 0, 0, .6)` |
+| `--popup-content-background-color` | `#fff` |
