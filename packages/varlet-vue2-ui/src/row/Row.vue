@@ -28,15 +28,12 @@ export default defineComponent({
     average() {
       return toPxNum(this.gutter) / 2
     },
-    length() {
-      return this.cols.length
-    },
   },
   watch: {
     gutter() {
       this.computePadding()
     },
-    length() {
+    cols() {
       this.computePadding()
     },
   },
