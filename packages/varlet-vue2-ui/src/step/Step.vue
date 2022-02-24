@@ -60,9 +60,6 @@ export default defineComponent({
     isActive({ index, active }) {
       return index !== -1 && active > index
     },
-    length() {
-      return this.steps.step.length
-    },
     activeColor() {
       return this.steps.activeColor
     },
@@ -74,7 +71,7 @@ export default defineComponent({
     },
   },
   watch: {
-    length() {
+    'steps.step': function () {
       const { newLength, index } = this
       this.isLastChild = newLength - 1 === index
       const main = this.$refs.main
