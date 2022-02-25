@@ -10,8 +10,7 @@
 import Vue from 'vue'
 import { Steps, Step } from '@varlet-vue2/ui'
 
-Vue.use(Steps)
-Vue.use(Step)
+Vue.use(Steps).use(Step)
 ```
 
 ### 基本使用
@@ -29,19 +28,13 @@ Vue.use(Step)
 ```
 
 ```javascript
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const active = ref(0)
-
-    const next = () => {
-      active.value = (active.value + 1) % 4
-    }
-
-    return {
-      active,
-      next
+  data: () => ({
+    active: 0
+  }),
+  methods: {
+    next() {
+      this.active = (this.active + 1) % 4
     }
   }
 }

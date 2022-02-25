@@ -8,7 +8,7 @@
 
 ```js
 import Vue from 'vue'
-import { BackTop } from '@varlet/ui'
+import { BackTop } from '@varlet-vue2/ui'
 
 Vue.use(BackTop)
 ```

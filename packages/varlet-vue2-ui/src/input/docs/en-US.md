@@ -4,7 +4,7 @@
 
 ```js
 import Vue from 'vue'
-import { Input } from '@varlet/ui'
+import { Input } from '@varlet-vue2/ui'
 
 Vue.use(Input)
 ```
@@ -71,7 +71,7 @@ If you only need the basic functionality of the component, you can remove some s
 ### Display Icon
 ```js
 import Vue from 'vue'
-import { Icon } from '@varlet/ui'
+import { Icon } from '@varlet-vue2/ui'
 
 Vue.use(Icon)
 ```

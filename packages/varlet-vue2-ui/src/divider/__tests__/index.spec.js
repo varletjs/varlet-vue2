@@ -2,11 +2,10 @@ import VarDivider from '../Divider'
 import Vue from 'vue'
 import example from '../example'
 import { mount } from '@vue/test-utils'
-import { createApp } from 'vue'
 
 test('test divider plugin', () => {
-  const app = Vue.use(VarDivider)
-  expect(app.component(VarDivider.name)).toBeTruthy()
+  Vue.use(VarDivider)
+  expect(Vue.component(VarDivider.name)).toBeTruthy()
 })
 
 test('test divider example', () => {

@@ -36,29 +36,35 @@ import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
   name: 'StepsExample',
+
   components: {
     VarSteps,
     VarStep,
     VarButton,
     AppType,
   },
+
   data: () => ({
     active: 0,
   }),
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, use)
 
     watchDarkMode(this, dark)
   },
+
   methods: {
     next() {
       this.active = (this.active + 1) % 4
     },
+
     click(index) {
       console.log(index)
     },

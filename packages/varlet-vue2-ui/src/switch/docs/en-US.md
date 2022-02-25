@@ -8,7 +8,7 @@ Switching Selector.
 
 ```js
 import Vue from 'vue'
-import { Switch } from '@varlet/ui'
+import { Switch } from '@varlet-vue2/ui'
 
 Vue.use(Switch)
 ```

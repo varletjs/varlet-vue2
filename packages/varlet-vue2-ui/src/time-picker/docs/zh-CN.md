@@ -7,10 +7,10 @@
 ### 引入
 
 ```js
-import { createApp } from 'vue'
-import { TimePicker } from '@varlet/ui'
+import Vue from 'vue'
+import { TimePicker } from '@varlet-vue2/ui'
 
-createApp().use(TimePicker)
+Vue.use(TimePicker)
 ```
 
 ### 基本使用

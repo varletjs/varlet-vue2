@@ -11,7 +11,9 @@ import { createParentMixin } from '../utils/mixins/relation'
 
 export default defineComponent({
   name: 'VarSteps',
+
   props,
+
   mixins: [createParentMixin('steps', { childrenKey: 'step' })],
 })
 </script>

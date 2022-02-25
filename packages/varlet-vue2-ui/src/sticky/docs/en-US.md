@@ -8,7 +8,7 @@ If necessary, you can switch to the `css sticky` layout mode to improve performa
 
 ```js
 import Vue from 'vue'
-import { Sticky } from '@varlet/ui'
+import { Sticky } from '@varlet-vue2/ui'
 
 Vue.use(Sticky)
 ```

@@ -7,7 +7,7 @@
 
 ```js
 import Vue from 'vue'
-import { Sticky } from '@varlet/ui'
+import { Sticky } from '@varlet-vue2/ui'
 
 Vue.use(Sticky)
 ```

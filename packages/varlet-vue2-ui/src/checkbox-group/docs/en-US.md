@@ -4,7 +4,7 @@
 
 ```js
 import Vue from 'vue'
-import { Checkbox, CheckboxGroup } from '@varlet/ui'
+import { Checkbox, CheckboxGroup } from '@varlet-vue2/ui'
 
 Vue.use(CheckboxGroup).use(Checkbox)
 ```

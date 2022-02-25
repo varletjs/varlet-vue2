@@ -10,7 +10,7 @@ so that you can do flex layout more efficiently.
 
 ```js
 import Vue from 'vue'
-import { Space } from '@varlet/ui'
+import { Space } from '@varlet-vue2/ui'
 
 Vue.use(Space)
 ```

@@ -54,7 +54,7 @@ Set the position of the title and the color of the navigation bar through the `t
 ```
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   methods: {
@@ -87,7 +87,7 @@ export default {
 ```
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   methods: {
@@ -147,7 +147,7 @@ export default {
 ```
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   data: () => ({

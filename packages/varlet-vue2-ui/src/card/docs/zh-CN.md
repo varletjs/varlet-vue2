@@ -4,7 +4,7 @@
 
 ```js
 import Vue from 'vue'
-import { Card } from '@varlet/ui'
+import { Card } from '@varlet-vue2/ui'
 
 Vue.use(Card)
 ```

@@ -54,7 +54,7 @@ Vue.use(AppBar)
 ```
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   methods: {
@@ -87,7 +87,7 @@ export default {
 ```
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   methods: {
@@ -147,7 +147,7 @@ export default {
 ```
 
 ```js
-import { Snackbar } from '@varlet/ui'
+import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   data: () => ({

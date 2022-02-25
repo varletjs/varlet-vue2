@@ -8,11 +8,11 @@
 每一个组件都是一个 `Vue插件`，并由 `组件逻辑` 和 `样式文件` 组成，如下方式进行手动引入使用。
 
 ```js
-import { createApp } from 'vue'
-import { Button } from '@varlet/ui'
-import '@varlet/ui/es/button/style/index.js'
+import Vue from 'vue'
+import { Button } from '@varlet-vue2/ui'
+import '@varlet-vue2/ui/es/button/style/index.js'
 
-createApp().use(Button)
+Vue.use(Button)
 ```
 
 ### 自动引入

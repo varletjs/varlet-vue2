@@ -6,10 +6,10 @@ Used to select a time.
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { TimePicker } from '@varlet/ui'
+import Vue from 'vue'
+import { TimePicker } from '@varlet-vue2/ui'
 
-createApp().use(TimePicker)
+Vue.use(TimePicker)
 ```
 
 ### Basic Usage

@@ -38,38 +38,49 @@ import { createChildrenMixin } from '../utils/mixins/relation'
 
 export default defineComponent({
   name: 'VarStep',
+
   components: {
     VarIcon,
   },
+
   mixins: [createChildrenMixin('steps', { childrenKey: 'step' })],
+
   data: () => ({
     lineMargin: '',
     isLastChild: false,
   }),
+
   props,
+
   computed: {
     index() {
       return this.steps.step.indexOf(this)
     },
+
     isCurrent({ active, index }) {
       return active === index
     },
+
     active() {
       return this.steps.active
     },
+
     isActive({ index, active }) {
       return index !== -1 && active > index
     },
+
     activeColor() {
       return this.steps.activeColor
     },
     inactiveColor() {
       return this.steps.inactiveColor
     },
+
     direction() {
       return this.steps.direction
     },
   },
+
   watch: {
     'steps.step': function () {
       const { newLength, index } = this
@@ -81,6 +92,7 @@ export default defineComponent({
       }
     },
   },
+
   methods: {
     click() {
       this.steps.getListeners().onClickStep?.(this.index)

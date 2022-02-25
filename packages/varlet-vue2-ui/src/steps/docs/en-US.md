@@ -7,10 +7,10 @@ Steps is a navigation bar that guides users through the steps of a task.
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { Steps, Step } from '@varlet/ui'
+import Vue from 'vue'
+import { Steps, Step } from '@varlet-vue2/ui'
 
-createApp().use(Steps).use(Step)
+Vue.use(Steps).use(Step)
 ```
 
 ### Basic Usage
@@ -28,19 +28,13 @@ Use `active` prop to control the progress of step, value is index of step and is
 ```
 
 ```javascript
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const active = ref(0)
-
-    const next = () => {
-      active.value = (active.value + 1) % 4
-    }
-    
-    return {
-      active,
-      next
+  data: () => ({
+    active: 0
+  }),
+  methods: {
+    next() {
+      this.active = (this.active + 1) % 4
     }
   }
 }

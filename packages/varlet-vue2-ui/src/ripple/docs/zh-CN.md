@@ -7,7 +7,7 @@
 
 ```js
 import Vue from 'vue'
-import { Ripple } from '@varlet/ui'
+import { Ripple } from '@varlet-vue2/ui'
 
 Vue.use(Ripple)
 ```

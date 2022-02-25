@@ -59,12 +59,16 @@ import { pack, use } from './locale'
 import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
+  name: 'VarSpaceExample',
+
   components: { VarSpace, VarButton, AppType },
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)

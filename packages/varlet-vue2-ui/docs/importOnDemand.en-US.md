@@ -10,11 +10,11 @@ Each component is a `Vue plugin` and is composed of `component logic` and `style
 It is manually install and used as follows.
 
 ```js
-import { createApp } from 'vue'
-import { Button } from '@varlet/ui'
-import '@varlet/ui/es/button/style/index.js'
+import Vue from 'vue'
+import { Button } from '@varlet-vue2/ui'
+import '@varlet-vue2/ui/es/button/style/index.js'
 
-createApp().use(Button)
+Vue.use(Button)
 ```
 
 ### Auto Import

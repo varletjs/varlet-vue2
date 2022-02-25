@@ -9,10 +9,10 @@ so that you can layout more efficiently.
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { Row, Col } from '@varlet/ui'
+import Vue from 'vue'
+import { Row, Col } from '@varlet-vue2/ui'
 
-createApp().use(Row).use(Col)
+Vue.use(Row).use(Col)
 ```
 
 ### Gird System

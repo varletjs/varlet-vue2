@@ -12,12 +12,15 @@ Here are the most basic ways to access component libraries in common development
 ```html
 <div id="app"></div>
 <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
-<script src="https://cdn.jsdelivr.net/npm/@varlet/ui/umd/varlet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@varlet-vue2/ui/umd/varlet.js"></script>
 <script>
-  const app = Vue.createApp({
-    template: '<var-button>Button</var-button>'
+  const App = Vue.use({
+    template: '<var-button>按钮</var-button>'
   })
-  app.use(Varlet).mount('#app')
+  new Vue({
+     el: '#app',
+     render: h => h(App)
+  })
 </script>
 ```
 
@@ -27,22 +30,27 @@ Here are the most basic ways to access component libraries in common development
 # Install with npm, yarn or pnpm
 
 # npm
-npm i @varlet/ui -S
+npm i @varlet-vue2/ui -S
 
 # yarn
-yarn add @varlet/ui
+yarn add @varlet-vue2/ui
 
 # pnpm
-pnpm add @varlet/ui
+pnpm add @varlet-vue2/ui
 ```
 
 ```js
 import App from './App.vue'
-import Varlet from '@varlet/ui'
-import { createApp } from 'vue'
-import '@varlet/ui/es/style.js'
+import Varlet from '@varlet-vue2/ui'
+import Vue from 'vue'
+import '@varlet-vue2/ui/es/style.js'
 
-createApp(App).use(Varlet).mount('#app')
+Vue.use(Varlet)
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});
 ```
 
 ### Components Playground
