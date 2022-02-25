@@ -53,7 +53,7 @@ npm i -g pnpm
 在项目根目录运行：
 
 ```
-pnpm bootstrap
+pnpm bootstrap 
 ```
 
 ### 修改组件
