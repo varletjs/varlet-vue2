@@ -33,6 +33,12 @@ export function doubleRaf() {
   })
 }
 
+export function nextTickFrame(fn: FrameRequestCallback) {
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(fn)
+  })
+}
+
 export async function inViewport(element: HTMLElement): Promise<boolean> {
   await doubleRaf()
   const { top, bottom, left, right } = element.getBoundingClientRect()
@@ -152,10 +158,10 @@ export function cancelAnimationFrame(handle: number): void {
 }
 
 interface ScrollToOptions {
-  top?: number;
-  left?: number;
-  duration?: number;
-  animation: (progress: number) => number;
+  top?: number
+  left?: number
+  duration?: number
+  animation: (progress: number) => number
 }
 
 export function scrollTo(

@@ -22,21 +22,27 @@ import { createParentMixin } from '../utils/mixins/relation'
 
 export default defineComponent({
   name: 'VarRow',
-  props,
+
   mixins: [createParentMixin('row', { childrenKey: 'cols' })],
+
+  props,
+
   computed: {
     average() {
       return toPxNum(this.gutter) / 2
     },
   },
+
   watch: {
     gutter() {
       this.computePadding()
     },
+
     cols() {
       this.computePadding()
     },
   },
+
   methods: {
     computePadding() {
       const { average } = this
@@ -44,6 +50,7 @@ export default defineComponent({
         col.setPadding({ left: average.value, right: average.value })
       })
     },
+
     handleClick(e) {
       const { getListeners } = this
       const { onClick } = getListeners()

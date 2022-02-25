@@ -29,12 +29,16 @@ import { createChildrenMixin } from '../utils/mixins/relation'
 
 export default defineComponent({
   name: 'VarCol',
+
+  mixins: [createChildrenMixin('row', { childrenKey: 'cols' })],
+
+  props,
+
   data: () => ({
     padding: { left: 0, right: 0 },
     toSizeUnit,
   }),
-  mixins: [createChildrenMixin('row', { childrenKey: 'cols' })],
-  props,
+
   watch: {
     span: {
       handler() {
@@ -43,6 +47,7 @@ export default defineComponent({
       immediate: true,
     },
   },
+
   methods: {
     handleClick(e) {
       const { getListeners } = this
@@ -53,9 +58,11 @@ export default defineComponent({
       }
       onClick(e)
     },
+
     setPadding(pad) {
       this.padding = pad
     },
+
     getSize(mode, size) {
       const classes = []
 
