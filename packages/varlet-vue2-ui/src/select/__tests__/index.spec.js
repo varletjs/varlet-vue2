@@ -136,9 +136,9 @@ test('test select disabled', async () => {
         disabled: true,
         value: '睡觉',
       }),
-      listeners: {
-        focus: onFocus,
-        blur: onBlur,
+      methods: {
+        onFocus,
+        onBlur,
       },
       template: `
       <div>
@@ -191,9 +191,9 @@ test('test select readonly', async () => {
         readonly: true,
         value: '睡觉',
       }),
-      listeners: {
-        focus: onFocus,
-        blur: onBlur,
+      methods: {
+        onFocus,
+        onBlur,
       },
       template: `
       <div>
