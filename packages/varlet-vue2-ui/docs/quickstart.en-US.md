@@ -11,16 +11,15 @@ Here are the most basic ways to access component libraries in common development
 
 ```html
 <div id="app"></div>
-<script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 <script src="https://cdn.jsdelivr.net/npm/@varlet-vue2/ui/umd/varlet.js"></script>
 <script>
   const App = Vue.use({
     template: '<var-button>按钮</var-button>'
   })
   new Vue({
-     el: '#app',
      render: h => h(App)
-  })
+  }).$mount('#app');
 </script>
 ```
 
@@ -48,9 +47,8 @@ import '@varlet-vue2/ui/es/style.js'
 Vue.use(Varlet)
 
 new Vue({
-  el: '#app',
   render: h => h(App)
-});
+}).$mount('#app');
 ```
 
 ### Components Playground
