@@ -17,19 +17,10 @@ test('test space plugin', () => {
 })
 
 test('test space props', async () => {
-  const template = `
-    <var-space>
-      <div>div1</div>
-      <div>div2</div>
-      <div>div3</div>
-    </var-space>
-  `
-
-  const wrapper = mount({
-    components: {
-      [VarSpace.name]: VarSpace,
+  const wrapper = mount(VarSpace, {
+    slots: {
+      default: '<div>div1</div>' + '<div>div2</div>' + '<div>div3</div>',
     },
-    template,
   })
 
   await delay(0)

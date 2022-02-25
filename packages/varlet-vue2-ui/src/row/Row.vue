@@ -29,6 +29,14 @@ export default defineComponent({
       return toPxNum(this.gutter) / 2
     },
   },
+  watch: {
+    gutter() {
+      this.computePadding()
+    },
+    cols() {
+      this.computePadding()
+    },
+  },
   methods: {
     computePadding() {
       const { average } = this
