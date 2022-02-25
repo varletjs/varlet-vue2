@@ -1,0 +1,762 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test select example 1`] = `
+"<div class=\\"var-select-example\\">
+  <div class=\\"app-type\\">基本使用</div>
+  <div>
+    <div class=\\"container\\"></div>
+    <div class=\\"var-select var--box\\">
+      <div class=\\"var-select__controller\\">
+        <div class=\\"var-select__icon\\"></div>
+        <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+          <div class=\\"var-select__wrap\\">
+            <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
+
+            </label>
+          </div>
+          <transition-stub name=\\"var-menu\\">
+            <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+              <div class=\\"var-select__scroller\\">
+                <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                  <div class=\\"var-option__cover\\"></div>
+                  <!---->
+                  <div class=\\"var-option__text var--ellipsis\\">
+                    吃饭
+                  </div>
+                </div>
+                <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                  <div class=\\"var-option__cover\\"></div>
+                  <!---->
+                  <div class=\\"var-option__text var--ellipsis\\">
+                    睡觉
+                  </div>
+                </div>
+              </div>
+            </div>
+          </transition-stub>
+        </div>
+        <div class=\\"var-select__icon\\">
+          <!---->
+        </div>
+      </div>
+      <div class=\\"var-select__line\\">
+        <div class=\\"var-select__dot\\"></div>
+      </div>
+      <transition-stub name=\\"var-form-details\\">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div class=\\"app-type\\">朴素模式</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon var-select--non-hint\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap var-select--non-hint\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis var-select--placeholder-non-hint\\">
+            请选择一个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon var-select--non-hint\\">
+        <!---->
+      </div>
+    </div>
+    <!---->
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">文本关联值</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择一个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\">
+        <!---->
+      </div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"relation\\">当前选择的是: </div>
+  <div class=\\"app-type\\">禁用</div>
+  <div class=\\"var-select var--box var-select--disabled\\">
+    <div class=\\"var-select__controller var-select--disabled\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select var-select--disabled\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis var-select--disabled\\">
+            请选择一个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\">
+        <!---->
+      </div>
+    </div>
+    <div class=\\"var-select__line var-select--line-disabled\\">
+      <div class=\\"var-select__dot var-select--line-disabled\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">只读</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择一个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\">
+        <!---->
+      </div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">可清除</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择一个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\"><i class=\\"var-icon var-select__clear-icon var-icon--set var-icon-close-circle\\" style=\\"transition: transform 0ms; font-size: 14px;\\"></i></div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">显示图标</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"><i class=\\"var-icon prepend-icon var-icon--set var-icon-plus\\" style=\\"transition: transform 0ms;\\"></i></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择一个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\"><i class=\\"var-icon append-icon var-icon--set var-icon-minus\\" style=\\"transition: transform 0ms;\\"></i></div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">多选</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\">
+            <div>
+              <div class=\\"var-select__values\\">
+
+              </div>
+            </div> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i>
+          </div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择多个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  打游戏
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  写代码
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\">
+        <!---->
+      </div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">纸片风格的多选</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\">
+            <div>
+              <div class=\\"var-select__chips\\"></div>
+            </div> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i>
+          </div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择多个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  打游戏
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  写代码
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\">
+        <!---->
+      </div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">单选值校验</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择一个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <!---->
+                <div class=\\"var-option__text var--ellipsis\\">
+                  摸鱼
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\">
+        <!---->
+      </div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"app-type\\">多选值校验</div>
+  <div class=\\"var-select var--box\\">
+    <div class=\\"var-select__controller\\">
+      <div class=\\"var-select__icon\\"></div>
+      <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+        <div class=\\"var-select__wrap\\">
+          <div class=\\"var-select__select\\" style=\\"text-align: left;\\">
+            <div>
+              <div class=\\"var-select__values\\">
+
+              </div>
+            </div> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i>
+          </div> <label class=\\"var-select__placeholder var--ellipsis\\">
+            请选择多个选项
+          </label>
+        </div>
+        <transition-stub name=\\"var-menu\\">
+          <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+            <div class=\\"var-select__scroller\\">
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  吃饭
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  睡觉
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  打游戏
+                </div>
+              </div>
+              <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+                <div class=\\"var-option__cover\\"></div>
+                <div class=\\"var-checkbox__wrap\\">
+                  <div class=\\"var-checkbox\\">
+                    <div class=\\"var-checkbox__action var-checkbox--unchecked\\">
+                      <!----> <i class=\\"var-icon var-checkbox__icon var-icon--set var-icon-checkbox-blank-outline\\" style=\\"transition: transform 0ms;\\" var-checkbox-cover=\\"\\"></i></div>
+                    <div class=\\"var-checkbox__text\\"></div>
+                  </div>
+                  <transition-stub name=\\"var-form-details\\">
+                    <!---->
+                  </transition-stub>
+                </div>
+                <div class=\\"var-option__text var--ellipsis\\">
+                  写代码
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition-stub>
+      </div>
+      <div class=\\"var-select__icon\\">
+        <!---->
+      </div>
+    </div>
+    <div class=\\"var-select__line\\">
+      <div class=\\"var-select__dot\\"></div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+  <div class=\\"space\\"></div>
+</div>"
+`;
+
+exports[`test select focus & blur methods 1`] = `
+"<div class=\\"var-select var--box\\">
+  <div class=\\"var-select__controller var-select--focus\\">
+    <div class=\\"var-select__icon\\"></div>
+    <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+      <div class=\\"var-select__wrap\\">
+        <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down var-select--arrow-rotate\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis var-select--focus var-select--placeholder-hint\\">
+
+        </label>
+      </div>
+      <div class=\\"var-teleport\\"></div>
+    </div>
+    <div class=\\"var-select__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-select__line\\">
+    <div class=\\"var-select__dot var-select--spread\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`test select focus & blur methods 2`] = `
+"<div class=\\"var-select var--box\\">
+  <div class=\\"var-select__controller\\">
+    <div class=\\"var-select__icon\\"></div>
+    <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+      <div class=\\"var-select__wrap\\">
+        <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
+
+        </label>
+      </div>
+      <div class=\\"var-teleport\\"></div>
+    </div>
+    <div class=\\"var-select__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-select__line\\">
+    <div class=\\"var-select__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`test select hint to be false 1`] = `
+"<div class=\\"var-select var--box\\">
+  <div class=\\"var-select__controller\\">
+    <div class=\\"var-select__icon var-select--non-hint\\"></div>
+    <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+      <div class=\\"var-select__wrap var-select--non-hint\\">
+        <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis var-select--placeholder-hidden var-select--placeholder-non-hint\\">
+
+        </label>
+      </div>
+      <transition-stub name=\\"var-menu\\">
+        <div class=\\"var-menu__menu var-elevation--3\\" style=\\"top: calc(0px + 0px); left: calc(0px + 0px); z-index: 2000; display: none;\\">
+          <div class=\\"var-select__scroller\\">
+            <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+              <div class=\\"var-option__cover\\"></div>
+              <!---->
+              <div class=\\"var-option__text var--ellipsis\\">
+                吃饭
+              </div>
+            </div>
+            <div class=\\"var-option var--box\\" style=\\"width: 0px;\\">
+              <div class=\\"var-option__cover\\"></div>
+              <!---->
+              <div class=\\"var-option__text var--ellipsis\\">
+                睡觉
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition-stub>
+    </div>
+    <div class=\\"var-select__icon var-select--non-hint\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-select__line\\">
+    <div class=\\"var-select__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`test select validation 1`] = `
+"<div class=\\"var-select var--box\\">
+  <div class=\\"var-select__controller var-select--error\\">
+    <div class=\\"var-select__icon\\"></div>
+    <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
+      <div class=\\"var-select__wrap\\">
+        <div class=\\"var-select__select var-select--error\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis var-select--error\\">
+
+        </label>
+      </div>
+      <div class=\\"var-teleport\\"></div>
+    </div>
+    <div class=\\"var-select__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-select__line var-select--line-error\\">
+    <div class=\\"var-select__dot var-select--line-error\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <div class=\\"var-form-details\\">
+      <div class=\\"var-form-details__message\\">您必须选择一个</div>
+      <div class=\\"var-form-details__length\\"></div>
+    </div>
+  </transition-stub>
+</div>"
+`;

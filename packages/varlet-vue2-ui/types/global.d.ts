@@ -32,6 +32,9 @@ declare module 'vue' {
     VarTable: typeof import('@varlet-vue2/ui')['_TableComponent']
     VarSteps: typeof import('@varlet-vue2/ui')['_StepsComponent']
     VarStep: typeof import('@varlet-vue2/ui')['_StepComponent']
+    VarSelect: typeof import('@varlet-vue2/ui')['_SelectComponent']
+    VarOption: typeof import('@varlet-vue2/ui')['_OptionComponent']
+    VarPicker: typeof import('@varlet-vue2/ui')['_PickerComponent']
     VarTimePicker: typeof import('@varlet-vue2/ui')['_TimePickerComponent']
   }
 }
