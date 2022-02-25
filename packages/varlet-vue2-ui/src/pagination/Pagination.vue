@@ -162,24 +162,24 @@ export default defineComponent({
       return this.showTotal(this.toNumber(this.total), this.range)
     },
 
-    listenPropsSizeAndCurrent() {
+    page() {
       const { current, size } = this
       return { current, size }
     },
 
-    listenDataSizeAndCurrent() {
+    localPage() {
       const { localCurrent, localSize } = this
       return { localCurrent, localSize }
     },
   },
 
   watch: {
-    listenPropsSizeAndCurrent({ current, size }) {
+    page({ current, size }) {
       this.localCurrent = this.toNumber(current) || 1
       this.localSize = this.toNumber(size || 10)
     },
 
-    listenDataSizeAndCurrent: {
+    localPage: {
       handler(newValue, oldValue) {
         const { localCurrent: newCurrent, localSize: newSize } = newValue
 

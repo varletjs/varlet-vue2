@@ -7,7 +7,7 @@ export type AllowedTime = {
 }
 
 export interface TimePickerProps {
-  modelValue?: string
+  value?: string
   shadow?: boolean
   color?: string
   headerColor?: string
@@ -18,7 +18,7 @@ export interface TimePickerProps {
   useSeconds?: boolean
   readonly?: boolean
   onChange?: (value: string) => void
-  'onUpdate:modelValue'?: (value: string) => void
+  onInput?: (value: string) => void
 }
 
 export class TimePicker extends VarComponent {

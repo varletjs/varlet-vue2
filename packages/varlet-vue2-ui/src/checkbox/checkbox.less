@@ -1,0 +1,78 @@
+@checkbox-checked-color: var(--color-primary);
+@checkbox-unchecked-color: #555;
+@checkbox-disabled-color: var(--color-text-disabled);
+@checkbox-error-color: var(--color-danger);
+@checkbox-action-padding: 6px;
+@checkbox-icon-size: 24px;
+
+:root {
+  --checkbox-checked-color: @checkbox-checked-color;
+  --checkbox-unchecked-color: @checkbox-unchecked-color;
+  --checkbox-disabled-color: @checkbox-disabled-color;
+  --checkbox-error-color: @checkbox-error-color;
+  --checkbox-action-padding: @checkbox-action-padding;
+  --checkbox-icon-size: @checkbox-icon-size;
+}
+
+@keyframes var-vibrate-animation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.var-checkbox {
+  display: flex;
+  align-items: center;
+  transform: translateX(calc(-1 * var(--checkbox-action-padding)));
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &__wrap {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--checkbox-action-padding);
+    border-radius: 50%;
+  }
+
+  &__icon[var-checkbox-cover] {
+    display: block;
+    font-size: var(--checkbox-icon-size);
+  }
+
+  &--with-animation {
+    animation: var-vibrate-animation 0.25s;
+  }
+
+  &--checked {
+    color: var(--checkbox-checked-color);
+  }
+
+  &--unchecked {
+    color: var(--checkbox-unchecked-color);
+  }
+
+  &--disabled {
+    color: var(--checkbox-disabled-color);
+  }
+
+  &--error {
+    color: var(--checkbox-error-color);
+  }
+}

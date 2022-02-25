@@ -1,14 +1,14 @@
 <div class="varlet-introduce">
   <div class="varlet-introduce__row">
     <img class="varlet-introduce__image" src="https://varlet.gitee.io/varlet-ui/varlet_icon.png" />
-    <div class="varlet-introduce__name">VARLET</div>
+    <div class="varlet-introduce__name">VARLET-VUE2</div>
   </div>
-  <div class="varlet-introduce__des">面向 Vue3 的 Material 风格移动端组件库</div>
+  <div class="varlet-introduce__des">面向 Vue2 的 Material 风格移动端组件库</div>
 </div>
 
 ### 介绍
 
-Varlet 是一个基于 `Vue3` 开发的 Material 风格移动端组件库，全面拥抱 `Vue3` 生态，由社区的小伙伴开发和维护。
+Varlet 是一个基于 `Vue2` 开发的 Material 风格移动端组件库，全面拥抱 `Vue2` 生态，由社区的小伙伴开发和维护。
 
 ### 特性
 - 1.提供 50个 高质量通用组件

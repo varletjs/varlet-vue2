@@ -1,14 +1,14 @@
 <div class="varlet-introduce">
   <div class="varlet-introduce__row">
     <img class="varlet-introduce__image" src="https://varlet.gitee.io/varlet-ui/varlet_icon.png" />
-    <div class="varlet-introduce__name">VARLET</div>  
+    <div class="varlet-introduce__name">VARLET-VUE2</div>  
   </div>
-  <div class="varlet-introduce__des">Material design mobile component library for Vue3</div>
+  <div class="varlet-introduce__des">Material design mobile component library for Vue2</div>
 </div>
 
 ### Intro
 
-Varlet is a Material design mobile component library developed based on `Vue3`, developed and maintained by partners in the community.
+Varlet is a Material design mobile component library developed based on `Vue2`, developed and maintained by partners in the community.
 
 ### Features
 - 1.Provide more than 50 high quality general purpose components

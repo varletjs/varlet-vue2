@@ -1,0 +1,113 @@
+<template>
+  <div class="var-checkboxGroup-example">
+    <app-type>{{ pack.basicUsage }}</app-type>
+    <var-checkbox v-model="value">{{ pack.currentValue }} {{ value }}</var-checkbox>
+
+    <app-type>{{ pack.setState }}</app-type>
+    <var-checkbox :unchecked-value="0" :checked-value="1" v-model="value2">
+      {{ pack.currentValue }} {{ value2 }}
+    </var-checkbox>
+
+    <app-type>{{ pack.setStyle }}</app-type>
+    <var-checkbox unchecked-color="#e99eb4" checked-color="#f44336" v-model="value3">
+      <template #unchecked-icon>
+        <var-icon name="heart-half-full" size="24px" />
+      </template>
+      <template #checked-icon>
+        <var-icon name="heart" size="24px" />
+      </template>
+      <template #default> {{ pack.currentValue }} {{ value3 }} </template>
+    </var-checkbox>
+
+    <app-type>{{ pack.disabled }}</app-type>
+    <var-checkbox disabled v-model="value4">{{ pack.currentValue }} {{ value4 }}</var-checkbox>
+
+    <app-type>{{ pack.readonly }}</app-type>
+    <var-checkbox readonly v-model="value5">{{ pack.currentValue }} {{ value5 }}</var-checkbox>
+
+    <app-type>{{ pack.checkboxGroup }}</app-type>
+    <var-checkbox-group ref="group" v-model="value6">
+      <var-checkbox :checked-value="0">{{ pack.eat }}</var-checkbox>
+      <var-checkbox :checked-value="1">{{ pack.sleep }}</var-checkbox>
+      <var-button class="button" type="primary" @click="$refs.group.checkAll()">{{ pack.checkAll }}</var-button>
+      <var-button class="button" type="primary" @click="$refs.group.inverseAll()">{{ pack.inverseAll }}</var-button>
+    </var-checkbox-group>
+    <div class="relation">{{ pack.currentValue }} {{ value6 }}</div>
+
+    <app-type>{{ pack.checkboxValidate }}</app-type>
+    <var-checkbox v-model="value7" :rules="[(v) => v || pack.checkboxValidateMessage]">
+      {{ pack.currentValue }} {{ value7 }}
+    </var-checkbox>
+
+    <app-type>{{ pack.checkboxGroupValidate }}</app-type>
+    <var-checkbox-group v-model="value8" :rules="[(v) => v.length === 2 || pack.checkboxGroupValidateMessage]">
+      <var-checkbox :checked-value="0">{{ pack.eat }}</var-checkbox>
+      <var-checkbox :checked-value="1">{{ pack.sleep }}</var-checkbox>
+    </var-checkbox-group>
+    <div class="relation">{{ pack.currentValue }} {{ value8 }}</div>
+
+    <div class="space"></div>
+  </div>
+</template>
+
+<script>
+import VarCheckboxGroup from '..'
+import VarCheckbox from '../../checkbox'
+import VarIcon from '../../icon'
+import VarButton from '../../button'
+import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
+import dark from '../../themes/dark'
+import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
+import { use, pack } from './locale'
+
+export default {
+  name: 'CheckboxGroupExample',
+
+  components: {
+    VarCheckboxGroup,
+    VarCheckbox,
+    VarIcon,
+    VarButton,
+    AppType,
+  },
+
+  data: () => ({
+    value: false,
+    value2: 0,
+    value3: false,
+    value4: false,
+    value5: false,
+    value6: [],
+    value7: false,
+    value8: [],
+    group: null,
+  }),
+
+  computed: {
+    pack() {
+      return pack.value
+    },
+  },
+
+  created() {
+    watchLang(this, use)
+    watchDarkMode(this, dark)
+  },
+}
+</script>
+
+<style scoped lang="less">
+.var-checkboxGroup-example {
+  .relation {
+    margin-top: 10px;
+  }
+
+  .button {
+    margin-left: 10px;
+  }
+
+  .space {
+    height: 40px;
+  }
+}
+</style>

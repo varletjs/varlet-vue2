@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Radio from './Radio.vue'
 
-Radio.install = function (app: App) {
+Radio.install = function (app: VueConstructor) {
   app.component(Radio.name, Radio)
 }
 

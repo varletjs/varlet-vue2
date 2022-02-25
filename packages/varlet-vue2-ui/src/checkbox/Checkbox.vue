@@ -1,40 +1,41 @@
 <template>
-  <div class="var-radio__wrap">
-    <div class="var-radio" @click="handleClick" v-bind="$attrs">
+  <div class="var-checkbox__wrap" @click="handleClick">
+    <div class="var-checkbox">
       <div
-        class="var-radio__action"
-        v-ripple="{ disabled: formReadonly || readonly || formDisabled || disabled || !ripple }"
+        class="var-checkbox__action"
         :class="[
-          checked ? 'var-radio--checked' : 'var-radio--unchecked',
-          errorMessage || radioGroupErrorMessage ? 'var-radio--error' : null,
-          formDisabled || disabled ? 'var-radio--disabled' : null,
+          checked ? 'var-checkbox--checked' : 'var-checkbox--unchecked',
+          errorMessage || checkboxGroupErrorMessage ? 'var-checkbox--error' : null,
+          formDisabled || disabled ? 'var-checkbox--disabled' : null,
         ]"
         :style="{ color: checked ? checkedColor : uncheckedColor }"
+        v-ripple="{ disabled: formReadonly || readonly || formDisabled || disabled || !ripple }"
       >
         <slot name="checked-icon" v-if="checked">
           <var-icon
-            class="var-radio__icon"
-            var-radio-cover
-            name="radio-marked"
-            :class="[withAnimation ? 'var-radio--with-animation' : null]"
+            class="var-checkbox__icon"
+            name="checkbox-marked"
+            :class="[withAnimation ? 'var-checkbox--with-animation' : null]"
             :size="iconSize"
+            var-checkbox-cover
           />
         </slot>
-        <slot name="unchecked-icon" v-else>
+        <slot name="unchecked-icon" v-if="!checked">
           <var-icon
-            class="var-radio__icon"
-            var-radio-cover
-            name="radio-blank"
-            :class="[withAnimation ? 'var-radio--with-animation' : null]"
+            class="var-checkbox__icon"
+            name="checkbox-blank-outline"
+            :class="[withAnimation ? 'var-checkbox--with-animation' : null]"
             :size="iconSize"
+            var-checkbox-cover
           />
         </slot>
       </div>
+
       <div
-        class="var-radio__text"
+        class="var-checkbox__text"
         :class="[
-          errorMessage || radioGroupErrorMessage ? 'var-radio--error' : null,
-          formDisabled || disabled ? 'var-radio--disabled' : null,
+          errorMessage || checkboxGroupErrorMessage ? 'var-checkbox--error' : null,
+          formDisabled || disabled ? 'var-checkbox--disabled' : null,
         ]"
       >
         <slot />
@@ -49,20 +50,18 @@
 import VarIcon from '../icon'
 import VarFormDetails from '../form-details'
 import Ripple from '../ripple'
-import { props } from './props'
 import { defineComponent } from '../utils/create'
+import { props } from './props'
 import { ValidationMixin } from '../utils/mixins/validation'
 import { createChildrenMixin } from '../utils/mixins/relation'
 import { doubleRaf } from '../utils/elements'
 
 export default defineComponent({
-  name: 'VarRadio',
-
-  inheritAttrs: false,
+  name: 'VarCheckbox',
 
   mixins: [
     ValidationMixin,
-    createChildrenMixin('radioGroup', { childrenKey: 'radios' }),
+    createChildrenMixin('checkboxGroup', { childrenKey: 'checkboxes' }),
     createChildrenMixin('form', { parentKey: 'form', childrenKey: 'formItems' }),
   ],
 
@@ -85,8 +84,8 @@ export default defineComponent({
       return this.localValue === this.checkedValue
     },
 
-    radioGroupErrorMessage() {
-      return this.radioGroup?.radioGroupErrorMessage
+    checkboxGroupErrorMessage() {
+      this.checkboxGroup?.checkboxGroupErrorMessage
     },
 
     formReadonly() {
@@ -110,27 +109,25 @@ export default defineComponent({
   methods: {
     // expose
     reset() {
-      const { onInput } = this.getListeners()
-
-      onInput?.(this.uncheckedValue)
+      this.getListeners().onInput?.(this.uncheckedValue)
       this.resetValidation()
     },
 
     // expose
-    validate() {
-      this._validate(this.rules, this.value)
-    },
-
-    // expose
     toggle(changedValue) {
-      const { uncheckedValue, checkedValue } = this
+      const { checkedValue, uncheckedValue } = this
 
-      const shouldReverse = ![uncheckedValue, checkedValue].includes(changedValue)
+      const shouldReverse = ![checkedValue, uncheckedValue].includes(changedValue)
       if (shouldReverse) {
         changedValue = this.checked ? uncheckedValue : checkedValue
       }
 
       this.change(changedValue)
+    },
+
+    // expose
+    validate() {
+      this._validate(this.rules, this.value)
     },
 
     validateWithTrigger(trigger) {
@@ -141,33 +138,36 @@ export default defineComponent({
     },
 
     change(changedValue) {
-      const { checkedValue } = this
-      const { onChange, onInput } = this.getListeners()
-
-      if (this.radioGroup && this.localValue === checkedValue) {
-        return
-      }
+      const { checkedValue, getListeners } = this
 
       this.localValue = changedValue
-      onInput?.(this.localValue)
-      onChange?.(this.localValue)
-      this.radioGroup?.onToggle(checkedValue)
+
+      getListeners().onInput?.(this.localValue)
+      getListeners().onChange?.(this.localValue)
       this.validateWithTrigger('onChange')
+
+      changedValue === checkedValue
+        ? this.checkboxGroup?.onChecked(checkedValue)
+        : this.checkboxGroup?.onUnchecked(checkedValue)
     },
 
     async handleClick(e) {
-      const { disabled, readonly, uncheckedValue, checkedValue } = this
-      const { onClick } = this.getListeners()
+      const { disabled, readonly, checkedValue, uncheckedValue, getListeners } = this
 
       if (this.form?.disabled || disabled) {
         return
       }
 
-      onClick?.(e)
-
-      this.withAnimation = false
+      getListeners().onClick?.(e)
 
       if (this.form?.readonly || readonly) {
+        return
+      }
+
+      this.withAnimation = false
+      const maximum = this.checkboxGroup ? this.checkboxGroup.checkedCount >= Number(this.checkboxGroup.max) : false
+
+      if (!this.checked && maximum) {
         return
       }
 
@@ -176,9 +176,9 @@ export default defineComponent({
       this.withAnimation = true
     },
 
-    sync(v) {
+    sync(values) {
       const { checkedValue, uncheckedValue } = this
-      this.localValue = v === checkedValue ? checkedValue : uncheckedValue
+      this.localValue = values.includes(checkedValue) ? checkedValue : uncheckedValue
     },
   },
 })
@@ -187,7 +187,7 @@ export default defineComponent({
 <style lang="less">
 @import '../styles/common';
 @import '../ripple/ripple';
-@import '../icon/icon';
 @import '../form-details/formDetails';
-@import './radio';
+@import '../icon/icon';
+@import './checkbox';
 </style>

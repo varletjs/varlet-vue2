@@ -188,7 +188,7 @@ exports[`test radio group validation 2`] = `
   <div class=\\"var-radio-group var-radio-group--horizontal\\">
     <div class=\\"var-radio__wrap\\">
       <div class=\\"var-radio\\">
-        <div class=\\"var-radio__action var-radio--checked\\"><i class=\\"var-icon var-radio__icon var-icon--set var-icon-radio-marked var-radio--with-animation\\" style=\\"transition: transform 0ms;\\" var-radio-cover=\\"\\"></i></div>
+        <div class=\\"var-radio__action var-radio--checked\\"><i class=\\"var-icon var-radio__icon var-icon--set var-icon-radio-marked\\" style=\\"transition: transform 0ms;\\" var-radio-cover=\\"\\"></i></div>
         <div class=\\"var-radio__text\\"></div>
       </div>
       <transition-stub name=\\"var-form-details\\">
@@ -229,7 +229,7 @@ exports[`test radio validation 1`] = `
 exports[`test radio validation 2`] = `
 "<div class=\\"var-radio__wrap\\">
   <div class=\\"var-radio\\">
-    <div class=\\"var-radio__action var-radio--checked\\"><i class=\\"var-icon var-radio__icon var-icon--set var-icon-radio-marked var-radio--with-animation\\" style=\\"transition: transform 0ms;\\" var-radio-cover=\\"\\"></i></div>
+    <div class=\\"var-radio__action var-radio--checked\\"><i class=\\"var-icon var-radio__icon var-icon--set var-icon-radio-marked\\" style=\\"transition: transform 0ms;\\" var-radio-cover=\\"\\"></i></div>
     <div class=\\"var-radio__text\\"></div>
   </div>
   <transition-stub name=\\"var-form-details\\">
