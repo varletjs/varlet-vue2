@@ -1,5 +1,3 @@
-import type { PropType } from 'vue'
-
 export const props = {
   loop: {
     type: Boolean,
@@ -30,8 +28,5 @@ export const props = {
   touchable: {
     type: Boolean,
     default: true,
-  },
-  onChange: {
-    type: Function as PropType<(index: number) => void>,
   },
 }

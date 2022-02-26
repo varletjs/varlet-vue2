@@ -141,7 +141,7 @@ snackbar1.clear();
 
 | 参数 | 说明 | 类型 | 默认值 |
 | ----- | -------------- | -------- | ---------- |
-| `:show.sync` | 是否显示 `Snackbar` | _boolean_ | `false` |
+| `show.sync` | 是否显示 `Snackbar` | _boolean_ | `false` |
 | `type`| `Snackbar` 类型，可选值为 `success warning info error loading` | _string_ | `-` |
 | `position`| `Snackbar`  位置，可选值为 `top center bottom` | _string_ | `top` |
 | `duration`| 显示时长 | _number_ | `3000` |

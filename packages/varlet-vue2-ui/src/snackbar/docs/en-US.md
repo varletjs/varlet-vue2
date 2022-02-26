@@ -142,7 +142,7 @@ snackbar1.clear();
 
 | Prop | Description | Type | Default |
 | ----- | -------------- | -------- | ---------- |
-| `:show.sync` | Whether to show `Snackbar` | _boolean_ | `false` |
+| `show.sync` | Whether to show `Snackbar` | _boolean_ | `false` |
 | `type`| `Snackbar` type, Optional value is one of `success, warning, info, error, loading` | _string_ | `-` |
 | `position`| `Snackbar` position, Optional value is one of `top, center, bottom` | _string_ | `top` |
 | `duration`| Display duration | _number_ | `3000` |
