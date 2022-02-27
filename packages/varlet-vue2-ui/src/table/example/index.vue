@@ -107,7 +107,7 @@ export default {
 
   methods: {
     get(current, size) {
-      this.list.value = gen(current, size)
+      this.list = gen(current, size)
     },
   },
 }
