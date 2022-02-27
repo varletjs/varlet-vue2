@@ -3,7 +3,7 @@ import { VarComponent } from './varComponent'
 export type SelectValidateTriggers = 'onFocus' | 'onBlur' | 'onChange' | 'onClick' | 'onClear' | 'onClose'
 
 export interface SelectProps {
-  modelValue?: any
+  value?: any
   placeholder?: string
   multiple?: boolean
   chip?: boolean
@@ -25,7 +25,7 @@ export interface SelectProps {
   onClear?: (value: any) => void
   onClose?: (value: any) => void
   onChange?: (value: any) => void
-  'onUpdate:modelValue'?: (value: any) => void
+  onInput?: (value: any) => void
 }
 
 export class Select extends VarComponent {

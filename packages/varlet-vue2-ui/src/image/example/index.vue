@@ -57,7 +57,7 @@
 import VarImage from '..'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 // TODO
-// import VarRow from '../../row'
+import VarRow from '../../row'
 import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 import dark from '../../themes/dark'
 import { use, pack } from './locale'
@@ -67,11 +67,7 @@ export default {
 
   components: {
     VarImage,
-    VarRow: {
-      render(h) {
-        return h('div', { style: { display: 'flex', flexWrap: 'wrap' } }, this.$slots.default)
-      },
-    },
+    VarRow,
     AppType,
   },
 
