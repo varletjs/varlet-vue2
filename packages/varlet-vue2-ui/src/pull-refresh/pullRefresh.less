@@ -1,0 +1,55 @@
+@pull-refresh-size: 40px;
+@pull-refresh-background: #fff;
+@pull-refresh-color: var(--color-primary);
+@pull-refresh-success-color: var(--color-success);
+@pull-refresh-icon-size: 25px;
+
+:root {
+  --pull-refresh-size: @pull-refresh-size;
+  --pull-refresh-background: @pull-refresh-background;
+  --pull-refresh-color: @pull-refresh-color;
+  --pull-refresh-success-color: @pull-refresh-success-color;
+  --pull-refresh-icon-size: @pull-refresh-icon-size;
+}
+
+.var-pull-refresh {
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+
+  &__control {
+    display: flex;
+    width: var(--pull-refresh-size);
+    height: var(--pull-refresh-size);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pull-refresh-background);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    z-index: 90;
+    color: var(--pull-refresh-color);
+
+    &-success {
+      color: var(--pull-refresh-success-color);
+    }
+  }
+
+  &__icon[var-pull-refresh-cover] {
+    font-size: var(--pull-refresh-icon-size);
+  }
+
+  &__animation {
+    transform: rotate(0deg);
+    animation: iconRotate 0.6s infinite linear;
+  }
+
+  @keyframes iconRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
