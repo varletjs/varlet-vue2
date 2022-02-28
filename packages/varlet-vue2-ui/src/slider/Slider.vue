@@ -92,34 +92,36 @@ export default defineComponent({
   data: () => ({
     maxWidth: 0,
     isScroll: false,
-    Thumbs: {
-      First: '1',
-      Second: '2',
+    thumbsProps: {
+      first: {
+        startPosition: 0,
+        currentLeft: 0,
+        active: false,
+        percentValue: 0,
+      },
+      second: {
+        startPosition: 0,
+        currentLeft: 0,
+        active: false,
+        percentValue: 0,
+      },
     },
   }),
 
   computed: {
-    thumbsProps() {
-      return {
-        [this.Thumbs.First]: this.getThumbProps(),
-        [this.Thumbs.Second]: this.getThumbProps(),
-      }
-    },
-
     unitWidth() {
       return (this.maxWidth / 100) * toNumber(this.step)
     },
 
     thumbList() {
-      let list = [{ value: this.value, enumValue: this.Thumbs.First }]
+      let list = [{ value: this.value, enumValue: 'first' }]
 
       if (this.range && isArray(this.value)) {
         list = [
-          { value: this.value[0], enumValue: this.Thumbs.First },
-          { value: this.value[1], enumValue: this.Thumbs.Second },
+          { value: this.value[0], enumValue: 'first' },
+          { value: this.value[1], enumValue: 'second' },
         ]
       }
-      console.log(list)
 
       return list
     },
@@ -176,15 +178,6 @@ export default defineComponent({
       this._validate(this.rules, this.value)
     },
 
-    getThumbProps() {
-      return {
-        startPosition: 0,
-        currentLeft: 0,
-        active: false,
-        percentValue: 0,
-      }
-    },
-
     validateWithTrigger() {
       this.$nextTick(() => {
         const { rules, value } = this
@@ -224,7 +217,7 @@ export default defineComponent({
 
       this.thumbsProps[type].percentValue = curValue / stepNumber
       if (range && isArray(value)) {
-        rangeValue = type === this.Thumbs.First ? [curValue, value[1]] : [value[0], curValue]
+        rangeValue = type === 'first' ? [curValue, value[1]] : [value[0], curValue]
       }
 
       if (prevValue !== curValue) {
@@ -236,13 +229,13 @@ export default defineComponent({
     },
 
     getType(offset) {
-      if (!this.range) return this.Thumbs.First
-      const thumb1Distance = this.thumbsProps[this.Thumbs.First].percentValue * this.unitWidth
-      const thumb2Distance = this.thumbsProps[this.Thumbs.Second].percentValue * this.unitWidth
+      if (!this.range) return 'first'
+      const thumb1Distance = this.thumbsProps.first.percentValue * this.unitWidth
+      const thumb2Distance = this.thumbsProps.second.percentValue * this.unitWidth
       const offsetToThumb1 = Math.abs(offset - thumb1Distance)
       const offsetToThumb2 = Math.abs(offset - thumb2Distance)
 
-      return offsetToThumb1 <= offsetToThumb2 ? this.Thumbs.First : this.Thumbs.Second
+      return offsetToThumb1 <= offsetToThumb2 ? 'first' : 'second'
     },
 
     start(event, type) {
@@ -276,7 +269,7 @@ export default defineComponent({
       const curValue = this.thumbsProps[type].percentValue
 
       if (range && isArray(value)) {
-        rangeValue = type === this.Thumbs.First ? [curValue, value[1]] : [value[0], curValue]
+        rangeValue = type === 'first' ? [curValue, value[1]] : [value[0], curValue]
       }
 
       getListeners().onEnd?.(range ? rangeValue : curValue)
@@ -328,15 +321,13 @@ export default defineComponent({
 
     setProps(value = this.value, step = toNumber(this.step)) {
       if (this.range && isArray(value)) {
-        this.thumbsProps[this.Thumbs.First].percentValue = value[0] / step
-        this.thumbsProps[this.Thumbs.First].currentLeft =
-          this.thumbsProps[this.Thumbs.First].percentValue * this.unitWidth
+        this.thumbsProps.first.percentValue = value[0] / step
+        this.thumbsProps.first.currentLeft = this.thumbsProps.first.percentValue * this.unitWidth
 
-        this.thumbsProps[this.Thumbs.Second].percentValue = value[1] / step
-        this.thumbsProps[this.Thumbs.Second].currentLeft =
-          this.thumbsProps[this.Thumbs.Second].percentValue * this.unitWidth
+        this.thumbsProps.second.percentValue = value[1] / step
+        this.thumbsProps.second.currentLeft = this.thumbsProps.second.percentValue * this.unitWidth
       } else if (isNumber(value)) {
-        this.thumbsProps[this.Thumbs.First].currentLeft = (value / step) * this.unitWidth
+        this.thumbsProps.first.currentLeft = (value / step) * this.unitWidth
       }
     },
 
