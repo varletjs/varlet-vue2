@@ -8,7 +8,7 @@
 
   ```js
 import Vue from 'vue'
-import { PullRefresh } from '@varlet/ui'
+import { PullRefresh } from '@varlet-vue2/ui'
 
 Vue.use(PullRefresh)
 ```

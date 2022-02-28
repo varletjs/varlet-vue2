@@ -98,12 +98,14 @@ import { use, pack } from './locale'
 
 export default {
   name: 'SelectExample',
+
   components: {
     VarSelect,
     VarOption,
     VarIcon,
     AppType,
   },
+
   data: () => ({
     value: undefined,
     value2: undefined,
@@ -117,11 +119,13 @@ export default {
     value10: [],
     value11: undefined,
   }),
+
   computed: {
     pack() {
       return pack.value
     },
   },
+
   created() {
     watchLang(this, (lang) => {
       use(lang)
@@ -140,10 +144,12 @@ export default {
 
     watchDarkMode(this, dark)
   },
+
   methods: {
     blur() {
       console.log('blur')
     },
+
     focus() {
       console.log('focus')
     },

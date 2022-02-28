@@ -6,8 +6,7 @@
 import Vue from 'vue'
 import { Select, Option } from '@varlet-vue2/ui'
 
-Vue.use(Select)
-Vue.use(Option)
+Vue.use(Select).use(Option)
 ```
 
 ### 基本使用
@@ -16,7 +15,6 @@ Vue.use(Option)
 组件会优先使用 option 的 `value` 作为选项的值，其次使用 `label`。
 
 ```js
-
 export default {
   data() {
     return {
