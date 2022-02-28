@@ -59,6 +59,7 @@ module.exports = {
     'vue/attributes-order': 'off',
     'vue/require-default-prop': 'off',
     'vue/no-unused-components': 'off',
+    'vue/valid-v-bind': 'off',
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     // typescript-eslint
     '@typescript-eslint/class-name-casing': 'off',
@@ -74,6 +75,5 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    'vue/valid-v-bind': 'off',
   },
 }
