@@ -5,32 +5,36 @@ exports[`test image example 1`] = `
   <div class=\\"app-type\\">基本使用</div>
   <div class=\\"var-image var--box\\" style=\\"border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: fill;\\"></div>
   <div class=\\"app-type\\">填充模式</div>
-  <div style=\\"display: flex; flex-wrap: wrap;\\">
-    <div class=\\"fit-item\\">
-      <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: fill;\\"></div>
-      <div>fill</div>
-    </div>
-    <div class=\\"fit-item\\">
-      <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: cover;\\"></div>
-      <div>cover</div>
-    </div>
-    <div class=\\"fit-item\\">
-      <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: contain;\\"></div>
-      <div>contain</div>
-    </div>
-    <div class=\\"fit-item\\">
-      <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: none;\\"></div>
-      <div>none</div>
-    </div>
-    <div class=\\"fit-item\\">
-      <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: scale-down;\\"></div>
-      <div>scale-down</div>
+  <div class=\\"var-row__wrap\\">
+    <div class=\\"var-row var--box\\" style=\\"justify-content: flex-start; align-items: flex-start;\\">
+      <div class=\\"fit-item\\">
+        <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: fill;\\"></div>
+        <div>fill</div>
+      </div>
+      <div class=\\"fit-item\\">
+        <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: cover;\\"></div>
+        <div>cover</div>
+      </div>
+      <div class=\\"fit-item\\">
+        <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: contain;\\"></div>
+        <div>contain</div>
+      </div>
+      <div class=\\"fit-item\\">
+        <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: none;\\"></div>
+        <div>none</div>
+      </div>
+      <div class=\\"fit-item\\">
+        <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: scale-down;\\"></div>
+        <div>scale-down</div>
+      </div>
     </div>
   </div>
   <div class=\\"app-type\\">设置圆角</div>
-  <div style=\\"display: flex; flex-wrap: wrap;\\">
-    <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 10px; margin-right: 10px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: cover;\\"></div>
-    <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 50%;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: cover;\\"></div>
+  <div class=\\"var-row__wrap\\">
+    <div class=\\"var-row var--box\\" style=\\"justify-content: flex-start; align-items: flex-start;\\">
+      <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 10px; margin-right: 10px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: cover;\\"></div>
+      <div class=\\"var-image var--box\\" style=\\"width: 85px; height: 85px; border-radius: 50%;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: cover;\\"></div>
+    </div>
   </div>
   <div class=\\"app-type\\">开启水波</div>
   <div class=\\"var-image var--box\\" style=\\"border-radius: 0px;\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" class=\\"var-image__image\\" style=\\"object-fit: fill;\\"></div>

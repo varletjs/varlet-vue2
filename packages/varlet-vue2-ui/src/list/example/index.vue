@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="var-list-example">
     <var-tabs :active.sync="current" sticky offset-top="54px" style="margin-bottom: 10px">
       <var-tab>{{ pack.basicUsage }}</var-tab>
       <var-tab>{{ pack.loadFail }}</var-tab>
@@ -100,6 +100,7 @@ export default {
         }
       }, 1000)
     },
+
     load2() {
       if (this.current !== 1) {
         this.loading2 = false
@@ -120,6 +121,7 @@ export default {
         this.loading2 = false
       }, 1000)
     },
+
     load3() {
       if (this.current !== 2) {
         this.loading3 = false

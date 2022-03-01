@@ -44,8 +44,6 @@ export default defineComponent({
   props,
 
   data: () => ({
-    listEl: null,
-    detectorEl: null,
     scroller: '',
   }),
 
@@ -55,7 +53,28 @@ export default defineComponent({
     },
   },
 
+  mounted() {
+    this.scroller = getParentScroller(this.$refs.listEl)
+
+    this.immediateCheck && this.check()
+
+    this.scroller.addEventListener('scroll', this.check)
+  },
+
+  beforeDestroy() {
+    this.scroller.removeEventListener('scroll', this.check)
+  },
+
   methods: {
+    // expose
+    async check() {
+      await nextTick()
+
+      if (!this.loading && !this.finished && !this.error && this.isReachBottom()) {
+        this.load()
+      }
+    },
+
     isNumber,
 
     dt,
@@ -77,27 +96,6 @@ export default defineComponent({
       // alert(this.$refs.detectorEl)
       return Math.floor(bottom) - toPxNum(this.offset) <= containerBottom
     },
-
-    // expose
-    async check() {
-      await nextTick()
-
-      if (!this.loading && !this.finished && !this.error && this.isReachBottom()) {
-        this.load()
-      }
-    },
-  },
-
-  mounted() {
-    this.scroller = getParentScroller(this.$refs.listEl)
-
-    this.immediateCheck && this.check()
-
-    this.scroller.addEventListener('scroll', this.check)
-  },
-
-  destroyed() {
-    this.scroller.removeEventListener('scroll', this.check)
   },
 })
 </script>

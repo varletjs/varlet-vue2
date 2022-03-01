@@ -2,9 +2,11 @@
 
 exports[`test click error text reload 1`] = `
 "<div class=\\"var-list var--box\\">
-  <!--v-if-->
-  <!--v-if-->
-  <div class=\\"var-list__error\\">点击重试</div>
+  <!---->
+  <!---->
+  <div class=\\"var-list__error\\">
+    点击重试
+  </div>
   <div class=\\"var-list__detector\\"></div>
 </div>"
 `;
@@ -33,9 +35,9 @@ exports[`test click error text reload 2`] = `
 
 exports[`test list finished 1`] = `
 "<div class=\\"var-list var--box\\">
-  <!--v-if-->
+  <!---->
   <div class=\\"var-list__finished\\">暂无更多</div>
-  <!--v-if-->
+  <!---->
   <div class=\\"var-list__detector\\"></div>
 </div>"
 `;

@@ -7,21 +7,21 @@ Support custom loading state, error state, data loading completed state.
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { List } from '@varlet/ui'
+import Vue from 'vue'
+import { List } from '@varlet-vue2/ui'
 
-createApp().use(List)
+Vue.use(List)
 ```
 
 ### Basic Use
 
-The `load` event is emitted when a scroll container is detected scrolling to the bottom，and will be set `loading` to `true`, 
-you need to manually set `loading` to `false` at the end of loading, that's the end of the load.
+The `load` event is emitted when a scroll container is detected scrolling to the bottom，and will be set `loading.sync` to `true`, 
+you need to manually set `loading.sync` to `false` at the end of loading, that's the end of the load.
 
 ```html
 <var-list
   :finished="finished"
-  v-model:loading="loading"
+  :loading.sync="loading"
   @load="load"
 >
   <var-cell :key="item" v-for="item in list">
@@ -31,33 +31,25 @@ you need to manually set `loading` to `false` at the end of loading, that's the 
 ```
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const loading = ref(false)
-    const finished = ref(false)
-    const list = reactive([])
-    
-    const load = () => {
+  data: () => ({
+    loading: false,
+    finished: false,
+    list: [],
+  }),
+  methods:{
+    load() {
       setTimeout(() => {
         for (let i = 0; i < 20; i++) {
-          list.push(list.length + 1)
+          this.list.push(this.list.length + 1)
         }
 
-        loading.value = false
+        this.loading = false
 
-        if (list.length >= 60) {
-          finished.value = true
+        if (this.list.length >= 60) {
+          this.finished = true
         }
       }, 1000)
-    }
-
-    return {
-      list,
-      loading,
-      finished,
-      load
     }
   }
 }
@@ -65,13 +57,13 @@ export default {
 
 ### Load Fail
 
-You can manually set the error status using `v-model:error`, an error message is displayed.
-Clicking on the error message will help you set the `error` to `false` and trigger the `load` event again.
+You can manually set the error status using `error.sync`, an error message is displayed.
+Clicking on the error message will help you set the `error.sync` to `false` and trigger the `load` event again.
 
 ```html
 <var-list
-  v-model:error="error"
-  v-model:loading="loading"
+  :error.sync="error"
+  :loading.sync="loading"
   @load="load"
 >
   <var-cell :key="item" v-for="item in list">
@@ -81,35 +73,27 @@ Clicking on the error message will help you set the `error` to `false` and trigg
 ```
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const loading = ref(false)
-    const error = ref(false)
-    const list = reactive([])
-    
-    const load = () => {
+  data: () => ({
+    loading: false,
+    finished: false,
+    list: [],
+  }),
+  methods:{
+    load() {
       setTimeout(() => {
-        if (list.length === 40) {
-          error.value = true
-          loading.value = false
+        if (this.list.length === 40) {
+          this.error = true
+          this.loading = false
           return
         }
 
         for (let i = 0; i < 20; i++) {
-          list.push(list.length + 1)
+          this.list2.push(this.list.length + 1)
         }
 
-        loading.value = false
+        this.loading = false
       }, 1000)
-    }
-
-    return {
-      list,
-      loading,
-      error,
-      load
     }
   }
 }
@@ -123,7 +107,7 @@ export default {
   finished-text="finished ORZ" 
   error-text="error TNT" 
   :finished="finished" 
-  v-model:loading="loading" 
+  :loading.sync="loading" 
   @load="load"
 >
   <var-cell :key="item" v-for="item in list">
@@ -133,33 +117,25 @@ export default {
 ```
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const loading = ref(false)
-    const finished = ref(false)
-    const list = reactive([])
-    
-    const load = () => {
+  data: () => ({
+    loading: false,
+    finished: false,
+    list: [],
+  }),
+  methods:{
+    load() {
       setTimeout(() => {
         for (let i = 0; i < 20; i++) {
-          list.push(list.length + 1)
+          this.list.push(this.list.length + 1)
         }
 
-        loading.value = false
+        this.loading = false
 
-        if (list.length >= 60) {
-          finished.value = true
+        if (this.list.length >= 60) {
+          this.finished = true
         }
       }, 1000)
-    }
-
-    return {
-      list,
-      loading,
-      finished,
-      load
     }
   }
 }
@@ -177,8 +153,8 @@ This can be mistaken for a scroll container, so avoid it.
 
 | Prop | Description | Type | Default | 
 | --- | --- | --- | --- | 
-| `v-model:loading` | loading state | _boolean_ | `false` |
-| `v-model:error` | error state | _boolean_ | `false` |
+| `loading.sync` | loading state | _boolean_ | `false` |
+| `error.sync` | error state | _boolean_ | `false` |
 | `immediate-check` | Whether the location is detected immediately when the List is initialized | _boolean_ | `true` |
 | `finished` | Whether the load is complete | _boolean_ | `false` |
 | `offset` | Trigger distance from the bottom | _string \| number_ | `0` |

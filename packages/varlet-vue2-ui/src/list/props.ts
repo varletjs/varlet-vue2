@@ -1,5 +1,3 @@
-import type { PropType } from 'vue'
-
 export const props = {
   loading: {
     type: Boolean,
@@ -29,14 +27,5 @@ export const props = {
   },
   errorText: {
     type: String,
-  },
-  onLoad: {
-    type: Function as PropType<() => void>,
-  },
-  'onUpdate:loading': {
-    type: Function as PropType<(loading: boolean) => void>,
-  },
-  'onUpdate:error': {
-    type: Function as PropType<(error: boolean) => void>,
   },
 }

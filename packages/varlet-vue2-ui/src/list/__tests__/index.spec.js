@@ -13,8 +13,8 @@ test('test list immediate check', async () => {
   const onUpdateLoading = jest.fn()
 
   const wrapper = mount(VarList, {
-    propsData: {
-      onLoad,
+    listeners: {
+      load: onLoad,
       'onUpdate:loading': onUpdateLoading,
     },
     attachTo: document.body,
@@ -41,7 +41,9 @@ test('test click error text reload', async () => {
       loadingText: '正在加载',
       error: true,
       errorText: '点击重试',
-      onLoad,
+    },
+    listeners: {
+      load: onLoad,
       'onUpdate:error': onUpdateError,
       'onUpdate:loading': onUpdateLoading,
     },
