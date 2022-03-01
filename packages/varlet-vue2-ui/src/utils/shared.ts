@@ -191,4 +191,6 @@ export const createCache = <T>(max: number): CacheInstance<T> => {
   }
 }
 
+export const dt = (value: unknown, defaultText: string | undefined) => (value == null ? defaultText : value)
+
 export const NOOP = () => {}
