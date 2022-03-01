@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Select from './Select.vue'
 
-Select.install = function (app: App) {
+Select.install = function (app: VueConstructor) {
   app.component(Select.name, Select)
 }
 

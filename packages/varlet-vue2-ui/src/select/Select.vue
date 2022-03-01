@@ -143,18 +143,30 @@ import { createParentMixin, createChildrenMixin } from '../utils/mixins/relation
 
 export default defineComponent({
   name: 'VarSelect',
+
   components: {
     VarIcon,
     VarMenu,
     VarChip,
     VarFormDetails,
   },
+
   mixins: [
     ValidationMixin,
     createParentMixin('select', { childrenKey: 'options' }),
     createChildrenMixin('form', { parentKey: 'form', childrenKey: 'formItems' }),
   ],
+
   props,
+
+  data: () => ({
+    isFocus: false,
+    label: '',
+    labels: [],
+    wrapWidth: '0px',
+    offsetY: 0,
+  }),
+
   computed: {
     formReadonly() {
       return this.form?.readonly
@@ -164,7 +176,37 @@ export default defineComponent({
       return this.form?.disabled
     },
   },
+
+  watch: {
+    value() {
+      this.syncOptions()
+    },
+
+    multiple(multiple) {
+      if (multiple && !isArray(this.value)) {
+        throw Error('The value must be an array when multiple is true')
+      }
+    },
+  },
+
   methods: {
+    // expose
+    blur() {
+      this.isFocus = false
+    },
+
+    // expose
+    validate() {
+      this._validate(this.rules, this.value)
+    },
+
+    // expose
+    reset() {
+      const { onInput } = this.getListeners()
+      onInput?.(this.multiple ? [] : undefined)
+      this.resetValidation()
+    },
+
     computeLabel() {
       const { multiple, value } = this
 
@@ -249,6 +291,7 @@ export default defineComponent({
       onBlur?.()
       this.validateWithTrigger('onBlur')
     },
+
     onSelect(option) {
       const { onChange, onInput } = this.getListeners()
       const { disabled, readonly, multiple, options } = this
@@ -267,6 +310,7 @@ export default defineComponent({
 
       !multiple && (this.isFocus = false)
     },
+
     handleClear() {
       const { onClear, onInput } = this.getListeners()
       const { disabled, readonly, multiple, clearable, formDisabled, formReadonly } = this
@@ -293,6 +337,7 @@ export default defineComponent({
       onClick?.(e)
       this.validateWithTrigger('onClick')
     },
+
     async validateWithTrigger(trigger) {
       await this.$nextTick()
       const { validateTrigger, rules, value } = this
@@ -331,43 +376,6 @@ export default defineComponent({
 
     focus() {
       this.isFocus = true
-    },
-    // expose
-    blur() {
-      this.isFocus = false
-    },
-
-    // expose
-    validate() {
-      this._validate(this.rules, this.value)
-    },
-
-    // expose
-    reset() {
-      const { onInput } = this.getListeners()
-      onInput?.(this.multiple ? [] : undefined)
-      this.resetValidation()
-    },
-  },
-  data: () => ({
-    isFocus: false,
-    label: '',
-    labels: [],
-    wrapWidth: '0px',
-    offsetY: 0,
-  }),
-
-  watch: {
-    value: {
-      handler() {
-        this.syncOptions()
-      },
-    },
-    multiple(multiple) {
-      const { value } = this
-      if (multiple && !isArray(value)) {
-        throw Error('The value must be an array when multiple is true')
-      }
     },
   },
 })

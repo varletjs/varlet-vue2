@@ -3,10 +3,10 @@
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { Select, Option } from '@varlet/ui'
+import Vue from 'vue'
+import { Select, Option } from '@varlet-vue2/ui'
 
-createApp().use(Select).use(Option)
+Vue.use(Select).use(Option)
 ```
 
 ### Basic Usage
@@ -15,13 +15,11 @@ The component uses the option's `label` as the displayed text.
 The component uses the `value` of the option first as the value of the option, followed by the `label`.
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const value = ref('')
-
-    return { value }
+  data() {
+    return {
+      value: ''
+    }
   }
 }
 ```
@@ -99,10 +97,10 @@ If you only need the basic functionality of the component, you can remove some s
 
 ### Display Icon
 ```js
-import { createApp } from 'vue'
-import { Icon } from '@varlet/ui'
+import Vue from 'vue'
+import { Icon } from '@varlet-vue2/ui'
 
-createApp().use(Icon)
+Vue.use(Icon)
 ```
 
 ```html
@@ -123,13 +121,11 @@ createApp().use(Icon)
 ### Multiple Selection
 
 ```js
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const value = ref([])
-
-    return { value }
+  data() {
+    return {
+      value: []
+    }
   }
 }
 ```
