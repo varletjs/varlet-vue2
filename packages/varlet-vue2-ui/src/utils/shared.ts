@@ -16,6 +16,8 @@ export const cubic = (value: number): number => value ** 3
 
 export const uniq = (arr: Array<any>) => [...new Set(arr)]
 
+export const dt = (value: unknown, defaultText: string | undefined) => (value == null ? defaultText : value)
+
 export const linear = (value: number): number => value
 
 export const easeInOutCubic = (value: number): number =>
