@@ -9,11 +9,11 @@
     :lock-scroll="lockScroll"
     :close-on-click-overlay="popupCloseOnClickOverlay"
     :teleport="teleport"
-    @open="onOpen"
-    @close="onClose"
-    @closed="onClosed"
-    @opened="onOpened"
-    @route-change="onRouteChange"
+    @open="$emit('open')"
+    @close="$emit('close')"
+    @closed="$emit('closed')"
+    @opened="$emit('opened')"
+    @route-change="$emit('route-change')"
     @click-overlay="handleClickOverlay"
   >
     <div class="var--box var-dialog" :class="dialogClass" :style="dialogStyle" v-bind="$attrs">
@@ -109,14 +109,18 @@ export default defineComponent({
     dt,
 
     done() {
-      this.getListeners()['onUpdate:show']?.(false)
+      this.$emit('update:show', false)
+    },
+
+    normalizeBeforeClose() {
+      return this.getListeners().onBeforeClose || this.beforeClose
     },
 
     handleClickOverlay() {
-      const { closeOnClickOverlay, getListeners } = this
-      const [onClickOverlay, onBeforeClose] = getListeners()
+      const { closeOnClickOverlay, normalizeBeforeClose } = this
+      const onBeforeClose = normalizeBeforeClose()
 
-      onClickOverlay?.()
+      this.$emit('click-overlay')
 
       if (!closeOnClickOverlay) {
         return
@@ -127,33 +131,33 @@ export default defineComponent({
         return
       }
 
-      getListeners()['onUpdate:show']?.(false)
+      this.$emit('update:show', false)
     },
 
     confirm() {
-      const { onBeforeClose, onConfirm } = this.getListeners()
+      const onBeforeClose = this.normalizeBeforeClose()
 
-      onConfirm?.()
+      this.$emit('confirm')
 
       if (onBeforeClose != null) {
         onBeforeClose('confirm', this.done)
         return
       }
 
-      this.getListeners()['onUpdate:show']?.(false)
+      this.$emit('update:show', false)
     },
 
     cancel() {
-      const { onBeforeClose, onCancel } = this.getListeners()
+      const onBeforeClose = this.normalizeBeforeClose()
 
-      onCancel?.()
+      this.$emit('cancel')
 
       if (onBeforeClose != null) {
         onBeforeClose('cancel', this.done)
         return
       }
 
-      this.getListeners()['onUpdate:show']?.(false)
+      this.$emit('update:show', false)
     },
   },
 })

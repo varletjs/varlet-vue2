@@ -38,9 +38,4 @@ export const props = {
   teleport: {
     type: String,
   },
-
-  // internal for Dialog
-  onRouteChange: {
-    type: Function as PropType<() => void>,
-  },
 }

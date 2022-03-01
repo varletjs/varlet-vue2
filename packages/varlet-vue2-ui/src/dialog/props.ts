@@ -54,6 +54,10 @@ export const props = {
   dialogStyle: {
     type: Object,
   },
+  // internal
+  beforeClose: {
+    type: Function,
+  },
   ...pickProps(popupProps, [
     'overlay',
     'overlayClass',
@@ -61,12 +65,5 @@ export const props = {
     'lockScroll',
     'closeOnClickOverlay',
     'teleport',
-    'onOpen',
-    'onClose',
-    'onOpened',
-    'onClosed',
-    'onClickOverlay',
-    // internal for function call closes the dialog
-    'onRouteChange',
   ]),
 }

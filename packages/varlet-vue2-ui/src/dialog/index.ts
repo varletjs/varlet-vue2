@@ -8,7 +8,7 @@ type ButtonType = 'default' | 'primary' | 'info' | 'success' | 'warning' | ' err
 type DialogMessageAlign = 'left' | 'center' | 'right'
 
 interface DialogOptions {
-  value?: boolean
+  show?: boolean
   title?: string
   message?: string
   messageAlign?: DialogMessageAlign
@@ -54,12 +54,12 @@ function Dialog(options: DialogOptions | string | number): Promise<DialogActions
       },
     })
 
-    instance.value = true
+    instance.show = true
 
     singletonInstance = instance
 
-    instance.$on('input', (value: boolean) => {
-      instance.value = value
+    instance.$on('update:show', (value: boolean) => {
+      instance.show = value
     })
 
     instance.$on('open', () => dialogOptions.onOpen?.())
