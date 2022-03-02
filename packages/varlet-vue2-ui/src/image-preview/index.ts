@@ -82,11 +82,15 @@ ImagePreview.close = () => {
   }
 }
 
-ImagePreview.Component = VarImagePreview
-
-ImagePreview.install = function (Vue: VueConstructor) {
-  Vue.use(VarImagePreview)
+VarImagePreview.install = function (app: VueConstructor) {
+  app.component(VarImagePreview.name, VarImagePreview)
 }
+
+ImagePreview.install = function (app: VueConstructor) {
+  app.component(VarImagePreview.name, VarImagePreview)
+}
+
+ImagePreview.Component = VarImagePreview
 
 export const _ImagePreviewComponent = VarImagePreview
 

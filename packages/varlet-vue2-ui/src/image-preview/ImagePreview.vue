@@ -171,7 +171,7 @@ export default defineComponent({
     },
 
     isTapTouch(target) {
-      if (!this.startTouch || !this.prevTouch) {
+      if (!target || !this.startTouch || !this.prevTouch) {
         return false
       }
 

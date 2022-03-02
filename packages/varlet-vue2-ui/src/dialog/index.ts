@@ -1,4 +1,4 @@
-import DialogPlugin from './Dialog'
+import VarDialog from './Dialog'
 import Vue, { ComponentOptions, VueConstructor } from 'vue'
 import { inBrowser, isNumber, isString } from '../utils/shared'
 import { mountComponent } from '../utils/components'
@@ -47,7 +47,7 @@ function Dialog(options: DialogOptions | string | number): Promise<DialogActions
 
     const dialogOptions: DialogOptions = isString(options) || isNumber(options) ? { message: String(options) } : options
 
-    const { instance, unmount } = mountComponent(DialogPlugin as ComponentOptions<Vue>, 'body', {
+    const { instance, unmount } = mountComponent(VarDialog as ComponentOptions<Vue>, 'body', {
       propsData: {
         ...dialogOptions,
         beforeClose: dialogOptions.onBeforeClose,
@@ -107,12 +107,16 @@ Dialog.close = () => {
   }
 }
 
-Dialog.Component = DialogPlugin
-
-Dialog.install = function (Vue: VueConstructor) {
-  Vue.use(DialogPlugin)
+VarDialog.install = function (app: VueConstructor) {
+  app.component(VarDialog.name, VarDialog)
 }
 
-export const _DialogComponent = DialogPlugin
+Dialog.install = function (app: VueConstructor) {
+  app.component(VarDialog.name, VarDialog)
+}
+
+Dialog.Component = VarDialog
+
+export const _DialogComponent = VarDialog
 
 export default Dialog
