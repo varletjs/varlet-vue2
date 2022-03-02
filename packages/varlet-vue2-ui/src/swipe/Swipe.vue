@@ -63,11 +63,11 @@ export default defineComponent({
     index: 0,
     touching: false,
     timer: -1,
-    startX: null,
-    startY: null,
-    startTime: null,
-    prevX: null,
-    prevY: null,
+    startX: undefined,
+    startY: undefined,
+    startTime: undefined,
+    prevX: undefined,
+    prevY: undefined,
   }),
 
   mounted() {
@@ -351,6 +351,7 @@ export default defineComponent({
 
       const positive = vertical ? this.prevY < this.startY : this.prevX < this.startX
       const distance = vertical ? Math.abs(this.startY - this.prevY) : Math.abs(this.startX - this.prevX)
+
       const quickSwiping = performance.now() - this.startTime <= SWIPE_DELAY && distance >= SWIPE_DISTANCE
       const swipeIndex = quickSwiping
         ? positive
