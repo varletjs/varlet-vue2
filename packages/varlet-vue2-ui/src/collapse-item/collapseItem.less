@@ -1,0 +1,105 @@
+@collapse-background: #fff;
+@collapse-text-color: #232222;
+@collapse-header-font-size: var(--font-size-lg);
+@collapse-header-padding: 10px 16px;
+@collapse-content-font-size: var(--font-size-md);
+@collapse-content-padding: 0 16px 10px;
+@collapse-item-margin-top: 16px;
+@collapse-disable-color: #bdbdbd;
+@collapse-border-top: thin solid rgba(0, 0, 0, 0.12);
+
+:root {
+  --collapse-background: @collapse-background;
+  --collapse-text-color: @collapse-text-color;
+  --collapse-header-font-size: @collapse-header-font-size;
+  --collapse-header-padding: @collapse-header-padding;
+  --collapse-content-font-size: @collapse-content-font-size;
+  --collapse-content-padding: @collapse-content-padding;
+  --collapse-item-margin-top: @collapse-item-margin-top;
+  --collapse-disable-color: @collapse-disable-color;
+  --collapse-border-top: @collapse-border-top;
+}
+
+.var-collapse-item {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 0;
+  background: var(--collapse-background);
+  color: var(--collapse-text-color);
+  transition: margin-top 0.25s, background-color 0.25s;
+
+  &::before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &:not(:first-child)::after {
+    border-top: var(--collapse-border-top);
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &-header {
+    align-items: center;
+    display: flex;
+    font-size: var(--collapse-header-font-size);
+    outline: none;
+    padding: var(--collapse-header-padding);
+    justify-content: space-between;
+    position: relative;
+
+    &__title {
+      transition: color 0.25s;
+    }
+
+    &__icon {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+
+    &__disable {
+      opacity: 0;
+    }
+
+    &__open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &-content {
+    display: flex;
+    font-size: var(--collapse-content-font-size);
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  &__wrap {
+    padding: var(--collapse-content-padding);
+    word-break: break-all;
+    flex: 1;
+  }
+
+  &__active + &,
+  &__active:not(:first-child) {
+    margin-top: var(--collapse-item-margin-top);
+
+    &::after {
+      border-top: none;
+    }
+  }
+
+  &__disable {
+    color: var(--collapse-disable-color);
+    cursor: not-allowed;
+  }
+}

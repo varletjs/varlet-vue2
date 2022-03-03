@@ -20,6 +20,22 @@ export const dt = (value: unknown, defaultText: string | undefined) => (value ==
 
 export const linear = (value: number): number => value
 
+export const isHTMLSupportImage = (val: string | undefined | null) => {
+  if (val == null) {
+    return false
+  }
+
+  return val.startsWith('data:image') || /\.(png|jpg|gif|jpeg|svg)$/.test(val)
+}
+
+export const isHTMLSupportVideo = (val: string | undefined | null) => {
+  if (val == null) {
+    return false
+  }
+
+  return val.startsWith('data:video') || /\.(mp4|webm|ogg)$/.test(val)
+}
+
 export const easeInOutCubic = (value: number): number =>
   value < 0.5 ? cubic(value * 2) / 2 : 1 - cubic((1 - value) * 2) / 2
 

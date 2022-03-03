@@ -62,8 +62,8 @@ exports[`test click anchor to trigger change event 1`] = `
 exports[`test indexBar example 1`] = `
 "<div class=\\"var-index-bar\\">
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 A
         </div>
@@ -87,8 +87,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 B
         </div>
@@ -112,8 +112,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 C
         </div>
@@ -137,8 +137,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 D
         </div>
@@ -162,8 +162,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 E
         </div>
@@ -187,8 +187,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 F
         </div>
@@ -212,8 +212,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 G
         </div>
@@ -237,8 +237,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 H
         </div>
@@ -262,8 +262,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 I
         </div>
@@ -287,8 +287,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 J
         </div>
@@ -312,8 +312,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 K
         </div>
@@ -337,8 +337,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 L
         </div>
@@ -362,8 +362,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 M
         </div>
@@ -387,8 +387,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 N
         </div>
@@ -412,8 +412,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 O
         </div>
@@ -437,8 +437,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 P
         </div>
@@ -462,8 +462,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 Q
         </div>
@@ -487,8 +487,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 R
         </div>
@@ -512,8 +512,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 S
         </div>
@@ -537,8 +537,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 T
         </div>
@@ -562,8 +562,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 U
         </div>
@@ -587,8 +587,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 V
         </div>
@@ -612,8 +612,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 W
         </div>
@@ -637,8 +637,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 X
         </div>
@@ -662,8 +662,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 Y
         </div>
@@ -687,8 +687,8 @@ exports[`test indexBar example 1`] = `
     </div>
   </div>
   <div>
-    <div class=\\"var-sticky\\" style=\\"z-index: 1; width: 0px; height: 0px;\\">
-      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1; position: fixed; width: 0px; height: 0px; left: 0px; top: 54px;\\">
+    <div class=\\"var-sticky\\" style=\\"z-index: 1;\\">
+      <div class=\\"var-sticky__wrapper\\" style=\\"z-index: 1;\\">
         <div class=\\"var-index-anchor var-index-anchor__example\\" style=\\"background: rgb(231, 237, 247); color: rgb(46, 103, 186);\\">
           标题 Z
         </div>
@@ -711,85 +711,6 @@ exports[`test indexBar example 1`] = `
       <!---->
     </div>
   </div>
-  <ul class=\\"var-index-bar__anchor-list\\" style=\\"z-index: 3; display: block;\\">
-    <li class=\\"var-index-bar__anchor-item\\">
-      A
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      B
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      C
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      D
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      E
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      F
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      G
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      H
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      I
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      J
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      K
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      L
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      M
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      N
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      O
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      P
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      Q
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      R
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      S
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      T
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      U
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      V
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      W
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      X
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      Y
-    </li>
-    <li class=\\"var-index-bar__anchor-item\\">
-      Z
-    </li>
-  </ul>
+  <ul class=\\"var-index-bar__anchor-list\\" style=\\"z-index: 3; display: block;\\"></ul>
 </div>"
 `;
