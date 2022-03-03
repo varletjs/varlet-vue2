@@ -88,37 +88,3 @@ exports[`test badge example 1`] = `
   </div>
 </div>"
 `;
-
-exports[`test badge position 1`] = `
-"<div class=\\"var-badge var--box\\">
-  <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--default var-badge__position var-badge--right-top\\"><span>0</span></span></transition-stub>
-  <div style=\\"width: 100px; height: 30px;\\"></div>
-</div>"
-`;
-
-exports[`test badge position 2`] = `
-"<div class=\\"var-badge var--box\\" position=\\"right-bottom\\">
-  <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--default var-badge__position var-badge--right-top\\"><span>0</span></span></transition-stub>
-  <div style=\\"width: 100px; height: 30px;\\"></div>
-</div>"
-`;
-
-exports[`test badge position 3`] = `
-"<div class=\\"var-badge var--box\\" position=\\"left-top\\">
-  <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--default var-badge__position var-badge--right-top\\"><span>0</span></span></transition-stub>
-  <div style=\\"width: 100px; height: 30px;\\"></div>
-</div>"
-`;
-
-exports[`test badge position 4`] = `
-"<div class=\\"var-badge var--box\\" position=\\"left-bottom\\">
-  <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--default var-badge__position var-badge--right-top\\"><span>0</span></span></transition-stub>
-  <div style=\\"width: 100px; height: 30px;\\"></div>
-</div>"
-`;
-
-exports[`test badge style 1`] = `
-"<div class=\\"var-badge var--box\\">
-  <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--default var-badge__icon\\" style=\\"background: rgb(98, 0, 234);\\"><i class=\\"var-icon var-icon--set var-icon-fire\\" style=\\"transition: transform 0ms; font-size: 10px;\\"></i></span></transition-stub>
-</div>"
-`;

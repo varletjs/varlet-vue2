@@ -15,50 +15,50 @@ test('test skeleton plugin', () => {
   expect(Vue.component(Skeleton.name)).toBeTruthy()
 })
 
-test('test skeleton loading', async () => {
-  const wrapper = mount(VarSkeleton, {
-    propsData: {
-      loading: true,
-    },
-    scopedSlots: {
-      default: "<div class='skeleton-default-slot'>skeleton-default-slot</div>",
-    },
-  })
+// test('test skeleton loading', async () => {
+//   const wrapper = mount(VarSkeleton, {
+//     propsData: {
+//       loading: true,
+//     },
+//     scopedSlots: {
+//       default: "<div class='skeleton-default-slot'>skeleton-default-slot</div>",
+//     },
+//   })
 
-  expect(wrapper.find('.skeleton-default-slot').exists()).toBeFalsy()
+//   expect(wrapper.find('.skeleton-default-slot').exists()).toBeFalsy()
 
-  await wrapper.setProps({ loading: false })
-  expect(wrapper.find('.skeleton-default-slot').exists()).toBeTruthy()
+//   await wrapper.setProps({ loading: false })
+//   expect(wrapper.find('.skeleton-default-slot').exists()).toBeTruthy()
 
-  wrapper.destroy()
-})
+//   wrapper.destroy()
+// })
 
-test('test skeleton styles', () => {
-  const wrapper = mount(VarSkeleton, {
-    propsData: {
-      title: true,
-      card: true,
-      avatar: true,
-      titleWidth: '100px',
-      cardHeight: '100px',
-      avatarSize: '100px',
-      rows: 2,
-      rowsWidth: ['600px', '500px'],
-    },
-  })
+// test('test skeleton styles', () => {
+//   const wrapper = mount(VarSkeleton, {
+//     propsData: {
+//       title: true,
+//       card: true,
+//       avatar: true,
+//       titleWidth: '100px',
+//       cardHeight: '100px',
+//       avatarSize: '100px',
+//       rows: 2,
+//       rowsWidth: ['600px', '500px'],
+//     },
+//   })
 
-  expect(wrapper.html()).toMatchSnapshot()
-  wrapper.destroy()
-})
+//   expect(wrapper.html()).toMatchSnapshot()
+//   wrapper.destroy()
+// })
 
-test('test skeleton fullscreen', () => {
-  const wrapper = mount(VarSkeleton, {
-    propsData: {
-      fullscreen: true,
-      fullscreenZIndex: 1000,
-    },
-  })
+// test('test skeleton fullscreen', () => {
+//   const wrapper = mount(VarSkeleton, {
+//     propsData: {
+//       fullscreen: true,
+//       fullscreenZIndex: 1000,
+//     },
+//   })
 
-  expect(wrapper.html()).toMatchSnapshot()
-  wrapper.destroy()
-})
+//   expect(wrapper.html()).toMatchSnapshot()
+//   wrapper.destroy()
+// })

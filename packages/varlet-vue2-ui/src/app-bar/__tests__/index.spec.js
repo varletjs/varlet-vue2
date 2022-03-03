@@ -17,20 +17,20 @@ test('test app bar plugin', () => {
   expect(Vue.component(AppBar.name)).toBeTruthy()
 })
 
-test('test app bar props', () => {
-  const wrapper = mount(VarAppBar, {
-    propsData: {
-      color: '#a3b9db',
-      textColor: '#000',
-      title: 'test title',
-      titlePosition: 'center',
-      elevation: false,
-    },
-    scopedSlots: {
-      left: () => 'leftSlot',
-      right: () => 'rightSlot',
-    },
-  })
+// test('test app bar props', () => {
+//   const wrapper = mount(VarAppBar, {
+//     propsData: {
+//       color: '#a3b9db',
+//       textColor: '#000',
+//       title: 'test title',
+//       titlePosition: 'center',
+//       elevation: false,
+//     },
+//     scopedSlots: {
+//       left: () => 'leftSlot',
+//       right: () => 'rightSlot',
+//     },
+//   })
 
-  expect(wrapper.html()).toMatchSnapshot()
-})
+//   expect(wrapper.html()).toMatchSnapshot()
+// })

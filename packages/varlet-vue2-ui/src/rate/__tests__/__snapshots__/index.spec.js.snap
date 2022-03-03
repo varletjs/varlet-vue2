@@ -1,55 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test rate count 1`] = `
-"<div class=\\"var-rate__warp\\">
-  <div class=\\"var-rate\\">
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 0px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-  </div>
-  <transition-stub name=\\"var-form-details\\">
-    <!---->
-  </transition-stub>
-</div>"
-`;
-
-exports[`test rate disabled & readonly 1`] = `
-"<div class=\\"var-rate__warp\\">
-  <div class=\\"var-rate\\">
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 0px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-  </div>
-  <transition-stub name=\\"var-form-details\\">
-    <!---->
-  </transition-stub>
-</div>"
-`;
-
-exports[`test rate disabled & readonly 2`] = `
-"<div class=\\"var-rate__warp\\">
-  <div class=\\"var-rate\\">
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 0px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-  </div>
-  <transition-stub name=\\"var-form-details\\">
-    <!---->
-  </transition-stub>
-</div>"
-`;
-
 exports[`test rate example 1`] = `
 "<div class=\\"var-rate-example\\">
   <div class=\\"app-type\\">基础评分</div>
@@ -337,53 +287,5 @@ exports[`test rate example 1`] = `
       <!---->
     </transition-stub>
   </div>
-</div>"
-`;
-
-exports[`test rate gap 1`] = `
-"<div class=\\"var-rate__warp\\">
-  <div class=\\"var-rate\\">
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 10px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 10px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 10px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 10px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 0px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-  </div>
-  <transition-stub name=\\"var-form-details\\">
-    <!---->
-  </transition-stub>
-</div>"
-`;
-
-exports[`test rate validation 1`] = `
-"<div class=\\"var-rate__warp\\">
-  <div class=\\"var-rate\\">
-    <div class=\\"var-rate__content var-rate--error\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content var-rate--error\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content var-rate--error\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content var-rate--error\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content var-rate--error\\" style=\\"margin-right: 0px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-  </div>
-  <transition-stub name=\\"var-form-details\\">
-    <div class=\\"var-form-details\\">
-      <div class=\\"var-form-details__message\\">至少选择一分</div>
-      <div class=\\"var-form-details__length\\"></div>
-    </div>
-  </transition-stub>
-</div>"
-`;
-
-exports[`test rate validation 2`] = `
-"<div class=\\"var-rate__warp\\">
-  <div class=\\"var-rate\\">
-    <div class=\\"var-rate__content var-rate--primary\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 2px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-    <div class=\\"var-rate__content\\" style=\\"margin-right: 0px; width: 24px; height: 24px; border-radius: 50%;\\"><i class=\\"var-icon var-icon--set var-icon-star-outline\\" style=\\"transition: transform 0ms; font-size: 24px;\\"></i></div>
-  </div>
-  <transition-stub name=\\"var-form-details\\">
-    <!---->
-  </transition-stub>
 </div>"
 `;

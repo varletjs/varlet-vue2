@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Form from './Form.vue'
 
-Form.install = function (app: App) {
+Form.install = function (app: VueConstructor) {
   app.component(Form.name, Form)
 }
 

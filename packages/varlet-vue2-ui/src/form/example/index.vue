@@ -2,58 +2,58 @@
   <div class="example">
     <app-type>{{ pack.example }}</app-type>
     <var-form ref="form" :disabled="disabled" :readonly="readonly">
-      <!--      <var-input-->
-      <!--        class="mb"-->
-      <!--        :placeholder="pack.username"-->
-      <!--        :rules="[(v) => !!v || pack.usernameMessage]"-->
-      <!--        v-model="formData.username"-->
-      <!--      />-->
-      <!--      <var-input-->
-      <!--        class="mb"-->
-      <!--        type="password"-->
-      <!--        :placeholder="pack.password"-->
-      <!--        :rules="[(v) => !!v || pack.passwordMessage]"-->
-      <!--        v-model="formData.password"-->
-      <!--      />-->
-      <!--      <var-select-->
-      <!--        class="mb"-->
-      <!--        :placeholder="pack.department"-->
-      <!--        :rules="[(v) => !!v || pack.departmentMessage]"-->
-      <!--        v-model="formData.department"-->
-      <!--      >-->
-      <!--        <var-option :label="`${pack.eat}${pack.departmentUnit}`" />-->
-      <!--        <var-option :label="`${pack.sleep}${pack.departmentUnit}`" />-->
-      <!--        <var-option :label="`${pack.play}${pack.departmentUnit}`" />-->
-      <!--      </var-select>-->
-      <!--      <var-select-->
-      <!--        class="mb"-->
-      <!--        multiple-->
-      <!--        :placeholder="pack.group"-->
-      <!--        :rules="[(v) => v.length >= 1 || pack.groupMessage]"-->
-      <!--        v-model="formData.group"-->
-      <!--      >-->
-      <!--        <var-option :label="`${pack.eat}${pack.groupUnit}`" />-->
-      <!--        <var-option :label="`${pack.sleep}${pack.groupUnit}`" />-->
-      <!--        <var-option :label="`${pack.play}${pack.groupUnit}`" />-->
-      <!--      </var-select>-->
+      <var-input
+        class="mb"
+        :placeholder="pack.username"
+        :rules="[(v) => !!v || pack.usernameMessage]"
+        v-model="formData.username"
+      />
+      <var-input
+        class="mb"
+        type="password"
+        :placeholder="pack.password"
+        :rules="[(v) => !!v || pack.passwordMessage]"
+        v-model="formData.password"
+      />
+      <var-select
+        class="mb"
+        :placeholder="pack.department"
+        :rules="[(v) => !!v || pack.departmentMessage]"
+        v-model="formData.department"
+      >
+        <var-option :label="`${pack.eat}${pack.departmentUnit}`" />
+        <var-option :label="`${pack.sleep}${pack.departmentUnit}`" />
+        <var-option :label="`${pack.play}${pack.departmentUnit}`" />
+      </var-select>
+      <var-select
+        class="mb"
+        multiple
+        :placeholder="pack.group"
+        :rules="[(v) => v.length >= 1 || pack.groupMessage]"
+        v-model="formData.group"
+      >
+        <var-option :label="`${pack.eat}${pack.groupUnit}`" />
+        <var-option :label="`${pack.sleep}${pack.groupUnit}`" />
+        <var-option :label="`${pack.play}${pack.groupUnit}`" />
+      </var-select>
       <var-radio-group class="mb" :rules="[(v) => !!v || pack.genderMessage]" v-model="formData.gender">
         <var-radio :checked-value="1">{{ pack.male }}</var-radio>
         <var-radio :checked-value="2">{{ pack.female }}</var-radio>
       </var-radio-group>
-      <!--      <var-checkbox-group class="mb" :rules="[(v) => v.length > 0 || pack.likeMessage]" v-model="formData.like">-->
-      <!--        <var-checkbox :checked-value="1">{{ pack.eat }}</var-checkbox>-->
-      <!--        <var-checkbox :checked-value="2">{{ pack.sleep }}</var-checkbox>-->
-      <!--        <var-checkbox :checked-value="3">{{ pack.play }}</var-checkbox>-->
-      <!--      </var-checkbox-group>-->
+      <var-checkbox-group class="mb" :rules="[(v) => v.length > 0 || pack.likeMessage]" v-model="formData.like">
+        <var-checkbox :checked-value="1">{{ pack.eat }}</var-checkbox>
+        <var-checkbox :checked-value="2">{{ pack.sleep }}</var-checkbox>
+        <var-checkbox :checked-value="3">{{ pack.play }}</var-checkbox>
+      </var-checkbox-group>
       <var-rate class="mb" :rules="[(v) => v >= 3 || pack.rateMessage]" v-model="formData.score" />
-      <!--      <div class="row mb">-->
-      <!--        <var-switch :rules="[(v) => !!v || pack.licenseMessage]" v-model="formData.license" />-->
-      <!--      </div>-->
-      <!--      <div class="row mb">-->
-      <!--        <var-counter :rules="[(v) => v > 10 || pack.countMessage]" v-model="formData.count" />-->
-      <!--      </div>-->
-      <!--      <var-slider class="mb" :rules="[(v) => v > 10 || pack.rangeMessage]" v-model="formData.range" />-->
-      <!--      <var-uploader class="mb" :rules="[(v) => v.length >= 1 || pack.filesMessage]" v-model="formData.files" />-->
+      <div class="row mb">
+        <var-switch :rules="[(v) => !!v || pack.licenseMessage]" v-model="formData.license" />
+      </div>
+      <div class="row mb">
+        <var-counter :rules="[(v) => v > 10 || pack.countMessage]" v-model="formData.count" />
+      </div>
+      <var-slider class="mb" :rules="[(v) => v > 10 || pack.rangeMessage]" v-model="formData.range" />
+      <var-uploader class="mb" :rules="[(v) => v.length >= 1 || pack.filesMessage]" v-model="formData.files" />
     </var-form>
 
     <app-type>{{ pack.controller }}</app-type>
@@ -71,18 +71,18 @@
 
 <script>
 import VarForm from '..'
-// import VarInput from '../../input'
-// import VarSelect from '../../select'
-// import VarOption from '../../option'
-// import VarCheckboxGroup from '../../checkbox-group'
-// import VarCheckbox from '../../checkbox'
+import VarInput from '../../input'
+import VarSelect from '../../select'
+import VarOption from '../../option'
+import VarCheckboxGroup from '../../checkbox-group'
+import VarCheckbox from '../../checkbox'
 import VarRadioGroup from '../../radio-group'
 import VarRadio from '../../radio'
 import VarButton from '../../button'
-// import VarSwitch from '../../switch'
-// import VarSlider from '../../slider'
-// import VarUploader from '../../uploader'
-// import VarCounter from '../../counter'
+import VarSwitch from '../../switch'
+import VarSlider from '../../slider'
+import VarUploader from '../../uploader'
+import VarCounter from '../../counter'
 import VarRate from '../../rate'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType.vue'
 import context from '../../context'
@@ -95,18 +95,18 @@ export default {
 
   components: {
     VarForm,
-    // VarInput,
-    // VarSelect,
-    // VarCheckboxGroup,
-    // VarCheckbox,
+    VarInput,
+    VarSelect,
+    VarCheckboxGroup,
+    VarCheckbox,
     VarRadioGroup,
     VarRadio,
-    // VarOption,
+    VarOption,
     VarButton,
-    // VarSlider,
-    // VarSwitch,
-    // VarUploader,
-    // VarCounter,
+    VarSlider,
+    VarSwitch,
+    VarUploader,
+    VarCounter,
     VarRate,
     AppType,
   },

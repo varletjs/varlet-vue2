@@ -1,10 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test chip color & textColor 1`] = `
-"<transition-stub name=\\"var-fade\\"><span class=\\"var-chip var--box var-chip--normal var--inline-flex var-chip--default var-chip--round\\" style=\\"color: rgb(0, 0, 0); background: rgb(0, 0, 0);\\"> <span class=\\"var-chip--text-normal\\"></span>
-  <!----></span></transition-stub>"
-`;
-
 exports[`test chip example 1`] = `
 "<div class=\\"var-chip-example\\">
   <div class=\\"app-type\\">纸片类型</div>
@@ -68,5 +63,3 @@ exports[`test chip example 1`] = `
     <!----></span></transition-stub>
 </div>"
 `;
-
-exports[`test chip styles 1`] = `"<transition-stub name=\\"var-fade\\"><span class=\\"var-chip var--box var-chip--large var--flex var-chip--plain var-chip--plain-default var-chip--round\\"> <span class=\\"var-chip--text-large\\"><div>chip text</div></span> <span class=\\"var-chip--close\\"><i class=\\"var-icon var-icon--set var-icon-fire\\" style=\\"transition: transform 0ms;\\"></i></span></span></transition-stub>"`;

@@ -48,14 +48,3 @@ exports[`test card example 1`] = `
   </div>
 </div>"
 `;
-
-exports[`test card props 1`] = `
-"<div class=\\"var-card var-elevation--2\\"><img src=\\"https://varlet.gitee.io/varlet-ui/cat.jpg\\" alt=\\"This is an image\\" class=\\"var-card__image\\" style=\\"object-fit: cover; height: 200px;\\">
-  <div class=\\"var-card__title\\">This is Card</div>
-  <div class=\\"var-card__subtitle\\">This is subtitle</div>
-  <div class=\\"var-card__description\\">This is description</div>
-  <div class=\\"var-card__footer\\">
-    <div>text</div>
-  </div>
-</div>"
-`;

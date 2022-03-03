@@ -42,29 +42,39 @@ import { createChildrenMixin } from '../utils/mixins/relation'
 
 export default defineComponent({
   name: 'VarOption',
+
   directives: { Ripple },
+
   components: {
     VarCheckbox,
   },
+
   mixins: [createChildrenMixin('select', { childrenKey: 'options' })],
+
   props,
+
   data: () => ({
     optionSelected: false,
   }),
+
   computed: {
     selected() {
       return this.optionSelected
     },
+
     wrapWidth() {
       return this.select.wrapWidth
     },
+
     multiple() {
       return this.select.multiple
     },
+
     focusColor() {
       return this.select.focusColor
     },
   },
+
   watch: {
     label: {
       handler() {
@@ -72,6 +82,7 @@ export default defineComponent({
       },
       immediate: true,
     },
+
     value: {
       handler() {
         this.checkProps()
@@ -79,12 +90,14 @@ export default defineComponent({
       immediate: true,
     },
   },
+
   methods: {
     checkProps() {
       if (this.label == null && this.value == null) {
         throw Error("Props label and value can't both be undefined\n")
       }
     },
+
     handleClick() {
       const { onSelect } = this.select
       this.optionSelected = !this.optionSelected
@@ -92,6 +105,7 @@ export default defineComponent({
       const { label, value } = this
       onSelect?.({ label, value })
     },
+
     handleSelect() {
       const { onSelect } = this.select.getListeners()
       const { label, value } = this

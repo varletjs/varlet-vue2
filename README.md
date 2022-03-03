@@ -27,9 +27,8 @@
 
 
 ### 项目状态
-`Varlet-vue2` 目前正在开发中
+`Varlet-vue2` 目前正在开发中，不要用在生产环境中。
 
-<!-- 
 ### 安装
 ### CDN
 `varlet.js` 包含组件库的所有样式和逻辑，引入即可。
@@ -75,4 +74,4 @@ new Vue({
 
 <a href="https://github.com/varletjs/varlet-vue2/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=varletjs/varlet-vue2" />
-</a> -->
+</a> 

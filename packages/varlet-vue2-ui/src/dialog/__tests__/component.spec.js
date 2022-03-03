@@ -8,7 +8,7 @@ test('test dialog component plugin', () => {
   expect(Vue.component(Dialog.Component.name)).toBeTruthy()
 })
 
-const Wrapper = {
+/* const Wrapper = {
   components: {
     [VarDialog.name]: VarDialog,
   },
@@ -65,3 +65,4 @@ test('test dialog component onBeforeClose', async () => {
 
   wrapper.destroy()
 })
+ */

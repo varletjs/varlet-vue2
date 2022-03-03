@@ -85,7 +85,7 @@ export default defineComponent({
     },
 
     checkboxGroupErrorMessage() {
-      this.checkboxGroup?.checkboxGroupErrorMessage
+      return this.checkboxGroup?.checkboxGroupErrorMessage
     },
 
     formReadonly() {

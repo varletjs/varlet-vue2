@@ -39,10 +39,6 @@ export default defineComponent({
     disabled: false,
   }),
 
-  mounted() {
-    console.log(this)
-  },
-
   computed: {
     name() {
       return this.index

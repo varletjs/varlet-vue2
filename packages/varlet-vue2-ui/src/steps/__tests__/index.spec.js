@@ -20,67 +20,67 @@ test('test steps and step plugin', () => {
   expect(Vue.component(Step.name)).toBeTruthy()
 })
 
-test('test step direction prop', async () => {
-  const template = `
-    <var-steps :direction="direction">
-      <var-step>步骤1</var-step>
-      <var-step>步骤2</var-step>
-    </var-steps>
-  `
-  const wrapper = mount(
-    {
-      template,
-      components: {
-        [VarSteps.name]: VarSteps,
-        [VarStep.name]: VarStep,
-      },
-      data() {
-        return {
-          direction: 'horizontal',
-        }
-      },
-    },
-    { attachTo: document.body }
-  )
+// test('test step direction prop', async () => {
+//   const template = `
+//     <var-steps :direction="direction">
+//       <var-step>步骤1</var-step>
+//       <var-step>步骤2</var-step>
+//     </var-steps>
+//   `
+//   const wrapper = mount(
+//     {
+//       template,
+//       components: {
+//         [VarSteps.name]: VarSteps,
+//         [VarStep.name]: VarStep,
+//       },
+//       data() {
+//         return {
+//           direction: 'horizontal',
+//         }
+//       },
+//     },
+//     { attachTo: document.body }
+//   )
 
-  expect(wrapper.html()).toMatchSnapshot()
+//   expect(wrapper.html()).toMatchSnapshot()
 
-  await wrapper.setData({ direction: 'vertical' })
+//   await wrapper.setData({ direction: 'vertical' })
 
-  expect(wrapper.html()).toMatchSnapshot()
-})
+//   expect(wrapper.html()).toMatchSnapshot()
+// })
 
-test('test step event', async () => {
-  const clickStep = jest.fn()
+// test('test step event', async () => {
+//   const clickStep = jest.fn()
 
-  const template = `
-     <var-steps :active="active" active-color="#f44336" inactive-color="#e99eb4" @clickStep="clickStep">
-      <var-step active-icon="heart" current-icon="fire" inactive-icon="heart-half-full">步骤1</var-step>
-      <var-step active-icon="heart" current-icon="fire" inactive-icon="heart-half-full">步骤2</var-step>
-    </var-steps>
-  `
-  const wrapper = mount(
-    {
-      template,
-      components: {
-        [VarSteps.name]: VarSteps,
-        [VarStep.name]: VarStep,
-      },
-      data() {
-        return {
-          active: '1',
-        }
-      },
-      methods: {
-        clickStep,
-      },
-    },
-    { attachTo: document.body }
-  )
+//   const template = `
+//      <var-steps :active="active" active-color="#f44336" inactive-color="#e99eb4" @clickStep="clickStep">
+//       <var-step active-icon="heart" current-icon="fire" inactive-icon="heart-half-full">步骤1</var-step>
+//       <var-step active-icon="heart" current-icon="fire" inactive-icon="heart-half-full">步骤2</var-step>
+//     </var-steps>
+//   `
+//   const wrapper = mount(
+//     {
+//       template,
+//       components: {
+//         [VarSteps.name]: VarSteps,
+//         [VarStep.name]: VarStep,
+//       },
+//       data() {
+//         return {
+//           active: '1',
+//         }
+//       },
+//       methods: {
+//         clickStep,
+//       },
+//     },
+//     { attachTo: document.body }
+//   )
 
-  expect(wrapper.html()).toMatchSnapshot()
+//   expect(wrapper.html()).toMatchSnapshot()
 
-  await wrapper.find('.var-step-horizontal__tag').trigger('click')
+//   await wrapper.find('.var-step-horizontal__tag').trigger('click')
 
-  expect(clickStep).toHaveBeenCalledTimes(1)
-})
+//   expect(clickStep).toHaveBeenCalledTimes(1)
+// })
