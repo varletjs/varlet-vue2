@@ -1,13 +1,13 @@
 import ora from 'ora'
 import logger from '../shared/logger'
 import { remove } from 'fs-extra'
-import { ES_DIR, HL_DIR, UMD_DIR } from '../shared/constant'
+import { ES_DIR, LIB_DIR, HL_DIR, UMD_DIR } from '../shared/constant'
 import { compileTypes } from '../compiler/compileTypes'
 import { compileTemplateHighlight } from '../compiler/compileTemplateHighlight'
 import { compileModule } from '../compiler/compileModule'
 
 export function removeDir() {
-  return Promise.all([remove(ES_DIR), remove(HL_DIR), remove(UMD_DIR)])
+  return Promise.all([remove(ES_DIR), remove(LIB_DIR), remove(HL_DIR), remove(UMD_DIR)])
 }
 
 export async function runTask(taskName: string, task: () => any) {
