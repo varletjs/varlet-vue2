@@ -145,7 +145,7 @@ export default {
   methods: {
     handleBeforeRead() {
       if (file.file.size <= 1 * 1024 * 1024) {
-        Snackbar.success('the file is less than 1M and can be uploaded')
+        Snackbar.success('the file is less than 1M, the upload is successful')
         return true
       } else {
         Snackbar.warning('the file is larger than 1M and cannot be uploaded')

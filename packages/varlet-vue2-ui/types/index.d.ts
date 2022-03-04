@@ -2,6 +2,7 @@ import type { VueConstructor } from 'vue'
 
 export const install: (app: VueConstructor) => void
 
+export * from './actionSheet'
 export * from './appBar'
 export * from './backTop'
 export * from './badge'
@@ -56,6 +57,5 @@ export * from './tabs'
 export * from './tabsItems'
 export * from './timePicker'
 export * from './uploader'
-export * from './actionSheet'
 export * from './varComponent'
 export * from './varDirective'

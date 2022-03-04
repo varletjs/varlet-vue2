@@ -133,15 +133,15 @@ export default {
     },
 
     handleOversize() {
-      Snackbar.warning('文件大小超出限制')
+      Snackbar.warning(this.pack.fileSizeExceedsLimit)
     },
 
     handleBeforeRead(file) {
       if (file.file.size <= 1 * 1024 * 1024) {
-        Snackbar.success('文件小于1M，可以上传')
+        Snackbar.success(this.pack.fileLessThen)
         return true
       } 
-        Snackbar.warning('文件大于1M，不能上传')
+        Snackbar.warning(this.pack.fileLargeThen)
         return false
       
     },

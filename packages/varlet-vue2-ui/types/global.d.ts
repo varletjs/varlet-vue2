@@ -1,5 +1,6 @@
 declare module 'vue' {
   export interface GlobalComponents {
+    VarActionSheet: typeof import('@varlet-vue2/ui')['_ActionSheetComponent']
     VarAppBar: typeof import('@varlet-vue2/ui')['_AppBarComponent']
     VarBackTop: typeof import('@varlet-vue2/ui')['_BackTopComponent']
     VarBadge: typeof import('@varlet-vue2/ui')['_BadgeComponent']

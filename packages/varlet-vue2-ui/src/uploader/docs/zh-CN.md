@@ -145,7 +145,7 @@ export default {
   methods: {
     handleBeforeRead() {
       if (file.file.size <= 1 * 1024 * 1024) {
-        Snackbar.success('文件小于1M，可以上传')
+        Snackbar.success('文件小于1M，上传成功')
         return true
       } else {
         Snackbar.warning('文件大于1M，不能上传')
