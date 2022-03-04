@@ -56,7 +56,6 @@ export default defineComponent({
     },
 
     renderContent() {
-      console.log(this.$attrs)
       return (
         <div
           class={['var-popup__content', 'var-elevation--3', `var-popup--${this.position}`, this.$attrs.class]}
