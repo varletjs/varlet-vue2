@@ -1,0 +1,43 @@
+name: Deploy Site And Sync to Gitee
+
+on:
+  push:
+    branches: [dev, main]
+
+jobs:
+  deploy-site-sync-gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 6
+
+      - name: Set node version to 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm bootstrap
+
+      - name: Build site
+        run: cd packages/varlet-vue2-ui && pnpm build
+
+      - name: Deploy site
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-page
+          folder: packages/varlet-vue2-ui/site
+
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY_FOR_VUE2 }}
+        with:
+          source-repo: git@github.com:varletjs/varlet-vue2.git
+          destination-repo: git@gitee.com:varlet/varlet-ui-vue2.git
