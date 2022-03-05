@@ -3,7 +3,7 @@ module.exports = {
   namespace: 'var',
   host: 'localhost',
   port: 8080,
-  title: 'VARLET',
+  title: 'VARLET-VUE2',
   themesKey: 'VARLET_THEMES',
   logo: 'https://varlet.gitee.io/varlet-ui/varlet_icon.png',
   defaultLanguage: 'zh-CN',
