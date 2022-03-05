@@ -3,13 +3,12 @@
 </template>
 
 <script>
-import { defineComponent } from '../utils/create'
 import VarOption from '..'
 
-export default defineComponent({
+export default {
   name: 'OptionExample',
   components: {
     VarOption,
   },
-})
+}
 </script>
