@@ -58,10 +58,6 @@ function Dialog(options: DialogOptions | string | number): Promise<DialogActions
 
     singletonInstance = instance
 
-    instance.$on('update:show', (value: boolean) => {
-      instance.show = value
-    })
-
     instance.$on('open', () => dialogOptions.onOpen?.())
 
     instance.$on('opened', () => dialogOptions.onOpened?.())
@@ -92,6 +88,10 @@ function Dialog(options: DialogOptions | string | number): Promise<DialogActions
     instance.$on('route-change', () => {
       unmount()
       singletonInstance === instance && (singletonInstance = null)
+    })
+
+    instance.$on('update:show', (value: boolean) => {
+      instance.show = value
     })
   })
 }

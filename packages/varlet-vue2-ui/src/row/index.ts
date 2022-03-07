@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Row from './Row.vue'
 
-Row.install = function (app: App) {
+Row.install = function (app: VueConstructor) {
   app.component(Row.name, Row)
 }
 

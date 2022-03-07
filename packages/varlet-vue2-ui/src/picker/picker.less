@@ -1,0 +1,103 @@
+@picker-background: #fff;
+@picker-toolbar-height: 44px;
+@picker-confirm-button-text-color: var(--color-primary);
+@picker-cancel-button-text-color: #888;
+@picker-picked-border: 1px solid rgba(0, 0, 0, 0.12);
+@picker-title-font-size: 16px;
+@picker-toolbar-padding: 0 4px;
+@picker-mask-background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4)),
+  linear-gradient(0deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4));
+
+:root {
+  --picker-background: @picker-background;
+  --picker-toolbar-height: @picker-toolbar-height;
+  --picker-confirm-button-text-color: @picker-confirm-button-text-color;
+  --picker-cancel-button-text-color: @picker-cancel-button-text-color;
+  --picker-picked-border: @picker-picked-border;
+  --picker-title-font-size: @picker-title-font-size;
+  --picker-toolbar-padding: @picker-toolbar-padding;
+  --picker-mask-background-image: @picker-mask-background-image;
+}
+
+.var-picker {
+  width: 100%;
+  background: var(--picker-background);
+  user-select: none;
+  transition: 0.25s background-color;
+
+  &__popup[var-picker-cover] {
+    width: 100%;
+  }
+
+  &__columns {
+    position: relative;
+    display: flex;
+    width: 100%;
+    cursor: grab;
+  }
+
+  &__column {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__scroller {
+    width: 100%;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.68, 1);
+  }
+
+  &__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
+  }
+
+  &__picked {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 100%;
+    left: 0;
+    border-top: var(--picker-picked-border);
+    border-bottom: var(--picker-picked-border);
+    transition: 0.25s border;
+  }
+
+  &__mask {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--picker-toolbar-height);
+    padding: var(--picker-toolbar-padding);
+  }
+
+  &__confirm-button[var-picker-cover] {
+    color: var(--picker-confirm-button-text-color);
+  }
+
+  &__cancel-button[var-picker-cover] {
+    color: var(--picker-cancel-button-text-color);
+  }
+
+  &__title {
+    font-size: var(--picker-title-font-size);
+  }
+}

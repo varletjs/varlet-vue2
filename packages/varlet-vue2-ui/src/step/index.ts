@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Step from './Step.vue'
 
-Step.install = function (app: App) {
+Step.install = function (app: VueConstructor) {
   app.component(Step.name, Step)
 }
 

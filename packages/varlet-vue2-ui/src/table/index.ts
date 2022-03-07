@@ -1,7 +1,7 @@
 import Table from './Table.vue'
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 
-Table.install = function (app: App) {
+Table.install = function (app: VueConstructor) {
   app.component(Table.name, Table)
 }
 
