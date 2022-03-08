@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Divider from './Divider.vue'
 
-Divider.install = function (app: App) {
+Divider.install = function (app: VueConstructor) {
   app.component(Divider.name, Divider)
 }
 

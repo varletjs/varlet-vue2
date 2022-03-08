@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import TimePicker from './TimePicker.vue'
 
-TimePicker.install = function (app: App) {
+TimePicker.install = function (app: VueConstructor) {
   app.component(TimePicker.name, TimePicker)
 }
 

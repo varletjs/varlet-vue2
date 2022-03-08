@@ -1,5 +1,5 @@
 import { VarComponent } from './varComponent'
-import type { App, TeleportProps } from 'vue'
+import type { VueConstructor, TeleportProps } from 'vue'
 
 export interface DialogProps {
   show?: boolean
@@ -74,7 +74,7 @@ export interface IDialog {
 
   close(): void
 
-  install(app: App): void
+  install(app: VueConstructor): void
 }
 
 export const Dialog: IDialog

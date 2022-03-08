@@ -50,6 +50,11 @@ export async function inViewport(element: HTMLElement): Promise<boolean> {
   return xInViewport && yInViewport
 }
 
+export function getTranslate(el: HTMLElement) {
+  const { transform } = window.getComputedStyle(el)
+  return +transform.slice(transform.lastIndexOf(',') + 2, transform.length - 1)
+}
+
 export function getParentScroller(el: HTMLElement): HTMLElement | Window {
   let element = el
 

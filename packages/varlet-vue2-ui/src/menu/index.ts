@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Menu from './Menu'
 
-Menu.install = function (app: App) {
+Menu.install = function (app: VueConstructor) {
   app.component(Menu.name, Menu)
 }
 

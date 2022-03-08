@@ -1,5 +1,5 @@
 import { VarComponent } from './varComponent'
-import type { App, TeleportProps } from 'vue'
+import type { VueConstructor, TeleportProps } from 'vue'
 
 export interface ImagePreviewProps {
   show?: boolean
@@ -43,7 +43,7 @@ export interface IImagePreview {
 
   close(): void
 
-  install(app: App): void
+  install(app: VueConstructor): void
 }
 
 export const ImagePreview: IImagePreview

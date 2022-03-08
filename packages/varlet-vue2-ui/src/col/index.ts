@@ -1,7 +1,7 @@
-import type { App } from 'vue'
+import type { VueConstructor } from 'vue'
 import Col from './Col.vue'
 
-Col.install = function (app: App) {
+Col.install = function (app: VueConstructor) {
   app.component(Col.name, Col)
 }
 

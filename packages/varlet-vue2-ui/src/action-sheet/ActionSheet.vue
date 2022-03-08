@@ -45,7 +45,7 @@
   </var-popup>
 </template>
 
-<script lang="ts">
+<script>
 import Ripple from '../ripple'
 import VarPopup from '../popup'
 import VarIcon from '../icon'
