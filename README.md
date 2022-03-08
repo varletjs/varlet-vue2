@@ -7,15 +7,15 @@
    <p>
     <a href="https://varlet.gitee.io/varlet-ui-vue2/">开发文档</a> | <a href="https://github.com/varletjs/varlet-vue2/blob/dev/README.en-US.md">English</a>
   </p>
-  <!-- <p>
-    <img src="https://img.shields.io/npm/v/@varlet/ui?style=flat-square" alt="version">
+  <p>
+    <img src="https://img.shields.io/npm/v/@varlet-vue2/ui?style=flat-square" alt="version">
     <img src="https://img.shields.io/github/stars/varletjs/varlet-vue2" alt="ci">
     <img src="https://img.shields.io/badge/vue-v2.6.14%2B-%23407fbc" alt="vue">
-    <img src="https://img.shields.io/npm/l/@varlet/ui.svg" alt="licence">
-    <img src="https://img.shields.io/codecov/c/github/varletjs/varlet-vue2" alt="coverage">
+    <img src="https://img.shields.io/npm/l/@varlet-vue2/ui.svg" alt="licence">
+    <!-- <img src="https://img.shields.io/codecov/c/github/varletjs/varlet-vue2" alt="coverage"> -->
     <img src="https://img.badgesize.io/https://unpkg.com/@varlet-vue2/ui/umd/varlet.js?compression=gzip&label=gzip" alt="gzip" />
     <img src="https://github.com/varletjs/varlet-vue2/workflows/CI/badge.svg" alt="ci">
-  </p> -->
+  </p>
 </div>
 
 ---
@@ -39,7 +39,7 @@
 
 
 ### 项目状态
-`Varlet-vue2` 目前正在开发中，不要用在生产环境中。
+`Varlet-vue2` 组件功能已全部完成，正在进行单元测试完善工作，推荐内部测试使用。
 
 ### 安装
 ### CDN
