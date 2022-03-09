@@ -19,7 +19,7 @@
 ```json
 {
   "compilerOptions": {
-    "types": ["@varlet/ui/types/global"]
+    "types": ["@varlet-vue2/ui/types/global"]
   }
 }
 ```

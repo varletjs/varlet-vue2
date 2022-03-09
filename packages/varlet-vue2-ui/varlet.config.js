@@ -30,27 +30,11 @@ module.exports = {
       },
       {
         text: {
-          'zh-CN': '按需引入',
-          'en-US': 'Import on demand',
-        },
-        doc: 'importOnDemand',
-        type: 3,
-      },
-      {
-        text: {
           'zh-CN': '暗黑模式',
           'en-US': 'Dark Mode',
         },
         doc: 'themes',
         type: 2,
-      },
-      {
-        text: {
-          'zh-CN': '服务端渲染',
-          'en-US': 'Server side rendering',
-        },
-        doc: 'serverSideRendering',
-        type: 3,
       },
       {
         text: {
@@ -74,22 +58,6 @@ module.exports = {
           'en-US': 'IDE Code Support',
         },
         doc: 'ide',
-        type: 3,
-      },
-      {
-        text: {
-          'zh-CN': '组件库快速成型工具',
-          'en-US': 'Components Library Tools',
-        },
-        doc: 'cli',
-        type: 3,
-      },
-      {
-        text: {
-          'zh-CN': '开源指南',
-          'en-US': 'Open Source Guide',
-        },
-        doc: 'openSourceGuide',
         type: 3,
       },
       {

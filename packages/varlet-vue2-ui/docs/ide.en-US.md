@@ -20,7 +20,7 @@ Install the `Volar` plugin and configure `ts.config.json` as follows to get type
 ```json
 {
   "compilerOptions": {
-    "types": ["@varlet/ui/types/global"]
+    "types": ["@varlet-vue2/ui/types/global"]
   }
 }
 ```
