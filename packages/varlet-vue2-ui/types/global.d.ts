@@ -56,6 +56,7 @@ declare module 'vue' {
     VarTabs: typeof import('@varlet-vue2/ui')['_TabsComponent']
     VarTabsItems: typeof import('@varlet-vue2/ui')['_TabsItemsComponent']
     VarTimePicker: typeof import('@varlet-vue2/ui')['_TimePickerComponent']
+    VarDatePicker: typeof import('@varlet-vue2/ui')['_DatePickerComponent']
     VarUploader: typeof import('@varlet-vue2/ui')['_UploaderComponent']
   }
 }
