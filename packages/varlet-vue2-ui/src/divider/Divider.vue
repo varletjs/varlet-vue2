@@ -65,7 +65,7 @@ export default defineComponent({
 
   methods: {
     checkHasText() {
-      this.withText = this.hasSlots() || Boolean(props.description)
+      this.withText = Boolean(this.hasSlots('default')) || Boolean(this.description)
     },
   },
 })
