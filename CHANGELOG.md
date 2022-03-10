@@ -1,4 +1,18 @@
-## 0.0.1 (2022-03-09)
+## [0.0.2](https://github.com/varletjs/varlet-vue2/compare/v0.0.1...v0.0.2) (2022-03-10)
+
+
+### Bug Fixes
+
+* fix divider component lag problem ([1f88df0](https://github.com/varletjs/varlet-vue2/commit/1f88df0af66f16f4d706544e448b6442c5f8b3ca))
+
+
+### Features
+
+* **ui/date-picker:** add date-picker tests ([42dad59](https://github.com/varletjs/varlet-vue2/commit/42dad599de7532eac61fe54449a18cdd9fc472d8))
+
+
+
+## [0.0.1](https://github.com/varletjs/varlet-vue2/compare/750e7e598c8f2362152a8c7cc55729e0a5618907...v0.0.1) (2022-03-09)
 
 
 ### Bug Fixes
