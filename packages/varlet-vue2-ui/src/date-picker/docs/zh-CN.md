@@ -104,24 +104,10 @@ export default {
 </var-date-picker>
 ```
 ```javascript
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const date = ref('2021-02')
-
-    const allowedDates = (val) => {
-      return parseInt(val.split('-')[1], 10) % 2 === 1
-    }
-
-    const change = (date) => {
-      console.log(date)
-    }
-
+  data() {
     return {
-      date,
-      change,
-      allowedDates
+      date: '2021-02'
     }
   }
 }

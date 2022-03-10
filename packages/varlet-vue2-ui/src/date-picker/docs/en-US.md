@@ -6,10 +6,10 @@ Used to select a date or date range.
 ### Install
 
 ```js
-import { createApp } from 'vue'
-import { DatePicker } from '@varlet/ui'
+import Vue from 'vue'
+import { DatePicker } from '@varlet-vue2/ui'
 
-createApp().use(DatePicker)
+Vue.use(DatePicker)
 ```
 
 ### Basic Usage
@@ -18,14 +18,10 @@ createApp().use(DatePicker)
 <var-date-picker v-model="date" />
 ```
 ```javascript
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const date = ref('2021-04-08')
-
+  data() {
     return {
-      date
+      date: '2021-04-08'
     }
   }
 }
@@ -68,19 +64,16 @@ Use `min` and `max` prop to allow the maximum and minimum date, and use `allowed
 />
 ```
 ```javascript
-import { ref } from 'vue'
 
 export default {
-  setup() {
-    const date = ref('2020-11-11')
-
-    const allowedDates = (val) => {
-      return parseInt(val.split('-')[2], 10) % 2 === 1
-    }
-
+  data() {
     return {
-      date,
-      allowedDates,
+      date: '2020-11-11'
+    }
+  },
+  methods: {
+    allowedDates(val) {
+      return parseInt(val.split('-')[2], 10) % 2 === 1
     }
   }
 }
@@ -110,27 +103,21 @@ export default {
 </var-date-picker>
 ```
 ```javascript
-import { ref } from 'vue'
-
 export default {
-  setup() {
-    const date = ref('2021-02')
-
-    const allowedDates = (val) => {
-      return parseInt(val.split('-')[1], 10) % 2 === 1
+  data() {
+    return {
+      date: '2020-11-11'
     }
-
-    const change = (date) => {
+  },
+  methods: {
+    allowedDates(val) {
+      return parseInt(val.split('-')[1], 10) % 2 === 1
+    },
+    change(date) {
       console.log(date)
     }
-
-    return {
-      date,
-      change,
-      allowedDates
-    }
   }
-}
+}1
 ```
 
 ## API
