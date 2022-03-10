@@ -15,6 +15,7 @@ declare module 'vue' {
     VarCollapseItem: typeof import('@varlet-vue2/ui')['_CollapseItemComponent']
     VarCountdown: typeof import('@varlet-vue2/ui')['_CountdownComponent']
     VarCounter: typeof import('@varlet-vue2/ui')['_CounterComponent']
+    VarDatePicker: typeof import('@varlet-vue2/ui')['_DatePickerComponent']
     VarDialog: typeof import('@varlet-vue2/ui')['_DialogComponent']
     VarDivider: typeof import('@varlet-vue2/ui')['_DividerComponent']
     VarForm: typeof import('@varlet-vue2/ui')['_FormComponent']
@@ -56,7 +57,6 @@ declare module 'vue' {
     VarTabs: typeof import('@varlet-vue2/ui')['_TabsComponent']
     VarTabsItems: typeof import('@varlet-vue2/ui')['_TabsItemsComponent']
     VarTimePicker: typeof import('@varlet-vue2/ui')['_TimePickerComponent']
-    VarDatePicker: typeof import('@varlet-vue2/ui')['_DatePickerComponent']
     VarUploader: typeof import('@varlet-vue2/ui')['_UploaderComponent']
   }
 }
