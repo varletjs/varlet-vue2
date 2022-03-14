@@ -23,6 +23,14 @@
 
       <var-button type="warning" block @click="closeEventShow = true">{{ pack.listenCloseEvents }} </var-button>
       <var-image-preview :images="images" :show.sync="closeEventShow" @close="handleCloseEvent" />
+
+      <var-button type="warning" block @click="extraSlotsShow = true">{{ pack.showExtraSlots }}</var-button>
+      <var-image-preview :images="images" :show.sync="extraSlotsShow">
+        <template #extra>
+          <var-icon name="menu" :size="22" color="#fff" @click="menuShow = true" />
+          <var-action-sheet :actions="actions" :show.sync="menuShow" />
+        </template>
+      </var-image-preview>
     </div>
   </div>
 </template>
@@ -36,6 +44,8 @@ import { defineComponent } from '../../utils/create'
 import { pack, use } from './locale'
 import { watchLang, watchPlatform } from '@varlet-vue2/cli/site/utils'
 import context from '../../context'
+import ActionSheet from '../../action-sheet'
+import VarIcon from '../../icon'
 
 export default defineComponent({
   name: 'ImagePreviewExample',
@@ -44,20 +54,36 @@ export default defineComponent({
     VarImagePreview: ImagePreview.Component,
     VarButton,
     AppType,
+    VarIcon,
+    VarActionSheet: ActionSheet.Component,
   },
 
   data: () => ({
     images: ['https://varlet.gitee.io/varlet-ui/cat.jpg', 'https://varlet.gitee.io/varlet-ui/cat2.jpg'],
     image: ['https://varlet.gitee.io/varlet-ui/cat.jpg'],
     show: false,
+    menuShow: false,
     currentShow: false,
     closeShow: false,
     closeEventShow: false,
+    extraSlotsShow: false,
   }),
 
   computed: {
     pack() {
       return pack.value
+    },
+    actions() {
+      return [
+        {
+          name: pack.value.operate,
+          icon: 'wrench',
+        },
+        {
+          name: pack.value.operate,
+          icon: 'wrench',
+        },
+      ]
     },
   },
 
