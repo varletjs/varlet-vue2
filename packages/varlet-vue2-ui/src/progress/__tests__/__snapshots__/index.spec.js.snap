@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test circle progress prop 1`] = `
+"<div class=\\"var-progress\\">
+  <!---->
+  <div class=\\"var-progress-circle\\" style=\\"width: 50px; height: 50px;\\"><svg viewBox=\\"0 0 50 50\\" class=\\"var-progress-circle__svg\\" style=\\"transform: rotate(-80deg);\\">
+      <circle cx=\\"25\\" cy=\\"25\\" r=\\"21\\" fill=\\"transparent\\" stroke-width=\\"8\\" class=\\"var-progress-circle__background\\" style=\\"stroke-dasharray: 131.94689145077132; stroke: #f5cb90;\\"></circle>
+      <circle cx=\\"25\\" cy=\\"25\\" r=\\"21\\" fill=\\"transparent\\" stroke-width=\\"8\\" class=\\"var-progress-circle__certain\\" style=\\"stroke-dasharray: 39.5840674352314, 131.94689145077132; stroke: #ff9800;\\"></circle>
+    </svg>
+    <div class=\\"var-progress-circle__label\\">
+      30%
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`test linear progress prop 1`] = `
+"<div class=\\"var-progress\\">
+  <div class=\\"var-progress-linear\\">
+    <div class=\\"var-progress-linear__block\\" style=\\"height: 8px;\\">
+      <div class=\\"var-progress-linear__background\\" style=\\"background: rgb(245, 203, 144);\\"></div>
+      <div class=\\"var-progress-linear__certain var-progress-linear__ripple\\" style=\\"background: rgb(255, 152, 0); width: 30%;\\"></div>
+    </div>
+    <div class=\\"var-progress-linear__label\\">
+      <div>success</div>
+    </div>
+  </div>
+  <!---->
+</div>"
+`;
+
 exports[`test progress example 1`] = `
 "<div class=\\"var-progress-example\\">
   <div class=\\"space\\"></div>
