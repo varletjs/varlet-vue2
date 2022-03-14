@@ -14,37 +14,37 @@ test('test progress plugin', () => {
   expect(Vue.component(Progress.name)).toBeTruthy()
 })
 
-// test('test linear progress prop', () => {
-//   const wrapper = mount(VarProgress, {
-//     propsData: {
-//       value: 30,
-//       lineWidth: 8,
-//       color: '#ff9800',
-//       trackColor: '#f5cb90',
-//       ripple: true,
-//       label: true,
-//     },
-//     scopedSlots: {
-//       default: '<div>success</div>',
-//     },
-//   })
+test('test linear progress prop', () => {
+  const wrapper = mount(VarProgress, {
+    propsData: {
+      value: 30,
+      lineWidth: 8,
+      color: '#ff9800',
+      trackColor: '#f5cb90',
+      ripple: true,
+      label: true,
+    },
+    scopedSlots: {
+      default: '<div>success</div>',
+    },
+  })
 
-//   expect(wrapper.html()).toMatchSnapshot()
-// })
+  expect(wrapper.html()).toMatchSnapshot()
+})
 
-// test('test circle progress prop', () => {
-//   const wrapper = mount(VarProgress, {
-//     propsData: {
-//       mode: 'circle',
-//       value: 30,
-//       lineWidth: 8,
-//       color: '#ff9800',
-//       trackColor: '#f5cb90',
-//       size: 50,
-//       rotate: 10,
-//       label: true,
-//     },
-//   })
+test('test circle progress prop', () => {
+  const wrapper = mount(VarProgress, {
+    propsData: {
+      mode: 'circle',
+      value: 30,
+      lineWidth: 8,
+      color: '#ff9800',
+      trackColor: '#f5cb90',
+      size: 50,
+      rotate: 10,
+      label: true,
+    },
+  })
 
-//   expect(wrapper.html()).toMatchSnapshot()
-// })
+  expect(wrapper.html()).toMatchSnapshot()
+})
