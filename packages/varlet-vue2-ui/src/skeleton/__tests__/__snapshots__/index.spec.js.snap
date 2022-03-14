@@ -144,3 +144,41 @@ exports[`test skeleton example 1`] = `
   </div>
 </div>"
 `;
+
+exports[`test skeleton fullscreen 1`] = `
+"<div class=\\"var--box var-skeleton\\">
+  <!---->
+  <!---->
+  <div class=\\"var-skeleton__fullscreen\\" style=\\"z-index: 1000;\\">
+    <div class=\\"var-skeleton--animation\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`test skeleton styles 1`] = `
+"<div class=\\"var--box var-skeleton\\">
+  <!---->
+  <div class=\\"var-skeleton__content\\">
+    <div class=\\"var-skeleton__card\\" style=\\"height: 100px;\\">
+      <div class=\\"var-skeleton--animation\\"></div>
+    </div>
+    <div class=\\"var-skeleton__article\\">
+      <div class=\\"var-skeleton__avatar\\" style=\\"width: 100px; height: 100px;\\">
+        <div class=\\"var-skeleton--animation\\"></div>
+      </div>
+      <div class=\\"var-skeleton__section\\">
+        <div class=\\"var-skeleton__title\\" style=\\"width: 100px;\\">
+          <div class=\\"var-skeleton--animation\\"></div>
+        </div>
+        <div class=\\"var-skeleton__row\\" style=\\"width: 600px;\\">
+          <div class=\\"var-skeleton--animation\\"></div>
+        </div>
+        <div class=\\"var-skeleton__row\\" style=\\"width: 500px;\\">
+          <div class=\\"var-skeleton--animation\\"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->
+</div>"
+`;
