@@ -101,6 +101,25 @@ ImagePreview({
   v-model:show="closeEventShow"
   @close="handleCloseEvent"
 />
+
+<var-button
+  type="warning"
+  block
+  @click="extraSlotsShow = true"
+>
+  显示额外插槽
+</var-button>
+<var-image-preview :images="images" :show.sync="extraSlotsShow">
+  <template #extra>
+    <var-icon 
+      name="menu"
+      :size="22"
+      color="#fff"
+      @click="menuShow = true"
+    />
+    <var-action-sheet :actions="actions" :show.sync="menuShow" />
+  </template>
+</var-image-preview>
 ```
 
 ```javascript
@@ -108,14 +127,24 @@ import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   data: () => ({
+    images: ['https://varlet.gitee.io/varlet-ui/cat.jpg', 'https://varlet.gitee.io/varlet-ui/cat2.jpg'],
+    image: ['https://varlet.gitee.io/varlet-ui/cat.jpg'],
     show: false,
+    menuShow:false,
     currentShow: false,
     closeShow: false,
     closeEventShow: false,
-    images: [
-      'https://varlet.gitee.io/varlet-ui/cat.jpg',
-      'https://varlet.gitee.io/varlet-ui/cat2.jpg',
-    ],
+    extraSlotsShow:false,
+    actions: [
+      {
+        name: '操作',
+        icon: 'wrench'
+      },
+      {
+        name: '操作',
+        icon: 'wrench'
+      }
+    ]
   }),
   methods: {
     handleCloseEvent() {
@@ -158,6 +187,7 @@ export default {
 | --- | --- | --- |
 | `indicator` | 分页指示器 | `index: number` 图片索引 <br> `length: number` 图片总数 |
 | `close-icon` | 关闭按钮 | `-` |
+| `extra` | 额外插槽 | `-` |
 
 ### ImagePreview Options
 
@@ -181,10 +211,12 @@ export default {
 
 | 变量名  | 默认值   |
 | ------ | -------- |
-| `--image-preview-swipe-indicators-text-color` | ` #ddd`  |
-| `--image-preview-swipe-indicators-padding` | `16px 0` |
-| `--image-preview-zoom-container-background`| ` #000`  |
-| `--image-preview-close-icon-top` | `13px` |
-| `--image-preview-close-icon-right` | ` 14px` |
-| `--image-preview-close-icon-size` | `22px` |
-| `--image-preview-close-icon-color` | `#fff` |
+| `--image-preview-swipe-indicators-text-color` | `#ddd`  |
+| `--image-preview-swipe-indicators-padding`    | `16px 0` |
+| `--image-preview-zoom-container-background`   | `#000`  |
+| `--image-preview-close-icon-top`              | `14px` |
+| `--image-preview-close-icon-right`            | `14px` |
+| `--image-preview-close-icon-size`             | `22px` |
+| `--image-preview-close-icon-color`            | `#fff` |
+| `--image-preview-extra-top`                   | `14px` |
+| `--image-preview-extra-left`                  | `14px` |
