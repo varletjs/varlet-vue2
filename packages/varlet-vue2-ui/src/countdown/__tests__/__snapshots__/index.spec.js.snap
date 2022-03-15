@@ -42,3 +42,9 @@ exports[`test countdown example 1`] = `
   </div>
 </div>"
 `;
+
+exports[`test countdown format prop 1`] = `
+"<div class=\\"var-countdown\\">
+  30 : 00 : 00 : 00
+</div>"
+`;
