@@ -22,153 +22,153 @@ test('test indexBar and indexAnchor plugin', () => {
   expect(Vue.component(IndexAnchor.name)).toBeTruthy()
 })
 
-// test('test sticky prop and it is value equal false', () => {
-//   const template = `
-//     <var-index-bar :sticky="false">
-//       <var-index-anchor index="A">test A</var-index-anchor>
-//       <var-index-anchor index="B">test B</var-index-anchor>
-//     </var-index-bar>
-//   `
-//   const wrapper = mount(
-//     {
-//       components: {
-//         [VarIndexBar.name]: VarIndexBar,
-//         [VarIndexAnchor.name]: VarIndexAnchor,
-//       },
-//       template,
-//     },
-//     { attachTo: document.body }
-//   )
+test('test sticky prop and it is value equal false', () => {
+  const template = `
+    <var-index-bar :sticky="false">
+      <var-index-anchor index="A">test A</var-index-anchor>
+      <var-index-anchor index="B">test B</var-index-anchor>
+    </var-index-bar>
+  `
+  const wrapper = mount(
+    {
+      components: {
+        [VarIndexBar.name]: VarIndexBar,
+        [VarIndexAnchor.name]: VarIndexAnchor,
+      },
+      template,
+    },
+    { attachTo: document.body }
+  )
 
-//   expect(wrapper.find('.var-sticky').exists()).toBeFalsy()
-// })
+  expect(wrapper.find('.var-sticky').exists()).toBeFalsy()
+})
 
-// test('test, hideList and z-index prop', () => {
-//   const template = `
-//     <var-index-bar hide-list z-index="2">
-//       <var-index-anchor index="A">test A</var-index-anchor>
-//     </var-index-bar>
-//   `
-//   const wrapper = mount(
-//     {
-//       components: {
-//         [VarIndexBar.name]: VarIndexBar,
-//         [VarIndexAnchor.name]: VarIndexAnchor,
-//       },
-//       template,
-//     },
-//     { attachTo: document.body }
-//   )
+test('test, hideList and z-index prop', () => {
+  const template = `
+    <var-index-bar hide-list z-index="2">
+      <var-index-anchor index="A">test A</var-index-anchor>
+    </var-index-bar>
+  `
+  const wrapper = mount(
+    {
+      components: {
+        [VarIndexBar.name]: VarIndexBar,
+        [VarIndexAnchor.name]: VarIndexAnchor,
+      },
+      template,
+    },
+    { attachTo: document.body }
+  )
 
-//   expect(wrapper.find('.var-sticky').exists()).toBeTruthy()
+  expect(wrapper.find('.var-sticky').exists()).toBeTruthy()
 
-//   expect(wrapper.find('.var-index-bar__anchor-list').attributes('style').includes('display: none')).toBeTruthy()
+  expect(wrapper.find('.var-index-bar__anchor-list').attributes('style').includes('display: none')).toBeTruthy()
 
-//   expect(wrapper.find('.var-sticky').attributes('style')).toBe('z-index: 2;')
-// })
+  expect(wrapper.find('.var-sticky').attributes('style')).toBe('z-index: 2;')
+})
 
-// test('test click anchor to trigger change event', async () => {
-//   mockScrollTo(HTMLElement)
+test('test click anchor to trigger change event', async () => {
+  mockScrollTo(HTMLElement)
 
-//   const template = `
-//     <div style="height: 50px; overflow: auto">
-//       <var-index-bar @click="clickHandle" @change="changeHandle" ref="bar" highlight-color="purple">
-//         <var-index-anchor index="A">test A</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="B">test B</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="C">test C</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="D">test D</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="E">test E</var-index-anchor>
-//       </var-index-bar>
-//     </div>
-//   `
-//   const clickHandle = jest.fn()
-//   const changeHandle = jest.fn()
+  const template = `
+    <div style="height: 50px; overflow: auto">
+      <var-index-bar @click="clickHandle" @change="changeHandle" ref="bar" highlight-color="purple">
+        <var-index-anchor index="A">test A</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="B">test B</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="C">test C</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="D">test D</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="E">test E</var-index-anchor>
+      </var-index-bar>
+    </div>
+  `
+  const clickHandle = jest.fn()
+  const changeHandle = jest.fn()
 
-//   const wrapper = mount(
-//     {
-//       components: {
-//         [VarIndexBar.name]: VarIndexBar,
-//         [VarIndexAnchor.name]: VarIndexAnchor,
-//       },
-//       methods: {
-//         clickHandle,
-//         changeHandle,
-//       },
-//       template,
-//     },
-//     { attachTo: document.body }
-//   )
+  const wrapper = mount(
+    {
+      components: {
+        [VarIndexBar.name]: VarIndexBar,
+        [VarIndexAnchor.name]: VarIndexAnchor,
+      },
+      methods: {
+        clickHandle,
+        changeHandle,
+      },
+      template,
+    },
+    { attachTo: document.body }
+  )
 
-//   await delay(200)
+  await delay(200)
 
-//   wrapper.vm.$refs.bar.scrollTo('A')
+  wrapper.vm.$refs.bar.scrollTo('A')
 
-//   await delay(100)
+  await delay(100)
 
-//   const anchorItems = wrapper.findAll('.var-index-bar__anchor-item')
+  const anchorItems = wrapper.findAll('.var-index-bar__anchor-item')
 
-//   expect(anchorItems[0].classes()).toContain('var-index-bar__anchor-item--active')
+  expect(anchorItems.at(0).classes()).toContain('var-index-bar__anchor-item--active')
 
-//   await anchorItems[1].trigger('click')
+  await anchorItems.at(1).trigger('click')
 
-//   await delay(100)
+  await delay(100)
 
-//   expect(anchorItems[1].classes()).toContain('var-index-bar__anchor-item--active')
+  expect(anchorItems.at(1).classes()).toContain('var-index-bar__anchor-item--active')
 
-//   expect(changeHandle).toHaveBeenCalledTimes(2)
-//   expect(clickHandle).toHaveBeenCalledTimes(1)
-//   expect(wrapper.html()).toMatchSnapshot()
+  expect(changeHandle).toHaveBeenCalledTimes(2)
+  expect(clickHandle).toHaveBeenCalledTimes(1)
+  expect(wrapper.html()).toMatchSnapshot()
 
-//   wrapper.destroy()
-// })
+  wrapper.destroy()
+})
 
-// test('test scroll indexBar to trigger change event', async () => {
-//   const template = `
-//     <div style="height: 50px; overflow: auto">
-//       <var-index-bar @change="changeHandle" ref="bar" highlight-color="purple">
-//         <var-index-anchor index="A">test A</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="B">test B</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="C">test C</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="D">test D</var-index-anchor>
-//         <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
-//         <var-index-anchor index="E">test E</var-index-anchor>
-//       </var-index-bar>
-//     </div>
-//   `
-//   const changeHandle = jest.fn()
+test('test scroll indexBar to trigger change event', async () => {
+  const template = `
+    <div style="height: 50px; overflow: auto">
+      <var-index-bar @change="changeHandle" ref="bar" highlight-color="purple">
+        <var-index-anchor index="A">test A</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="B">test B</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="C">test C</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="D">test D</var-index-anchor>
+        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <var-index-anchor index="E">test E</var-index-anchor>
+      </var-index-bar>
+    </div>
+  `
+  const changeHandle = jest.fn()
 
-//   const wrapper = mount(
-//     {
-//       components: {
-//         [VarIndexBar.name]: VarIndexBar,
-//         [VarIndexAnchor.name]: VarIndexAnchor,
-//       },
-//       methods: {
-//         changeHandle,
-//       },
-//       template,
-//     },
-//     { attachTo: document.body }
-//   )
+  const wrapper = mount(
+    {
+      components: {
+        [VarIndexBar.name]: VarIndexBar,
+        [VarIndexAnchor.name]: VarIndexAnchor,
+      },
+      methods: {
+        changeHandle,
+      },
+      template,
+    },
+    { attachTo: document.body }
+  )
 
-//   await delay(200)
+  await delay(200)
 
-//   wrapper.vm.$refs.bar.scrollTo('A')
+  wrapper.vm.$refs.bar.scrollTo('A')
 
-//   await delay(100)
+  await delay(100)
 
-//   wrapper.element.scrollTop = 150
+  wrapper.element.scrollTop = 150
 
-//   await wrapper.trigger('scroll')
+  await wrapper.trigger('scroll')
 
-//   await delay(0)
+  await delay(0)
 
-//   expect(changeHandle).toHaveBeenCalled()
-// })
+  expect(changeHandle).toHaveBeenCalled()
+})
