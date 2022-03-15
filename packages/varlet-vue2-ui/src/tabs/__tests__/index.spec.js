@@ -31,153 +31,167 @@ test('test tabs & tab & tabsItems & tabItem plugin', () => {
   expect(Vue.component(TabItem.name)).toBeTruthy()
 })
 
-// const Wrapper = {
-//   components: {
-//     [VarTabs.name]: VarTabs,
-//     [VarTab.name]: VarTab,
-//     [VarTabsItems.name]: VarTabsItems,
-//     [VarTabItem.name]: VarTabItem,
-//   },
-//   props: ['onClick', 'onChange'],
-//   data: () => ({
-//     active: 2,
-//   }),
-//   template: `
-//     <var-tabs :active.sync="active" v-bind="$props">
-//       <var-tab style="width: 100px">选项1</var-tab>
-//       <var-tab style="width: 100px">选项2</var-tab>
-//       <var-tab style="width: 100px">选项3</var-tab>
-//     </var-tabs>
+const Wrapper = {
+  components: {
+    [VarTabs.name]: VarTabs,
+    [VarTab.name]: VarTab,
+    [VarTabsItems.name]: VarTabsItems,
+    [VarTabItem.name]: VarTabItem,
+  },
+  props: ['onClick', 'onChange'],
+  data: () => ({
+    active: 2,
+  }),
+  template: `
+    <div>
+      <var-tabs :active.sync="active" @click="onClick" @change="onChange">
+        <var-tab style="width: 100px">选项1</var-tab>
+        <var-tab style="width: 100px">选项2</var-tab>
+        <var-tab style="width: 100px">选项3</var-tab>
+      </var-tabs>
 
-//     <var-tabs-items :active="active">
-//       <var-tab-item>视图1</var-tab-item>
-//       <var-tab-item>视图2</var-tab-item>
-//       <var-tab-item>视图3</var-tab-item>
-//     </var-tabs-items>
-//   `,
-// }
+      <var-tabs-items :active="active">
+        <var-tab-item>视图1</var-tab-item>
+        <var-tab-item>视图2</var-tab-item>
+        <var-tab-item>视图3</var-tab-item>
+      </var-tabs-items>
+    </div>
+  `,
+}
 
-// test('test tabs active', async () => {
-//   const wrapper = mount(Wrapper)
-//   await delay(200)
-//   expect(wrapper.html()).toMatchSnapshot()
-//   wrapper.destroy()
-// })
+test('test tabs active', async () => {
+  const onClick = jest.fn()
+  const onChange = jest.fn()
+  const wrapper = mount(Wrapper, {
+    propsData: {
+      onClick,
+      onChange,
+    },
+  })
+  await delay(200)
+  expect(wrapper.html()).toMatchSnapshot()
+  wrapper.destroy()
+})
 
-// test('test tabs match index', async () => {
-//   const onClick = jest.fn()
-//   const onChange = jest.fn()
+test('test tabs match index', async () => {
+  const onClick = jest.fn()
+  const onChange = jest.fn()
 
-//   const wrapper = mount(Wrapper, {
-//     listeners: {
-//       click: onClick,
-//       change: onChange,
-//     },
-//   })
-//   await delay(100)
+  const wrapper = mount(Wrapper, {
+    propsData: {
+      onClick,
+      onChange,
+    },
+  })
+  await delay(100)
 
-//   const tab = wrapper.find('.var-tab')
-//   await tab.trigger('click')
-//   expect(onClick).toHaveBeenLastCalledWith(0)
-//   expect(onChange).toHaveBeenLastCalledWith(0)
-//   wrapper.destroy()
-// })
+  const tab = wrapper.find('.var-tab')
+  await tab.trigger('click')
+  expect(onClick).toHaveBeenLastCalledWith(0)
+  expect(onChange).toHaveBeenLastCalledWith(0)
+  wrapper.destroy()
+})
 
-// test('test tabs match name', async () => {
-//   const onClick = jest.fn()
-//   const onChange = jest.fn()
+test('test tabs match name', async () => {
+  const onClick = jest.fn()
+  const onChange = jest.fn()
 
-//   const Wrapper = {
-//     components: {
-//       [VarTabs.name]: VarTabs,
-//       [VarTab.name]: VarTab,
-//     },
-//     data: () => ({
-//       active: '选项3',
-//     }),
-//     methods: {
-//       onClick,
-//       onChange,
-//     },
-//     template: `
-//       <var-tabs :active.sync="active" v-bind="$props">
-//         <var-tab name="选项1" style="width: 100px">选项1</var-tab>
-//         <var-tab name="选项2" style="width: 100px">选项2</var-tab>
-//         <var-tab name="选项3" style="width: 100px">选项3</var-tab>
-//       </var-tabs>
-//     `,
-//   }
+  const Wrapper = {
+    components: {
+      [VarTabs.name]: VarTabs,
+      [VarTab.name]: VarTab,
+    },
+    props: ['onClick', 'onChange'],
+    data: () => ({
+      active: '选项3',
+    }),
+    template: `
+      <var-tabs :active.sync="active"  @click="onClick" @change="onChange">
+        <var-tab name="选项1" style="width: 100px">选项1</var-tab>
+        <var-tab name="选项2" style="width: 100px">选项2</var-tab>
+        <var-tab name="选项3" style="width: 100px">选项3</var-tab>
+      </var-tabs>
+    `,
+  }
 
-//   const wrapper = mount(Wrapper, {
-//     listeners: {
-//       click: onClick,
-//       change: onChange,
-//     },
-//   })
+  const wrapper = mount(Wrapper, {
+    propsData: {
+      onClick,
+      onChange,
+    },
+  })
 
-//   await delay(100)
-//   const tab = wrapper.find('.var-tab')
-//   await tab.trigger('click')
-//   expect(onClick).toHaveBeenLastCalledWith('选项1')
-//   expect(onChange).toHaveBeenLastCalledWith('选项1')
-//   wrapper.destroy()
-// })
+  await delay(100)
+  const tab = wrapper.find('.var-tab')
+  await tab.trigger('click')
+  expect(onClick).toHaveBeenLastCalledWith('选项1')
+  expect(onChange).toHaveBeenLastCalledWith('选项1')
+  wrapper.destroy()
+})
 
-// test('test tabs match boundary', async () => {
-//   const onChange = jest.fn()
+test('test tabs match boundary', async () => {
+  const onClick = jest.fn()
+  const onChange = jest.fn()
 
-//   const wrapper = mount(Wrapper, {
-//     listeners: {
-//       change: onChange,
-//     },
-//   })
+  const wrapper = mount(Wrapper, {
+    propsData: {
+      onClick,
+      onChange,
+    },
+  })
 
-//   await delay(100)
-//   await wrapper.setData({ active: -1 })
-//   expect(onChange).toHaveBeenCalledTimes(0)
-//   expect(wrapper.vm.active).toBe(0)
-//   wrapper.destroy()
-// })
+  await delay(100)
+  await wrapper.setData({ active: -1 })
+  expect(onChange).toHaveBeenCalledTimes(0)
+  expect(wrapper.vm.active).toBe(0)
+  wrapper.destroy()
+})
 
-// test('test tabs disabled', async () => {
-//   const onClick = jest.fn()
-//   const onChange = jest.fn()
+test('test tabs disabled', async () => {
+  const onClick = jest.fn()
+  const onChange = jest.fn()
+  const Wrapper = {
+    components: {
+      [VarTabs.name]: VarTabs,
+      [VarTab.name]: VarTab,
+    },
+    props: ['onClick', 'onChange'],
+    data: () => ({
+      active: 1,
+    }),
+    template: `
+    <var-tabs v-model="active" @click="onClick" @change="onChange">
+      <var-tab disabled>选项1</var-tab>
+      <var-tab>选项2</var-tab>
+      <var-tab>选项3</var-tab>
+    </var-tabs>
+  `,
+  }
+  const wrapper = mount(Wrapper, {
+    propsData: {
+      onClick,
+      onChange,
+    },
+  })
 
-//   const wrapper = mount({
-//     components: {
-//       [VarTabs.name]: VarTabs,
-//       [VarTab.name]: VarTab,
-//     },
-//     data: () => ({
-//       active: 1,
-//     }),
-//     template: `
-//       <var-tabs v-model="active">
-//         <var-tab disabled>选项1</var-tab>
-//         <var-tab>选项2</var-tab>
-//         <var-tab>选项3</var-tab>
-//       </var-tabs>
-//     `,
-//   })
+  await delay(100)
+  expect(wrapper.html()).toMatchSnapshot()
 
-//   await delay(100)
-//   expect(wrapper.html()).toMatchSnapshot()
+  const tab = wrapper.find('.var-tab')
+  await tab.trigger('click')
+  expect(onClick).toHaveBeenCalledTimes(0)
+  expect(onChange).toHaveBeenCalledTimes(0)
+  wrapper.destroy()
+})
 
-//   const tab = wrapper.find('.var-tab')
-//   await tab.trigger('click')
-//   expect(onClick).toHaveBeenCalledTimes(0)
-//   expect(onChange).toHaveBeenCalledTimes(0)
-//   wrapper.destroy()
-// })
+test('test tabs relation tabsItems', async () => {
+  const wrapper = mount(Wrapper)
 
-// test('test tabs relation tabsItems', async () => {
-//   const wrapper = mount(Wrapper)
+  await delay(100)
+  expect(wrapper.html()).toMatchSnapshot()
 
-//   await delay(100)
-//   expect(wrapper.html()).toMatchSnapshot()
-
-//   await wrapper.setData({ active: 1 })
-//   await delay(50)
-//   expect(wrapper.html()).toMatchSnapshot()
-//   wrapper.destroy()
-// })
+  await wrapper.setData({ active: 1 })
+  await delay(50)
+  expect(wrapper.html()).toMatchSnapshot()
+  wrapper.destroy()
+})
