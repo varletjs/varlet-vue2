@@ -12,10 +12,10 @@ test('test app bar example', async () => {
   expect(wrapper.html()).toMatchSnapshot()
 })
 
-test('test app bar plugin', () => {
-  Vue.use(AppBar)
-  expect(Vue.component(AppBar.name)).toBeTruthy()
-})
+// test('test app bar plugin', () => {
+//   Vue.use(AppBar)
+//   expect(Vue.component(AppBar.name)).toBeTruthy()
+// })
 
 // test('test app bar props', () => {
 //   const wrapper = mount(VarAppBar, {
