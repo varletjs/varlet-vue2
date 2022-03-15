@@ -13,7 +13,7 @@ import { createChildrenMixin } from '../utils/mixins/relation'
 export default defineComponent({
   name: 'VarTabItem',
 
-  mixins: [createChildrenMixin('tabsItem', { parentKey: 'tabsItem', childrenKey: 'tabsItems' })],
+  mixins: [createChildrenMixin('tabsItems', { parentKey: 'tabsItems', childrenKey: 'tabItemList' })],
 
   components: {
     VarSwipeItem,
