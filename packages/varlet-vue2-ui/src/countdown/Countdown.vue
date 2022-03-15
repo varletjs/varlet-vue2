@@ -90,7 +90,9 @@ export default defineComponent({
     },
 
     start() {
-      if (this.isStart) return
+      if (this.isStart) {
+        return
+      }
 
       this.isStart = true
       this.endTime = Date.now() + (this.pauseTime || toNumber(this.time))

@@ -22,7 +22,7 @@ export default defineComponent({
 
   components: { VarSwipe },
 
-  mixins: [createParentMixin('tabsItem', { childrenKey: 'tabsItems' })],
+  mixins: [createParentMixin('tabsItems', { childrenKey: 'tabItemList' })],
 
   props,
 
@@ -31,18 +31,18 @@ export default defineComponent({
       this.handleActiveChange(newValue)
     },
 
-    tabsItems() {
+    tabItemList() {
       this.handleActiveChange(this.active)
     },
   },
 
   methods: {
     matchName(active) {
-      return this.tabsItems.find(({ name }) => active === name)
+      return this.tabItemList.find(({ name }) => active === name)
     },
 
     matchIndex(active) {
-      return this.tabsItems.find(({ index }) => active === index)
+      return this.tabItemList.find(({ index }) => active === index)
     },
 
     matchActive(active) {
@@ -55,13 +55,13 @@ export default defineComponent({
         return
       }
 
-      this.tabsItems.forEach(({ setCurrent }) => setCurrent(false))
+      this.tabItemList.forEach(({ setCurrent }) => setCurrent(false))
       newActiveTabItemProvider.setCurrent(true)
       this.$refs.swipe?.to(newActiveTabItemProvider.index)
     },
 
     handleSwipeChange(currentIndex) {
-      const tabItem = this.tabsItems.find(({ index }) => index === currentIndex)
+      const tabItem = this.tabItemList.find(({ index }) => index === currentIndex)
       const active = tabItem.name ?? tabItem.index
 
       this.getListeners()['onUpdate:active']?.(active)

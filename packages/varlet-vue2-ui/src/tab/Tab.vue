@@ -22,7 +22,7 @@ import { createChildrenMixin } from '../utils/mixins/relation'
 export default defineComponent({
   name: 'VarTab',
 
-  mixins: [createChildrenMixin('tab', { parentKey: 'tab', childrenKey: 'tabs' })],
+  mixins: [createChildrenMixin('tabs', { parentKey: 'tabs', childrenKey: 'tabList' })],
 
   directives: { Ripple },
 
@@ -34,24 +34,24 @@ export default defineComponent({
     },
 
     itemDirection() {
-      return this.tab.itemDirection
+      return this.tabs.itemDirection
     },
   },
 
   watch: {
     name() {
-      this.tab.resize()
+      this.tabs.resize()
     },
 
     disabled() {
-      this.tab.resize()
+      this.tabs.resize()
     },
   },
 
   methods: {
     computeColorStyle() {
-      const { disabled, name, tab, index } = this
-      const { active, activeColor, inactiveColor, disabledColor } = tab
+      const { disabled, name, tabs, index } = this
+      const { active, activeColor, inactiveColor, disabledColor } = tabs
 
       return disabled ? disabledColor : active === name || active === index ? activeColor : inactiveColor
     },
@@ -61,7 +61,7 @@ export default defineComponent({
         disabled,
         name,
         index,
-        tab: { active },
+        tabs: { active },
       } = this
 
       return disabled
@@ -78,7 +78,7 @@ export default defineComponent({
         getListeners,
         index,
         element,
-        tab: { onTabClick },
+        tabs: { onTabClick },
       } = this
 
       if (disabled) {

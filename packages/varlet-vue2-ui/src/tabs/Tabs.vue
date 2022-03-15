@@ -49,7 +49,7 @@ export default defineComponent({
 
   components: { VarSticky },
 
-  mixins: [createParentMixin('tab', { childrenKey: 'tabs' })],
+  mixins: [createParentMixin('tabs', { childrenKey: 'tabList' })],
 
   inheritAttrs: false,
 
@@ -72,7 +72,7 @@ export default defineComponent({
   },
 
   watch: {
-    async tabs() {
+    async tabList() {
       await doubleRaf()
       this.resize()
     },
@@ -107,17 +107,17 @@ export default defineComponent({
     },
 
     matchName() {
-      return this.tabs.find(({ name }) => this.active === name)
+      return this.tabList.find(({ name }) => this.active === name)
     },
 
     matchIndex() {
-      return this.tabs.find(({ index }) => this.active === index)
+      return this.tabList.find(({ index }) => this.active === index)
     },
 
     matchBoundary() {
       const {
         active,
-        tabs: { length },
+        tabList: { length },
         getListeners,
       } = this
 
@@ -135,7 +135,7 @@ export default defineComponent({
     },
 
     watchScrollable() {
-      this.scrollable = this.tabs.length >= 5
+      this.scrollable = this.tabList.length >= 5
     },
 
     moveIndicator({ element }) {
