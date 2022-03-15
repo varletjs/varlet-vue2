@@ -1,7 +1,7 @@
 <template>
   <div
     class="var-site-app-bar"
-    :class="{ 'var-elevation--3': elevation }"
+    :class="{ 'var-site-elevation--3': elevation }"
     :style="{
       background: color,
       color: textColor,

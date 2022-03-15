@@ -19,7 +19,7 @@
   })
   new Vue({
      render: h => h(App)
-  }).$mount('#app');
+  }).$mount('#app')
 </script>
 ```
 
@@ -48,7 +48,7 @@ Vue.use(Varlet)
 
 new Vue({
   render: h => h(App)
-}).$mount('#app');;
+}).$mount('#app')
 ```
 
 ### 在线编辑组件

@@ -11,7 +11,7 @@ exports[`test select example 1`] = `
         <div class=\\"var-select__menu var-menu\\" var-select-cover=\\"\\">
           <div class=\\"var-select__wrap\\">
             <div class=\\"var-select__select\\" style=\\"text-align: left;\\"><span></span> <i class=\\"var-icon var-select__arrow var-icon--set var-icon-menu-down\\" style=\\"transition: transform 300ms;\\" var-select-cover=\\"\\"></i></div> <label class=\\"var-select__placeholder var--ellipsis\\">
-
+              请选择一个选项
             </label>
           </div>
           <transition-stub name=\\"var-menu\\">

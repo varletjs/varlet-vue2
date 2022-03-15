@@ -3,7 +3,7 @@
     <app-type>{{ pack.basicUsage }}</app-type>
     <div>
       <div class="container"></div>
-      <var-select v-model="value" @focus="focus" @blur="blur">
+      <var-select :placeholder="pack.placeholder" v-model="value" @focus="focus" @blur="blur">
         <var-option label="吃饭" />
         <var-option label="睡觉" />
       </var-select>
