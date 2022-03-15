@@ -92,7 +92,7 @@ export default defineComponent({
       const { bottom } = this.$refs.detectorEl.getBoundingClientRect()
 
       // The fractional part of the detectorBottom when bottoming out overflows
-      // https://github.com/varletjs/varlet/issues/310
+      // https://github.com/varletjs/varlet-vue2/issues/310
       // alert(this.$refs.detectorEl)
       return Math.floor(bottom) - toPxNum(this.offset) <= containerBottom
     },
