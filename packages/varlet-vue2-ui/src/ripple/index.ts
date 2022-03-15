@@ -5,23 +5,23 @@ import type { VueConstructor, DirectiveOptions, PluginObject } from 'vue'
 import type { DirectiveBinding } from 'vue/types/options'
 
 interface RippleStyles {
-  x: number;
-  y: number;
-  centerX: number;
-  centerY: number;
-  size: number;
+  x: number
+  y: number
+  centerX: number
+  centerY: number
+  size: number
 }
 
 interface RippleOptions {
-  removeRipple: any;
-  touchmoveForbid: boolean;
-  color?: string;
-  disabled?: boolean;
-  tasker?: number | null;
+  removeRipple: any
+  touchmoveForbid: boolean
+  color?: string
+  disabled?: boolean
+  tasker?: number | null
 }
 
 interface RippleHTMLElement extends HTMLElement {
-  _ripple?: RippleOptions;
+  _ripple?: RippleOptions
 }
 
 const ANIMATION_DURATION = 250
