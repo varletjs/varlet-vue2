@@ -79,3 +79,14 @@ exports[`test app bar example 1`] = `
   <div class=\\"space\\"></div>
 </div>"
 `;
+
+exports[`test app bar props 1`] = `
+"<div class=\\"var-app-bar\\" style=\\"background: rgb(163, 185, 219); color: rgb(0, 0, 0);\\">
+  <div class=\\"var-app-bar__left\\">leftSlot
+    <!---->
+  </div>
+  <div class=\\"var-app-bar__title\\">test title</div>
+  <div class=\\"var-app-bar__right\\">
+    <!----> rightSlot</div>
+</div>"
+`;
