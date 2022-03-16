@@ -12,55 +12,55 @@ test('test backTop plugin', () => {
 
 test('test backTop example', () => {
   const wrapper = mount(example, { attachTo: document.body })
-
   expect(wrapper.html()).toMatchSnapshot()
+  wrapper.destroy()
 })
 
-// test('test backTop props', async () => {
-//   mockScrollTo(HTMLDivElement)
+test('test backTop props', async () => {
+  mockScrollTo(HTMLDivElement)
 
-//   const template = `
-//     <div class="back-top__test" style="height: 300px; overflow: auto">
-//       <div style="height: 5000px"></div>
-//       <var-back-top target=".back-top__test" :duration="500" visibility-height="500" @click="clickHandle" />
-//     </div>
-//   `
-//   const clickHandle = jest.fn()
+  const template = `
+    <div class="back-top__test" style="height: 300px; overflow: auto">
+      <div style="height: 5000px"></div>
+      <var-back-top target=".back-top__test" :duration="500" visibility-height="500" @click="clickHandle" />
+    </div>
+  `
+  const clickHandle = jest.fn()
 
-//   const wrapper = mount(
-//     {
-//       components: {
-//         [VarBackTop.name]: VarBackTop,
-//       },
-//       methods: {
-//         clickHandle,
-//       },
-//       template,
-//     },
-//     { attachTo: document.body }
-//   )
+  const wrapper = mount(
+    {
+      components: {
+        [VarBackTop.name]: VarBackTop,
+      },
+      methods: {
+        clickHandle,
+      },
+      template,
+    },
+    { attachTo: document.body }
+  )
 
-//   await delay(0)
+  await delay(0)
 
-//   const backTopEl = wrapper.find('.var-back-top')
+  const backTopEl = wrapper.find('.var-back-top')
 
-//   expect(backTopEl.classes('var-back-top--active')).toBe(false)
+  expect(backTopEl.classes('var-back-top--active')).toBe(false)
 
-//   wrapper.element.scrollTop = 600
+  wrapper.element.scrollTop = 600
 
-//   await wrapper.trigger('scroll')
+  await wrapper.trigger('scroll')
 
-//   await delay(500)
+  await delay(500)
 
-//   expect(backTopEl.classes('var-back-top--active')).toBe(true)
+  expect(backTopEl.classes('var-back-top--active')).toBe(true)
 
-//   await backTopEl.trigger('click')
+  await backTopEl.trigger('click')
 
-//   await delay(500)
+  await delay(500)
 
-//   expect(wrapper.element.scrollTop).toBeLessThan(1)
+  expect(wrapper.element.scrollTop).toBeLessThan(1)
 
-//   expect(clickHandle).toHaveBeenCalledTimes(1)
+  expect(clickHandle).toHaveBeenCalledTimes(1)
 
-//   wrapper.destroy()
-// })
+  wrapper.destroy()
+})
