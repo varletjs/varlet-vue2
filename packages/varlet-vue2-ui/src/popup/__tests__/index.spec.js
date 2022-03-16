@@ -17,7 +17,7 @@ const Wrapper = {
     show: false,
   }),
   template: `
-   <var-popup :show.sync="show" v-bind="$attrs">
+   <var-popup :show.sync="show" v-bind="$props">
       default slot content
     </var-popup>
   `,
