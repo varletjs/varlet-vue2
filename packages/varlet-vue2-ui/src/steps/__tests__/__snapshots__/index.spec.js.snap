@@ -1,5 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test step direction prop 1`] = `
+"<div class=\\"var-steps\\" style=\\"flex-direction: row;\\">
+  <div class=\\"var-step\\">
+    <div class=\\"var-step-horizontal\\">
+      <div class=\\"var-step-horizontal__main\\">
+        <div class=\\"var-step-horizontal__tag\\"><span>0</span></div>
+        <div class=\\"var-step-horizontal__content\\">步骤1</div>
+      </div>
+      <div class=\\"var-step-horizontal__line\\"></div>
+    </div>
+  </div>
+  <div class=\\"var-step\\">
+    <div class=\\"var-step-horizontal\\">
+      <div class=\\"var-step-horizontal__main\\">
+        <div class=\\"var-step-horizontal__tag\\"><span>0</span></div>
+        <div class=\\"var-step-horizontal__content\\">步骤2</div>
+      </div>
+      <div class=\\"var-step-horizontal__line\\"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`test step direction prop 2`] = `
+"<div class=\\"var-steps\\" style=\\"flex-direction: column;\\">
+  <div class=\\"var-step\\">
+    <div class=\\"var-step-vertical\\">
+      <div class=\\"var-step-vertical__main\\">
+        <div class=\\"var-step-vertical__tag var-step-vertical__tag--active\\"><span>1</span></div>
+        <div class=\\"var-step-vertical__content var-step-vertical__content--active\\">步骤1</div>
+      </div>
+      <div class=\\"var-step-vertical__line\\"></div>
+    </div>
+  </div>
+  <div class=\\"var-step\\">
+    <div class=\\"var-step-vertical\\">
+      <div class=\\"var-step-vertical__main\\">
+        <div class=\\"var-step-vertical__tag\\"><span>2</span></div>
+        <div class=\\"var-step-vertical__content\\">步骤2</div>
+      </div>
+      <div class=\\"var-step-vertical__line\\"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`test step event 1`] = `
+"<div class=\\"var-steps\\" style=\\"flex-direction: row;\\">
+  <div class=\\"var-step\\">
+    <div class=\\"var-step-horizontal\\">
+      <div class=\\"var-step-horizontal__main\\">
+        <div class=\\"var-step-horizontal__tag\\" style=\\"background-color: rgb(233, 158, 180);\\"><i class=\\"var-icon var-step__icon var-icon--set var-icon-heart-half-full\\" style=\\"transition: transform 0ms;\\" var-step-cover=\\"\\"></i></div>
+        <div class=\\"var-step-horizontal__content\\">步骤1</div>
+      </div>
+      <div class=\\"var-step-horizontal__line\\"></div>
+    </div>
+  </div>
+  <div class=\\"var-step\\">
+    <div class=\\"var-step-horizontal\\">
+      <div class=\\"var-step-horizontal__main\\">
+        <div class=\\"var-step-horizontal__tag\\" style=\\"background-color: rgb(233, 158, 180);\\"><i class=\\"var-icon var-step__icon var-icon--set var-icon-heart-half-full\\" style=\\"transition: transform 0ms;\\" var-step-cover=\\"\\"></i></div>
+        <div class=\\"var-step-horizontal__content\\">步骤2</div>
+      </div>
+      <div class=\\"var-step-horizontal__line\\"></div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`test steps example 1`] = `
 "<div class=\\"var-step2-example\\">
   <div class=\\"app-type\\">基本使用</div>
