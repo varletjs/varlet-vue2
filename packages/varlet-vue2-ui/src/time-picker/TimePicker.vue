@@ -299,7 +299,7 @@ export default defineComponent({
         return
       }
 
-      if (this.type === 'minute' && this.useSeconds && this.sChosenUsableMinute) {
+      if (this.type === 'minute' && this.useSeconds && this.isChosenUsableMinute) {
         this.type = 'second'
       }
     },
