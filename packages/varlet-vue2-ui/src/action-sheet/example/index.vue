@@ -128,17 +128,7 @@ export default {
 
   methods: {
     async createBasic() {
-      const onOpen = () => {
-        console.log('basic open')
-      }
-      const onOpened = () => {
-        console.log('basic onOpened')
-      }
-      const onClose = () => {
-        console.log('basic onClose')
-      }
-
-      const action = await ActionSheet({ actions: rawActions, onOpen, onOpened, onClose })
+      const action = await ActionSheet({ actions: rawActions })
 
       action !== 'close' && Snackbar(`${this.pack.yourSelected}${action.name}`)
     },
