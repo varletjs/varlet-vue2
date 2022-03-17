@@ -16,74 +16,91 @@ test('test counter plugin', () => {
   expect(Vue.component(Counter.name)).toBeTruthy()
 })
 
-// const Wrapper = {
-//   components: {
-//     [VarCounter.name]: VarCounter,
-//   },
-//   data: () => ({
-//     value: 0,
-//   }),
-//   template: `<var-counter v-model="value" />`,
-// }
+test('test counter increment & decrement', async () => {
+  const Wrapper = {
+    components: {
+      [VarCounter.name]: VarCounter,
+    },
+    data: () => ({
+      value: 0,
+    }),
+    template: `<var-counter v-model="value" />`,
+  }
+  const wrapper = mount(Wrapper)
 
-// test('test counter increment & decrement', async () => {
-//   const wrapper = mount(Wrapper)
+  await wrapper.find('.var-counter__increment-button').trigger('click')
+  expect(wrapper.vm.value).toBe(1)
+  await wrapper.find('.var-counter__decrement-button').trigger('click')
+  expect(wrapper.vm.value).toBe(0)
 
-//   await wrapper.find('.var-counter__increment-button').trigger('click')
-//   expect(wrapper.vm.value).toBe(1)
-//   await wrapper.find('.var-counter__decrement-button').trigger('click')
-//   expect(wrapper.vm.value).toBe(0)
+  wrapper.destroy()
+})
 
-//   wrapper.destroy()
-// })
+test('test counter initial value over max', async () => {
+  const Wrapper = {
+    components: {
+      [VarCounter.name]: VarCounter,
+    },
+    data: () => ({
+      value: 11,
+    }),
+    template: `<var-counter :max="10" v-model="value" />`,
+  }
+  const wrapper = mount(Wrapper)
+  expect(wrapper.vm.value).toBe(10)
 
-// test('test counter initial value over max', async () => {
-//   const wrapper = mount({
-//     ...Wrapper,
-//     data: () => ({
-//       value: 11,
-//     }),
-//     template: `<var-counter :max="10" v-model="value" />`,
-//   })
+  wrapper.destroy()
+})
 
-//   expect(wrapper.vm.value).toBe(10)
+test('test counter initial value less min', async () => {
+  const Wrapper = {
+    components: {
+      [VarCounter.name]: VarCounter,
+    },
+    data: () => ({
+      value: -1,
+    }),
+    template: `<var-counter :min="0" v-model="value" />`,
+  }
+  const wrapper = mount(Wrapper)
+  expect(wrapper.vm.value).toBe(0)
 
-//   wrapper.destroy()
-// })
+  wrapper.destroy()
+})
 
-// test('test counter initial value less min', async () => {
-//   const wrapper = mount({
-//     ...Wrapper,
-//     data: () => ({
-//       value: -1,
-//     }),
-//     template: `<var-counter :min="0" v-model="value" />`,
-//   })
+test('test counter onChange', async () => {
+  const onChange = jest.fn()
+  const Wrapper = {
+    components: {
+      [VarCounter.name]: VarCounter,
+    },
+    data: () => ({
+      value: 0,
+    }),
+    methods: {
+      onChange,
+    },
+    template: `<var-counter v-model="value" @change="onChange" />`,
+  }
+  const wrapper = mount(Wrapper)
 
-//   expect(wrapper.vm.value).toBe(0)
+  wrapper.find('.var-counter__input').setValue('1')
+  await wrapper.find('.var-counter__input').trigger('change')
+  expect(onChange).lastCalledWith(1)
 
-//   wrapper.destroy()
-// })
-
-// test('test counter onChange', async () => {
-//   const onChange = jest.fn()
-
-//   const wrapper = mount({
-//     ...Wrapper,
-//     methods: {
-//       onChange,
-//     },
-//     template: `<var-counter v-model="value" @change="onChange" />`,
-//   })
-
-//   wrapper.find('.var-counter__input').setValue('1')
-//   await wrapper.find('.var-counter__input').trigger('change')
-//   expect(onChange).lastCalledWith(1)
-
-//   wrapper.destroy()
-// })
+  wrapper.destroy()
+})
 
 // test('test counter press increment', async () => {
+//   const Wrapper = {
+//     components: {
+//       [VarCounter.name]: VarCounter,
+//     },
+//     data: () => ({
+//       value: 0,
+//     }),
+//     template: `<var-counter v-model="value" />`,
+//   }
 //   const wrapper = mount(Wrapper)
 
 //   await trigger(wrapper.find('.var-counter__increment-button'), 'touchstart')
@@ -100,12 +117,22 @@ test('test counter plugin', () => {
 // })
 
 // test('test counter press decrement', async () => {
+//   const Wrapper = {
+//     components: {
+//       [VarCounter.name]: VarCounter,
+//     },
+//     data: () => ({
+//       value: 0,
+//     }),
+//     template: `<var-counter v-model="value" />`,
+//   }
 //   const wrapper = mount(Wrapper)
 
 //   await trigger(wrapper.find('.var-counter__decrement-button'), 'touchstart')
 //   await delay(750)
 
 //   const current = wrapper.vm.value
+//   console.log('current', current)
 //   expect(current).toBeLessThan(0)
 
 //   await trigger(wrapper.find('.var-counter__decrement-button'), 'touchend')
