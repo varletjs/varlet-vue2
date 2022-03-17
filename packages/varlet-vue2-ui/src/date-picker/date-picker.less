@@ -162,6 +162,7 @@
       overflow: hidden;
       font-weight: 700;
       cursor: pointer;
+      user-select: none;
 
       div {
         width: 100%;
@@ -195,6 +196,11 @@
 
     &__button[var-date-picker-color-cover='true'] {
       color: var(--date-picker-main-color);
+    }
+
+    &__button-disabled {
+      color: var(--color-text-disabled) !important;
+      cursor: not-allowed;
     }
   }
 
@@ -258,9 +264,14 @@
     &__button[var-date-picker-color-cover='true'] {
       color: var(--date-picker-main-color);
     }
+
+    &__button-disabled {
+      color: var(--color-text-disabled) !important;
+      cursor: not-allowed;
+    }
   }
 
-  &-translatey-enter-from {
+  &-translatey-enter {
     opacity: 0;
     transform: translateY(100%);
   }
@@ -281,7 +292,7 @@
     transform: translateY(-100%);
   }
 
-  &-reverse-translatey-enter-from {
+  &-reverse-translatey-enter {
     opacity: 0;
     transform: translateY(-100%);
   }
@@ -291,7 +302,7 @@
     transform: translateY(100%);
   }
 
-  &-panel-fade-enter-from,
+  &-panel-fade-enter,
   &-panel-fade-leave-to {
     transition: 0.3s var(--cubic-bezier);
     opacity: 0;
@@ -301,12 +312,12 @@
     position: absolute;
   }
 
-  &-translatex-enter-from {
+  &-translatex-enter {
     opacity: 0;
     transform: translateX(100%);
   }
 
-  &-reverse-translatex-enter-from {
+  &-reverse-translatex-enter {
     opacity: 0;
     transform: translateX(-100%);
   }

@@ -163,4 +163,8 @@ export const props = {
     type: Boolean,
     default: false,
   },
+  touchable: {
+    type: Boolean,
+    default: true,
+  },
 }
