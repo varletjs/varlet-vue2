@@ -56,8 +56,11 @@ export default defineComponent({
 
   methods: {
     toSizeUnit,
+
     isURL,
+
     toNumber,
+
     onClickIcon() {
       this.getListeners().onClick?.()
     },

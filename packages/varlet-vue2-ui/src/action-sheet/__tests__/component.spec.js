@@ -8,32 +8,32 @@ test('test action-sheet component plugin', () => {
   expect(Vue.component(ActionSheet.Component.name)).toBeTruthy()
 })
 
-// test('test action-sheet styles', () => {
-//   const Wrapper = {
-//     components: {
-//       [VarActionSheet.name]: VarActionSheet,
-//     },
-//     data: () => ({
-//       actions: [
-//         {
-//           name: 'Item 01',
-//           icon: 'account-circle',
-//           iconSize: '30px',
-//           color: '#4caf50',
-//           className: 'customClass',
-//         },
-//         {
-//           name: 'Item 02',
-//           icon: 'account-circle',
-//           disabled: true,
-//         },
-//       ],
-//     }),
-//     template: `
-//       <var-action-sheet :actions="actions" />
-//     `,
-//   }
-//   const wrapper = mount(Wrapper)
-//   expect(wrapper.html()).toMatchSnapshot()
-//   wrapper.destroy()
-// })
+test('test action-sheet styles', () => {
+  const Wrapper = {
+    components: {
+      [VarActionSheet.name]: VarActionSheet,
+    },
+    data: () => ({
+      actions: [
+        {
+          name: 'Item 01',
+          icon: 'account-circle',
+          iconSize: '30px',
+          color: '#4caf50',
+          className: 'customClass',
+        },
+        {
+          name: 'Item 02',
+          icon: 'account-circle',
+          disabled: true,
+        },
+      ],
+    }),
+    template: `
+      <var-action-sheet :actions="actions" />
+    `,
+  }
+  const wrapper = mount(Wrapper)
+  expect(wrapper.html()).toMatchSnapshot()
+  wrapper.destroy()
+})

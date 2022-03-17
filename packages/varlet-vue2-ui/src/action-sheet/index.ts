@@ -61,6 +61,13 @@ function ActionSheet(options: ActionSheetOptions): Promise<ActionSheetActions | 
       resolve(action)
     })
 
+    instance.$on('open', () => {
+      actionSheetOptions.onOpen?.()
+    })
+    instance.$on('opened', () => {
+      actionSheetOptions.onOpened?.()
+    })
+
     instance.$on('close', () => {
       actionSheetOptions.onClose?.()
       resolve('close')

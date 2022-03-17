@@ -26,6 +26,7 @@ import {
   doubleRaf,
   getParentScroller,
   getScrollLeft,
+  getScrollTop,
   nextTickFrame,
   requestAnimationFrame,
   scrollTo,
@@ -41,7 +42,6 @@ export default defineComponent({
   props,
 
   data: () => ({
-    scrollEl: null,
     clickedName: '',
     scroller: null,
     anchorNameList: [],
@@ -51,8 +51,7 @@ export default defineComponent({
   async mounted() {
     await doubleRaf()
     this.scroller = getParentScroller(this.$refs.barEl)
-    this.scrollEl = this.scroller === window ? this.scroller.document.documentElement : this.scroller
-    this.scroller?.addEventListener('scroll', this.handleScroll)
+    this.scroller.addEventListener('scroll', this.handleScroll)
   },
 
   beforeDestroy() {
@@ -86,7 +85,9 @@ export default defineComponent({
     },
 
     handleScroll() {
-      const { scrollTop, scrollHeight } = this.scrollEl
+      const scrollTop = getScrollTop(this.scroller)
+      const scrollHeight = this.scroller === window ? document.body.scrollHeight : this.scroller.scrollHeight
+
       const { offsetTop } = this.$refs.barEl
       this.indexAnchors.forEach((anchor, index) => {
         const anchorTop = anchor.ownTop
@@ -112,11 +113,11 @@ export default defineComponent({
       const indexAnchor = this.indexAnchors.find(({ name }) => anchorName === name)
       if (!indexAnchor) return
       const top = indexAnchor.ownTop - this.stickyOffsetTop + this.$refs.barEl.offsetTop
-      const left = getScrollLeft(this.scrollEl)
+      const left = getScrollLeft(this.scroller)
       this.clickedName = anchorName
       this.emitEvent(anchorName)
 
-      await scrollTo(this.scrollEl, {
+      await scrollTo(this.scroller, {
         left,
         top,
         animation: easeInOutCubic,
