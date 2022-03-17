@@ -39,6 +39,7 @@ describe('test datePicker style and type', () => {
 
     expect(wrapper.html()).toMatchSnapshot()
   })
+
   test('test datePicker style and month', async () => {
     const template = `
     <var-date-picker
@@ -289,29 +290,29 @@ test('test datePicker readonly', async () => {
   expect(wrapper.vm.date).toBe('2021-05-19')
 })
 
-// test('test datePicker touchable prop', async () => {
-//   const wrapper = mount({
-//     components: {
-//       [VarDatePicker.name]: VarDatePicker,
-//     },
-//     data() {
-//       return {
-//         date: '2021-04-08',
-//         type: 'date',
-//       }
-//     },
-//     template: `<var-date-picker v-model="date" :type="type" />`,
-//   })
+test('test datePicker touchable prop', async () => {
+  const wrapper = mount({
+    components: {
+      [VarDatePicker.name]: VarDatePicker,
+    },
+    data() {
+      return {
+        date: '2021-04-08',
+        type: 'date',
+      }
+    },
+    template: `<var-date-picker v-model="date" :type="type" />`,
+  })
 
-//   const pickBodyEl = wrapper.findComponent('.var-date-picker-body')
-//   const headerEl = wrapper.findComponent('.var-picker-header__value')
+  const pickBodyEl = wrapper.findComponent('.var-date-picker-body')
+  const headerEl = wrapper.findComponent('.var-picker-header__value')
 
-//   await triggerDrag(pickBodyEl, 0, 100)
-//   expect(headerEl.text()).toBe('2021 四月')
-//   await triggerDrag(pickBodyEl, 100, 0)
-//   await delay(300)
-//   expect(headerEl.text()).toBe('2021 三月')
-// })
+  await triggerDrag(pickBodyEl, 0, 100)
+  expect(headerEl.text()).toBe('2021 四月')
+  await triggerDrag(pickBodyEl, 100, 0)
+  await delay(300)
+  expect(headerEl.text()).toBe('2021 三月')
+})
 
 test('test value legal', async () => {
   const fn = jest.fn()

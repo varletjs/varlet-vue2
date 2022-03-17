@@ -77,6 +77,8 @@ export default defineComponent({
 
   methods: {
     checkDate(checkType) {
+      if ((checkType === 'prev' && this.disabled.left) || (checkType === 'next' && this.disabled.right)) return
+
       this.$emit('check-date', checkType)
       this.reverse = checkType === 'prev'
       this.forwardOrBackNum += checkType === 'prev' ? -1 : 1

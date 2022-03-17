@@ -19,9 +19,9 @@
           disabled: !ripple || disabled || readonly || disableDecrement || !decrementButton || isMin,
         }"
         @click="decrement"
-        @touchstart="pressDecrement"
-        @touchend="releaseDecrement"
-        @touchcancel="releaseDecrement"
+        @touchstart.native="pressDecrement"
+        @touchend.native="releaseDecrement"
+        @touchcancel.native="releaseDecrement"
       />
       <input
         class="var-counter__input"
@@ -48,9 +48,9 @@
           disabled: !ripple || disabled || readonly || disableIncrement || !incrementButton || isMax,
         }"
         @click="increment"
-        @touchstart="pressIncrement"
-        @touchend="releaseIncrement"
-        @touchcancel="releaseIncrement"
+        @touchstart.native="pressIncrement"
+        @touchend.native="releaseIncrement"
+        @touchcancel.native="releaseIncrement"
       />
     </div>
 

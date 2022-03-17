@@ -45,15 +45,21 @@
         </transition>
       </div>
     </div>
-    <div class="var-date-picker-body">
+    <div
+      class="var-date-picker-body"
+      @touchstart="handleTouchstart"
+      @touchmove="handleTouchmove"
+      @touchend="handleTouchend"
+    >
       <transition name="var-date-picker-panel-fade">
         <year-picker-panel
           :component-props="componentProps"
           :preview="previewYear"
           @choose-year="getChooseYear"
-          v-if="isYearPanel"
+          v-if="getPanelType === 'year'"
         />
         <month-picker-panel
+          ref="monthPanelEl"
           :current="currentDate"
           :choose="getChoose"
           :preview="getPreview"
@@ -61,9 +67,10 @@
           :component-props="componentProps"
           @choose-month="getChooseMonth"
           @check-preview="checkPreview"
-          v-else-if="(!isYearPanel && type === 'month') || isMonthPanel"
+          v-else-if="getPanelType === 'month'"
         />
         <day-picker-panel
+          ref="dayPanelEl"
           :current="currentDate"
           :choose="getChoose"
           :preview="getPreview"
@@ -71,7 +78,7 @@
           :click-month="() => clickEl('month')"
           @choose-day="getChooseDay"
           @check-preview="checkPreview"
-          v-else-if="!isYearPanel && !isMonthPanel && type === 'date'"
+          v-else-if="getPanelType === 'date'"
         />
       </transition>
     </div>
@@ -86,8 +93,13 @@ import YearPickerPanel from './src/year-picker-panel.vue'
 import DayPickerPanel from './src/day-picker-panel.vue'
 import { props, MONTH_LIST, WEEK_HEADER } from './props'
 import { isArray, toNumber } from '../utils/shared'
+import { nextTickFrame } from '../utils/elements'
 import { pack } from '../locale'
 
+let startX = 0
+let startY = 0
+let checkType = ''
+let touchDirection
 const currentDate = dayjs().format('YYYY-MM-D')
 const [currentYear, currentMonth] = currentDate?.split('-')
 const monthDes = MONTH_LIST.find((month) => month.index === currentMonth)
@@ -223,6 +235,17 @@ export default defineComponent({
     isSameMonth() {
       return this.chooseMonth?.index === this.previewMonth.index
     },
+
+    getPanelType() {
+      if (this.isYearPanel) return 'year'
+      if (this.type === 'month' || this.isMonthPanel) return 'month'
+      if (this.type === 'date') return 'date'
+      return ''
+    },
+
+    isUntouchable() {
+      return !this.touchable || ['', 'year'].includes(this.getPanelType)
+    },
   },
 
   watch: {
@@ -244,6 +267,10 @@ export default defineComponent({
         }
       },
       immediate: true,
+    },
+
+    getPanelType() {
+      this.resetState()
     },
   },
 
@@ -440,6 +467,42 @@ export default defineComponent({
       this.chooseDay = dayValue
       this.previewMonth = monthDes
       this.previewYear = yearValue
+    },
+
+    handleTouchstart(event) {
+      if (this.isUntouchable) return
+      const { clientX, clientY } = event.touches[0]
+      startX = clientX
+      startY = clientY
+    },
+
+    getDirection(x, y) {
+      return x >= y && x > 20 ? 'x' : 'y'
+    },
+
+    handleTouchmove(event) {
+      if (this.isUntouchable) return
+      const { clientX, clientY } = event.touches[0]
+      const x = clientX - startX
+      const y = clientY - startY
+      touchDirection = this.getDirection(Math.abs(x), Math.abs(y))
+      checkType = x > 0 ? 'prev' : 'next'
+    },
+
+    handleTouchend() {
+      if (this.isUntouchable || touchDirection !== 'x') return
+      const componentRef = this.getPanelType === 'month' ? 'monthPanelEl' : 'dayPanelEl'
+      nextTickFrame(() => {
+        this.$refs[componentRef].forwardRef(checkType)
+        this.resetState()
+      })
+    },
+
+    resetState() {
+      startY = 0
+      startX = 0
+      checkType = ''
+      touchDirection = undefined
     },
   },
 })
