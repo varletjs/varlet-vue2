@@ -244,7 +244,7 @@ test('test datePicker range prop', async () => {
   })
 
   await delay(0)
-  const elements = wrapper.findAllComponents('.var-day-picker__button--usable').wrappers.slice(0, 3)
+  const elements = wrapper.findAll('.var-day-picker__button--usable')
   await elements.at(0).trigger('click')
   await elements.at(2).trigger('click')
 
