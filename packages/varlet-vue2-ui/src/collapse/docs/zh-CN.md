@@ -19,8 +19,8 @@ Vue.use(Collapse).use(CollapseItem)
 
 ```html
 <var-collapse v-model="value" @change="changeHandle">
-  <var-collapse-item title="标题" name="1">内容</var-collapse-item>
-  <var-collapse-item title="标题" name="2">内容</var-collapse-item>
+  <var-collapse-item title="标题" name="1">文本</var-collapse-item>
+  <var-collapse-item title="标题" name="2">文本</var-collapse-item>
 </var-collapse>
 ```
 ```javascript
@@ -42,8 +42,8 @@ export default {
 
 ```html
 <var-collapse v-model="value" :offset="false">
-  <var-collapse-item title="标题" name="1">内容</var-collapse-item>
-  <var-collapse-item title="标题" name="2">内容</var-collapse-item>
+  <var-collapse-item title="标题" name="1">文本</var-collapse-item>
+  <var-collapse-item title="标题" name="2">文本</var-collapse-item>
 </var-collapse>
 ```
 
@@ -53,8 +53,8 @@ export default {
 
 ```html
 <var-collapse v-model="value" accordion :offset="false">
-  <var-collapse-item title="标题" name="1">内容</var-collapse-item>
-  <var-collapse-item title="标题" name="2">内容</var-collapse-item>
+  <var-collapse-item title="标题" name="1">文本</var-collapse-item>
+  <var-collapse-item title="标题" name="2">文本</var-collapse-item>
 </var-collapse>
 ```
 ```javascript
@@ -75,10 +75,10 @@ export default {
 </var-button>
 <var-collapse v-model="value">
   <var-collapse-item title="标题" :name="1" :disabled="disabled">
-    内容
+    文本
   </var-collapse-item>
   <var-collapse-item title="标题" :name="2" :disabled="disabled">
-    内容
+    文本
   </var-collapse-item>
 </var-collapse>
 ```
