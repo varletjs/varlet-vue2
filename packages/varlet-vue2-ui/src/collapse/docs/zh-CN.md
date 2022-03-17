@@ -96,7 +96,7 @@ export default {
 ```html
 <var-collapse v-model="value">
   <var-collapse-item title="这是标题" name="1" icon="account-circle">
-    这是内容
+    文本
   </var-collapse-item>
   <var-collapse-item name="2">
     <template #title>这是标题</template>
