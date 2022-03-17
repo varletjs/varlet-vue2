@@ -185,7 +185,14 @@ test('test tabs disabled', async () => {
 })
 
 test('test tabs relation tabsItems', async () => {
-  const wrapper = mount(Wrapper)
+  const onClick = jest.fn()
+  const onChange = jest.fn()
+  const wrapper = mount(Wrapper, {
+    propsData: {
+      onClick,
+      onChange,
+    },
+  })
 
   await delay(100)
   expect(wrapper.html()).toMatchSnapshot()
