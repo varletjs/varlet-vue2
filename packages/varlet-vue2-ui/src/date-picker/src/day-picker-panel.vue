@@ -2,6 +2,7 @@
   <div class="var-day-picker__panel">
     <div class="var-day-picker__content">
       <panel-header
+        ref="headerEl"
         type="day"
         :date="preview"
         :disabled="panelBtnDisabled"
@@ -27,7 +28,7 @@
                 v-bind="{
                   ...buttonProps(day),
                 }"
-                @click="chooseDay(day)"
+                @click="(event) => chooseDay(day, event)"
               >
                 {{ filterDay(day) }}
               </var-button>
@@ -286,6 +287,9 @@ export default defineComponent({
         outline: computeOutline(),
         textColor: isCover ? '' : textColorOrCover(),
         'var-date-picker-color-cover': isCover,
+        class: {
+          'var-day-picker__button-disabled': disabled,
+        },
       }
     },
 
@@ -295,8 +299,15 @@ export default defineComponent({
       this.$emit('check-preview', 'month', checkType)
     },
 
-    chooseDay(day) {
+    chooseDay(day, event) {
+      const buttonEl = event.currentTarget
+      if (buttonEl.classList.contains('var-day-picker__button-disabled')) return
+
       this.$emit('choose-day', day)
+    },
+
+    forwardRef(checkType) {
+      this.$refs.headerEl.checkDate(checkType)
     },
   },
 })

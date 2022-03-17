@@ -2,6 +2,7 @@
   <div class="var-month-picker__panel">
     <div class="var-month-picker__content">
       <panel-header
+        ref="headerEl"
         type="month"
         :date="preview"
         :disabled="panelBtnDisabled"
@@ -19,7 +20,7 @@
               v-bind="{
                 ...buttonProps(month.index),
               }"
-              @click="chooseMonth(month)"
+              @click="(event) => chooseMonth(month, event)"
             >
               {{ getMonthAbbr(month.index) }}
             </var-button>
@@ -217,10 +218,16 @@ export default defineComponent({
         color: !computeText() ? color : '',
         textColor: isCover ? '' : textColorOrCover(),
         'var-date-picker-color-cover': isCover,
+        class: {
+          'var-month-picker__button-disabled': disabled,
+        },
       }
     },
 
-    chooseMonth(month) {
+    chooseMonth(month, event) {
+      const buttonEl = event.currentTarget
+      if (buttonEl.classList.contains('var-month-picker__button-disabled')) return
+
       this.$emit('choose-month', month)
     },
 
@@ -228,6 +235,10 @@ export default defineComponent({
       this.reverse = checkType === 'prev'
       this.panelKey += checkType === 'prev' ? -1 : 1
       this.$emit('check-preview', 'year', checkType)
+    },
+
+    forwardRef(checkType) {
+      this.$refs.headerEl.checkDate(checkType)
     },
   },
 })
