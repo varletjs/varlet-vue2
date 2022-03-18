@@ -158,7 +158,7 @@ export default defineComponent({
 
       if (this.isEmpty(value)) return `0 / ${maxlength}`
 
-      return `${String(value).length} / ${maxlength}`
+      return `${String(value).length}/${maxlength}`
     },
 
     formReadonly() {
@@ -229,7 +229,7 @@ export default defineComponent({
     handleInput(e) {
       const { value } = e.target
 
-      this.getListeners().onInput?.(value)
+      this.getListeners().onInput?.(value, e)
       this.validateWithTrigger('onInput')
     },
 
