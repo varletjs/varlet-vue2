@@ -67,11 +67,10 @@
 import VarButton from '../index'
 import VarIcon from '../../icon'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
-import context from '../../context'
 import Snackbar from '../../snackbar'
 import dark from '../../themes/dark'
 import { pack, use } from './locale'
-import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/utils'
+import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
   name: 'ButtonExample',
@@ -91,18 +90,6 @@ export default {
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)
-
-    const prevTouchmoveForbid = context.touchmoveForbid
-
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-
-    this.$on('hook:beforeDestroy', () => {
-      context.touchmoveForbid = prevTouchmoveForbid
-    })
   },
 
   methods: {
