@@ -14,11 +14,10 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 <script src="https://cdn.jsdelivr.net/npm/@varlet-vue2/ui/umd/varlet.js"></script>
 <script>
-  const App = Vue.use({
-    template: '<var-button>按钮</var-button>'
-  })
+  Vue.use(Varlet)
+
   new Vue({
-     render: h => h(App)
+    template: '<var-button>按钮</var-button>'
   }).$mount('#app')
 </script>
 ```
@@ -50,8 +49,3 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 ```
-
-### 在线编辑组件
-
-我们提供了网页版的组件编辑器，方便您对组件库的各个组件进行快速上手、在线编辑、分享给他人或是下载代码包本地运行。
-您可以点击网页右上角的`{...}`图标或是[这里前往](https://varlet.gitee.io/varlet-ui-playground)

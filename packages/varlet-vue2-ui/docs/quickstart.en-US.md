@@ -14,12 +14,11 @@ Here are the most basic ways to access component libraries in common development
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 <script src="https://cdn.jsdelivr.net/npm/@varlet-vue2/ui/umd/varlet.js"></script>
 <script>
-  const App = Vue.use({
-    template: '<var-button>按钮</var-button>'
-  })
+  Vue.use(Varlet)
+
   new Vue({
-     render: h => h(App)
-  }).$mount('#app');
+    template: '<var-button>按钮</var-button>'
+  }).$mount('#app')
 </script>
 ```
 
@@ -50,10 +49,3 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 ```
-
-### Components Playground
-
-We provide a web version of the component editor,
-which is convenient for you to quickly get started with each component of the component library,
-edit it online, share it with others, or download the code package to run locally.
-You can click the `{...}` icon in the upper right corner of the page or [go here](https://varlet.gitee.io/varlet-ui-playground)
