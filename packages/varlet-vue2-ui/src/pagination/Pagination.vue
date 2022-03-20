@@ -72,7 +72,7 @@
             v-ripple
             v-for="(option, index) in sizeOption"
             :key="index"
-            @click="clickSize(option)"
+            @click.native="clickSize(option)"
           >
             {{ option }}{{ pack.paginationItem }} / {{ pack.paginationPage }}
           </var-cell>
