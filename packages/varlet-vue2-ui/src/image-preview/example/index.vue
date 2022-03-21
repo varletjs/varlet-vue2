@@ -42,8 +42,7 @@ import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import Snackbar from '../../snackbar'
 import { defineComponent } from '../../utils/create'
 import { pack, use } from './locale'
-import { watchLang, watchPlatform } from '@varlet-vue2/cli/site/utils'
-import context from '../../context'
+import { watchLang } from '@varlet-vue2/cli/site/utils'
 import ActionSheet from '../../action-sheet'
 import VarIcon from '../../icon'
 
@@ -89,17 +88,6 @@ export default defineComponent({
 
   created() {
     watchLang(this, use)
-
-    const prevTouchmoveForbid = context.touchmoveForbid
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-
-    this.$on('hook:beforeDestroy', () => {
-      context.touchmoveForbid = prevTouchmoveForbid
-    })
   },
 
   methods: {

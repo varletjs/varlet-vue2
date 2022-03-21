@@ -50,9 +50,8 @@ import VarPopup from '..'
 import VarButton from '../../button'
 import Snackbar from '../../snackbar'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
-import context from '../../context'
 import dark from '../../themes/dark'
-import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/utils'
+import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 import { pack, use } from './locale'
 
 export default {
@@ -73,7 +72,6 @@ export default {
     overlayClass: false,
     overlayStyle: false,
     event: false,
-    prevTouchmoveForbid: context.touchmoveForbid,
   }),
 
   computed: {
@@ -85,16 +83,6 @@ export default {
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)
-
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-  },
-
-  beforeDestroy() {
-    context.touchmoveForbid = this.prevTouchmoveForbid
   },
 
   methods: {

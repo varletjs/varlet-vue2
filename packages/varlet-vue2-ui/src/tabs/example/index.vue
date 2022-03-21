@@ -142,10 +142,9 @@ import VarTab from '../../tab'
 import VarIcon from '../../icon'
 import VarTabsItems from '../../tabs-items'
 import VarTabItem from '../../tab-item'
-import context from '../../context'
 import dark from '../../themes/dark'
 import { use, pack } from './locale'
-import { watchPlatform, watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
+import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
   name: 'TabsExample',
@@ -188,17 +187,6 @@ export default {
     watchLang(this, use)
     watchDarkMode(this, dark, (mode) => {
       this.themes = mode
-    })
-
-    const prevTouchmoveForbid = context.touchmoveForbid
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-
-    this.$on('hook:beforeDestroy', () => {
-      context.touchmoveForbid = prevTouchmoveForbid
     })
   },
 }
