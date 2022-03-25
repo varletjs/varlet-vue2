@@ -1,6 +1,6 @@
 {
   "name": "@varlet-vue2/stylelint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "stylelint config of varlet-vue2",
   "keywords": [
     "stylelint",
