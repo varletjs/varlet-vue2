@@ -241,7 +241,7 @@ export default defineComponent({
     start(event, type) {
       if (!this.maxWidth) this.maxWidth = this.$refs.sliderEl.offsetWidth
       if (this.isDisabled || this.isReadonly) return
-      this.onStart?.()
+      this.getListeners().onStart?.()
       this.isScroll = true
       this.thumbsProps[type].startPosition = event.touches[0].clientX
     },
