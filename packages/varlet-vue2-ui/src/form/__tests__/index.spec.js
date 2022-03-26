@@ -19,35 +19,35 @@ test('test form plugin', () => {
   expect(Vue.component(Form.name)).toBeTruthy()
 })
 
-// const expectValidate = async (form, wrapper, message) => {
-//   form.validate()
-//   await delay(16)
-//   expect(wrapper.find('.var-form-details__message').text()).toBe(message)
-//   expect(wrapper.html()).toMatchSnapshot()
-// }
+const expectValidate = async (form, wrapper, message) => {
+  form.validate()
+  await delay(16)
+  expect(wrapper.find('.var-form-details__message').text()).toBe(message)
+  expect(wrapper.html()).toMatchSnapshot()
+}
 
-// const expectReset = async (form, wrapper) => {
-//   form.reset()
-//   await delay(16)
-//   expect(wrapper.find('.var-form-details__message').exists()).toBeFalsy()
-//   expect(wrapper.html()).toMatchSnapshot()
-// }
+const expectReset = async (form, wrapper) => {
+  form.reset()
+  await delay(16)
+  expect(wrapper.find('.var-form-details__message').exists()).toBeFalsy()
+  expect(wrapper.html()).toMatchSnapshot()
+}
 
-// const Wrapper = {
-//   components: {
-//     [VarForm.name]: VarForm,
-//     [VarInput.name]: VarInput,
-//     [VarSelect.name]: VarSelect,
-//     [VarOption.name]: VarOption,
-//     [VarRadio.name]: VarRadio,
-//     [VarCheckbox.name]: VarCheckbox,
-//     [VarCounter.name]: VarCounter,
-//     [VarRate.name]: VarRate,
-//     [VarUploader.name]: VarUploader,
-//     [VarSwitch.name]: VarSwitch,
-//     [VarSlider.name]: VarSlider,
-//   },
-// }
+const Wrapper = {
+  components: {
+    [VarForm.name]: VarForm,
+    [VarInput.name]: VarInput,
+    [VarSelect.name]: VarSelect,
+    [VarOption.name]: VarOption,
+    [VarRadio.name]: VarRadio,
+    [VarCheckbox.name]: VarCheckbox,
+    [VarCounter.name]: VarCounter,
+    [VarRate.name]: VarRate,
+    [VarUploader.name]: VarUploader,
+    [VarSwitch.name]: VarSwitch,
+    [VarSlider.name]: VarSlider,
+  },
+}
 
 // test('test form with input', async () => {
 //   const onClick = jest.fn()
@@ -402,55 +402,55 @@ test('test form plugin', () => {
 //
 //   wrapper.unmount()
 // })
-//
-// test('test form with switch', async () => {
-//   const onChange = jest.fn()
-//
-//   const wrapper = mount({
-//     ...Wrapper,
-//     data: () => ({
-//       disabled: true,
-//       readonly: false,
-//       value: false,
-//     }),
-//     methods: {
-//       onChange,
-//     },
-//     template: `
-//       <var-form ref="form" :disabled="disabled" :readonly="readonly">
-//         <var-switch
-//           :rules="[v => v === true || '您必须开启']"
-//           v-model="value"
-//           @change="onChange"
-//         />
-//       </var-form>
-//     `,
-//   })
-//
-//   expect(wrapper.html()).toMatchSnapshot()
-//
-//   await wrapper.find('.var-switch-block').trigger('click')
-//   expect(wrapper.vm.value).toBe(false)
-//   expect(onChange).toHaveBeenCalledTimes(0)
-//
-//   await wrapper.setData({ disabled: false, readonly: true })
-//
-//   await wrapper.find('.var-switch-block').trigger('click')
-//   expect(wrapper.vm.value).toBe(false)
-//   expect(onChange).toHaveBeenCalledTimes(0)
-//
-//   const { form } = wrapper.vm.$refs
-//   await expectValidate(form, wrapper, '您必须开启')
-//   await expectReset(form, wrapper)
-//
-//   await wrapper.setData({ disabled: false, readonly: false })
-//
-//   await wrapper.find('.var-switch-block').trigger('click')
-//   expect(wrapper.vm.value).toBe(true)
-//   expect(onChange).toHaveBeenCalledTimes(1)
-//
-//   wrapper.unmount()
-// })
+
+test('test form with switch', async () => {
+  const onChange = jest.fn()
+
+  const wrapper = mount({
+    ...Wrapper,
+    data: () => ({
+      disabled: true,
+      readonly: false,
+      value: false,
+    }),
+    methods: {
+      onChange,
+    },
+    template: `
+      <var-form ref="form" :disabled="disabled" :readonly="readonly">
+        <var-switch
+          :rules="[v => v === true || '您必须开启']"
+          v-model="value"
+          @change="onChange"
+        />
+      </var-form>
+    `,
+  })
+
+  expect(wrapper.html()).toMatchSnapshot()
+
+  await wrapper.find('.var-switch-block').trigger('click')
+  expect(wrapper.vm.value).toBe(false)
+  expect(onChange).toHaveBeenCalledTimes(0)
+
+  await wrapper.setData({ disabled: false, readonly: true })
+
+  await wrapper.find('.var-switch-block').trigger('click')
+  expect(wrapper.vm.value).toBe(false)
+  expect(onChange).toHaveBeenCalledTimes(0)
+
+  const { form } = wrapper.vm.$refs
+  await expectValidate(form, wrapper, '您必须开启')
+  await expectReset(form, wrapper)
+
+  await wrapper.setData({ disabled: false, readonly: false })
+
+  await wrapper.find('.var-switch-block').trigger('click')
+  expect(wrapper.vm.value).toBe(true)
+  expect(onChange).toHaveBeenCalledTimes(1)
+
+  wrapper.destroy()
+})
 //
 // test('test form with slider', async () => {
 //   const onChange = jest.fn()
