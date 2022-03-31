@@ -15,7 +15,7 @@
       <var-image-preview
         :images="images"
         :show.sync="currentShow"
-        current="https://varlet.gitee.io/varlet-ui/cat2.jpg"
+        current="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg"
       />
 
       <var-button type="warning" block @click="closeShow = true">{{ pack.displayCloseButton }} </var-button>
@@ -58,8 +58,8 @@ export default defineComponent({
   },
 
   data: () => ({
-    images: ['https://varlet.gitee.io/varlet-ui/cat.jpg', 'https://varlet.gitee.io/varlet-ui/cat2.jpg'],
-    image: ['https://varlet.gitee.io/varlet-ui/cat.jpg'],
+    images: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg', 'https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg'],
+    image: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'],
     show: false,
     menuShow: false,
     currentShow: false,

@@ -62,28 +62,28 @@ export default {
     files: [],
     files2: [
       {
-        url: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
+        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
       },
       {
         url: 'https://www.runoob.com/try/demo_source/mov_bbb.mp4',
-        cover: 'https://varlet.gitee.io/varlet-ui/cover.jpg',
+        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cover.jpg',
       },
     ],
     files3: [
       {
-        url: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
+        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
         state: 'loading',
       },
       {
-        url: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
+        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
         state: 'success',
       },
       {
-        url: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
+        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
         state: 'error',
       },
     ],
@@ -95,15 +95,15 @@ export default {
     files9: [],
     files10: [
       {
-        url: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
+        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
         state: 'error',
       },
     ],
     files11: [
       {
-        url: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
+        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
       },
     ],
   }),
@@ -140,10 +140,9 @@ export default {
       if (file.file.size <= 1 * 1024 * 1024) {
         Snackbar.success(this.pack.fileLessThen)
         return true
-      } 
-        Snackbar.warning(this.pack.fileLargeThen)
-        return false
-      
+      }
+      Snackbar.warning(this.pack.fileLargeThen)
+      return false
     },
 
     async handleBeforeRemove() {

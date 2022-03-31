@@ -18,8 +18,8 @@ test('test lazy plugin', () => {
 const Wrapper = {
   directives: { Lazy },
   data: () => ({
-    src: 'https://varlet.gitee.io/varlet-ui/cat.jpg',
-    error: 'https://varlet.gitee.io/varlet-ui/error.jpg',
+    src: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+    error: 'https://varlet.gitee.io/varlet-ui-vue2/error.jpg',
   }),
   template: `
     <img
@@ -78,7 +78,7 @@ test('test lazy updated', async () => {
   await delay(80)
   expect(wrapper.html()).toMatchSnapshot()
 
-  await wrapper.setData({ src: 'https://varlet.gitee.io/varlet-ui/dog.jpg' })
+  await wrapper.setData({ src: 'https://varlet.gitee.io/varlet-ui-vue2/dog.jpg' })
   await delay(80)
 
   await trigger(wrapper.element._lazy.preloadImage, 'load')
@@ -95,7 +95,7 @@ test('test lazy background-image', async () => {
   const wrapper = mount({
     directives: { Lazy },
     template: `
-      <img v-lazy:background-image="'https://varlet.gitee.io/varlet-ui/cat.jpg'">
+      <img v-lazy:background-image="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'">
     `,
   })
   await delay(80)

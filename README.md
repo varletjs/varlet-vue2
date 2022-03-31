@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://varlet.gitee.io/varlet-ui-vue2/">
-    <img src="https://varlet.gitee.io/varlet-ui/logo.svg" width="150">
+    <img src="https://varlet.gitee.io/varlet-ui-vue2/logo.svg" width="150">
   </a>
   <h1>VARLET-VUE2</h1>
   <p>基于 Vue2 的 Material design 风格移动端组件库</p>

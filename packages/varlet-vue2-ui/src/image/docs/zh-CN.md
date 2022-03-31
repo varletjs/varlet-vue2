@@ -17,40 +17,40 @@ Vue.use(Image)
 ### 基本使用
 
 ```html
-<var-image src="https://varlet.gitee.io/varlet-ui/cat.jpg" />
+<var-image src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg" />
 ```
 
 ### 填充模式
 
 ```html
-<var-image width="85px" height="85px" src="https://varlet.gitee.io/varlet-ui/cat.jpg" />
+<var-image width="85px" height="85px" src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg" />
 
 <var-image
   width="85px"
   height="85px"
   fit="cover"
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
 />
 
 <var-image
   width="85px"
   height="85px"
   fit="contain"
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
 />
 
 <var-image
   width="85px"
   height="85px"
   fit="none"
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
 />
 
 <var-image
   width="85px"
   height="85px"
   fit="scale-down"
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
 />
 ```
 
@@ -62,7 +62,7 @@ Vue.use(Image)
   height="85px"
   fit="cover"
   :radius="10"
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
 />
 
 <var-image
@@ -70,20 +70,20 @@ Vue.use(Image)
   height="85px"
   fit="cover"
   radius="50%"
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
 />
 ```
 
 ### 开启水波
 
 ```html
-<var-image ripple src="https://varlet.gitee.io/varlet-ui/cat.jpg"/>
+<var-image ripple src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"/>
 ```
 
 ### 开启懒加载
 
 ```html
-<var-image lazy src="https://varlet.gitee.io/varlet-ui/cat.jpg" />
+<var-image lazy src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg" />
 ```
 
 ### 设置懒加载状态图片
@@ -93,7 +93,7 @@ Vue.use(Image)
   lazy
   loading="https://xxx.xxx/loading.png"
   error="https://xxx.xxx/error.png"
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
 />
 ```
 
