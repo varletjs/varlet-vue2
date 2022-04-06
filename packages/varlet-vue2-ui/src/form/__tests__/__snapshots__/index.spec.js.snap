@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test form with switch 1`] = `
+"<div class=\\"var-form\\">
+  <div class=\\"var-switch\\">
+    <div class=\\"var-switch-block var-switch__disable\\" style=\\"height: 24px; width: 40px;\\">
+      <div class=\\"var-switch__track\\" style=\\"height: 14.399999999999999px; width: 38px; border-radius: 13.333333333333334px;\\"></div>
+      <div class=\\"var-switch__ripple\\" style=\\"left: -10px; color: rgb(153, 153, 153); width: 40px; height: 40px;\\">
+        <div class=\\"var-switch__handle var-elevation--2\\" style=\\"width: 20px; height: 20px;\\">
+          <!---->
+        </div>
+      </div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+</div>"
+`;
+
+exports[`test form with switch 2`] = `
+"<div class=\\"var-form\\">
+  <div class=\\"var-switch\\">
+    <div class=\\"var-switch-block\\" style=\\"height: 24px; width: 40px;\\">
+      <div class=\\"var-switch__track var-switch__track-error\\" style=\\"height: 14.399999999999999px; width: 38px; border-radius: 13.333333333333334px;\\"></div>
+      <div class=\\"var-switch__ripple\\" style=\\"left: -10px; color: rgb(153, 153, 153); width: 40px; height: 40px;\\">
+        <div class=\\"var-switch__handle var-elevation--2 var-switch__handle-error\\" style=\\"width: 20px; height: 20px;\\">
+          <!---->
+        </div>
+      </div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <div class=\\"var-form-details\\">
+        <div class=\\"var-form-details__message\\">您必须开启</div>
+        <div class=\\"var-form-details__length\\"></div>
+      </div>
+    </transition-stub>
+  </div>
+</div>"
+`;
+
+exports[`test form with switch 3`] = `
+"<div class=\\"var-form\\">
+  <div class=\\"var-switch\\">
+    <div class=\\"var-switch-block\\" style=\\"height: 24px; width: 40px;\\">
+      <div class=\\"var-switch__track\\" style=\\"height: 14.399999999999999px; width: 38px; border-radius: 13.333333333333334px;\\"></div>
+      <div class=\\"var-switch__ripple\\" style=\\"left: -10px; color: rgb(153, 153, 153); width: 40px; height: 40px;\\">
+        <div class=\\"var-switch__handle var-elevation--2\\" style=\\"width: 20px; height: 20px;\\">
+          <!---->
+        </div>
+      </div>
+    </div>
+    <transition-stub name=\\"var-form-details\\">
+      <!---->
+    </transition-stub>
+  </div>
+</div>"
+`;

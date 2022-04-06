@@ -71,12 +71,24 @@ export default defineComponent({
   methods: {
     // expose
     resize() {
+      const { host } = this.$refs
+
       this.top = this.computeTop(this.alignment)
-      this.left = getLeft(this.$refs.host)
+
+      if (!host) {
+        return
+      }
+
+      this.left = getLeft(host)
     },
 
     computeTop(alignment) {
       const { host, menu } = this.$refs
+
+      if (!host) {
+        return
+      }
+
       return alignment === 'top' ? getTop(host) : getTop(host) - menu.offsetHeight
     },
 
