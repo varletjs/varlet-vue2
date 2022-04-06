@@ -1,3 +1,12 @@
+# [0.1.0](https://github.com/varletjs/varlet-vue2/compare/v0.0.3...v0.1.0) (2022-04-06)
+
+
+### Bug Fixes
+
+* synchronously modify known bugs of varlet ([84ad1ec](https://github.com/varletjs/varlet-vue2/commit/84ad1ec83b41d1ad1a512bc3d541961c03af9e21))
+
+
+
 ## [0.0.3](https://github.com/varletjs/varlet-vue2/compare/v0.0.2...v0.0.3) (2022-03-25)
 
 

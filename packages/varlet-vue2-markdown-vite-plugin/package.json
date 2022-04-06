@@ -1,6 +1,6 @@
 {
   "name": "@varlet-vue2/markdown-vite-plugin",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "markdown vite plugin of varlet-vue2",
   "keywords": [
     "vite",

@@ -1,6 +1,6 @@
 {
   "name": "@varlet-vue2/cli",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "cli of varlet-vue2",
   "bin": {
     "varlet-vue2-cli": "./lib/index.js"
