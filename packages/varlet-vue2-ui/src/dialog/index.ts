@@ -1,4 +1,4 @@
-import VarDialog from './Dialog'
+import VarDialog from './Dialog.vue'
 import Vue, { ComponentOptions, VueConstructor } from 'vue'
 import { inBrowser, isNumber, isString } from '../utils/shared'
 import { mountComponent } from '../utils/components'
