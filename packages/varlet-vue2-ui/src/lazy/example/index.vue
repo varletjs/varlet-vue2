@@ -1,14 +1,14 @@
 <template>
   <div class="var-lazy-example">
     <app-type>{{ pack.basicUsage }}</app-type>
-    <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'" />
-    <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'" />
-    <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'" />
-    <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'" />
-    <img class="cat" v-lazy="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'" />
+    <img class="cat" v-lazy="'https://varlet-vue2.vercel.app/cat.jpg'" />
+    <img class="cat" v-lazy="'https://varlet-vue2.vercel.app/cat.jpg'" />
+    <img class="cat" v-lazy="'https://varlet-vue2.vercel.app/cat.jpg'" />
+    <img class="cat" v-lazy="'https://varlet-vue2.vercel.app/cat.jpg'" />
+    <img class="cat" v-lazy="'https://varlet-vue2.vercel.app/cat.jpg'" />
 
     <app-type>{{ pack.backgroundImageLazyLoad }}</app-type>
-    <div class="cat" v-lazy:background-image="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'"></div>
+    <div class="cat" v-lazy:background-image="'https://varlet-vue2.vercel.app/cat.jpg'"></div>
   </div>
 </template>
 

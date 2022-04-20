@@ -14,13 +14,13 @@ Vue.use(Swipe).use(SwipeItem)
 ```html
 <var-swipe class="swipe">
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat2.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat3.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat3.jpg">
   </var-swipe-item>
 </var-swipe>
 ```
@@ -42,13 +42,13 @@ Vue.use(Swipe).use(SwipeItem)
 ```html
 <var-swipe class="swipe" :loop="false">
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat2.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat3.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat3.jpg">
   </var-swipe-item>
 </var-swipe>
 ```
@@ -58,13 +58,13 @@ Vue.use(Swipe).use(SwipeItem)
 ```html
 <var-swipe class="swipe" :autoplay="2000">
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat2.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat3.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat3.jpg">
   </var-swipe-item>
 </var-swipe>
 ```
@@ -74,13 +74,13 @@ Vue.use(Swipe).use(SwipeItem)
 ```html
 <var-swipe class="swipe" vertical>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat2.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat3.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat3.jpg">
   </var-swipe-item>
 </var-swipe>
 ```
@@ -90,13 +90,13 @@ Vue.use(Swipe).use(SwipeItem)
 ```html
 <var-swipe class="swipe" @change="Snackbar">
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat2.jpg">
   </var-swipe-item>
   <var-swipe-item>
-    <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat3.jpg">
+    <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat3.jpg">
   </var-swipe-item>
 </var-swipe>
 ```
@@ -117,13 +117,13 @@ export default {
 <var-swipe class="swipe">
   <template #default>
     <var-swipe-item>
-      <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg">
+      <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat.jpg">
     </var-swipe-item>
     <var-swipe-item>
-      <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg">
+      <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat2.jpg">
     </var-swipe-item>
     <var-swipe-item>
-      <img class="swipe-item" src="https://varlet.gitee.io/varlet-ui-vue2/cat3.jpg">
+      <img class="swipe-item" src="https://varlet-vue2.vercel.app/cat3.jpg">
     </var-swipe-item>
   </template>
 

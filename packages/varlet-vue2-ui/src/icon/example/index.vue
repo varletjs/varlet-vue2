@@ -9,7 +9,7 @@
     <var-icon class="example__animation-icon" name="checkbox-marked-circle" color="#2979ff" :size="26" />
 
     <app-type>{{ pack.useImage }}</app-type>
-    <var-icon class="example__animation-icon" name="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg" :size="32" />
+    <var-icon class="example__animation-icon" name="https://varlet-vue2.vercel.app/cat.jpg" :size="32" />
 
     <app-type>{{ pack.events }}</app-type>
     <var-icon class="example__animation-icon" name="checkbox-marked-circle" color="#2979ff" @click="iconClick" />

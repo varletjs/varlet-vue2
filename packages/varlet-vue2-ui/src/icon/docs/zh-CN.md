@@ -32,7 +32,7 @@ Vue.use(Icon)
 当传入的 `name` 是一个网络地址时,将会使用 `img` 标签以 `cover` 模式显示。`size` 为图片的宽高。
 
 ```html
-<var-icon name="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg" :size="32" />
+<var-icon name="https://varlet-vue2.vercel.app/cat.jpg" :size="32" />
 ```
 
 ### 注册事件

@@ -64,16 +64,16 @@ exports[`test uploader example 1`] = `
     <div class=\\"var-uploader__file-list\\">
       <div class=\\"var-uploader__file var-elevation--2\\">
         <div class=\\"var-uploader__file-name\\">
-          https://varlet.gitee.io/varlet-ui-vue2/cat.jpg
+          https://varlet-vue2.vercel.app/cat.jpg
         </div>
-        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" class=\\"var-uploader__file-cover\\">
+        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet-vue2.vercel.app/cat.jpg\\" class=\\"var-uploader__file-cover\\">
         <div class=\\"var-uploader__file-indicator\\"></div>
       </div>
       <div class=\\"var-uploader__file var-elevation--2\\">
         <div class=\\"var-uploader__file-name\\">
           https://www.runoob.com/try/demo_source/mov_bbb.mp4
         </div>
-        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cover.jpg\\" class=\\"var-uploader__file-cover\\">
+        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet-vue2.vercel.app/cover.jpg\\" class=\\"var-uploader__file-cover\\">
         <div class=\\"var-uploader__file-indicator\\"></div>
       </div>
       <div class=\\"var--relative var-uploader__action var-elevation--2\\"><input type=\\"file\\" accept=\\"image/*\\" class=\\"var-uploader__action-input\\"> <i class=\\"var-icon var-uploader__action-icon var-icon--set var-icon-plus\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div>
@@ -93,23 +93,23 @@ exports[`test uploader example 1`] = `
     <div class=\\"var-uploader__file-list\\">
       <div class=\\"var-uploader__file var-elevation--2 var-uploader--loading\\">
         <div class=\\"var-uploader__file-name\\">
-          https://varlet.gitee.io/varlet-ui-vue2/cat.jpg
+          https://varlet-vue2.vercel.app/cat.jpg
         </div>
-        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" class=\\"var-uploader__file-cover\\">
+        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet-vue2.vercel.app/cat.jpg\\" class=\\"var-uploader__file-cover\\">
         <div class=\\"var-uploader__file-indicator\\"></div>
       </div>
       <div class=\\"var-uploader__file var-elevation--2\\">
         <div class=\\"var-uploader__file-name\\">
-          https://varlet.gitee.io/varlet-ui-vue2/cat.jpg
+          https://varlet-vue2.vercel.app/cat.jpg
         </div>
-        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" class=\\"var-uploader__file-cover\\">
+        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet-vue2.vercel.app/cat.jpg\\" class=\\"var-uploader__file-cover\\">
         <div class=\\"var-uploader__file-indicator var-uploader--success\\"></div>
       </div>
       <div class=\\"var-uploader__file var-elevation--2\\">
         <div class=\\"var-uploader__file-name\\">
-          https://varlet.gitee.io/varlet-ui-vue2/cat.jpg
+          https://varlet-vue2.vercel.app/cat.jpg
         </div>
-        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" class=\\"var-uploader__file-cover\\">
+        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet-vue2.vercel.app/cat.jpg\\" class=\\"var-uploader__file-cover\\">
         <div class=\\"var-uploader__file-indicator var-uploader--error\\"></div>
       </div>
       <div class=\\"var--relative var-uploader__action var-elevation--2\\"><input type=\\"file\\" accept=\\"image/*\\" class=\\"var-uploader__action-input\\"> <i class=\\"var-icon var-uploader__action-icon var-icon--set var-icon-plus\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div>
@@ -207,9 +207,9 @@ exports[`test uploader example 1`] = `
     <div class=\\"var-uploader__file-list\\">
       <div class=\\"var-uploader__file var-elevation--2\\">
         <div class=\\"var-uploader__file-name\\">
-          https://varlet.gitee.io/varlet-ui-vue2/cat.jpg
+          https://varlet-vue2.vercel.app/cat.jpg
         </div>
-        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" class=\\"var-uploader__file-cover\\">
+        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet-vue2.vercel.app/cat.jpg\\" class=\\"var-uploader__file-cover\\">
         <div class=\\"var-uploader__file-indicator\\"></div>
       </div>
       <div class=\\"var--relative var-uploader__action var-elevation--2\\"><input type=\\"file\\" accept=\\"image/*\\" class=\\"var-uploader__action-input\\"> <i class=\\"var-icon var-uploader__action-icon var-icon--set var-icon-plus\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div>
@@ -247,9 +247,9 @@ exports[`test uploader example 1`] = `
     <div class=\\"var-uploader__file-list\\">
       <div class=\\"var-uploader__file var-elevation--2\\">
         <div class=\\"var-uploader__file-name\\">
-          https://varlet.gitee.io/varlet-ui-vue2/cat.jpg
+          https://varlet-vue2.vercel.app/cat.jpg
         </div>
-        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" class=\\"var-uploader__file-cover\\">
+        <div class=\\"var-uploader__file-close\\"><i class=\\"var-icon var-uploader__file-close-icon var-icon--set var-icon-delete\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div> <img src=\\"https://varlet-vue2.vercel.app/cat.jpg\\" class=\\"var-uploader__file-cover\\">
         <div class=\\"var-uploader__file-indicator var-uploader--error\\"></div>
       </div>
       <div class=\\"var--relative var-uploader__action var-elevation--2\\"><input type=\\"file\\" accept=\\"image/*\\" class=\\"var-uploader__action-input\\"> <i class=\\"var-icon var-uploader__action-icon var-icon--set var-icon-plus\\" style=\\"transition: transform 0ms;\\" var-uploader-cover=\\"\\"></i></div>

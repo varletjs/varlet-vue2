@@ -16,12 +16,12 @@ Vue.use(Lazy)
 ### Basic Use
 
 ```html
-<img v-lazy="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'">
+<img v-lazy="'https://varlet-vue2.vercel.app/cat.jpg'">
 ```
 
 ### Background Image Lazy Load
 ```html
-<div v-lazy:background-image="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'"></div>
+<div v-lazy:background-image="'https://varlet-vue2.vercel.app/cat.jpg'"></div>
 ```
 
 ### Inline Attributes
@@ -29,7 +29,7 @@ You can modify the `loading`, `error` image, and `reload attempts` by using inli
 
 ```html
 <img 
-  v-lazy="'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'"
+  v-lazy="'https://varlet-vue2.vercel.app/cat.jpg'"
   lazy-loading="https://xxx.cn/loading.png"
   lazy-error="https://xxx.cn/error.png"
   lazy-attempt="3"

@@ -1,11 +1,11 @@
 <div align="center">
-  <a href="https://varlet.gitee.io/varlet-ui-vue2/">
-    <img src="https://varlet.gitee.io/varlet-ui-vue2/logo.svg" width="150">
+  <a href="https://varlet-vue2.vercel.app/">
+    <img src="https://varlet-vue2.vercel.app/logo.svg" width="150">
   </a>
   <h1>VARLET-VUE2</h1>
   <p>基于 Vue2 的 Material design 风格移动端组件库</p>
    <p>
-    <a href="https://varlet.gitee.io/varlet-ui-vue2/">开发文档</a> | <a href="https://github.com/varletjs/varlet-vue2/blob/dev/README.en-US.md">English</a>
+    <a href="https://varlet-vue2.vercel.app/">开发文档</a> | <a href="https://github.com/varletjs/varlet-vue2/blob/dev/README.en-US.md">English</a>
   </p>
   <p>
     <img src="https://img.shields.io/npm/v/@varlet-vue2/ui?style=flat-square" alt="version">

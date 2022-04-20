@@ -9,14 +9,14 @@
       :title="pack.title"
       :subtitle="pack.subtitle"
       :description="pack.description"
-      src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
+      src="https://varlet-vue2.vercel.app/cat.jpg"
     />
     <app-type>{{ pack.useSlot }}</app-type>
     <var-card
       :title="pack.title"
       :subtitle="pack.subtitle"
       :description="pack.description"
-      src="https://varlet.gitee.io/varlet-ui-vue2/cat.jpg"
+      src="https://varlet-vue2.vercel.app/cat.jpg"
     >
       <template #extra>
         <var-button type="primary" style="margin-right: 10px">{{ pack.button }}</var-button>

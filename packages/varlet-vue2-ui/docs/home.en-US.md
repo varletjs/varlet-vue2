@@ -1,6 +1,6 @@
 <div class="varlet-introduce">
   <div class="varlet-introduce__row">
-    <img class="varlet-introduce__image" src="https://varlet.gitee.io/varlet-ui-vue2/varlet_icon.png" />
+    <img class="varlet-introduce__image" src="https://varlet-vue2.vercel.app/varlet_icon.png" />
     <div class="varlet-introduce__name">VARLET-VUE2</div>  
   </div>
   <div class="varlet-introduce__des">Material design mobile component library for Vue2</div>

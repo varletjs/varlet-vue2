@@ -45,12 +45,12 @@ export default {
   data: () => ({
     files: [
       {
-        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'
+        url: 'https://varlet-vue2.vercel.app/cat.jpg',
+        cover: 'https://varlet-vue2.vercel.app/cat.jpg'
       },
       {
         url: 'https://www.runoob.com/try/demo_source/mov_bbb.mp4',
-        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cover.jpg'
+        cover: 'https://varlet-vue2.vercel.app/cover.jpg'
       }
     ]
   })
@@ -70,18 +70,18 @@ export default {
   data: () => ({
     files: [
       {
-        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        url: 'https://varlet-vue2.vercel.app/cat.jpg',
+        cover: 'https://varlet-vue2.vercel.app/cat.jpg',
         state: 'loading'
       },
       {
-        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        url: 'https://varlet-vue2.vercel.app/cat.jpg',
+        cover: 'https://varlet-vue2.vercel.app/cat.jpg',
         state: 'success'
       },
       {
-        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        url: 'https://varlet-vue2.vercel.app/cat.jpg',
+        cover: 'https://varlet-vue2.vercel.app/cat.jpg',
         state: 'error'
       }
     ]
@@ -183,8 +183,8 @@ export default {
   data: () => ({
     files: [
       {
-        url: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
-        cover: 'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
+        url: 'https://varlet-vue2.vercel.app/cat.jpg',
+        cover: 'https://varlet-vue2.vercel.app/cat.jpg',
       }
     ]
   }),

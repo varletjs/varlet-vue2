@@ -30,14 +30,14 @@ export default {
 ### 基本使用
 
 ```js
-ImagePreview('https://varlet.gitee.io/varlet-ui-vue2/cat.jpg')
+ImagePreview('https://varlet-vue2.vercel.app/cat.jpg')
 ```
 
 ### 处理回调函数
 ```js
 const images = [
-  'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
-  'https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg'
+  'https://varlet-vue2.vercel.app/cat.jpg',
+  'https://varlet-vue2.vercel.app/cat2.jpg'
 ]
 
 ImagePreview({
@@ -71,7 +71,7 @@ ImagePreview({
   指定初始位置
 </var-button>
 <var-image-preview
-  current="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg"
+  current="https://varlet-vue2.vercel.app/cat2.jpg"
   :images="images"
   v-model:show="currentShow"
 />
@@ -127,8 +127,8 @@ import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   data: () => ({
-    images: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg', 'https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg'],
-    image: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'],
+    images: ['https://varlet-vue2.vercel.app/cat.jpg', 'https://varlet-vue2.vercel.app/cat2.jpg'],
+    image: ['https://varlet-vue2.vercel.app/cat.jpg'],
     show: false,
     menuShow:false,
     currentShow: false,

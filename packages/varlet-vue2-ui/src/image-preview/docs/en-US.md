@@ -30,14 +30,14 @@ export default {
 #### Basic Usage
 
 ```js
-ImagePreview('https://varlet.gitee.io/varlet-ui-vue2/cat.jpg')
+ImagePreview('https://varlet-vue2.vercel.app/cat.jpg')
 ```
 
 #### Call Back
 ```js
 const images = [
-  'https://varlet.gitee.io/varlet-ui-vue2/cat.jpg',
-  'https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg'
+  'https://varlet-vue2.vercel.app/cat.jpg',
+  'https://varlet-vue2.vercel.app/cat2.jpg'
 ]
 
 ImagePreview({
@@ -71,7 +71,7 @@ ImagePreview({
   Specify initial position
 </var-button>
 <var-image-preview
-  current="https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg"
+  current="https://varlet-vue2.vercel.app/cat2.jpg"
   :images="images"
   :show.sync="currentShow" 
 />
@@ -127,8 +127,8 @@ import { Snackbar } from '@varlet-vue2/ui'
 
 export default {
   data: () => ({
-    images: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg', 'https://varlet.gitee.io/varlet-ui-vue2/cat2.jpg'],
-    image: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'],
+    images: ['https://varlet-vue2.vercel.app/cat.jpg', 'https://varlet-vue2.vercel.app/cat2.jpg'],
+    image: ['https://varlet-vue2.vercel.app/cat.jpg'],
     show: false,
     menuShow:false,
     currentShow: false,
