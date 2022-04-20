@@ -34,4 +34,4 @@ Install the `Volar` plugin and configure `tsconfig.json` as follows to get type 
 Search the `varlet-vscode-extension` installation in the `vscode` plugin market. When you hover over the component name, you can go directly to the component's document address via a link, and provides autocompletion for all components
 
 <img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/ext_vsc.png" alt="vscode ext" />
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="../public/varlet-vscode-extension.gif" alt="vscode ext link" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/varlet-vscode-extension.gif" alt="vscode ext link" />
