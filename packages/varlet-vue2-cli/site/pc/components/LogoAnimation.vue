@@ -44,8 +44,11 @@ export default defineComponent({
     animationBoxData(){
       return floating.animationBoxData;
     },
-    proxyRect(){
-      return floating.animationElClientRect;
+    proxyRect:{
+      get(){
+        return floating.animationElClientRect;
+      },
+      set(){ }
     }
   },
   mounted() {
@@ -60,11 +63,9 @@ export default defineComponent({
   created(){
     this.$router.beforeEach((to, from, next) => {
       if (!this.floatingState) {
-        console.log("进来啦");
         this.floatingState = true;
       }
-      this.$nextTick();
-      next();
+      this.$nextTick(next);
     })
   },
   methods: {
@@ -74,13 +75,13 @@ export default defineComponent({
     async resetPosition () {
       if (this.floatingState) {
         this.floatingState = false
-        await nextTick();
+        await this.$nextTick();
       }
-      window.clearTimeout(resetTimer);
+      this.resetTimer && window.clearTimeout(this.resetTimer);
       const newBRect = this.animationEl?.getBoundingClientRect()
       if (newBRect) {
         this.resetTimer = window.setTimeout(() => {
-          proxyRect.value = newBRect
+          this.proxyRect = newBRect
         }, 200)
       }
     }
