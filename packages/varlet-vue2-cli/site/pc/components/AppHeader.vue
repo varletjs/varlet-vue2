@@ -1,7 +1,7 @@
 <template>
   <div class="varlet-site-header">
     <div class="varlet-site-header__lead">
-      <img class="varlet-site-header__logo" :src="logo" alt="logo" v-if="logo" />
+      <animation-box class="varlet-site-header__logo" />
       <div class="varlet-site-header__title" v-if="title">{{ title }}</div>
     </div>
 
@@ -74,6 +74,7 @@ import config from '@config'
 import { get } from 'lodash-es'
 import { getBrowserThemes, getPCLocationInfo, removeEmpty, setThemes, watchThemes } from '../../utils'
 import { defineComponent } from '../../components/utils/create'
+import AnimationBox from './AnimationBox.vue'
 
 export default defineComponent({
   name: 'AppHeader',
@@ -92,7 +93,6 @@ export default defineComponent({
 
   data: () => ({
     title: get(config, 'title'),
-    logo: get(config, 'logo'),
     themesKey: get(config, 'themesKey'),
     languages: get(config, 'pc.header.i18n'),
     playground: get(config, 'pc.header.playground'),
@@ -134,6 +134,10 @@ export default defineComponent({
       window.postMessage(this.getThemesMessage(), '*')
       document.getElementById('mobile').contentWindow?.postMessage(this.getThemesMessage(), '*')
     },
+  },
+
+  components:{
+    AnimationBox
   }
 })
 </script>
@@ -182,7 +186,7 @@ export default defineComponent({
   padding: 0 30px;
   justify-content: space-between;
   user-select: none;
-  z-index: 996;
+  z-index: 6;
   background: var(--site-config-color-bar);
   border-bottom: 1px solid var(--site-config-color-border);
   box-sizing: border-box;
@@ -194,6 +198,7 @@ export default defineComponent({
 
   &__logo {
     width: 32px;
+    height: 32px;
     margin-right: 12px;
     flex-shrink: 0;
   }
