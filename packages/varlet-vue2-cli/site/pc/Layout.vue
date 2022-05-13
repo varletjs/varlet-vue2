@@ -163,15 +163,6 @@ export default defineComponent({
   white-space: pre-wrap;
 }
 
-body {
-  min-width: 1200px;
-  margin: 0;
-  padding: 60px 0 0;
-  font-family: 'Roboto', sans-serif;
-  background: var(--site-config-color-body);
-  color: var(--site-config-color-text);
-}
-
 * {
   transition: background-color .25s, box-shadow .25s;
 }
@@ -222,6 +213,8 @@ iframe {
   }
 
   &-site {
+    min-width: 1200px;
+    padding: 60px 0 0;
     &-content {
       display: flex;
       background: var(--site-config-color-body);
@@ -378,6 +371,9 @@ iframe {
         padding: 20px;
         margin-bottom: 30px;
         box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        &:first-child{
+          margin-top: 30px;
+        }
       }
     }
   }

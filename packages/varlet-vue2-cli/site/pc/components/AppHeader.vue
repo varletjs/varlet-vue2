@@ -1,6 +1,6 @@
 <template>
   <div class="varlet-site-header">
-    <div class="varlet-site-header__lead">
+    <div class="varlet-site-header__lead" @click="backRoot">
       <animation-box class="varlet-site-header__logo" />
       <div class="varlet-site-header__title" v-if="title">{{ title }}</div>
     </div>
@@ -93,6 +93,7 @@ export default defineComponent({
 
   data: () => ({
     title: get(config, 'title'),
+    redirect: get(config, 'pc.redirect'),
     themesKey: get(config, 'themesKey'),
     languages: get(config, 'pc.header.i18n'),
     playground: get(config, 'pc.header.playground'),
@@ -113,6 +114,11 @@ export default defineComponent({
   },
 
   methods: {
+    backRoot() {
+      const { language: lang } = getPCLocationInfo()
+      this.$router.replace(`/${lang}${this.redirect}`)
+    },
+
     handleLanguageChange(language) {
       const { menuName } = getPCLocationInfo()
       this.$router.replace(`/${language}/${menuName}`)
@@ -194,6 +200,7 @@ export default defineComponent({
   &__lead {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   &__logo {

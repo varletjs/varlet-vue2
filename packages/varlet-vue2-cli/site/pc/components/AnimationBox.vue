@@ -17,9 +17,10 @@ export default defineComponent({
   },
   mounted() {
     floating.animationEl = this.$refs.varletLogoAnimationRef
+    console.log(" this.$refs.varletLogoAnimationRef",  this.$refs.varletLogoAnimationRef);
     floating.animationElClientRect = this.$refs.varletLogoAnimationRef.getBoundingClientRect();
     this.mutationObserver = new MutationObserver(() => {
-      floating.animationElClientRect = this.$refs.varletLogoAnimationRef.getBoundingClientRect();
+      floating.animationElClientRect = this.$refs.varletLogoAnimationRef?.getBoundingClientRect();
     });
     this.mutationObserver.observe(document.body, { attributes: true, subtree: true, childList: true });
   },

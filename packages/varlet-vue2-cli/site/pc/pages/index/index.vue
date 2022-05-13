@@ -61,7 +61,6 @@ export default ({
   data() {
     return {
       github:get(config, 'pc.header.github'),
-      
       currentThemes: getBrowserThemes(themesKey),
       darkMode: get(config, 'pc.header.darkMode'),
       title: get(config, 'title'),
@@ -70,10 +69,10 @@ export default ({
     }
   },
   created() {
-    setThemes(config, currentThemes.value)
-    window.postMessage(getThemesMessage(), '*')
-    watchThemes((themes, from) => {
-      from === 'mobile' && setCurrentThemes(themes)
+    setThemes(config, this.currentThemes)
+    window.postMessage(this.getThemesMessage, '*')
+    watchThemes(this, (themes, from) => {
+      from === 'mobile' && this.setCurrentThemes(themes)
     })
   },
   computed:{
@@ -85,43 +84,53 @@ export default ({
     goGithub() {
       window.open(github)
     },
+
     getStar () {
       const { language: lang } = getPCLocationInfo()
-      router.push(`/${lang}/home`)
+      this.$router.push(`/${lang}/home`)
     },
+
     setCurrentThemes (themes) {
       this.currentThemes = themes
-      this.setThemes(config, this.currentThemes)
+      setThemes(config, this.currentThemes)
       window.localStorage.setItem(themesKey, this.currentThemes)
     },
+    
     toggleTheme() {
       this.setCurrentThemes(this.currentThemes === 'darkThemes' ? 'themes' : 'darkThemes')
-      window.postMessage(getThemesMessage(), '*')
-        ; document.getElementById('mobile')?.contentWindow.postMessage(getThemesMessage(), '*')
+      window.postMessage(this.getThemesMessage, '*')
+        ; document.getElementById('mobile')?.contentWindow.postMessage(this.getThemesMessage, '*')
     },
-    // setLocale = () => {
-    //   const { language: lang } = getPCLocationInfo()
-    //   if (!lang) return
+    setLocale() {
+      const { language: lang } = getPCLocationInfo()
+      if (!lang) return
 
-    //   this.pack = packs[lang]
-    //   document.title = get(config, 'pc.title')[lang]
-    // },
-    toggleLanguages = () => {
+      this.pack = packs[lang]
+      document.title = get(config, 'pc.title')[lang]
+    },
+    toggleLanguages() {
       const { language: lang } = getPCLocationInfo()
 
       const { menuName } = getPCLocationInfo()
       const replaceStr = `/${lang === 'zh-CN' ? 'en-US' : 'zh-CN'}/${menuName}`
-      router.replace(replaceStr)
+      this.$router.replace(replaceStr)
     },
   },
   components:{
     VarSiteIcon,
     VarSiteButton,
     AnimationBox
+  },
+  watch:{
+    '$route.path': {
+      handler() {
+        this.setLocale()
+      },
+      immediate: true
+    }
   }
 })
 
-// watch(() => route.path, setLocale, { immediate: true })
 </script>
 <style lang="less" scoped>
 @import "./index";

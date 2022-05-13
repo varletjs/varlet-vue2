@@ -1,6 +1,6 @@
 <template>
   <div>
-    <teleport to="#varletLogoAnimationRef" v-if="animationEl">
+    <teleport to="#varletLogoAnimationRef" v-if="animationEl && !floatingState">
       <img v-show="!floatingState && logo" v-bind="animationBoxData" :style="styles" :src="logo" alt="logo" class="varlet-cli-logo-animation" />
     </teleport>
     {{Boolean(animationEl)}}
@@ -25,6 +25,7 @@ export default defineComponent({
     return {
       logo: get(config, 'logo'),
       floatingState:false,
+      resetTimer: null
     }
   },
   computed:{
@@ -47,21 +48,41 @@ export default defineComponent({
       return floating.animationElClientRect;
     }
   },
-  beforeRouteUpdate(to, from, next) {
-    if (!this.floatingState) {
-      this.floatingState = true;
-    }
-    this.$nextTick();
-    next();
-  },
   mounted() {
     if (this.floatingState) {
       this.floatingState = false;
     }
+    window.addEventListener('resize', this.resetPosition, false);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.resetPosition);
+  },
+  created(){
+    this.$router.beforeEach((to, from, next) => {
+      if (!this.floatingState) {
+        console.log("进来啦");
+        this.floatingState = true;
+      }
+      this.$nextTick();
+      next();
+    })
   },
   methods: {
     land() {
       this.floatingState = false;
+    },
+    async resetPosition () {
+      if (this.floatingState) {
+        this.floatingState = false
+        await nextTick();
+      }
+      window.clearTimeout(resetTimer);
+      const newBRect = this.animationEl?.getBoundingClientRect()
+      if (newBRect) {
+        this.resetTimer = window.setTimeout(() => {
+          proxyRect.value = newBRect
+        }, 200)
+      }
     }
   },
   components:{teleport}
