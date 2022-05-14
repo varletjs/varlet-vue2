@@ -1,9 +1,8 @@
 <template>
   <div>
-    <teleport to="#varletLogoAnimationRef" v-if="animationEl && !floatingState">
+    <teleport :to="animationEl" v-if="animationEl">
       <img v-show="!floatingState && logo" v-bind="animationBoxData" :style="styles" :src="logo" alt="logo" class="varlet-cli-logo-animation" />
     </teleport>
-    {{Boolean(animationEl)}}
     <div v-show="floatingState">
       <img @transitionend="land" v-bind="animationBoxData" :style="styles" :src="logo" alt="logo"
         v-if="logo && animationEl"
@@ -58,6 +57,7 @@ export default defineComponent({
     window.addEventListener('resize', this.resetPosition, false);
   },
   beforeUnmount() {
+    this.resetTimer && clearTimeout(this.resetTimer)
     window.removeEventListener('resize', this.resetPosition);
   },
   created(){
