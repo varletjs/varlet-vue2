@@ -82,7 +82,7 @@ export default ({
   },
   methods: {
     goGithub() {
-      window.open(github)
+      window.open(this.github)
     },
 
     getStar () {
