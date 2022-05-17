@@ -1,16 +1,9 @@
-<div class="varlet-introduce">
-  <div class="varlet-introduce__row">
-    <img class="varlet-introduce__image" src="https://varlet-vue2.vercel.app/varlet_icon.png" />
-    <div class="varlet-introduce__name">VARLET-VUE2</div>  
-  </div>
-  <div class="varlet-introduce__des">Material design mobile component library for Vue2</div>
-</div>
-
 ### Intro
 
 Varlet is a Material design mobile component library developed based on `Vue2`, developed and maintained by partners in the community.
 
 ### Features
+
 - 1.Provide more than 50 high quality general purpose components
 - 2.Components are very lightweight
 - 3.Developed by Chinese, complete Chinese and English documentation and logistics support
@@ -24,17 +17,21 @@ Varlet is a Material design mobile component library developed based on `Vue2`, 
 - 11.Support dark mode
 
 ### PR & Issue
+
 If you have any problems during use, you can [issue](https://github.com/varletjs/varlet-vue2/issues) them to us on [github](https://github.com/varletjs/varlet-vue2),
 we will deal with it as soon as possible. You can also give us [PR](https://github.com/varletjs/varlet-vue2/pulls).
 
 ### Open source licenses
+
 Component library based on `MIT` licenses.
 
 ### Material Design Introduction
+
 Material Design, Is a new design language from Google that aims to provide a more consistent and broader 
 "look and feel" for phones, tablets, desktops and "other platforms".
 
 ### Why Material
+
 In the early mobile devices, large color blocks and strong contrast colors had high requirements for display devices, 
 while non-linear animation and water ripples had certain requirements for GPU.
 As a result, Material style does not have a good experience in the mobile browser environment, and more flat and simple style is chosen to be put into the product.
@@ -43,5 +40,5 @@ browsers have more free time, and the ability to process animations, and Materia
 
 ### Special thanks
 
-Special thanks to `Yu Tiezhu-eddieyc@163.com` for the visual support of our component library documentation site, 
+Special thanks to `Yu Tiezhu-eddieyc@163.com` for the visual support of our component library documentation site,
 so as to help us continue to evolve.
