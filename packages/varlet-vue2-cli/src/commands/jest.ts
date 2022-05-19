@@ -3,10 +3,10 @@ import { runCLI } from 'jest'
 import { CWD, JEST_CONFIG } from '../shared/constant'
 
 interface JestCommandOptions {
-  watch?: boolean;
-  watchAll?: boolean;
-  component?: string;
-  clearCache?: boolean;
+  watch?: boolean
+  watchAll?: boolean
+  component?: string
+  clearCache?: boolean
 }
 
 export async function jest(cmd: JestCommandOptions) {

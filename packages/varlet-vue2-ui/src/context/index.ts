@@ -1,9 +1,9 @@
 import Vue from 'vue'
 
 interface Context {
-  locks: Record<any, number>;
-  zIndex: number;
-  touchmoveForbid: boolean;
+  locks: Record<any, number>
+  zIndex: number
+  touchmoveForbid: boolean
 }
 
 const context: Context = {
