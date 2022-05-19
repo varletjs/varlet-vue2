@@ -41,7 +41,7 @@ test('test image preview onChange callback', async () => {
   const onChange = jest.fn()
 
   ImagePreview({
-    images: ['https://varlet.gitee.io/varlet-ui/cat.jpg', 'https://varlet.gitee.io/varlet-ui/cat2.jpg'],
+    images: ['https://varlet-vue2.vercel.app/cat.jpg', 'https://varlet-vue2.vercel.app/cat2.jpg'],
     onChange,
   })
   await delay(200)
@@ -80,7 +80,7 @@ test('test image preview extra slot', async () => {
       [VarImagePreview.name]: VarImagePreview,
     },
     data: () => ({
-      images: ['https://varlet.gitee.io/varlet-ui/cat.jpg'],
+      images: ['https://varlet-vue2.vercel.app/cat.jpg'],
       show: true,
     }),
     template,

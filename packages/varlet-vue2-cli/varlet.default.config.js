@@ -5,7 +5,7 @@ module.exports = {
   port: 8080,
   title: 'VARLET-VUE2',
   themesKey: 'VARLET_THEMES',
-  logo: 'https://varlet.gitee.io/varlet-ui/varlet_icon.png',
+  logo: 'https://varlet-vue2.vercel.app/varlet_icon.png',
   defaultLanguage: 'zh-CN',
   highlight: {
     /**
@@ -19,7 +19,7 @@ module.exports = {
   useMobile: false,
   pc: {
     menu: [],
-    redirect: '/home',
+    redirect: '/index',
     title: {
       'zh-CN': '面向 Vue2 的 Material 风格移动端组件库',
       'en-US': 'Material design mobile components built for Vue2',
@@ -59,6 +59,11 @@ module.exports = {
   themes: {
     'color-body': '#fff',
     'color-bar': '#fff',
+    'color-home-page-background': '#fff',
+    'color-home-page-slash': '#ccc',
+    'color-home-page-primary-button-background': '#3a7afe',
+    'color-home-page-extra-button-background': '#f5f5f5',
+    'color-home-page-github-button-background': '#212121',
     'color-sub-bar': '#f5f5f5',
     'color-text': '#555',
     'color-sub-text': '#888',
@@ -95,6 +100,11 @@ module.exports = {
   darkThemes: {
     'color-body': '#121212',
     'color-bar': '#1e1e1e',
+    'color-home-page-background': 'linear-gradient(to right, #1e1e1e, #272727)',
+    'color-home-page-slash': '#111',
+    'color-home-page-primary-button-background': '#4a7afe',
+    'color-home-page-extra-button-background': '#303030',
+    'color-home-page-github-button-background': '#303030',
     'color-sub-bar': '#272727',
     'color-text': '#fff',
     'color-sub-text': '#aaa',

@@ -1,3 +1,40 @@
+## [0.1.1](https://github.com/varletjs/varlet-vue2/compare/v0.1.0...v0.1.1) (2022-04-20)
+
+
+
+# [0.1.0](https://github.com/varletjs/varlet-vue2/compare/v0.0.3...v0.1.0) (2022-04-06)
+
+
+### Bug Fixes
+
+* synchronously modify known bugs of varlet ([84ad1ec](https://github.com/varletjs/varlet-vue2/commit/84ad1ec83b41d1ad1a512bc3d541961c03af9e21))
+
+
+
+## [0.0.3](https://github.com/varletjs/varlet-vue2/compare/v0.0.2...v0.0.3) (2022-03-25)
+
+
+### Bug Fixes
+
+* **cli/jest:** reset transformIgnorePatterns ([ab6a957](https://github.com/varletjs/varlet-vue2/commit/ab6a957847589f251da53149707e8f2b84919cc5))
+* **site:** fix app-bar css ([7b42c3b](https://github.com/varletjs/varlet-vue2/commit/7b42c3b46e5125a30f54035620d7182bfb7e20bd))
+* **ui/counter:** fix the bug that the long-press event of the counter component does not take effect ([cc35d33](https://github.com/varletjs/varlet-vue2/commit/cc35d3367907d67f7309a00da86738a5c01b20b7))
+* **ui/index-bar:** change scrollable target to fix cant scroll in Android web ([35e3686](https://github.com/varletjs/varlet-vue2/commit/35e368677fb4e273d36409dbc66f9497134da5ae))
+* **ui/input:** delete extra space & add lost param in handleInput ([#37](https://github.com/varletjs/varlet-vue2/issues/37)) ([9a0239d](https://github.com/varletjs/varlet-vue2/commit/9a0239d3172aad03da33b080a6e3ab9863da9f7a)), closes [#35](https://github.com/varletjs/varlet-vue2/issues/35) [#36](https://github.com/varletjs/varlet-vue2/issues/36)
+* **ui/pagination:** fix the bug that pagination component cannot change the size ([b05f028](https://github.com/varletjs/varlet-vue2/commit/b05f028e33efcee97ce1ad0ab6895d999aa16da9))
+
+
+### Features
+
+* **ui/chip:** update snap ([6f53d7f](https://github.com/varletjs/varlet-vue2/commit/6f53d7f37d3bc652b5b64fc1bfaf11de6cb80065))
+* **ui/date-picker:** suport touchable ([f619e58](https://github.com/varletjs/varlet-vue2/commit/f619e58d73e3fb47fea6319fd1df0afef728f71f))
+* **ui/form:** add added documentation and unit test files ([1399b14](https://github.com/varletjs/varlet-vue2/commit/1399b14991d056a24be74906c3795a43d4f45d54))
+* **ui/icon:** update snap ([b62f7f9](https://github.com/varletjs/varlet-vue2/commit/b62f7f926c383951f4af4c5aa5b1c7ad960094c8))
+* **ui/image-preview:** add extra slot ([#19](https://github.com/varletjs/varlet-vue2/issues/19)) ([31fc76d](https://github.com/varletjs/varlet-vue2/commit/31fc76d3bcc4e80f363e6ded7d9d51bb3d16a3bc))
+* **ui/ripple:** determine whether to prevent ripple's fast touchmove by supporting touch events ([719637c](https://github.com/varletjs/varlet-vue2/commit/719637cea5a25299a17602af6769bc0b3764dbaa))
+
+
+
 ## [0.0.2](https://github.com/varletjs/varlet-vue2/compare/v0.0.1...v0.0.2) (2022-03-10)
 
 

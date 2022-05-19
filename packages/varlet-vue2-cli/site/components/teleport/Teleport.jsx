@@ -33,7 +33,7 @@ export default defineComponent({
     },
 
     transfer() {
-      const container = this.disabled ? this.$refs.teleport : document.querySelector(this.to)
+      const container = this.disabled ? this.$refs.teleport : (typeof this.to === 'string'? document.querySelector(this.to): this.to)
       const parentNode = this.el.parentNode
 
       if (parentNode === container) {

@@ -110,7 +110,7 @@ export default {
 
 ### Props
 
-### Collapse Props
+#### Collapse Props
 
 | Prop | Description | Type | Default |
 | ----- | -------------- | -------- | ---------- |
@@ -118,7 +118,7 @@ export default {
 | `accordion` | Whether to be accordion mode | _boolean_ | `false` |
 | `offset` | Whether to show margin | _boolean_ | `true` |
 
-### CollapseItem Props
+#### CollapseItem Props
 
 | Prop | Description | Type | Default |
 | ----- | -------------- | -------- | ---------- |
@@ -129,7 +129,7 @@ export default {
 
 ### Events
 
-### Collapse Events
+#### Collapse Events
 
 | Event | Description | arguments |
 | ----- | -------------- | -------- |
@@ -137,7 +137,7 @@ export default {
 
 ### Slots
 
-### CollapseItem Slots
+#### CollapseItem Slots
 
 | Name | Description | SlotProps |
 | ----- | -------------- | -------- |
@@ -153,9 +153,9 @@ Here are the CSS variables used by the component, Styles can be customized using
 | `--collapse-background` | `#fff` |
 | `--collapse-text-color` | `#232222` |
 | `--collapse-header-font-size` | `var(--font-size-lg)` |
-| `--collapse-header-padding` | `10px 16px` |
+| `--collapse-header-padding` | `10px 12px` |
 | `--collapse-content-font-size` | `var(--font-size-md)` |
-| `--collapse-content-font-size` | `14px` |
+| `--collapse-content-padding` | `0 12px 10px` |
 | `--collapse-item-margin-top` | `16px` |
 | `--collapse-disable-color` | `#bdbdbd` |
 | `--collapse-border-top` | `thin solid rgba(0, 0, 0, 0.12)` |

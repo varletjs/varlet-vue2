@@ -10,12 +10,14 @@ The component library provides a separate helper plugin for `vscode`, which can 
 
 Open the library properties documentation by setting 'editor-> general-> Code Completion->Show the documentation popup in ___ ms'.
 
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui/hl_wb_setting.png" alt="webstorm setting" />
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui/hl_wb.jpg" alt="webstorm highlight" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/hl_wb_setting.png" alt="webstorm setting" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/hl_wb.jpg" alt="webstorm highlight" />
 
 ### VSCode
 
-Install the `Volar` plugin and configure `ts.config.json` as follows to get type hints in the template.
+#### Volar
+
+Install the `Volar` plugin and configure `tsconfig.json` as follows to get type hints in the template.
 
 ```json
 {
@@ -25,12 +27,11 @@ Install the `Volar` plugin and configure `ts.config.json` as follows to get type
 }
 ```
 
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui/hl_vsc_setting.png" alt="vscode setting" />
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui/hl_vsc.png" alt="vscode highlight" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/hl_vsc_setting.png" alt="vscode setting" />
 
-### VSCode Extension
+#### Varlet VSCode Extension
 
-Search the `varlet-vscode-extension` installation in the `vscode` plugin market. When you hover over the component name, you can go directly to the component's document address via a link
+Search the `varlet-vscode-extension` installation in the `vscode` plugin market. When you hover over the component name, you can go directly to the component's document address via a link, and provides autocompletion for all components
 
-<img style="width: 50%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui/ext_vsc.png" alt="vscode ext" />
-<img style="width: 78%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui/ext_vsc_link.png" alt="vscode ext link" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/ext_vsc.png" alt="vscode ext" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/varlet-vscode-extension.gif" alt="vscode ext link" />

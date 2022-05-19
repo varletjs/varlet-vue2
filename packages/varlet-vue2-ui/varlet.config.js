@@ -30,6 +30,14 @@ module.exports = {
       },
       {
         text: {
+          'zh-CN': '按需引入',
+          'en-US': 'Import on demand',
+        },
+        doc: 'importOnDemand',
+        type: 3,
+      },
+      {
+        text: {
           'zh-CN': '暗黑模式',
           'en-US': 'Dark Mode',
         },

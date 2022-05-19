@@ -19,7 +19,13 @@
         <slot name="prepend-icon" />
       </div>
 
-      <var-menu class="var-select__menu" var-select-cover :offset-y="offsetY" :show.sync="isFocus" @close="handleBlur">
+      <var-menu
+        class="var-select__menu"
+        var-select-cover
+        :offset-y="localOffsetY"
+        :show.sync="isFocus"
+        @close="handleBlur"
+      >
         <div
           class="var-select__wrap"
           :class="[!hint ? 'var-select--non-hint' : null]"
@@ -164,7 +170,7 @@ export default defineComponent({
     label: '',
     labels: [],
     wrapWidth: '0px',
-    offsetY: 0,
+    localOffsetY: 0,
   }),
 
   computed: {
@@ -190,6 +196,13 @@ export default defineComponent({
   },
 
   methods: {
+    // expose
+    focus() {
+      this.wrapWidth = this.getWrapWidth()
+      this.localOffsetY = this.getOffsetY() + toPxNum(this.offsetY)
+      this.isFocus = true
+    },
+
     // expose
     blur() {
       this.isFocus = false
@@ -259,7 +272,7 @@ export default defineComponent({
 
     getOffsetY() {
       const { wrapEl } = this.$refs
-      const paddingTop = (wrapEl && window.getComputedStyle(wrapEl)) || '0px'
+      const paddingTop = (wrapEl && window.getComputedStyle(wrapEl).paddingTop) || '0px'
       return toPxNum(paddingTop) * 1.5
     },
 
@@ -272,7 +285,7 @@ export default defineComponent({
       }
 
       this.wrapWidth = getWrapWidth()
-      this.offsetY = getOffsetY()
+      this.localOffsetY = getOffsetY() + toPxNum(this.offsetY)
 
       this.isFocus = true
 
@@ -372,10 +385,6 @@ export default defineComponent({
       }
 
       computeLabel()
-    },
-
-    focus() {
-      this.isFocus = true
     },
   },
 })

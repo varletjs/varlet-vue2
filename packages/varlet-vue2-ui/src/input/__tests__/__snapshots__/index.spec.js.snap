@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test input clear 1`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller\\">
+    <div class=\\"var-input__icon\\"></div>
+    <div class=\\"var-input__wrap\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-58\\" type=\\"text\\" class=\\"var-input__input\\"> <label for=\\"var-input-58\\" class=\\"var--ellipsis var-input__placeholder var-input--placeholder-hint\\">
+
+      </label></div>
+    <div class=\\"var-input__icon\\"><i class=\\"var-icon var-input__clear-icon var-icon--set var-icon-close-circle\\" style=\\"transition: transform 0ms; font-size: 14px;\\" var-input-cover=\\"\\"></i></div>
+  </div>
+  <div class=\\"var-input__line\\">
+    <div class=\\"var-input__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
 exports[`test input example 1`] = `
 "<div class=\\"var-input-example\\">
   <div class=\\"app-type pb\\">基本使用</div>
@@ -171,5 +190,158 @@ exports[`test input example 1`] = `
     </transition-stub>
   </div>
   <div style=\\"height: 40px;\\"></div>
+</div>"
+`;
+
+exports[`test input focus & blur 1`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller\\">
+    <div class=\\"var-input__icon\\"></div>
+    <div class=\\"var-input__wrap\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-42\\" type=\\"text\\" class=\\"var-input__input\\"> <label for=\\"var-input-42\\" class=\\"var--ellipsis var-input__placeholder\\">
+
+      </label></div>
+    <div class=\\"var-input__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-input__line\\">
+    <div class=\\"var-input__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`test input focus & blur 2`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller\\">
+    <div class=\\"var-input__icon\\"></div>
+    <div class=\\"var-input__wrap\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-42\\" type=\\"text\\" class=\\"var-input__input\\"> <label for=\\"var-input-42\\" class=\\"var--ellipsis var-input__placeholder\\">
+
+      </label></div>
+    <div class=\\"var-input__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-input__line\\">
+    <div class=\\"var-input__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`test input hint to be false 1`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller\\">
+    <div class=\\"var-input__icon var-input--non-hint\\"></div>
+    <div class=\\"var-input__wrap var-input--non-hint\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-54\\" type=\\"text\\" class=\\"var-input__input\\"> <label for=\\"var-input-54\\" class=\\"var--ellipsis var-input__placeholder var-input--placeholder-hidden var-input--placeholder-non-hint\\">
+
+      </label></div>
+    <div class=\\"var-input__icon var-input--non-hint\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-input__line\\">
+    <div class=\\"var-input__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`test input maxlength 1`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller\\">
+    <div class=\\"var-input__icon\\"></div>
+    <div class=\\"var-input__wrap\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-50\\" type=\\"text\\" maxlength=\\"100\\" class=\\"var-input__input\\"> <label for=\\"var-input-50\\" class=\\"var--ellipsis var-input__placeholder var-input--placeholder-hint\\">
+
+      </label></div>
+    <div class=\\"var-input__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-input__line\\">
+    <div class=\\"var-input__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <div class=\\"var-form-details\\">
+      <div class=\\"var-form-details__message\\"></div>
+      <div class=\\"var-form-details__length\\">4/100</div>
+    </div>
+  </transition-stub>
+</div>"
+`;
+
+exports[`test input validation 1`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller var-input--error\\">
+    <div class=\\"var-input__icon\\"></div>
+    <div class=\\"var-input__wrap\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-73\\" type=\\"text\\" class=\\"var-input__input var-input--caret-error\\"> <label for=\\"var-input-73\\" class=\\"var--ellipsis var-input--error var-input__placeholder var-input--placeholder-hint\\">
+
+      </label></div>
+    <div class=\\"var-input__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-input__line var-input--line-error\\">
+    <div class=\\"var-input__dot var-input--line-error\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <div class=\\"var-form-details\\">
+      <div class=\\"var-form-details__message\\">长度必须大于3</div>
+      <div class=\\"var-form-details__length\\"></div>
+    </div>
+  </transition-stub>
+</div>"
+`;
+
+exports[`test input validation 2`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller\\">
+    <div class=\\"var-input__icon\\"></div>
+    <div class=\\"var-input__wrap\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-73\\" type=\\"text\\" class=\\"var-input__input\\"> <label for=\\"var-input-73\\" class=\\"var--ellipsis var-input__placeholder\\">
+
+      </label></div>
+    <div class=\\"var-input__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-input__line\\">
+    <div class=\\"var-input__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`test input validation 3`] = `
+"<div class=\\"var-input var--box\\">
+  <div class=\\"var-input__controller\\">
+    <div class=\\"var-input__icon\\"></div>
+    <div class=\\"var-input__wrap\\">
+      <!----> <input autocomplete=\\"new-password\\" id=\\"var-input-73\\" type=\\"text\\" class=\\"var-input__input\\"> <label for=\\"var-input-73\\" class=\\"var--ellipsis var-input__placeholder var-input--placeholder-hint\\">
+
+      </label></div>
+    <div class=\\"var-input__icon\\">
+      <!---->
+    </div>
+  </div>
+  <div class=\\"var-input__line\\">
+    <div class=\\"var-input__dot\\"></div>
+  </div>
+  <transition-stub name=\\"var-form-details\\">
+    <!---->
+  </transition-stub>
 </div>"
 `;

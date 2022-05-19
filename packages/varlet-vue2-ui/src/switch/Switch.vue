@@ -107,7 +107,7 @@ export default defineComponent({
   methods: {
     // expose
     reset() {
-      this.getListeners.onInput?.(this.inactiveValue)
+      this.getListeners().onInput?.(this.inactiveValue)
       this.resetValidation()
     },
 

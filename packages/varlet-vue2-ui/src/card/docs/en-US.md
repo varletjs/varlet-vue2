@@ -31,7 +31,7 @@ Vue.use(Card)
 ### Show Image
 
 ```html
-<var-card title="Little Prince" src="https://varlet.gitee.io/varlet-ui/cat.jpg" />
+<var-card title="Little Prince" src="https://varlet-vue2.vercel.app/cat.jpg" />
 ```
 
 ### Use Slot
@@ -41,7 +41,7 @@ Vue.use(Card)
   title="Little Prince"
   subtitle="where little prince from"
   description="It took me a long time to learn where he came from. The little prince, whoasked me so many questions, never seemed to hear the ones I asked him. Itwas from words dropped by chance that, little by little, everything wasrevealed to me."
-  src="https://varlet.gitee.io/varlet-ui/cat.jpg"
+  src="https://varlet-vue2.vercel.app/cat.jpg"
 >
   <template #extra>
     <var-button type="primary" style="margin-right: 10px">Use Button</var-button>
