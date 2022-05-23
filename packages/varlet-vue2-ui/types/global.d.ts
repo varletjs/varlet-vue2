@@ -4,6 +4,8 @@ declare module 'vue' {
     VarAppBar: typeof import('@varlet-vue2/ui')['_AppBarComponent']
     VarBackTop: typeof import('@varlet-vue2/ui')['_BackTopComponent']
     VarBadge: typeof import('@varlet-vue2/ui')['_BadgeComponent']
+    VarBottomNavigation: typeof import('@varlet-vue2/ui')['_BottomNavigationComponent']
+    VarBottomNavigationItem: typeof import('@varlet-vue2/ui')['_BottomNavigationItemComponent']
     VarButton: typeof import('@varlet-vue2/ui')['_ButtonComponent']
     VarCard: typeof import('@varlet-vue2/ui')['_CardComponent']
     VarCell: typeof import('@varlet-vue2/ui')['_CellComponent']

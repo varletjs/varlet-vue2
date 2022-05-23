@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fab button 1`] = `
+"<div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"> <button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item var-bottom-navigation-item--right-space\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-button var--box var-bottom-navigation__fab var-button--normal var--inline-flex var-button--primary var-elevation--2 var-button--round var-bottom-navigation--fab-right\\">
+    <!---->
+    <div class=\\"var-button__content\\">
+      <div class=\\"tab_example\\"></div>
+    </div>
+  </button></div>"
+`;
+
+exports[`test BottomNavigation relation BottomNavigationItems 1`] = `
+"<div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+  <!---->
+</div>"
+`;
+
+exports[`test BottomNavigation relation BottomNavigationItems 2`] = `
+"<div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+    <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+  <!---->
+</div>"
+`;
+
+exports[`test bottom-navigation example 1`] = `
+"<div class=\\"bottom-navigation-example\\">
+  <div class=\\"app-type\\">基本使用</div>
+  <div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+    <!---->
+  </div>
+  <div class=\\"app-type\\">通过名称匹配</div>
+  <div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+    <!---->
+  </div>
+  <div class=\\"app-type\\">徽标提示</div>
+  <div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+      <div class=\\"var-badge var--box var-bottom-navigation-item__badge\\">
+        <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--danger var-badge__dot var-badge__dot--right\\"><span></span></span></transition-stub>
+      </div> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span>
+    </button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+      <div class=\\"var-badge var--box var-bottom-navigation-item__badge\\">
+        <transition-stub name=\\"var-badge-fade\\"><span class=\\"var-badge__content var-badge--primary\\"><span>66</span></span></transition-stub>
+      </div> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span>
+    </button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+    <!---->
+  </div>
+  <div class=\\"app-type\\">自定义颜色</div>
+  <div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+    <!---->
+  </div>
+  <div class=\\"app-type\\">监听切换事件</div>
+  <div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+    <!---->
+  </div>
+  <div class=\\"app-type\\">监听点击事件</div>
+  <div class=\\"var-bottom-navigation\\" style=\\"z-index: 1;\\"><button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-account-circle\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+    <!---->
+  </div>
+  <div class=\\"app-type\\">悬浮按钮</div>
+  <div class=\\"var-bottom-navigation\\" style=\\"z-index: 1; margin-top: 10px;\\"> <button class=\\"var-bottom-navigation-item var-bottom-navigation-item--active\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-home\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-magnify\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button> <button class=\\"var-bottom-navigation-item\\"><i class=\\"var-icon var-bottom-navigation-item__icon var-icon--set var-icon-bell\\" style=\\"transition: transform 0ms;\\"></i>
+      <!----> <span class=\\"var-bottom-navigation-item__label\\">
+      标签
+     </span></button>
+    <!----> <button class=\\"var-button var--box var-bottom-navigation__fab var-button--normal var--inline-flex var-button--primary var-elevation--2 var-button--round var-bottom-navigation--fab-center\\">
+      <!---->
+      <div class=\\"var-button__content\\"><i class=\\"var-icon var-icon--set var-icon-heart\\" style=\\"transition: transform 0ms;\\"></i></div>
+    </button></div>
+</div>"
+`;

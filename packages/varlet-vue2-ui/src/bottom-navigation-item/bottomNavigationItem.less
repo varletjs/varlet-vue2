@@ -1,0 +1,78 @@
+@bottom-navigation-item-font-size: var(--font-size-sm);
+@bottom-navigation-item-inactive-color: #646566;
+@bottom-navigation-item-active-color: var(--color-primary);
+@bottom-navigation-item-active-background-color: #fff;
+@bottom-navigation-item-line-height: 1;
+@bottom-navigation-item-icon-size: 22px;
+@bottom-navigation-item-icon-margin-bottom: 5px;
+
+:root {
+  --bottom-navigation-item-font-size: @bottom-navigation-item-font-size;
+  --bottom-navigation-item-inactive-color: @bottom-navigation-item-inactive-color;
+  --bottom-navigation-item-active-color: @bottom-navigation-item-active-color;
+  --bottom-navigation-item-active-background-color: @bottom-navigation-item-active-background-color;
+  --bottom-navigation-item-line-height: @bottom-navigation-item-line-height;
+  --bottom-navigation-item-icon-size: @bottom-navigation-item-icon-size;
+  --bottom-navigation-item-icon-margin-bottom: @bottom-navigation-item-icon-margin-bottom;
+}
+
+.var-bottom-navigation-item {
+  height: 100%;
+  padding: 6px 12px 8px;
+  position: relative;
+  display: inline-flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: var(--bottom-navigation-item-line-height);
+  color: var(--bottom-navigation-item-inactive-color);
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  transition: color 250ms, margin 250ms;
+
+  &--active {
+    color: var(--bottom-navigation-item-active-color);
+    background-color: var(--bottom-navigation-item-active-background-color);
+    transition: background-color 250ms;
+
+    .var-bottom-navigation-item__label {
+      font-size: calc(var(--bottom-navigation-item-font-size) * 1.16);
+    }
+  }
+
+  &--right-half-space {
+    margin-right: calc(var(--bottom-navigation-height) / 2);
+  }
+
+  &--left-half-space {
+    margin-left: calc(var(--bottom-navigation-height) / 2);
+  }
+
+  &--right-space {
+    margin-right: calc(var(--bottom-navigation-height) + var(--bottom-navigation-fab-offset));
+  }
+
+  &__icon {
+    font-size: var(--bottom-navigation-item-icon-size);
+  }
+
+  &__badge {
+    position: absolute;
+    left: 40px;
+    transform: translateY(-16px);
+  }
+
+  &__label {
+    margin-top: var(--bottom-navigation-item-icon-margin-bottom);
+    font-size: var(--bottom-navigation-item-font-size);
+    transition: font-size 0.2s ease 0.1s;
+    white-space: nowrap;
+  }
+}
