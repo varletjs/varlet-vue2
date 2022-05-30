@@ -73,12 +73,12 @@ export function mockOffset({
   offsetLeft,
   offsetTop,
 }: {
-  offsetWidth?: number;
-  offsetHeight?: number;
-  clientWidth?: number;
-  clientHeight?: number;
-  offsetLeft?: number;
-  offsetTop?: number;
+  offsetWidth?: number
+  offsetHeight?: number
+  clientWidth?: number
+  clientHeight?: number
+  offsetLeft?: number
+  offsetTop?: number
 } = {}) {
   Object.defineProperties(HTMLElement.prototype, {
     offsetWidth: {

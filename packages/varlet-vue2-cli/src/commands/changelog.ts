@@ -5,8 +5,8 @@ import { resolve as resolvePath } from 'path'
 import { CWD } from '../shared/constant'
 
 interface ChangelogCommandOptions {
-  file?: string;
-  releaseCount?: number;
+  file?: string
+  releaseCount?: number
 }
 
 export function changelog({ releaseCount = 0, file = 'CHANGELOG.md' }: ChangelogCommandOptions = {}): Promise<void> {
