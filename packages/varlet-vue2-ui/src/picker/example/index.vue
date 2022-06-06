@@ -17,10 +17,9 @@ import Picker from '../index'
 import VarButton from '../../button'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import area from '../../../json/area.json'
-import context from '../../context'
 import dark from '../../themes/dark'
 import { use, pack } from './locale'
-import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/utils'
+import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 
 export default {
   name: 'PickerExample',
@@ -50,17 +49,6 @@ export default {
   created() {
     watchLang(this, use)
     watchDarkMode(this, dark)
-
-    const prevTouchmoveForbid = context.touchmoveForbid
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-
-    this.$on('hook:beforeDestroy', () => {
-      context.touchmoveForbid = prevTouchmoveForbid
-    })
   },
 
   methods: {

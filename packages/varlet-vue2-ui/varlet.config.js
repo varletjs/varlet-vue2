@@ -4,6 +4,14 @@ module.exports = {
     baidu: 'https://hm.baidu.com/hm.js?5c628ce58967c90ff4dd9c8803d930fa',
   },
   pc: {
+    header: {
+      version: {
+        current: 'Vue 2',
+        items: {
+          'Vue 3': 'https://varlet-varletjs.vercel.app/',
+        },
+      },
+    },
     menu: [
       {
         text: {
@@ -26,6 +34,14 @@ module.exports = {
           'en-US': 'Quickstart',
         },
         doc: 'quickstart',
+        type: 3,
+      },
+      {
+        text: {
+          'zh-CN': '按需引入',
+          'en-US': 'Import on demand',
+        },
+        doc: 'importOnDemand',
         type: 3,
       },
       {
@@ -279,6 +295,14 @@ module.exports = {
           'en-US': 'AppBar',
         },
         doc: 'app-bar',
+        type: 2,
+      },
+      {
+        text: {
+          'zh-CN': 'BottomNavigation 底部导航栏',
+          'en-US': 'BottomNavigation',
+        },
+        doc: 'bottom-navigation',
         type: 2,
       },
       {

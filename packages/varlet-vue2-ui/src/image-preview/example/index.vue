@@ -12,11 +12,7 @@
       <var-image-preview :images="image" :show.sync="show" />
 
       <var-button type="warning" block @click="currentShow = true">{{ pack.specifyInitialPosition }} </var-button>
-      <var-image-preview
-        :images="images"
-        :show.sync="currentShow"
-        current="https://varlet.gitee.io/varlet-ui/cat2.jpg"
-      />
+      <var-image-preview :images="images" :show.sync="currentShow" current="https://varlet-vue2.vercel.app/cat2.jpg" />
 
       <var-button type="warning" block @click="closeShow = true">{{ pack.displayCloseButton }} </var-button>
       <var-image-preview :images="images" :show.sync="closeShow" :closeable="true" />
@@ -42,8 +38,7 @@ import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import Snackbar from '../../snackbar'
 import { defineComponent } from '../../utils/create'
 import { pack, use } from './locale'
-import { watchLang, watchPlatform } from '@varlet-vue2/cli/site/utils'
-import context from '../../context'
+import { watchLang } from '@varlet-vue2/cli/site/utils'
 import ActionSheet from '../../action-sheet'
 import VarIcon from '../../icon'
 
@@ -59,8 +54,8 @@ export default defineComponent({
   },
 
   data: () => ({
-    images: ['https://varlet.gitee.io/varlet-ui/cat.jpg', 'https://varlet.gitee.io/varlet-ui/cat2.jpg'],
-    image: ['https://varlet.gitee.io/varlet-ui/cat.jpg'],
+    images: ['https://varlet-vue2.vercel.app/cat.jpg', 'https://varlet-vue2.vercel.app/cat2.jpg'],
+    image: ['https://varlet-vue2.vercel.app/cat.jpg'],
     show: false,
     menuShow: false,
     currentShow: false,
@@ -89,17 +84,6 @@ export default defineComponent({
 
   created() {
     watchLang(this, use)
-
-    const prevTouchmoveForbid = context.touchmoveForbid
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-
-    this.$on('hook:beforeDestroy', () => {
-      context.touchmoveForbid = prevTouchmoveForbid
-    })
   },
 
   methods: {

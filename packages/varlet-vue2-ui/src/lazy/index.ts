@@ -5,27 +5,27 @@ import type { DirectiveBinding } from 'vue/types/options'
 import type { CacheInstance } from '../utils/shared'
 
 interface LazyOptions {
-  loading?: string;
-  error?: string;
-  attempt?: number;
-  throttleWait?: number;
-  filter?: (lazy: Lazy) => void;
-  events?: string[];
+  loading?: string
+  error?: string
+  attempt?: number
+  throttleWait?: number
+  filter?: (lazy: Lazy) => void
+  events?: string[]
 }
 
 type LazyState = 'pending' | 'success' | 'error'
 
 type Lazy = LazyOptions & {
-  src: string;
-  arg: string | undefined;
-  currentAttempt: number;
-  attemptLock: boolean;
-  state: LazyState;
-  preloadImage?: HTMLImageElement;
+  src: string
+  arg: string | undefined
+  currentAttempt: number
+  attemptLock: boolean
+  state: LazyState
+  preloadImage?: HTMLImageElement
 }
 
 export interface LazyHTMLElement extends HTMLElement {
-  _lazy?: Lazy;
+  _lazy?: Lazy
 }
 type ListenTarget = Window | HTMLElement
 

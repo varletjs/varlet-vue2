@@ -1,18 +1,18 @@
 <div align="center">
-  <a href="https://varlet.gitee.io/varlet-ui-vue2/">
-    <img src="https://varlet.gitee.io/varlet-ui/logo.svg" width="150">
+  <a href="https://varlet-vue2.vercel.app/">
+    <img src="https://varlet-vue2.vercel.app/logo.svg" width="150">
   </a>
   <h1>VARLET-VUE2</h1>
   <p>Material design mobile component library for Vue2</p>
   <p>
-    <a href="https://varlet.gitee.io/varlet-ui-vue2/">Documentation</a>
+    <a href="https://varlet-vue2.vercel.app/">Documentation</a>
   </p>
   <p>
     <img src="https://img.shields.io/npm/v/@varlet-vue2/ui?style=flat-square" alt="version">
     <img src="https://img.shields.io/github/stars/varletjs/varlet-vue2" alt="ci">
     <img src="https://img.shields.io/badge/vue-v2.6.14%2B-%23407fbc" alt="vue">
     <img src="https://img.shields.io/npm/l/@varlet-vue2/ui.svg" alt="licence">
-    <!-- <img src="https://img.shields.io/codecov/c/github/varletjs/varlet-vue2" alt="coverage"> -->
+    <img src="https://img.shields.io/codecov/c/github/varletjs/varlet-vue2" alt="coverage">
     <img src="https://img.badgesize.io/https://unpkg.com/@varlet-vue2/ui/umd/varlet.js?compression=gzip&label=gzip" alt="gzip" />
     <img src="https://github.com/varletjs/varlet-vue2/workflows/CI/badge.svg" alt="ci">
   </p>

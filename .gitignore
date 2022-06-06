@@ -5,6 +5,7 @@ node_modules
 .vscode
 *.log
 .DS_Store
+.history
 package-lock.json
 
 packages/varlet-vue2-cli/lib/commands

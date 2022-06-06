@@ -85,9 +85,8 @@ import VarUploader from '../../uploader'
 import VarCounter from '../../counter'
 import VarRate from '../../rate'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType.vue'
-import context from '../../context'
 import dark from '../../themes/dark'
-import { watchLang, watchPlatform, watchDarkMode } from '@varlet-vue2/cli/site/utils'
+import { watchLang, watchDarkMode } from '@varlet-vue2/cli/site/utils'
 import { use, pack } from './locale'
 
 export default {
@@ -136,16 +135,6 @@ export default {
   },
 
   created() {
-    const prevTouchmoveForbid = context.touchmoveForbid
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-    this.$on('hook:beforeDestroy', () => {
-      context.touchmoveForbid = prevTouchmoveForbid
-    })
-
     watchLang(this, (lang) => {
       use(lang)
       this.$refs.form?.reset()

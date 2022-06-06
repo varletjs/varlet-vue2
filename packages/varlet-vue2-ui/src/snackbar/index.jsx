@@ -12,7 +12,7 @@ let isMount = false
 let unmount
 let isAllowMultiple = false
 let uniqSnackbarOptions = Vue.observable({
-  value: []
+  value: [],
 })
 
 const defaultOption = {
@@ -27,14 +27,10 @@ const defaultOption = {
   lockScroll: false,
   teleport: 'body',
   forbidClick: false,
-  onOpen: () => {
-  },
-  onOpened: () => {
-  },
-  onClose: () => {
-  },
-  onClosed: () => {
-  },
+  onOpen: () => {},
+  onOpened: () => {},
+  onClose: () => {},
+  onClosed: () => {},
 }
 
 const transitionGroupProps = {
@@ -48,22 +44,22 @@ function getCoreVNode(h, option) {
   const attrs = {
     ...reactiveSnackOptions,
     'data-id': id,
-    customUpdate
+    customUpdate,
   }
   const directives = [
     {
       name: 'show',
       rawName: 'v-show',
       value: reactiveSnackOptions.show,
-      expression: 'show'
-    }
+      expression: 'show',
+    },
   ]
   const style = {
     position: isAllowMultiple ? 'relative' : 'absolute',
-    top: getTop(reactiveSnackOptions.position)
+    top: getTop(reactiveSnackOptions.position),
   }
   const on = {
-    'update:show': value => {
+    'update:show': (value) => {
       reactiveSnackOptions.show = value
     },
     open: () => {
@@ -78,7 +74,7 @@ function getCoreVNode(h, option) {
     attrs,
     style,
     directives,
-    on
+    on,
   })
 }
 
@@ -101,15 +97,15 @@ const TransitionGroupHost = {
       'transition-group',
       {
         attrs: {
-          ...transitionGroupProps
+          ...transitionGroupProps,
         },
         style: {
-          zIndex: context.zIndex
+          zIndex: context.zIndex,
         },
         on: {
           'after-enter': opened,
-          'after-leave': removeUniqOption
-        }
+          'after-leave': removeUniqOption,
+        },
       },
       snackbarList
     )
@@ -210,7 +206,7 @@ function removeUniqOption(element) {
   if (isAllAnimationEnd) {
     unmount?.()
     uniqSnackbarOptions = Vue.observable({
-      value: []
+      value: [],
     })
     isMount = false
   }

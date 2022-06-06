@@ -14,8 +14,7 @@
 <script>
 import Ripple from '..'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
-import context from '../../context'
-import { watchPlatform, watchLang } from '@varlet-vue2/cli/site/utils'
+import { watchLang } from '@varlet-vue2/cli/site/utils'
 import { pack, use } from './locale'
 
 export default {
@@ -25,10 +24,6 @@ export default {
 
   directives: { Ripple },
 
-  data: () => ({
-    prevTouchmoveForbid: context.touchmoveForbid,
-  }),
-
   computed: {
     pack() {
       return pack.value
@@ -36,17 +31,7 @@ export default {
   },
 
   created() {
-    watchPlatform(this, (platform) => {
-      if (platform === 'pc') {
-        context.touchmoveForbid = false
-      }
-    })
-
     watchLang(this, use)
-  },
-
-  beforeDestroy() {
-    context.touchmoveForbid = this.prevTouchmoveForbid
   },
 }
 </script>

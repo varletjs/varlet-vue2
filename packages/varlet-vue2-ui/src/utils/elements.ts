@@ -39,6 +39,11 @@ export function nextTickFrame(fn: FrameRequestCallback) {
   })
 }
 
+export function supportTouch() {
+  const inBrowser = typeof window !== 'undefined'
+  return inBrowser && 'ontouchstart' in window
+}
+
 export async function inViewport(element: HTMLElement): Promise<boolean> {
   await doubleRaf()
   const { top, bottom, left, right } = element.getBoundingClientRect()

@@ -1,11 +1,11 @@
 import { VarComponent } from './varComponent'
 
 export interface AppBarProps {
-  color?: string;
-  textColor?: string;
-  title?: string;
-  titlePosition?: 'left' | 'center' | 'right';
-  elevation?: boolean;
+  color?: string
+  textColor?: string
+  title?: string
+  titlePosition?: 'left' | 'center' | 'right'
+  elevation?: boolean
 }
 
 export class AppBar extends VarComponent {

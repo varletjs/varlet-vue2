@@ -83,6 +83,14 @@
       <var-option :label="pack.play" />
       <var-option :label="pack.coding" />
     </var-select>
+
+    <app-type>{{ pack.offsetY }}</app-type>
+    <var-select :placeholder="pack.placeholder" v-model="value12" :offset-y="-138">
+      <var-option :label="pack.emberSprit" />
+      <var-option :label="pack.stormSpirit" />
+      <var-option :label="pack.voidSpirit" />
+      <var-option :label="pack.earthSprit" />
+    </var-select>
     <div class="space"></div>
   </div>
 </template>
@@ -118,6 +126,7 @@ export default {
     value9: undefined,
     value10: [],
     value11: undefined,
+    value12: undefined,
   }),
 
   computed: {
@@ -140,6 +149,7 @@ export default {
       this.value9 = undefined
       this.value10 = []
       this.value11 = undefined
+      this.value12 = undefined
     })
 
     watchDarkMode(this, dark)
