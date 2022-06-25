@@ -55,6 +55,12 @@ exports[`test picker example 1`] = `
   </button> <button class=\\"var-button var--box var-button--normal var--flex var-button--block var-button--primary var-elevation--2\\" style=\\"margin-bottom: 10px;\\">
     <!---->
     <div class=\\"var-button__content\\">级联选择</div>
+  </button> <button class=\\"var-button var--box var-button--normal var--flex var-button--block var-button--primary var-elevation--2\\" style=\\"margin-bottom: 10px;\\">
+    <!---->
+    <div class=\\"var-button__content\\">文本格式化</div>
+  </button> <button class=\\"var-button var--box var-button--normal var--flex var-button--block var-button--primary var-elevation--2\\" style=\\"margin-bottom: 10px;\\">
+    <!---->
+    <div class=\\"var-button__content\\">值的映射</div>
   </button>
   <div class=\\"app-type\\">组件调用</div>
   <transition-stub style=\\"margin-bottom: 14px;\\">
@@ -533,6 +539,627 @@ exports[`test picker example 1`] = `
             </div>
             <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
               <div class=\\"var-picker__text\\">延庆区</div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"var-picker__picked\\" style=\\"top: 110px; height: 44px;\\"></div>
+        <div class=\\"var-picker__mask\\" style=\\"background-size: 100% 110px;\\"></div>
+      </div>
+    </div>
+  </transition-stub>
+  <transition-stub style=\\"margin-bottom: 14px;\\">
+    <div class=\\"var-picker\\">
+      <div class=\\"var-picker__toolbar\\"><button class=\\"var-button var--box var-picker__cancel-button var-button--normal var--inline-flex var-button--text-default var-button--text\\" var-picker-cover=\\"\\">
+          <!---->
+          <div class=\\"var-button__content\\">
+            取消
+          </div>
+        </button>
+        <div class=\\"var-picker__title\\">请选择</div> <button class=\\"var-button var--box var-picker__confirm-button var-button--normal var--inline-flex var-button--text-default var-button--text\\" var-picker-cover=\\"\\">
+          <!---->
+          <div class=\\"var-button__content\\">
+            确认
+          </div>
+        </button>
+      </div>
+      <div class=\\"var-picker__columns\\" style=\\"height: 264px;\\">
+        <div class=\\"var-picker__column\\">
+          <div class=\\"var-picker__scroller\\" style=\\"transform: translateY(110px); transition-duration: 0ms; transition-property: none;\\">
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1970年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1971年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1972年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1973年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1974年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1975年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1976年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1977年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1978年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1979年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1980年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1981年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1982年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1983年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1984年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1985年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1986年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1987年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1988年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1989年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1990年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1991年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1992年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1993年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1994年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1995年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1996年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1997年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1998年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1999年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2000年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2001年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2002年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2003年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2004年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2005年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2006年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2007年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2008年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2009年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2010年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2011年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2012年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2013年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2014年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2015年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2016年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2017年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2018年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2019年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2020年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2021年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2022年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2023年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2024年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2025年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2026年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2027年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2028年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2029年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2030年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2031年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2032年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2033年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2034年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2035年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2036年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2037年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2038年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2039年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2040年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2041年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2042年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2043年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2044年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2045年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2046年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2047年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2048年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2049年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2050年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2051年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2052年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2053年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2054年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2055年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2056年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2057年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2058年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2059年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2060年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2061年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2062年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2063年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2064年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2065年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2066年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2067年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2068年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2069年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2070年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2071年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2072年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2073年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2074年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2075年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2076年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2077年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2078年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2079年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2080年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2081年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2082年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2083年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2084年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2085年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2086年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2087年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2088年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2089年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2090年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2091年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2092年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2093年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2094年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2095年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2096年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2097年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2098年</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2099年</div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"var-picker__column\\">
+          <div class=\\"var-picker__scroller\\" style=\\"transform: translateY(110px); transition-duration: 0ms; transition-property: none;\\">
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">3月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">4月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">5月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">6月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">7月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">8月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">9月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">10月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">11月</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">12月</div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"var-picker__column\\">
+          <div class=\\"var-picker__scroller\\" style=\\"transform: translateY(110px); transition-duration: 0ms; transition-property: none;\\">
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">1日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">2日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">3日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">4日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">5日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">6日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">7日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">8日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">9日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">10日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">11日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">12日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">13日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">14日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">15日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">16日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">17日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">18日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">19日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">20日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">21日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">22日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">23日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">24日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">25日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">26日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">27日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">28日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">29日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">30日</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">31日</div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"var-picker__picked\\" style=\\"top: 110px; height: 44px;\\"></div>
+        <div class=\\"var-picker__mask\\" style=\\"background-size: 100% 110px;\\"></div>
+      </div>
+    </div>
+  </transition-stub>
+  <transition-stub style=\\"margin-bottom: 14px;\\">
+    <div class=\\"var-picker\\">
+      <div class=\\"var-picker__toolbar\\"><button class=\\"var-button var--box var-picker__cancel-button var-button--normal var--inline-flex var-button--text-default var-button--text\\" var-picker-cover=\\"\\">
+          <!---->
+          <div class=\\"var-button__content\\">
+            取消
+          </div>
+        </button>
+        <div class=\\"var-picker__title\\">请选择</div> <button class=\\"var-button var--box var-picker__confirm-button var-button--normal var--inline-flex var-button--text-default var-button--text\\" var-picker-cover=\\"\\">
+          <!---->
+          <div class=\\"var-button__content\\">
+            确认
+          </div>
+        </button>
+      </div>
+      <div class=\\"var-picker__columns\\" style=\\"height: 264px;\\">
+        <div class=\\"var-picker__column\\">
+          <div class=\\"var-picker__scroller\\" style=\\"transform: translateY(110px); transition-duration: 200ms; transition-property: transform;\\">
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">灰烬之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">风暴之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">大地之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">虚空之灵</div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"var-picker__column\\">
+          <div class=\\"var-picker__scroller\\" style=\\"transform: translateY(110px); transition-duration: 200ms; transition-property: transform;\\">
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">灰烬之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">风暴之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">大地之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">虚空之灵</div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"var-picker__column\\">
+          <div class=\\"var-picker__scroller\\" style=\\"transform: translateY(110px); transition-duration: 200ms; transition-property: transform;\\">
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">灰烬之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">风暴之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">大地之灵</div>
+            </div>
+            <div class=\\"var-picker__option\\" style=\\"height: 44px;\\">
+              <div class=\\"var-picker__text\\">虚空之灵</div>
             </div>
           </div>
         </div>

@@ -68,7 +68,7 @@
               v-for="t in c.column.texts"
               :key="t"
             >
-              <div class="var-picker__text">{{ t }}</div>
+              <div class="var-picker__text">{{ textFormatter(t, c.columnIndex) }}</div>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@
               v-for="t in c.column.texts"
               :key="t"
             >
-              <div class="var-picker__text">{{ t }}</div>
+              <div class="var-picker__text">{{ textFormatter(t, c.columnIndex) }}</div>
             </div>
           </div>
         </div>
@@ -369,7 +369,7 @@ export default defineComponent({
     },
 
     normalizeNormalColumns(normalColumns) {
-      return normalColumns.map((column) => {
+      return normalColumns.map((column, columnIndex) => {
         const normalColumn = isArray(column) ? { texts: column } : column
         const scrollColumn = {
           id: sid++,
@@ -378,6 +378,7 @@ export default defineComponent({
           touching: false,
           translate: this.center,
           index: normalColumn.initialIndex ?? 0,
+          columnIndex,
           duration: 0,
           momentumTime: 0,
           column: normalColumn,
@@ -392,12 +393,12 @@ export default defineComponent({
     normalizeCascadeColumns(cascadeColumns) {
       const scrollColumns = []
 
-      this.createChildren(scrollColumns, cascadeColumns)
+      this.createChildren(scrollColumns, cascadeColumns, 0)
 
       return scrollColumns
     },
 
-    createChildren(scrollColumns, children) {
+    createChildren(scrollColumns, children, columnIndex) {
       if (isArray(children) && children.length) {
         const scrollColumn = {
           id: sid++,
@@ -406,6 +407,7 @@ export default defineComponent({
           touching: false,
           translate: this.center,
           index: 0,
+          columnIndex,
           duration: 0,
           momentumTime: 0,
           column: {
@@ -417,13 +419,17 @@ export default defineComponent({
         }
 
         scrollColumns.push(scrollColumn)
-        this.createChildren(scrollColumns, scrollColumn.columns[scrollColumn.index].children)
+        this.createChildren(scrollColumns, scrollColumn.columns[scrollColumn.index].children, columnIndex + 1)
       }
     },
 
     rebuildChildren(scrollColumn) {
       this.scrollColumns.splice(this.scrollColumns.indexOf(scrollColumn) + 1)
-      this.createChildren(this.scrollColumns, scrollColumn.columns[scrollColumn.index].children)
+      this.createChildren(
+        this.scrollColumns,
+        scrollColumn.columns[scrollColumn.index].children,
+        scrollColumn.columnIndex + 1
+      )
     },
 
     change(scrollColumn) {

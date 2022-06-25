@@ -22,6 +22,7 @@ interface PickerOptions {
   cancelButtonTextColor?: string
   teleport?: 'to'
   dynamic?: boolean
+  textFormatter?: (text: any, columnIndex: number) => any
   onOpen?: () => void
   onOpened?: () => void
   onClose?: () => void

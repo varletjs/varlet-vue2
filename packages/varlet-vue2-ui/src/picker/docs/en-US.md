@@ -54,6 +54,117 @@ const { state, texts, indexes } = await Picker({
 })
 ```
 
+### Text Formatter
+
+Picker passes in a `textFormatter` attribute to customize the text.
+`textFormatter` accepts two parameters. The first parameter `text` is the current text, and the second parameter
+`columnIndex` is the subscript of the column where the current text is located.
+The following is the case of year month day selection
+
+```js
+import { Picker } from '@varlet-vue2/ui'
+
+const genCounts = length => Array.from({ length }, (_, index) => index + 1)
+
+const months = genCounts(12)
+const leapYearFebruaryDates = genCounts(29)
+const februaryDates = genCounts(28)
+const oddMonthDates = genCounts(31)
+const evenMonthDates = genCounts(30)
+
+const isOddMonth = month => [1, 3, 5, 7, 8, 10, 12].includes(month)
+
+const isLeapYear = year => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
+
+const genDates = (year, month) => {
+  if (isLeapYear(year) && month === 2) {
+    return leapYearFebruaryDates
+  }
+
+  if (!isLeapYear(year) && month === 2) {
+    return februaryDates
+  }
+
+  if (isOddMonth(month)) {
+    return oddMonthDates
+  }
+
+  return evenMonthDates
+}
+
+const genColumns = (startYear, endYear) => {
+  const columns = []
+
+  for (let year = startYear; year < endYear; year++) {
+    columns.push({
+      text: year,
+      children: months.map((month) => {
+        return {
+          text: month,
+          children: genDates(year, month).map(date => ({ text: date }))
+        }
+      })
+    })
+  }
+
+  return columns
+}
+
+const columns = genColumns(1970, 2100)
+
+const textFormatter = (text, columnIndex) => {
+  if (columnIndex === 0) return `${text} YEAR`
+  else if (columnIndex === 1) return `${text} MONTH`
+  else if (columnIndex === 2) return `${text} DATE`
+}
+
+const { state, texts, indexes } = await Picker({
+  cascade: true,
+  columns,
+  textFormatter,
+})
+```
+
+### Mapping of values
+
+```js
+import { Picker, Snackbar } from '@varlet-vue2/ui'
+
+const rawColumns = [
+  [
+    { label: 'Ember Spirit', id: 1 },
+    { label: 'Storm Spirit', id: 2 },
+    { label: 'Earth Spirit', id: 3 },
+    { label: 'Void Spirit', id: 4 },
+  ],
+  [
+    { label: 'Ember Spirit', id: 1 },
+    { label: 'Storm Spirit', id: 2 },
+    { label: 'Earth Spirit', id: 3 },
+    { label: 'Void Spirit', id: 4 },
+  ],
+  [
+    { label: 'Ember Spirit', id: 1 },
+    { label: 'Storm Spirit', id: 2 },
+    { label: 'Earth Spirit', id: 3 },
+    { label: 'Void Spirit', id: 4 },
+  ],
+]
+
+const normalizedColumns = rawColumns.map((column) => column.map(option => option.label))
+
+const handleChange = (_, [i1, i2, i3]) => {
+  const [c1, c2, c3] = rawColumns
+  const ids = [c1[i1].id, c2[i2].id, c3[i3].id]
+  Snackbar(ids.toString())
+}
+
+const { state, texts, indexes } = await Picker({
+  columns: normalizedColumns,
+  onChange: handleChange
+})
+```
+
 ## Component Call
 
 ### Multi-column Picker
@@ -118,6 +229,123 @@ export default {
 }
 ```
 
+### Text Formatter
+
+```html
+<template>
+  <var-picker cascade :columns="columns" :text-formatter="textFormatter" />
+</template>
+```
+
+```js
+const genCounts = length => Array.from({ length }, (_, index) => index + 1)
+
+const months = genCounts(12)
+const leapYearFebruaryDates = genCounts(29)
+const februaryDates = genCounts(28)
+const oddMonthDates = genCounts(31)
+const evenMonthDates = genCounts(30)
+
+const isOddMonth = month => [1, 3, 5, 7, 8, 10, 12].includes(month)
+
+const isLeapYear = year => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
+
+const genDates = (year, month) => {
+  if (isLeapYear(year) && month === 2) {
+    return leapYearFebruaryDates
+  }
+
+  if (!isLeapYear(year) && month === 2) {
+    return februaryDates
+  }
+
+  if (isOddMonth(month)) {
+    return oddMonthDates
+  }
+
+  return evenMonthDates
+}
+
+const genColumns = (startYear, endYear) => {
+  const columns = []
+
+  for (let year = startYear; year < endYear; year++) {
+    columns.push({
+      text: year,
+      children: months.map((month) => {
+        return {
+          text: month,
+          children: genDates(year, month).map(date => ({ text: date }))
+        }
+      })
+    })
+  }
+
+  return columns
+}
+
+export default {
+  data: () => ({
+    columns: genColumns(1970, 2100)
+  }),
+  methods: {
+    textFormatter() {
+      if (columnIndex === 0) return `${text} YEAR`
+      else if (columnIndex === 1) return `${text} MONTH`
+      else if (columnIndex === 2) return `${text} DATE`
+    }
+  }
+}
+```
+
+### Mapping of values
+
+```html
+<template>
+  <var-picker :columns="columns" @change="handleChange" />
+</template>
+```
+
+```js
+import { Snackbar } from '@varlet-vue2/ui'
+
+const rawColumns = [
+  [
+    { label: 'Ember Spirit', id: 1 },
+    { label: 'Storm Spirit', id: 2 },
+    { label: 'Earth Spirit', id: 3 },
+    { label: 'Void Spirit', id: 4 },
+  ],
+  [
+    { label: 'Ember Spirit', id: 1 },
+    { label: 'Storm Spirit', id: 2 },
+    { label: 'Earth Spirit', id: 3 },
+    { label: 'Void Spirit', id: 4 },
+  ],
+  [
+    { label: 'Ember Spirit', id: 1 },
+    { label: 'Storm Spirit', id: 2 },
+    { label: 'Earth Spirit', id: 3 },
+    { label: 'Void Spirit', id: 4 },
+  ]
+]
+
+const normalizedColumns = rawColumns.map(column => column.map(option => option.label))
+
+export default {
+  data: () => ({
+    columns: normalizedColumns
+  }),
+  methods: {
+    handleChange(_, [i1, i2, i3]) {
+      const [c1, c2, c3] = rawColumns
+      const ids = [c1[i1].id, c2[i2].id, c3[i3].id]
+      Snackbar(ids.toString())
+    }
+  }  
+}
+```
+
 ## API
 
 ### Props
@@ -129,6 +357,7 @@ export default {
 | `text-key` | The attribute key of the text | _string_ | `text` |
 | `toolbar` | Whether to display the top toolbar | _string_ | `true` |
 | `cascade` | Whether to enable cascading mode | _boolean_ | `true` |
+| `text-formatter` | Text formatter | _(text: any, columnIndex: number) => any_ | `text => text` |
 | `option-height` | Option height(px rem) | _string \| number_ | `44` |
 | `option-count` | Number of options visible | _string \| number_ | `6` |
 | `confirm-button-text` | Confirm button text | _string_ | `Confirm` |
@@ -145,6 +374,7 @@ export default {
 | `textKey` | The attribute key of the text | _string_ | `text` |
 | `toolbar` | Whether to display the top toolbar | _string_ | `true` |
 | `cascade` | Whether to enable cascading mode | _boolean_ | `true` |
+| `textFormatter` | Text formatter | _(text: any, columnIndex: number) => any_ | `text => text` |
 | `optionHeight` | Option height | _string \| number_ | `44` |
 | `optionCount` | Number of options visible | _string \| number_ | `6` |
 | `confirmButtonText` | Confirm button text | _string_ | `Confirm` |

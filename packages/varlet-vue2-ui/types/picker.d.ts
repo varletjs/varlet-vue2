@@ -25,6 +25,7 @@ export interface PickerProps {
   cancelButtonText?: string
   confirmButtonTextColor?: string
   cancelButtonTextColor?: string
+  textFormatter?: (text: any, columnIndex: number) => any
   onChange?: (texts: Texts, indexes: number[]) => void
   onConfirm?: (texts: Texts, indexes: number[]) => void
   onCancel?: (texts: Texts, indexes: number[]) => void
@@ -58,6 +59,7 @@ export interface PickerOptions {
   cancelButtonText?: string
   confirmButtonTextColor?: string
   cancelButtonTextColor?: string
+  textFormatter?: (text: any, columnIndex: number) => any
   onOpen?: () => void
   onOpened?: () => void
   onClose?: () => void

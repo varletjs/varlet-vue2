@@ -159,3 +159,21 @@ test('test cascade mode', async () => {
   mockRestore()
   wrapper.destroy()
 })
+
+test('test picker component textFormatter', async () => {
+  const textFormatter = jest.fn().mockReturnValue('text')
+  const columns = [['A']]
+
+  const wrapper = mount(VarPicker, {
+    propsData: {
+      columns,
+      textFormatter,
+    },
+  })
+
+  const pickerText = wrapper.find('.var-picker__text')
+
+  expect(pickerText.text()).toBe('text')
+
+  wrapper.destroy()
+})

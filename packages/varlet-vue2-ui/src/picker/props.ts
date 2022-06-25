@@ -53,6 +53,10 @@ export const props = {
   cancelButtonTextColor: {
     type: String,
   },
+  textFormatter: {
+    type: Function as PropType<(text: any, columnIndex: number) => any>,
+    default: (text: any) => text,
+  },
   // dynamic internal
   dynamic: {
     type: Boolean,
