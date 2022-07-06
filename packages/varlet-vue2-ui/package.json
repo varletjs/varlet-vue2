@@ -37,6 +37,12 @@
   "peerDependencies": {
     "vue": ">= 2.6.0"
   },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.css",
+    "*.less"
+  ],
   "gitHead": "ee9c3866bedad96c86365b0f9888a3a6bb781b1f",
   "dependencies": {
     "@varlet/icons": "latest",
