@@ -1,3 +1,20 @@
+## [0.1.2](https://github.com/varletjs/varlet-vue2/compare/v0.1.1...v0.1.2) (2022-07-10)
+
+
+### Bug Fixes
+
+* **cli:** fix fold height ([7a52b35](https://github.com/varletjs/varlet-vue2/commit/7a52b35ed44ffd96491eeb9c72ee085fdbac3f63))
+
+
+### Features
+
+* add `versions` config ([#57](https://github.com/varletjs/varlet-vue2/issues/57)) ([10875e5](https://github.com/varletjs/varlet-vue2/commit/10875e56a13ddeb33cd5b7b9229179ed4e8b3896))
+* add component bottom-navigation ([#56](https://github.com/varletjs/varlet-vue2/issues/56)) ([2ca9973](https://github.com/varletjs/varlet-vue2/commit/2ca99739d8bf320df93a7b011cffb6bb5397d8c5))
+* build the homepage ([#50](https://github.com/varletjs/varlet-vue2/issues/50)) ([72c833c](https://github.com/varletjs/varlet-vue2/commit/72c833cdc2145965d089dcbd0c3fce6f6156ad14))
+* **ui/picker:** add textFormatter in picker ([#58](https://github.com/varletjs/varlet-vue2/issues/58)) ([d88c2ad](https://github.com/varletjs/varlet-vue2/commit/d88c2ada356ba21a13444a073ee7f6d8be9e7e92))
+
+
+
 ## [0.1.1](https://github.com/varletjs/varlet-vue2/compare/v0.1.0...v0.1.1) (2022-04-20)
 
 
