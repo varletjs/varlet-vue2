@@ -96,7 +96,7 @@
 <script>
 import config from '@config'
 import { get } from 'lodash-es'
-import { getBrowserThemes, getPCLocationInfo, removeEmpty, setThemes, watchThemes } from '../../utils'
+import { getBrowserTheme, getPCLocationInfo, removeEmpty, setTheme, watchThemes } from '../../utils'
 import { defineComponent } from '../../components/utils/create'
 import AnimationBox from './AnimationBox.vue'
 
@@ -128,7 +128,7 @@ export default defineComponent({
     playground: get(config, 'pc.header.playground'),
     github: get(config, 'pc.header.github'),
     darkMode: get(config, 'pc.header.darkMode'),
-    currentThemes: getBrowserThemes(get(config, 'themesKey')),
+    currentThemes: getBrowserTheme(get(config, 'themesKey')),
     isOpenLanguageMenu: false,
     isOpenVersionsMenu: false
   }),
@@ -138,7 +138,7 @@ export default defineComponent({
       from === 'mobile' && this.setCurrentThemes(themes)
     })
 
-    setThemes(config, this.currentThemes)
+    setTheme(config, this.currentThemes)
 
     window.postMessage(this.getThemesMessage(), '*')
   },
@@ -163,7 +163,7 @@ export default defineComponent({
 
     setCurrentThemes(themes) {
       this.currentThemes = themes
-      setThemes(config, this.currentThemes)
+      setTheme(config, this.currentThemes)
       window.localStorage.setItem(this.themesKey, this.currentThemes)
     },
 

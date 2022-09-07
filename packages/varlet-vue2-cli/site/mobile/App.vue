@@ -76,11 +76,11 @@
 import config from '@config'
 import {
   bigCamelize,
-  getBrowserThemes,
+  getBrowserTheme,
   inIframe,
   isPhone,
   removeEmpty,
-  setThemes,
+  setTheme,
   watchLang,
   watchThemes
 } from '../utils'
@@ -94,7 +94,7 @@ export default {
     languages: get(config, 'mobile.header.i18n'),
     showMenu: false,
     redirect: get(config, 'mobile.redirect', ''),
-    currentThemes: getBrowserThemes(themesKey),
+    currentThemes: getBrowserTheme(themesKey),
     bigCamelizeComponentName: '',
     showBackIcon: false,
     github: get(config, 'mobile.header.github'),
@@ -121,7 +121,7 @@ export default {
 
     window.toggleTheme = this.toggleTheme
 
-    setThemes(config, this.currentThemes)
+    setTheme(config, this.currentThemes)
 
     window.postMessage(this.getThemesMessage(), '*')
 
@@ -151,7 +151,7 @@ export default {
 
     setCurrentThemes(themes) {
       this.currentThemes = themes
-      setThemes(config, this.currentThemes)
+      setTheme(config, this.currentThemes)
       window.localStorage.setItem(themesKey, this.currentThemes)
     },
 

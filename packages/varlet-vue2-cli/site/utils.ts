@@ -114,7 +114,7 @@ export function watchThemes(
     })
   }
 
-  cb(getBrowserThemes(), 'default')
+  cb(getBrowserTheme(), 'default')
 }
 
 export function addRouteListener(vm: any, cb: () => void) {
@@ -129,7 +129,7 @@ export function addRouteListener(vm: any, cb: () => void) {
   })
 }
 
-export function setThemes(config: Record<string, any>, name: 'themes' | 'darkThemes') {
+export function setTheme(config: Record<string, any>, name: 'themes' | 'darkThemes') {
   const themes = get(config, name, {})
   const styleVars = Object.entries(themes).reduce((styleVars, [key, value]) => {
     styleVars[`--site-config-${key}`] = value as string
@@ -139,7 +139,7 @@ export function setThemes(config: Record<string, any>, name: 'themes' | 'darkThe
   StyleProvider(styleVars)
 }
 
-export function getBrowserThemes(themes = 'VARLET_THEMES'): 'darkThemes' | 'themes' {
+export function getBrowserTheme(themes = 'VARLET_THEMES'): 'darkThemes' | 'themes' {
   let currentThemes = window.localStorage.getItem(themes) as 'darkThemes' | 'themes'
 
   if (!currentThemes) {

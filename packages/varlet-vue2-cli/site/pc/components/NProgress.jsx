@@ -1,6 +1,6 @@
 import Progress from '../../components/progress'
 import config from '@config'
-import { getBrowserThemes, watchThemes } from '../../utils'
+import { getBrowserTheme, watchThemes } from '../../utils'
 import { get } from 'lodash-es'
 
 export default {
@@ -28,12 +28,12 @@ export default {
     getColor(themes) {
       const themesKey = get(config, 'themesKey')
 
-      return get(config, `${themes ?? getBrowserThemes(themesKey)}.color-progress`)
+      return get(config, `${themes ?? getBrowserTheme(themesKey)}.color-progress`)
     },
     getTrackColor(themes) {
       const themesKey = get(config, 'themesKey')
 
-      return get(config, `${themes ?? getBrowserThemes(themesKey)}.color-progress-track`)
+      return get(config, `${themes ?? getBrowserTheme(themesKey)}.color-progress-track`)
     },
     changeValue() {
       this.timer = window.setTimeout(() => {

@@ -19,7 +19,7 @@ import VarSwitch from '../../switch'
 import VarButton from '../../button'
 import AppType from '@varlet-vue2/cli/site/mobile/components/AppType'
 import dark from '../../themes/dark'
-import { getBrowserThemes, watchLang } from '@varlet-vue2/cli/site/utils'
+import { getBrowserTheme, watchLang } from '@varlet-vue2/cli/site/utils'
 import { use, pack } from './locale'
 
 export default {
@@ -61,7 +61,7 @@ export default {
     watchLang(this, use)
 
     this.$on('hook:beforeDestroy', () => {
-      StyleProvider(getBrowserThemes() === 'darkThemes' ? dark : null)
+      StyleProvider(getBrowserTheme() === 'darkThemes' ? dark : null)
     })
   },
 
