@@ -15,7 +15,7 @@ import{n as a}from"./index.1361b848.js";import"./vendor.c9dd9d4d.js";var l=funct
   },
 }
 `)])])]),t._m(1),r("var-site-code-example",[r("pre",{staticClass:"hljs"},[r("code",{pre:!0},[r("span",{pre:!0,attrs:{class:"hljs-selector-tag"}},[t._v("body")]),t._v(` {
-  `),r("span",{pre:!0,attrs:{class:"hljs-attribute"}},[t._v("transition")]),t._v(": background-color ."),r("span",{pre:!0,attrs:{class:"hljs-number"}},[t._v("25s")]),t._v(`;
+  `),r("span",{pre:!0,attrs:{class:"hljs-attribute"}},[t._v("transition")]),t._v(": background-color ."),r("span",{pre:!0,attrs:{class:"hljs-number"}},[t._v("25s")]),t._v(", color ."),r("span",{pre:!0,attrs:{class:"hljs-number"}},[t._v("25s")]),t._v(`;
   `),r("span",{pre:!0,attrs:{class:"hljs-attribute"}},[t._v("color")]),t._v(": var(--"),r("span",{pre:!0,attrs:{class:"hljs-attribute"}},[t._v("color")]),t._v(`-text);
   `),r("span",{pre:!0,attrs:{class:"hljs-attribute"}},[t._v("background-color")]),t._v(": var(--"),r("span",{pre:!0,attrs:{class:"hljs-attribute"}},[t._v("color")]),t._v(`-body);
 }
