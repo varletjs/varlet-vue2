@@ -36,7 +36,7 @@ test('test image preview tap', async () => {
   const wrapper = mount(VarImagePreview, {
     propsData: {
       show: true,
-      images: ['https://varlet-vue2.vercel.app/cat.jpg'],
+      images: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'],
     },
     listeners: {
       'update:show': onUpdateShow,
@@ -54,7 +54,7 @@ test('test image preview zoom', async () => {
   const wrapper = mount(VarImagePreview, {
     propsData: {
       show: true,
-      images: ['https://varlet-vue2.vercel.app/cat.jpg'],
+      images: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'],
     },
     listeners: {
       'update:show': onUpdateShow,
@@ -85,7 +85,7 @@ test('test image preview zoom move', async () => {
   const wrapper = mount(VarImagePreview, {
     propsData: {
       show: true,
-      images: ['https://varlet-vue2.vercel.app/cat.jpg'],
+      images: ['https://varlet.gitee.io/varlet-ui-vue2/cat.jpg'],
     },
   })
 

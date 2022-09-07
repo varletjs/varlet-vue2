@@ -5,7 +5,7 @@ module.exports = {
   port: 8080,
   title: 'VARLET-VUE2',
   themesKey: 'VARLET_THEMES',
-  logo: 'https://varlet-vue2.vercel.app/varlet_icon.png',
+  logo: 'https://varlet.gitee.io/varlet-ui-vue2/varlet_icon.png',
   defaultLanguage: 'zh-CN',
   highlight: {
     /**

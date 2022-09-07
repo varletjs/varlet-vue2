@@ -9,8 +9,8 @@
 
 通过设置 `Editor -> General -> Code Completion -> Show the documentation popup in ___ ms` 开启组件库文档说明。
 
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/hl_wb_setting.png" alt="webstorm setting" />
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/hl_wb.jpg" alt="webstorm highlight" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui-vue2/hl_wb_setting.png" alt="webstorm setting" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui-vue2/hl_wb.jpg" alt="webstorm highlight" />
 
 ### VSCode
 
@@ -26,12 +26,12 @@
 }
 ```
 
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/hl_vsc_setting.png" alt="vscode setting" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui-vue2/hl_vsc_setting.png" alt="vscode setting" />
 
 #### Varlet VSCode Extension
 
 在 `vscode` 插件市场搜索 `varlet-vscode-extension` 安装即可, 在鼠标悬停在组件名上时, 可以通过链接直接前往该组件的文档地址，并且提供了所有组件的自动补全。
 
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/ext_vsc.png" alt="vscode ext" />
-<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet-vue2.vercel.app/varlet-vscode-extension.gif" alt="vscode ext link" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui-vue2/ext_vsc.png" alt="vscode ext" />
+<img style="width: 100%; margin-top: 10px; border-radius: 5px" src="https://varlet.gitee.io/varlet-ui-vue2/varlet-vscode-extension.gif" alt="vscode ext link" />
 

@@ -8,7 +8,7 @@ exports[`test image preview extra slot 1`] = `
         <div class=\\"var-swipe var-image-preview__swipe\\" var-image-preview-cover=\\"\\">
           <div class=\\"var-swipe__track\\" style=\\"width: 0px; transform: translateX(0px); transition-duration: 300ms;\\">
             <div class=\\"var-swipe-item var-image-preview__swipe-item\\" style=\\"width: 0px; transform: translateX(0px);\\" var-image-preview-cover=\\"\\">
-              <div class=\\"var-image-preview__zoom-container\\" style=\\"transform: scale(1) translate(0px, 0px);\\"><img src=\\"https://varlet-vue2.vercel.app/cat.jpg\\" alt=\\"https://varlet-vue2.vercel.app/cat.jpg\\" class=\\"var-image-preview__image\\"></div>
+              <div class=\\"var-image-preview__zoom-container\\" style=\\"transform: scale(1) translate(0px, 0px);\\"><img src=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" alt=\\"https://varlet.gitee.io/varlet-ui-vue2/cat.jpg\\" class=\\"var-image-preview__image\\"></div>
             </div>
           </div>
           <!---->
