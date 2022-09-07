@@ -33,7 +33,7 @@ Inject the `text color` and `background color` variables recommended by the comp
 
 ```less
 body {
-  transition: background-color .25s;
+  transition: background-color .25s, color .25s;
   color: var(--color-text);
   background-color: var(--color-body);
 }

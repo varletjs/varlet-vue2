@@ -32,7 +32,7 @@ export default {
 
 ```less
 body {
-  transition: background-color .25s;
+  transition: background-color .25s, color .25s;
   color: var(--color-text);
   background-color: var(--color-body);
 }
