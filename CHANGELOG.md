@@ -1,3 +1,12 @@
+## [0.1.4](https://github.com/varletjs/varlet-vue2/compare/v0.1.3...v0.1.4) (2022-09-27)
+
+
+### Bug Fixes
+
+* fix select sync options bug ([fe588be](https://github.com/varletjs/varlet-vue2/commit/fe588be455785cf775a928b2abf5cd770663f3f1))
+
+
+
 ## [0.1.3](https://github.com/varletjs/varlet-vue2/compare/v0.1.2...v0.1.3) (2022-09-27)
 
 
