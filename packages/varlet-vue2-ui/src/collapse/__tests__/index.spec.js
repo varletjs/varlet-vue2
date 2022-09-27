@@ -52,7 +52,7 @@ test('test collapse modelValue and onChange', async () => {
 
   await delay(0)
 
-  const collapseItemList = wrapper.findAllComponents('.var-collapse-item')
+  const collapseItemList = wrapper.findAll('.var-collapse-item')
   expect(collapseItemList.at(1).classes()).toContain('var-collapse-item__active')
 
   const firstCollapseItemHeader = collapseItemList.at(0).find('.var-collapse-item-header')
@@ -162,7 +162,7 @@ test('test collapseItem disabled', async () => {
 
   await delay(0)
 
-  const collapseItemList = wrapper.findAllComponents('.var-collapse-item')
+  const collapseItemList = wrapper.findAll('.var-collapse-item')
 
   expect(collapseItemList.at(0).classes()).toContain('var-collapse-item__disable')
 

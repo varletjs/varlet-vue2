@@ -126,7 +126,7 @@ test('test firstDayOfWeek prop', async () => {
   })
 
   await delay(0)
-  expect(wrapper.findComponent('.var-day-picker__head').findComponent('li').text()).toBe('三')
+  expect(wrapper.find('.var-day-picker__head').find('li').text()).toBe('三')
 })
 
 test('test max and min', async () => {
@@ -139,18 +139,18 @@ test('test max and min', async () => {
   })
 
   await delay(0)
-  expect(wrapper.findComponent('.var-picker-header__value').text()).toBe('2021 四月')
+  expect(wrapper.find('.var-picker-header__value').text()).toBe('2021 四月')
 
-  await wrapper.findComponent('.var-picker-header').findComponent('button').trigger('click')
+  await wrapper.find('.var-picker-header').find('button').trigger('click')
   await delay(200)
-  expect(wrapper.findComponent('.var-picker-header__value').text()).toBe('2021 四月')
+  expect(wrapper.find('.var-picker-header__value').text()).toBe('2021 四月')
 
-  await wrapper.findComponent('.var-picker-header__value').trigger('click')
+  await wrapper.find('.var-picker-header__value').trigger('click')
   await delay(200)
-  await wrapper.findComponent('.var-picker-header__value').trigger('click')
+  await wrapper.find('.var-picker-header__value').trigger('click')
   await delay(200)
 
-  expect(wrapper.findComponent('.var-year-picker__panel').findAll('li').length).toBe(1)
+  expect(wrapper.find('.var-year-picker__panel').findAll('li').length).toBe(1)
 })
 
 test('test datePicker v-model', async () => {
@@ -170,22 +170,22 @@ test('test datePicker v-model', async () => {
   })
 
   await delay(0)
-  await wrapper.findComponent('.var-picker-header').findComponent('button').trigger('click')
+  await wrapper.find('.var-picker-header').find('button').trigger('click')
   await delay(200)
-  await wrapper.findComponent('.var-month-picker__content').findComponent('ul').findComponent('button').trigger('click')
+  await wrapper.find('.var-month-picker__content').find('ul').find('button').trigger('click')
   expect(wrapper.vm.date).toBe('2020-01')
 
-  await wrapper.findComponent('.var-picker-header__value').trigger('click')
+  await wrapper.find('.var-picker-header__value').trigger('click')
   await delay(200)
-  await wrapper.findComponent('.var-year-picker__panel').findComponent('li').trigger('click')
+  await wrapper.find('.var-year-picker__panel').find('li').trigger('click')
   await delay(200)
-  await wrapper.findComponent('.var-month-picker__content').findComponent('ul').findComponent('button').trigger('click')
+  await wrapper.find('.var-month-picker__content').find('ul').find('button').trigger('click')
   expect(wrapper.vm.date).not.toBe('2021-01')
 
   await wrapper.setData({ type: 'date', date: '2021-05-19' })
-  await wrapper.findComponent('.var-picker-header').findComponent('button').trigger('click')
+  await wrapper.find('.var-picker-header').find('button').trigger('click')
   await delay(200)
-  await wrapper.findComponent('.var-day-picker__button--usable').trigger('click')
+  await wrapper.find('.var-day-picker__button--usable').trigger('click')
   expect(wrapper.vm.date).toBe('2021-04-01')
 })
 
@@ -254,9 +254,9 @@ test('test datePicker range prop', async () => {
   await wrapper.setData({ type: 'month', date: null })
   await wrapper.setData({ type: 'month', date: ['2021-05', '2021-06'] })
   await delay(0)
-  const lis = wrapper.findComponent('.var-month-picker__content').findComponent('ul').findAll('li')
-  await lis.at(0).findComponent('button').trigger('click')
-  await lis.at(2).findComponent('button').trigger('click')
+  const lis = wrapper.find('.var-month-picker__content').find('ul').findAll('li')
+  await lis.at(0).find('button').trigger('click')
+  await lis.at(2).find('button').trigger('click')
   expect(wrapper.vm.date).toEqual([`${currentYear}-01`, `${currentYear}-03`])
   expect(fn).toHaveBeenCalledTimes(1)
 
@@ -280,12 +280,12 @@ test('test datePicker readonly', async () => {
   })
 
   await delay(0)
-  await wrapper.findComponent('.var-month-picker__content').findComponent('ul').findComponent('button').trigger('click')
+  await wrapper.find('.var-month-picker__content').find('ul').find('button').trigger('click')
   await delay(200)
   expect(wrapper.vm.date).toBe('2021-05')
 
   await wrapper.setData({ type: 'date', date: '2021-05-19' })
-  await wrapper.findComponent('.var-day-picker__button--usable').trigger('click')
+  await wrapper.find('.var-day-picker__button--usable').trigger('click')
   await delay(200)
   expect(wrapper.vm.date).toBe('2021-05-19')
 })
@@ -304,8 +304,8 @@ test('test datePicker touchable prop', async () => {
     template: `<var-date-picker v-model="date" :type="type" />`,
   })
 
-  const pickBodyEl = wrapper.findComponent('.var-date-picker-body')
-  const headerEl = wrapper.findComponent('.var-picker-header__value')
+  const pickBodyEl = wrapper.find('.var-date-picker-body')
+  const headerEl = wrapper.find('.var-picker-header__value')
 
   await triggerDrag(pickBodyEl, 0, 100)
   expect(headerEl.text()).toBe('2021 四月')

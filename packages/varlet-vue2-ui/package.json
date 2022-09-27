@@ -55,10 +55,12 @@
     "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^18.7.18",
     "@varlet-vue2/cli": "workspace:*",
     "@varlet/touch-emulator": "latest",
-    "@vue/test-utils": "^1.2.2",
-    "@babel/runtime": "^7.16.0",
+    "@vue/test-utils": "1.2.2",
+    "@babel/runtime": "7.16.0",
     "vue-template-compiler": "2.6.14",
     "vue": "2.6.14",
     "live-server": "^1.2.1",

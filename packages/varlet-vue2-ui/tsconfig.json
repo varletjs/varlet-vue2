@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
     "strict": true,
     "downlevelIteration": true,
     "declaration": true,
@@ -8,8 +9,8 @@
     "esModuleInterop": true,
     "allowJs": true,
     "lib": ["esnext", "dom"],
+    "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "isolatedModules": true,
-    "exclude": ["**/*.spec.ts", "**/*.spec.js", "node_modules"]
+    "isolatedModules": true
   }
 }
