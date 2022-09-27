@@ -40,10 +40,13 @@
   "sideEffects": [
     "es/**/style/*",
     "lib/**/style/*",
+    "es/style.js",
+    "es/less.js",
+    "lib/style.js",
+    "lib/less.js",
     "*.css",
     "*.less"
   ],
-  "gitHead": "ee9c3866bedad96c86365b0f9888a3a6bb781b1f",
   "dependencies": {
     "@varlet/icons": "latest",
     "dayjs": "^1.10.4",
@@ -56,8 +59,8 @@
     "@varlet/touch-emulator": "latest",
     "@vue/test-utils": "^1.2.2",
     "@babel/runtime": "^7.16.0",
-    "vue-template-compiler": "^2.6.14",
-    "vue": "^2.6.14",
+    "vue-template-compiler": "2.6.14",
+    "vue": "2.6.14",
     "live-server": "^1.2.1",
     "lodash-es": "^4.17.21",
     "clipboard": "^2.0.8",
