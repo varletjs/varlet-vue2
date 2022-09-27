@@ -3,9 +3,11 @@
     <img src="https://varlet.gitee.io/varlet-ui-vue2/logo.svg" width="150">
   </a>
   <h1>VARLET-VUE2</h1>
-  <p>Material design mobile component library for Vue2</p>
-  <p>
-    <a href="https://varlet.gitee.io/varlet-ui-vue2/">Documentation</a>
+  <p>基于 Vue2 的 Material design 风格移动端组件库</p>
+   <p>
+    <a href="https://varlet-vue2.vercel.app">文档(Vercel)</a> | 
+    <a href="https://varlet.gitee.io/varlet-ui-vue2">文档(Gitee)</a> |
+    <a href="https://github.com/varletjs/varlet/blob/dev/README.md">ENGLISH README</a>
   </p>
   <p>
     <img src="https://img.shields.io/npm/v/@varlet-vue2/ui?style=flat-square" alt="version">
@@ -20,28 +22,27 @@
 
 ---
 
-### Intro
+### 介绍
 
-Varlet-vue2 is a Material design mobile component library developed based on `Vue2`, developed and maintained by partners in the community.
+`Varlet-vue2` 是 `Varlet` 的 vue2 版本, 是一个 Material 风格移动端组件库，由社区建立起来的组件库团队进行维护。
 
+### 特性
+- 🚀 提供50个高质量通用组件 
+- 🚀 组件十分轻量
+- 💪 由国人开发，完善的中英文文档和后勤保障
+- 🛠️ 支持按需引入
+- 🛠️ 支持主题定制
+- 🌍 支持国际化
+- 💡 支持 webstorm，vscode 组件属性高亮
+- 💪 支持 SSR
+- 💡 支持 Typescript 
+- 💪 确保90%以上单元测试覆盖率，提供稳定性保证
+- 🛠️ 支持暗黑模式
 
-### Features
-- 🚀 Provide 50 high quality general purpose components
-- 🚀 Components are very lightweight
-- 💪 Developed by Chinese, complete Chinese and English documentation and logistics support
-- 🛠️ Support on-demand introduction
-- 🛠️ Support theme customization
-- 🌍 Support internationalization
-- 💡 Support WebStorm, VS Code component syntax highlighting
-- 💪 Support the SSR
-- 💡 Support the Typescript
-- 💪 Make sure more than 90 percent unit test coverage, providing stability assurance
-- 🛠️ Support dark mode
-
-### Install
+### 安装
 
 ### CDN
-`varlet.js` component functions have been completed, and unit testing is in progress, recommended for internal testing
+`varlet.js` 包含组件库的所有样式和逻辑，引入即可。
 
 ```html
 <div id="app"></div>
@@ -51,16 +52,14 @@ Varlet-vue2 is a Material design mobile component library developed based on `Vu
   Vue.use(Varlet)
 
   new Vue({
-    template: '<var-button>Button</var-button>'
+    template: '<var-button>按钮</var-button>'
   }).$mount('#app')
 </script>
 ```
 
 ### Webpack / Vite
-
 ```shell
-# Install with npm or yarn or pnpm
-
+# 通过 npm 或 yarn 或 pnpm 安装
 # npm
 npm i @varlet-vue2/ui -S
 
