@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/varletjs/varlet-vue2/compare/v0.1.2...v0.1.3) (2022-09-27)
+
+
+### Bug Fixes
+
+* fix side effects ([cc7dc3a](https://github.com/varletjs/varlet-vue2/commit/cc7dc3a2578d7a73744752e8cbf1903f372712e1))
+
+
+
 ## [0.1.2](https://github.com/varletjs/varlet-vue2/compare/v0.1.1...v0.1.2) (2022-07-10)
 
 
