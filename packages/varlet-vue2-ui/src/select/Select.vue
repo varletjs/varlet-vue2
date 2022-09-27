@@ -188,6 +188,10 @@ export default defineComponent({
       this.syncOptions()
     },
 
+    options() {
+      this.syncOptions()
+    },
+
     multiple(multiple) {
       if (multiple && !isArray(this.value)) {
         throw Error('The value must be an array when multiple is true')
