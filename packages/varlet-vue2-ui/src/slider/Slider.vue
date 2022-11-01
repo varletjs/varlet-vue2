@@ -174,8 +174,9 @@ export default defineComponent({
   methods: {
     toNumber,
 
+    // expose
     validate() {
-      this._validate(this.rules, this.value)
+      return this._validate(this.rules, this.value)
     },
 
     validateWithTrigger() {

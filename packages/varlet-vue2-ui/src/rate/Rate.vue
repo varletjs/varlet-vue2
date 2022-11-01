@@ -95,8 +95,9 @@ export default defineComponent({
       onInput?.(score)
     },
 
+    // expose
     validate() {
-      this._validate(this.rules, toNumber(this.value))
+      return this._validate(this.rules, toNumber(this.value))
     },
 
     validateWithTrigger(trigger) {

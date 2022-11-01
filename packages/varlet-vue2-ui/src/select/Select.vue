@@ -214,7 +214,7 @@ export default defineComponent({
 
     // expose
     validate() {
-      this._validate(this.rules, this.value)
+      return this._validate(this.rules, this.value)
     },
 
     // expose
