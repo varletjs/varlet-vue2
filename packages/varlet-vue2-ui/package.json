@@ -1,6 +1,6 @@
 {
   "name": "@varlet-vue2/ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A material like components library for vue2",
   "module": "es/index.js",
   "main": "lib/index.js",

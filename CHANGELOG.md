@@ -1,3 +1,12 @@
+## [0.1.5](https://github.com/varletjs/varlet-vue2/compare/v0.1.4...v0.1.5) (2022-11-01)
+
+
+### Bug Fixes
+
+* fix validate methods error ([ddc6cb9](https://github.com/varletjs/varlet-vue2/commit/ddc6cb9ca4eb72e2e6323874d0e858d566c8a1a7))
+
+
+
 ## [0.1.4](https://github.com/varletjs/varlet-vue2/compare/v0.1.3...v0.1.4) (2022-09-27)
 
 
