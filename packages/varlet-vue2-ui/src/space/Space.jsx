@@ -17,6 +17,10 @@ const getSize = (size, isInternalSize) => {
   return isInternalSize ? internalSizes[size] : isArray(size) ? size.map(toPxNum) : [toPxNum(size), toPxNum(size)]
 }
 
+const padStartFlex = (style) => {
+  return style === 'start' || style === 'end' ? `flex-${style}` : style
+}
+
 export default defineComponent({
   name: 'VarSpace',
 
@@ -64,8 +68,8 @@ export default defineComponent({
         class={['var-space', 'var--box', inline ? 'var-space--inline' : null]}
         style={{
           flexDirection: direction,
-          justifyContent: justify,
-          alignItems: align,
+          justifyContent: padStartFlex(justify),
+          alignItems: padStartFlex(align),
           flexWrap: wrap ? 'wrap' : 'nowrap',
           margin: direction === 'row' ? `-${y / 2}px 0` : undefined,
         }}
