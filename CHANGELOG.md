@@ -1,3 +1,7 @@
+## [0.1.6](https://github.com/varletjs/varlet-vue2/compare/v0.1.5...v0.1.6) (2022-11-11)
+
+
+
 ## [0.1.5](https://github.com/varletjs/varlet-vue2/compare/v0.1.4...v0.1.5) (2022-11-01)
 
 
