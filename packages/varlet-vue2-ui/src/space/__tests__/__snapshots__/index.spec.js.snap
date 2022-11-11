@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test child in space 1`] = `
-"<div class=\\"var-space var--box var-space--inline\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -2px 0px;\\">
+"<div class=\\"var-space var--box var-space--inline\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -2px 0px;\\">
   <div style=\\"margin: 2px 4px 2px 0px;\\">
     <div>div1</div>
   </div>
@@ -17,7 +17,7 @@ exports[`test child in space 1`] = `
 `;
 
 exports[`test child in space 2`] = `
-"<div class=\\"var-space var--box var-space--inline\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -5px 0px;\\">
+"<div class=\\"var-space var--box var-space--inline\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -5px 0px;\\">
   <div style=\\"margin: 5px 20px 5px 0px;\\">
     <div>div1</div>
   </div>
@@ -33,7 +33,7 @@ exports[`test child in space 2`] = `
 `;
 
 exports[`test child in space 3`] = `
-"<div class=\\"var-space var--box var-space--inline\\" style=\\"flex-direction: column; justify-content: start; flex-wrap: wrap;\\">
+"<div class=\\"var-space var--box var-space--inline\\" style=\\"flex-direction: column; justify-content: flex-start; flex-wrap: wrap;\\">
   <div style=\\"margin: 0px 0px 10px 0px;\\">
     <div>div1</div>
   </div>
@@ -49,7 +49,7 @@ exports[`test child in space 3`] = `
 `;
 
 exports[`test child in space 4`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: column; justify-content: start; flex-wrap: wrap;\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: column; justify-content: flex-start; flex-wrap: wrap;\\">
   <div style=\\"margin: 0px 0px 10px 0px;\\">
     <div>div1</div>
   </div>
@@ -67,7 +67,7 @@ exports[`test child in space 4`] = `
 exports[`test space example 1`] = `
 "<div class=\\"var-space-example\\">
   <div class=\\"app-type\\">基本用法</div>
-  <div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\">
+  <div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\">
     <div style=\\"margin: 4px 12px 4px 0px;\\"><button class=\\"var-button var--box var-button--normal var--inline-flex var-button--default var-elevation--2\\">
         <!---->
         <div class=\\"var-button__content\\">Button1</div>
@@ -84,7 +84,7 @@ exports[`test space example 1`] = `
       </button></div>
   </div>
   <div class=\\"app-type\\">垂直</div>
-  <div class=\\"var-space var--box\\" style=\\"flex-direction: column; justify-content: start; flex-wrap: wrap;\\">
+  <div class=\\"var-space var--box\\" style=\\"flex-direction: column; justify-content: flex-start; flex-wrap: wrap;\\">
     <div style=\\"margin: 0px 0px 12px 0px;\\"><button class=\\"var-button var--box var-button--normal var--inline-flex var-button--default var-elevation--2\\">
         <!---->
         <div class=\\"var-button__content\\">Button1</div>
@@ -101,7 +101,7 @@ exports[`test space example 1`] = `
       </button></div>
   </div>
   <div class=\\"app-type\\">间隙</div>
-  <div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -10px 0px;\\">
+  <div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -10px 0px;\\">
     <div style=\\"margin: 10px 20px 10px 0px;\\"><button class=\\"var-button var--box var-button--normal var--inline-flex var-button--default var-elevation--2\\">
         <!---->
         <div class=\\"var-button__content\\">Button1</div>
@@ -133,7 +133,7 @@ exports[`test space example 1`] = `
       </button></div>
   </div>
   <div class=\\"app-type\\">靠右</div>
-  <div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: end; flex-wrap: wrap; margin: -4px 0px;\\">
+  <div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-end; flex-wrap: wrap; margin: -4px 0px;\\">
     <div style=\\"margin: 4px 12px 4px 0px;\\"><button class=\\"var-button var--box var-button--normal var--inline-flex var-button--default var-elevation--2\\">
         <!---->
         <div class=\\"var-button__content\\">Button1</div>
@@ -184,7 +184,7 @@ exports[`test space example 1`] = `
 `;
 
 exports[`test space props 1`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"row\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"row\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -200,7 +200,7 @@ exports[`test space props 1`] = `
 `;
 
 exports[`test space props 2`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -216,7 +216,7 @@ exports[`test space props 2`] = `
 `;
 
 exports[`test space props 3`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"mini\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"mini\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -232,7 +232,7 @@ exports[`test space props 3`] = `
 `;
 
 exports[`test space props 4`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"small\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"small\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -248,7 +248,7 @@ exports[`test space props 4`] = `
 `;
 
 exports[`test space props 5`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"normal\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"normal\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -264,7 +264,7 @@ exports[`test space props 5`] = `
 `;
 
 exports[`test space props 6`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"large\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"large\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -280,7 +280,7 @@ exports[`test space props 6`] = `
 `;
 
 exports[`test space props 7`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"10px\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"10px\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -296,7 +296,7 @@ exports[`test space props 7`] = `
 `;
 
 exports[`test space props 8`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"10rem\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"10rem\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -312,7 +312,7 @@ exports[`test space props 8`] = `
 `;
 
 exports[`test space props 9`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -328,7 +328,7 @@ exports[`test space props 9`] = `
 `;
 
 exports[`test space props 10`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" wrap=\\"true\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" wrap=\\"true\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -344,7 +344,7 @@ exports[`test space props 10`] = `
 `;
 
 exports[`test space props 11`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -360,7 +360,7 @@ exports[`test space props 11`] = `
 `;
 
 exports[`test space props 12`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"start\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"start\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -376,7 +376,7 @@ exports[`test space props 12`] = `
 `;
 
 exports[`test space props 13`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"end\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"end\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -392,7 +392,7 @@ exports[`test space props 13`] = `
 `;
 
 exports[`test space props 14`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"center\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"center\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -408,7 +408,7 @@ exports[`test space props 14`] = `
 `;
 
 exports[`test space props 15`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-between\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-between\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -424,7 +424,7 @@ exports[`test space props 15`] = `
 `;
 
 exports[`test space props 16`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -440,7 +440,7 @@ exports[`test space props 16`] = `
 `;
 
 exports[`test space props 17`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"start\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"start\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -456,7 +456,7 @@ exports[`test space props 17`] = `
 `;
 
 exports[`test space props 18`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"center\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"center\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -472,7 +472,7 @@ exports[`test space props 18`] = `
 `;
 
 exports[`test space props 19`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"end\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"end\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -488,7 +488,7 @@ exports[`test space props 19`] = `
 `;
 
 exports[`test space props 20`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"stretch\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"stretch\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -504,7 +504,7 @@ exports[`test space props 20`] = `
 `;
 
 exports[`test space props 21`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"baseline\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"baseline\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -520,7 +520,7 @@ exports[`test space props 21`] = `
 `;
 
 exports[`test space props 22`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"initial\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"initial\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -536,7 +536,7 @@ exports[`test space props 22`] = `
 `;
 
 exports[`test space props 23`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"inherit\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"inherit\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -552,7 +552,7 @@ exports[`test space props 23`] = `
 `;
 
 exports[`test space props 24`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"inherit\\" inline=\\"true\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"inherit\\" inline=\\"true\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -568,7 +568,7 @@ exports[`test space props 24`] = `
 `;
 
 exports[`test space props 25`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"inherit\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\" direction=\\"column\\" size=\\"[10px,20px]\\" justify=\\"space-around\\" align=\\"inherit\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -584,7 +584,7 @@ exports[`test space props 25`] = `
 `;
 
 exports[`test space v-for 1`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
@@ -598,7 +598,7 @@ exports[`test space v-for 1`] = `
 `;
 
 exports[`test space with Comment 1`] = `
-"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: wrap; margin: -4px 0px;\\">
+"<div class=\\"var-space var--box\\" style=\\"flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin: -4px 0px;\\">
   <div style=\\"margin: 4px 12px 4px 0px;\\">
     <div>div1</div>
   </div>
