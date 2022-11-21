@@ -249,6 +249,11 @@ export default defineComponent({
 
     findLabel(value) {
       const { options } = this
+
+      if (!options.length) {
+        return
+      }
+
       let option = options.find((option) => option.value === value)
 
       if (!option) {
