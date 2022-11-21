@@ -1,3 +1,12 @@
+## [0.1.7](https://github.com/varletjs/varlet-vue2/compare/v0.1.6...v0.1.7) (2022-11-21)
+
+
+### Bug Fixes
+
+* **select:** fix error of the dynamic set options ([6f81f50](https://github.com/varletjs/varlet-vue2/commit/6f81f50768d907e42fd0a087590326159744ac44))
+
+
+
 ## [0.1.6](https://github.com/varletjs/varlet-vue2/compare/v0.1.5...v0.1.6) (2022-11-11)
 
 

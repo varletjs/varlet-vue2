@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.1.6",
+  "version": "0.1.7",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "bootstrap": "pnpm install --shamefully-hoist && node scripts/bootstrap.mjs",
