@@ -12,7 +12,7 @@
   <p>
     <img src="https://img.shields.io/npm/v/@varlet-vue2/ui?style=flat-square" alt="version">
     <img src="https://img.shields.io/github/stars/varletjs/varlet-vue2" alt="ci">
-    <img src="https://img.shields.io/badge/vue-v2.6.14%2B-%23407fbc" alt="vue">
+    <img src="https://img.shields.io/badge/vue-v2.6.14-%23407fbc" alt="vue">
     <img src="https://img.shields.io/npm/l/@varlet-vue2/ui.svg" alt="licence">
     <img src="https://img.shields.io/codecov/c/github/varletjs/varlet-vue2" alt="coverage">
     <img src="https://img.badgesize.io/https://unpkg.com/@varlet-vue2/ui/umd/varlet.js?compression=gzip&label=gzip" alt="gzip" />
@@ -83,8 +83,12 @@ new Vue({
 }).$mount('#app')
 ```
 
-### Contributors
+### 贡献者
 
 <a href="https://github.com/varletjs/varlet-vue2/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=varletjs/varlet-vue2" />
 </a> 
+
+### 仓库状态
+
+本仓库不再进行特性更新，只做 bug 修复，推荐使用 [Varlet Vue3 版本](https://github.com/varletjs/varlet)
