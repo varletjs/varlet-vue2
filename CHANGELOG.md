@@ -1,3 +1,12 @@
+## [0.1.8](https://github.com/varletjs/varlet-vue2/compare/v0.1.7...v0.1.8) (2023-02-24)
+
+
+### Bug Fixes
+
+* **ui/space:** fix space inline mode className err ([#69](https://github.com/varletjs/varlet-vue2/issues/69)) ([6d528b7](https://github.com/varletjs/varlet-vue2/commit/6d528b775642a14ab8abef2994968f228377838a))
+
+
+
 ## [0.1.7](https://github.com/varletjs/varlet-vue2/compare/v0.1.6...v0.1.7) (2022-11-21)
 
 
