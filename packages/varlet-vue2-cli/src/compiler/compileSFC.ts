@@ -15,6 +15,7 @@ export function injectRender(script: string, render: string): string {
       DEFINE_EXPORT_START_RE,
       `${render}\nexport default defineComponent({
   render,\
+  staticRenderFns,\
     `
     )
   }
@@ -24,6 +25,7 @@ export function injectRender(script: string, render: string): string {
       EXPORT_START_RE,
       `${render}\nexport default {
   render,\
+  staticRenderFns,\
     `
     )
   }
