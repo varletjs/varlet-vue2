@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/varletjs/varlet-vue2/compare/v0.1.8...v0.2.0) (2025-01-08)
+
+
+### Bug Fixes
+
+* 🐛 fix compiled results with `staticRenderFns` in some case ([#74](https://github.com/varletjs/varlet-vue2/issues/74)) ([1a19ef1](https://github.com/varletjs/varlet-vue2/commit/1a19ef15ca5c41b65a51170ab634503985804c1d))
+
+
+
 ## [0.1.8](https://github.com/varletjs/varlet-vue2/compare/v0.1.7...v0.1.8) (2023-02-24)
 
 
